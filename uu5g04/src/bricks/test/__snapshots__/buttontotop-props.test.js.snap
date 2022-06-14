@@ -67,6 +67,23 @@ exports[`UU5.Bricks.ButtonToTop props testing className="my-classname" 1`] = `
 </Button>
 `;
 
+exports[`UU5.Bricks.ButtonToTop props testing className="test-classname" 1`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top test-classname"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
 exports[`UU5.Bricks.ButtonToTop props testing controlled=false 1`] = `
 <Button
   bgStyle="outline"
@@ -135,11 +152,80 @@ exports[`UU5.Bricks.ButtonToTop props testing disabled=false 1`] = `
 </Button>
 `;
 
+exports[`UU5.Bricks.ButtonToTop props testing disabled=false 3`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
 exports[`UU5.Bricks.ButtonToTop props testing disabled=true 1`] = `
 <Button
   bgStyle="outline"
   className="uu5-bricks-button-to-top"
   disabled={true}
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
+exports[`UU5.Bricks.ButtonToTop props testing disabled=true 3`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  disabled={true}
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
+exports[`UU5.Bricks.ButtonToTop props testing elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
+exports[`UU5.Bricks.ButtonToTop props testing fullTextSearchPriority=0 1`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top uu-fulltextsearch-0"
   hidden={true}
   id="uuID-inner"
   mainAttrs={Object {}}
@@ -170,7 +256,41 @@ exports[`UU5.Bricks.ButtonToTop props testing hidden=false 1`] = `
 </Button>
 `;
 
+exports[`UU5.Bricks.ButtonToTop props testing hidden=false 3`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
 exports[`UU5.Bricks.ButtonToTop props testing hidden=true 1`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
+exports[`UU5.Bricks.ButtonToTop props testing hidden=true 3`] = `
 <Button
   bgStyle="outline"
   className="uu5-bricks-button-to-top"
@@ -227,6 +347,23 @@ exports[`UU5.Bricks.ButtonToTop props testing id="myId" 1`] = `
   className="uu5-bricks-button-to-top"
   hidden={true}
   id="myId-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
+exports[`UU5.Bricks.ButtonToTop props testing id="test-id" 1`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  hidden={true}
+  id="test-id-inner"
   mainAttrs={Object {}}
   nestingLevel="smallBox"
   onClick={[Function]}
@@ -324,6 +461,23 @@ exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="box" 1`] = `
 </Button>
 `;
 
+exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="box" 3`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
 exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="boxCollection" 1`] = `
 <Button
   bgStyle="outline"
@@ -359,6 +513,22 @@ exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="inline" 1`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
+exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="inline" 3`] = `
 <Button
   bgStyle="outline"
   className="uu5-bricks-button-to-top"
@@ -462,7 +632,41 @@ exports[`UU5.Bricks.ButtonToTop props testing noIndex=false 1`] = `
 exports[`UU5.Bricks.ButtonToTop props testing noIndex=true 1`] = `
 <Button
   bgStyle="outline"
-  className="uu5-bricks-button-to-top uu5-noindex"
+  className="uu5-bricks-button-to-top uu5-noindex uu-fulltextsearch-0"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
+exports[`UU5.Bricks.ButtonToTop props testing noPrint=false 1`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
+exports[`UU5.Bricks.ButtonToTop props testing noPrint=true 1`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
   hidden={true}
   id="uuID-inner"
   mainAttrs={Object {}}
@@ -720,6 +924,27 @@ exports[`UU5.Bricks.ButtonToTop props testing style={"backgroundColor":"red","co
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
+exports[`UU5.Bricks.ButtonToTop props testing style={"margin":8} 1`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={
+    Object {
+      "margin": 8,
     }
   }
 >

@@ -6,13 +6,61 @@ exports[`UU5.Bricks.Unauthenticated className="my-classname" 1`] = `
 </Identity>
 `;
 
+exports[`UU5.Bricks.Unauthenticated className="test-classname" 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
 exports[`UU5.Bricks.Unauthenticated default props 1`] = `
 <Identity>
   <Component />
 </Identity>
 `;
 
+exports[`UU5.Bricks.Unauthenticated disabled=false 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated disabled=true 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated fullTextSearchPriority=0 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated hidden=false 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated hidden=true 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
 exports[`UU5.Bricks.Unauthenticated id="myId" 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated id="test-id" 1`] = `
 <Identity>
   <Component />
 </Identity>
@@ -30,6 +78,18 @@ exports[`UU5.Bricks.Unauthenticated name="myName" 1`] = `
 </Identity>
 `;
 
+exports[`UU5.Bricks.Unauthenticated nestingLevel="box" 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated nestingLevel="inline" 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
 exports[`UU5.Bricks.Unauthenticated noIndex=false 1`] = `
 <Identity>
   <Component />
@@ -37,6 +97,18 @@ exports[`UU5.Bricks.Unauthenticated noIndex=false 1`] = `
 `;
 
 exports[`UU5.Bricks.Unauthenticated noIndex=true 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated noPrint=false 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated noPrint=true 1`] = `
 <Identity>
   <Component />
 </Identity>
@@ -55,6 +127,12 @@ exports[`UU5.Bricks.Unauthenticated style="padding:8px; borderRadius: 2px" 1`] =
 `;
 
 exports[`UU5.Bricks.Unauthenticated style={"backgroundColor":"red","color":"blue"} 1`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
+exports[`UU5.Bricks.Unauthenticated style={"margin":8} 1`] = `
 <Identity>
   <Component />
 </Identity>

@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Text className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Text className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-text uu5-common-text test-classname uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Text colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
@@ -295,7 +304,30 @@ exports[`UU5.Bricks.Text disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Text disabled=false 3`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Text disabled=true 1`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-common-disabled uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Text disabled=true 3`] = `
 <div
   className="uu5-bricks-text uu5-common-text uu5-common-disabled uu5-bricks-text-nesting-level-small-box"
   id="uuID"
@@ -374,7 +406,34 @@ exports[`UU5.Bricks.Text dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Text elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Text fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu-fulltextsearch-0 uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Text hidden=false 1`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Text hidden=false 3`] = `
 <div
   className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
   id="uuID"
@@ -392,10 +451,28 @@ exports[`UU5.Bricks.Text hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Text hidden=true 3`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-common-hidden uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Text id="myId" 1`] = `
 <div
   className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Text id="test-id" 1`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -465,6 +542,15 @@ exports[`UU5.Bricks.Text nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Text nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Text nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
@@ -484,6 +570,15 @@ exports[`UU5.Bricks.Text nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Text nestingLevel="inline" 1`] = `
+<span
+  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-inline"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Text nestingLevel="inline" 3`] = `
 <span
   className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-inline"
   id="uuID"
@@ -539,7 +634,25 @@ exports[`UU5.Bricks.Text noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Text noIndex=true 1`] = `
 <div
-  className="uu5-bricks-text uu5-common-text uu5-noindex uu5-bricks-text-nesting-level-small-box"
+  className="uu5-bricks-text uu5-common-text uu5-noindex uu-fulltextsearch-0 uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Text noPrint=false 1`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Text noPrint=true 1`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
   id="uuID"
   style={Object {}}
   title={null}
@@ -604,6 +717,19 @@ exports[`UU5.Bricks.Text style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Text style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

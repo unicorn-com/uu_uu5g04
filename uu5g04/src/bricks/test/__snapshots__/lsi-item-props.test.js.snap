@@ -85,6 +85,14 @@ exports[`UU5.Bricks.Lsi.Item props className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi.Item props className="test-classname" 1`] = `
+<Span
+  className="uu5-bricks-lsi-item test-classname"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Lsi.Item props content="This is Content from ContentMixin" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
@@ -135,7 +143,24 @@ exports[`UU5.Bricks.Lsi.Item props disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi.Item props disabled=false 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Lsi.Item props disabled=true 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  disabled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props disabled=true 3`] = `
 <Span
   className="uu5-bricks-lsi-item"
   disabled={true}
@@ -161,7 +186,31 @@ exports[`UU5.Bricks.Lsi.Item props dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi.Item props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props fullTextSearchPriority=0 1`] = `
+<Span
+  className="uu5-bricks-lsi-item uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Lsi.Item props hidden=false 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props hidden=false 3`] = `
 <Span
   className="uu5-bricks-lsi-item"
   id="uuID-inner"
@@ -178,10 +227,27 @@ exports[`UU5.Bricks.Lsi.Item props hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi.Item props hidden=true 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Lsi.Item props id="myId" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
   id="myId-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props id="test-id" 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  id="test-id-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -235,6 +301,22 @@ exports[`UU5.Bricks.Lsi.Item props name="myName" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi.Item props nestingLevel="box" 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props nestingLevel="inline" 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Lsi.Item props noIndex=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
@@ -245,7 +327,23 @@ exports[`UU5.Bricks.Lsi.Item props noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Lsi.Item props noIndex=true 1`] = `
 <Span
-  className="uu5-bricks-lsi-item uu5-noindex"
+  className="uu5-bricks-lsi-item uu5-noindex uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props noPrint=false 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props noPrint=true 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
   id="uuID-inner"
   mainAttrs={Object {}}
 />
@@ -308,6 +406,19 @@ exports[`UU5.Bricks.Lsi.Item props style={"backgroundColor":"red","color":"blue"
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props style={"margin":8} 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  style={
+    Object {
+      "margin": 8,
     }
   }
 />

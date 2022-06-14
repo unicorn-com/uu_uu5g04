@@ -77,6 +77,17 @@ exports[`UU5.Bricks.Box className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Box className="test-classname" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text test-classname uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Box colorSchema="brown" 1`] = `
 <Fragment>
   <div
@@ -381,7 +392,34 @@ exports[`UU5.Bricks.Box disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Box disabled=false 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Box disabled=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-disabled uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Box disabled=true 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-box uu5-bricks-text uu5-common-disabled uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
@@ -409,6 +447,17 @@ exports[`UU5.Bricks.Box dynamic=false 1`] = `
 `;
 
 exports[`UU5.Bricks.Box dynamic=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Box elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
 <Fragment>
   <div
     className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
@@ -447,7 +496,29 @@ exports[`UU5.Bricks.Box example from docKit UU5.Bricks.Box in The box are Icon a
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Box fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Box hidden=false 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Box hidden=false 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
@@ -469,11 +540,33 @@ exports[`UU5.Bricks.Box hidden=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Box hidden=true 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-hidden uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Box id="myId" 1`] = `
 <Fragment>
   <div
     className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
     id="myId"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Box id="test-id" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="test-id"
     style={Object {}}
     title={null}
   />
@@ -587,6 +680,17 @@ exports[`UU5.Bricks.Box nestingLevel="box" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Box nestingLevel="box" 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Box nestingLevel="boxCollection" 1`] = `
 <Fragment>
   <div
@@ -610,6 +714,15 @@ exports[`UU5.Bricks.Box nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Box nestingLevel="inline" 1`] = `
+<Text
+  className="uu5-bricks-box uu5-bricks-text"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="inline"
+/>
+`;
+
+exports[`UU5.Bricks.Box nestingLevel="inline" 3`] = `
 <Text
   className="uu5-bricks-box uu5-bricks-text"
   id="uuID-inner"
@@ -676,7 +789,29 @@ exports[`UU5.Bricks.Box noIndex=false 1`] = `
 exports[`UU5.Bricks.Box noIndex=true 1`] = `
 <Fragment>
   <div
-    className="uu5-bricks-box uu5-bricks-text uu5-noindex uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    className="uu5-bricks-box uu5-bricks-text uu5-noindex uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Box noPrint=false 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Box noPrint=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
     id="uuID"
     style={Object {}}
     title={null}
@@ -753,6 +888,21 @@ exports[`UU5.Bricks.Box style={"backgroundColor":"red","color":"blue"} 1`] = `
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Box style={"margin":8} 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID"
+    style={
+      Object {
+        "margin": 8,
       }
     }
     title={null}

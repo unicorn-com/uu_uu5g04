@@ -118,6 +118,7 @@ export const TagSelect = Context.withContext(
     componentDidUpdate(prevProps, prevState) {
       if (prevState.language !== this.state.language) {
         this._initAvailableTags(this.props);
+        this._correctAvailableTags(this.state.value, this.props);
       }
     },
 

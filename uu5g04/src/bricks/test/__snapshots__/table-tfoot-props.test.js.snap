@@ -72,6 +72,15 @@ exports[`UU5.Bricks.Table.TFoot className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.TFoot className="test-classname" 1`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.TFoot colorSchema="brown" 1`] = `
 <tfoot
   className="color-schema-brown uu5-bricks-table-tfoot"
@@ -297,7 +306,30 @@ exports[`UU5.Bricks.Table.TFoot disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.TFoot disabled=false 3`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.TFoot disabled=true 1`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</tfoot>
+`;
+
+exports[`UU5.Bricks.Table.TFoot disabled=true 3`] = `
 <tfoot
   className="uu5-bricks-table-tfoot uu5-common-disabled"
   id="uuID"
@@ -329,7 +361,34 @@ exports[`UU5.Bricks.Table.TFoot dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.TFoot elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.TFoot fullTextSearchPriority=0 1`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.TFoot hidden=false 1`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.TFoot hidden=false 3`] = `
 <tfoot
   className="uu5-bricks-table-tfoot"
   id="uuID"
@@ -347,10 +406,28 @@ exports[`UU5.Bricks.Table.TFoot hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.TFoot hidden=true 3`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.TFoot id="myId" 1`] = `
 <tfoot
   className="uu5-bricks-table-tfoot"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.TFoot id="test-id" 1`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -420,6 +497,15 @@ exports[`UU5.Bricks.Table.TFoot nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.TFoot nestingLevel="box" 3`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.TFoot nestingLevel="boxCollection" 1`] = `
 <tfoot
   className="uu5-bricks-table-tfoot"
@@ -439,6 +525,8 @@ exports[`UU5.Bricks.Table.TFoot nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Table.TFoot nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Table.TFoot nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Table.TFoot nestingLevel="page" 1`] = `
 <tfoot
@@ -487,7 +575,25 @@ exports[`UU5.Bricks.Table.TFoot noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Table.TFoot noIndex=true 1`] = `
 <tfoot
-  className="uu5-bricks-table-tfoot uu5-noindex"
+  className="uu5-bricks-table-tfoot uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.TFoot noPrint=false 1`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.TFoot noPrint=true 1`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot"
   id="uuID"
   style={Object {}}
   title={null}
@@ -625,6 +731,19 @@ exports[`UU5.Bricks.Table.TFoot style={"backgroundColor":"red","color":"blue"} 1
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.TFoot style={"margin":8} 1`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

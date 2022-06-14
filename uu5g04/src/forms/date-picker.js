@@ -25,7 +25,8 @@ import TextInput from "./internal/text-input.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
 import DateTools from "./internal/date-tools.js";
 import Context from "./form-context.js";
-import withUserPreferences from "../common/user-preferences";
+import withUserPreferences from "../common/user-preferences.js";
+import withUserPreferencesDateAdapter from "./internal/with-user-preferences-date-adapter.js";
 
 import "./calendar.less";
 import "./date-picker.less";
@@ -648,7 +649,7 @@ let DatePicker = Context.withContext(
       } else {
         if (!this._hasFocus) {
           this._onFocus(opt); // make sure that the component knows that it has focus
-          opt.value = e.target.value;
+          opt = { ...opt, value: e.target.value };
         }
         this._updateState({ value: opt.value });
       }
@@ -670,7 +671,7 @@ let DatePicker = Context.withContext(
       };
 
       if (this.props.validateOnChange) {
-        opt.value = opt._data.value;
+        opt = { ...opt, value: opt._data.value };
         if (this._checkRequired(opt)) {
           let validationResult = this._validateDate(opt);
           if (validationResult.feedback === "initial" && !this._validateOnChange(opt)) {
@@ -682,9 +683,13 @@ let DatePicker = Context.withContext(
         if (value) {
           if (this._checkRequired({ value })) {
             opt.required = this.props.required;
-            opt.value = value;
-            opt.feedback = this.getFeedback();
-            opt.message = this.getMessage();
+            opt = {
+              ...opt,
+              required: this.props.required,
+              value,
+              feedback: this.getFeedback(),
+              message: this.getMessage(),
+            };
             let result = this.getChangeFeedback(opt);
             _callCallback = false;
             this._updateState(result, closeOnChange, callback);
@@ -1076,7 +1081,8 @@ let DatePicker = Context.withContext(
   })
 );
 
-DatePicker = withUserPreferences(DatePicker, { weekStartDay: "weekStartDay" });
+DatePicker = withUserPreferencesDateAdapter(DatePicker);
+DatePicker = withUserPreferences(DatePicker, { weekStartDay: "weekStartDay", _dateFormat: "shortDateFormat" });
 const Datepicker = DatePicker;
 
 export { DatePicker, Datepicker };

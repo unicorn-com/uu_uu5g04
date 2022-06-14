@@ -209,6 +209,28 @@ exports[`UU5.Bricks.Ul className="my-classname" 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ul className="test-classname" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul test-classname"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ul content="This is Content from ContentMixin" 1`] = `
 <ContextProvider
   value={
@@ -341,7 +363,56 @@ exports[`UU5.Bricks.Ul disabled=false 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ul disabled=false 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ul disabled=true 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul uu5-common-disabled"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </ul>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ul disabled=true 3`] = `
 <ContextProvider
   value={
     Object {
@@ -412,6 +483,28 @@ exports[`UU5.Bricks.Ul dynamic=true 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ul elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ul footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <ContextProvider
   value={
@@ -441,6 +534,28 @@ exports[`UU5.Bricks.Ul footer={"type":"div","key":null,"ref":null,"props":{"chil
       key="uuID-footer"
     />
   </ul>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ul fullTextSearchPriority=0 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul uu-fulltextsearch-0"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
 </ContextProvider>
 `;
 
@@ -499,7 +614,51 @@ exports[`UU5.Bricks.Ul hidden=false 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ul hidden=false 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ul hidden=true 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul uu5-common-hidden"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ul hidden=true 3`] = `
 <ContextProvider
   value={
     Object {
@@ -536,6 +695,28 @@ exports[`UU5.Bricks.Ul id="myId" 1`] = `
   <ul
     className="uu5-bricks-ul"
     id="myId"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ul id="test-id" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul"
+    id="test-id"
     style={Object {}}
     title={null}
     type={null}
@@ -1006,6 +1187,28 @@ exports[`UU5.Bricks.Ul nestingLevel="box" 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ul nestingLevel="box" 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ul nestingLevel="boxCollection" 1`] = `
 <ContextProvider
   value={
@@ -1051,6 +1254,28 @@ exports[`UU5.Bricks.Ul nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Ul nestingLevel="inline" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul uu-bricks-18xdgtf"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ul nestingLevel="inline" 3`] = `
 <ContextProvider
   value={
     Object {
@@ -1195,7 +1420,51 @@ exports[`UU5.Bricks.Ul noIndex=true 1`] = `
   }
 >
   <ul
-    className="uu5-bricks-ul uu5-noindex"
+    className="uu5-bricks-ul uu5-noindex uu-fulltextsearch-0"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ul noPrint=false 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ul noPrint=true 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul"
     id="uuID"
     style={Object {}}
     title={null}
@@ -1294,6 +1563,32 @@ exports[`UU5.Bricks.Ul style={"backgroundColor":"red","color":"blue"} 1`] = `
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ul style={"margin":8} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul"
+    id="uuID"
+    style={
+      Object {
+        "margin": 8,
       }
     }
     title={null}

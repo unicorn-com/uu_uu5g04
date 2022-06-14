@@ -1961,6 +1961,7 @@ exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
               "elevation": null,
               "feedback": "initial",
               "focusMessage": null,
+              "fullTextSearchPriority": undefined,
               "hidden": false,
               "icon": "mdi-check",
               "iconPosition": "right",
@@ -1987,7 +1988,6 @@ exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
               "mainAttrs": null,
               "message": null,
               "name": null,
-              "noIndex": false,
               "onBlur": null,
               "onChange": null,
               "onClick": null,
@@ -2201,7 +2201,6 @@ exports[`UU5.Forms.TextInputMixin interface isValid() should return false 1`] = 
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -2324,6 +2323,7 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
               "elevation": null,
               "feedback": "initial",
               "focusMessage": null,
+              "fullTextSearchPriority": undefined,
               "hidden": false,
               "icon": "mdi-check",
               "iconPosition": "right",
@@ -2350,7 +2350,6 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
               "mainAttrs": null,
               "message": null,
               "name": null,
-              "noIndex": false,
               "onBlur": null,
               "onChange": null,
               "onClick": null,

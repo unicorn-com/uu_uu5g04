@@ -46,7 +46,6 @@ exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] =
           mainAttrs={null}
           name={null}
           nestingLevel={null}
-          noIndex={false}
           parent={null}
           pureRender={false}
           ref_={null}
@@ -123,7 +122,6 @@ exports[`UU5.Forms.Controls props buttonReset=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -160,7 +158,6 @@ exports[`UU5.Forms.Controls props buttonReset=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -206,7 +203,6 @@ exports[`UU5.Forms.Controls props buttonReset=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -242,7 +238,6 @@ exports[`UU5.Forms.Controls props buttonReset=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -279,7 +274,6 @@ exports[`UU5.Forms.Controls props buttonReset=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -324,7 +318,6 @@ exports[`UU5.Forms.Controls props buttonValidate=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -361,7 +354,6 @@ exports[`UU5.Forms.Controls props buttonValidate=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -407,7 +399,6 @@ exports[`UU5.Forms.Controls props buttonValidate=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -443,7 +434,6 @@ exports[`UU5.Forms.Controls props buttonValidate=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -480,7 +470,6 @@ exports[`UU5.Forms.Controls props buttonValidate=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -525,7 +514,6 @@ exports[`UU5.Forms.Controls props className="my-classname" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -562,7 +550,86 @@ exports[`UU5.Forms.Controls props className="my-classname" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props className="test-classname" 1`] = `
+<Div
+  className="uu5-forms-controls test-classname"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
         params={null}
         parent={null}
         pureRender={false}
@@ -607,7 +674,6 @@ exports[`UU5.Forms.Controls props controlled=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -644,7 +710,6 @@ exports[`UU5.Forms.Controls props controlled=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -689,7 +754,6 @@ exports[`UU5.Forms.Controls props controlled=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -726,7 +790,6 @@ exports[`UU5.Forms.Controls props controlled=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -771,7 +834,6 @@ exports[`UU5.Forms.Controls props default props 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -808,7 +870,6 @@ exports[`UU5.Forms.Controls props default props 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -853,7 +914,6 @@ exports[`UU5.Forms.Controls props disabled=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -890,7 +950,86 @@ exports[`UU5.Forms.Controls props disabled=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props disabled=false 3`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
         params={null}
         parent={null}
         pureRender={false}
@@ -935,7 +1074,6 @@ exports[`UU5.Forms.Controls props disabled=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -973,7 +1111,6 @@ exports[`UU5.Forms.Controls props disabled=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -984,6 +1121,248 @@ exports[`UU5.Forms.Controls props disabled=true 1`] = `
       />
     }
     disabled={true}
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props disabled=true 3`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    disabled={true}
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    disabled={true}
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props fullTextSearchPriority=0 1`] = `
+<Div
+  className="uu5-forms-controls uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
     onClick={[Function]}
   />
 </Div>
@@ -1019,7 +1398,6 @@ exports[`UU5.Forms.Controls props hidden=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1056,7 +1434,86 @@ exports[`UU5.Forms.Controls props hidden=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props hidden=false 3`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
         params={null}
         parent={null}
         pureRender={false}
@@ -1102,7 +1559,6 @@ exports[`UU5.Forms.Controls props hidden=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1139,7 +1595,87 @@ exports[`UU5.Forms.Controls props hidden=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props hidden=true 3`] = `
+<Div
+  className="uu5-forms-controls"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
         params={null}
         parent={null}
         pureRender={false}
@@ -1184,7 +1720,6 @@ exports[`UU5.Forms.Controls props id="myId" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1221,7 +1756,86 @@ exports[`UU5.Forms.Controls props id="myId" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props id="test-id" 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="test-id-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
         params={null}
         parent={null}
         pureRender={false}
@@ -1266,7 +1880,6 @@ exports[`UU5.Forms.Controls props mainAttrs=undefined 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1303,7 +1916,6 @@ exports[`UU5.Forms.Controls props mainAttrs=undefined 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1349,7 +1961,6 @@ exports[`UU5.Forms.Controls props name="myName" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1386,7 +1997,166 @@ exports[`UU5.Forms.Controls props name="myName" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props nestingLevel="box" 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props nestingLevel="inline" 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
         params={null}
         parent={null}
         pureRender={false}
@@ -1431,7 +2201,6 @@ exports[`UU5.Forms.Controls props noIndex=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1468,7 +2237,6 @@ exports[`UU5.Forms.Controls props noIndex=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1485,7 +2253,7 @@ exports[`UU5.Forms.Controls props noIndex=false 1`] = `
 
 exports[`UU5.Forms.Controls props noIndex=true 1`] = `
 <Div
-  className="uu5-forms-controls uu5-noindex"
+  className="uu5-forms-controls uu5-noindex uu-fulltextsearch-0"
   id="uuID-inner"
   mainAttrs={Object {}}
 >
@@ -1513,7 +2281,6 @@ exports[`UU5.Forms.Controls props noIndex=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1550,7 +2317,166 @@ exports[`UU5.Forms.Controls props noIndex=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props noPrint=false 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props noPrint=true 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
         params={null}
         parent={null}
         pureRender={false}
@@ -1595,7 +2521,6 @@ exports[`UU5.Forms.Controls props pureRender=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1632,7 +2557,6 @@ exports[`UU5.Forms.Controls props pureRender=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1678,7 +2602,6 @@ exports[`UU5.Forms.Controls props pureRender=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1715,7 +2638,6 @@ exports[`UU5.Forms.Controls props pureRender=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1760,7 +2682,6 @@ exports[`UU5.Forms.Controls props selected=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1797,7 +2718,6 @@ exports[`UU5.Forms.Controls props selected=false 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1843,7 +2763,6 @@ exports[`UU5.Forms.Controls props selected=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1880,7 +2799,6 @@ exports[`UU5.Forms.Controls props selected=true 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1931,7 +2849,6 @@ exports[`UU5.Forms.Controls props style="padding:8px; borderRadius: 2px" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1968,7 +2885,6 @@ exports[`UU5.Forms.Controls props style="padding:8px; borderRadius: 2px" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -2019,7 +2935,6 @@ exports[`UU5.Forms.Controls props style={"backgroundColor":"red","color":"blue"}
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -2056,7 +2971,91 @@ exports[`UU5.Forms.Controls props style={"backgroundColor":"red","color":"blue"}
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props style={"margin":8} 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
         params={null}
         parent={null}
         pureRender={false}
@@ -2106,7 +3105,6 @@ exports[`UU5.Forms.Controls props tooltip="My Tooltip" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -2143,7 +3141,6 @@ exports[`UU5.Forms.Controls props tooltip="My Tooltip" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}

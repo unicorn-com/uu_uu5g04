@@ -1,6 +1,7 @@
 //@@viewOn:imports
 import React from "react";
 import { PropTypes } from "uu5g05";
+import { Utils } from "uu5g05";
 import ns from "./common-ns.js";
 import BaseMixin from "./base-mixin.js";
 import Css from "./css";
@@ -9,7 +10,7 @@ import Uu5Component from "./component";
 
 const VISIBILITY_CHECK_ALLOWED = !navigator.webdriver; // don't check visibility if running in headless browser (e.g. when generating PDFs on server)
 
-export const withVisibilityCheck = function (Component, reserve = 500) {
+export const withVisibilityCheck = function (Component, reserve = 500, blockPrint = false) {
   if (typeof IntersectionObserver === "undefined" || !VISIBILITY_CHECK_ALLOWED) return Component;
 
   const VisibilityCheck = Uu5Component.create({
@@ -51,6 +52,7 @@ export const withVisibilityCheck = function (Component, reserve = 500) {
       return { visible: false };
     },
     componentDidMount() {
+      if (blockPrint) this._printBlockerId = Utils.Print.registerPrintBlocker(this._printRequestCallback);
       let domNodeRect = this._domNode.getBoundingClientRect();
       let isVisible = domNodeRect.top <= window.innerHeight + reserve && domNodeRect.bottom >= -reserve;
       if (isVisible) {
@@ -61,10 +63,19 @@ export const withVisibilityCheck = function (Component, reserve = 500) {
       }
     },
     componentWillUnmount() {
+      if (blockPrint) Utils.Print.unregisterPrintBlocker(this._printBlockerId);
       if (this._observer) this._observer.disconnect();
     },
     //@@viewOff:reactLifeCycle
     //@@viewOn:private
+    _onPrintReady() {
+      Utils.Print.unregisterPrintBlocker(this._printBlockerId);
+    },
+
+    _printRequestCallback() {
+      this.setState({ visible: true });
+    },
+
     _onIntersected(entries, observer) {
       let entry = entries[entries.length - 1];
       if (entry && entry.isIntersecting) {
@@ -89,7 +100,10 @@ export const withVisibilityCheck = function (Component, reserve = 500) {
       }
 
       return visible ? (
-        <Component {...this.props} />
+        <Component
+          {...this.props}
+          onPrintReady={blockPrint ? this._onPrintReady : this.props.onPrintReady} // if print blocking is not enabled, do not overwrite original value just to be safe
+        />
       ) : (
         <span ref={this._setRef} className={this.getClassName("placeholder")} style={style} />
       );

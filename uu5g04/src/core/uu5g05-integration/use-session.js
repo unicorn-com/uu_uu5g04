@@ -13,7 +13,16 @@
  * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
-import { useSession, createComponent, PropTypes, useState, usePreviousValue, useMemo, useLayoutEffect } from "uu5g05";
+import {
+  useSession,
+  createComponent,
+  PropTypes,
+  useState,
+  usePreviousValue,
+  useMemo,
+  useLayoutEffect,
+  Utils,
+} from "uu5g05";
 
 const SessionContext = useSession._context;
 const sessionHolder = useSession._sessionHolder;
@@ -24,10 +33,10 @@ const registerSession = (session, setIdentity, setExpiring) => {
 
   const changeIdentity = () => {
     if (typeof session.getIdentity === "function") {
-      let newIdentity = session.isAuthenticated() ? session.getIdentity() : null;
+      let newIdentity = getIdentityFromSession(session);
       setIdentity((curIdentity) =>
         newIdentity !== curIdentity &&
-        (!newIdentity || !curIdentity || JSON.stringify(newIdentity) !== JSON.stringify(curIdentity))
+        (!newIdentity || !curIdentity || !Utils.Object.shallowEqual(newIdentity, curIdentity))
           ? newIdentity
           : curIdentity
       );
@@ -63,6 +72,19 @@ const registerSession = (session, setIdentity, setExpiring) => {
   };
 };
 
+function getIdentityFromSession(currentSession) {
+  if (!currentSession || !currentSession.isAuthenticated()) return null;
+  let oidcIdentity = currentSession.getIdentity(); // contains also internal fields, methods, ... => we'll use only subset of fields
+  let uu5Identity = {};
+  uu5Identity.id = oidcIdentity.id;
+  uu5Identity.name = oidcIdentity.name;
+  uu5Identity.email = oidcIdentity.email;
+  uu5Identity.uuIdentity = oidcIdentity.uuIdentity;
+  uu5Identity.levelOfAssurance = oidcIdentity.levelOfAssurance;
+  uu5Identity.loginLevelOfAssurance = oidcIdentity.loginLevelOfAssurance;
+  return uu5Identity;
+}
+
 const SessionProvider = createComponent({
   uu5Tag: "UU5.Hooks.SessionProvider",
 
@@ -84,25 +106,17 @@ const SessionProvider = createComponent({
   },
 
   render({ session, children }) {
-    const [identity, setIdentity] = useState(() =>
-      session && !session.initComplete
-        ? undefined
-        : !session || !session.isAuthenticated()
-        ? null
-        : session.getIdentity()
+    let [identity, setIdentity] = useState(() =>
+      session && !session.initComplete ? undefined : getIdentityFromSession(session)
     );
-    const [isExpiring, setExpiring] = useState(() => (session && session.initComplete ? session.isExpiring() : false));
+    let [isExpiring, setExpiring] = useState(() => (session && session.initComplete ? session.isExpiring() : false));
 
     const prevSession = usePreviousValue(session, session);
     if (session !== prevSession) {
-      setIdentity(
-        session && !session.initComplete
-          ? undefined
-          : !session || !session.isAuthenticated()
-          ? null
-          : session.getIdentity()
-      );
-      setExpiring(session && session.initComplete ? session.isExpiring() : false);
+      let newIdentity = session && !session.initComplete ? undefined : getIdentityFromSession(session);
+      if (!Utils.Object.shallowEqual(newIdentity, identity)) setIdentity((identity = newIdentity));
+      let newExpiring = session && session.initComplete ? session.isExpiring() : false;
+      if (newExpiring !== isExpiring) setExpiring((isExpiring = newExpiring));
     }
     useLayoutEffect(() => {
       const unregister = registerSession(session, setIdentity, setExpiring);
@@ -144,4 +158,4 @@ const SessionProvider = createComponent({
   },
 });
 
-export { SessionContext, useSession, SessionProvider };
+export { SessionContext, useSession, SessionProvider, getIdentityFromSession };

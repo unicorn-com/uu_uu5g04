@@ -200,6 +200,26 @@ exports[`UU5.Bricks.Button props testing className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Button props testing className="test-classname" 1`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz test-classname uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Button props testing colorSchema="brown" 1`] = `
 <Fragment>
   <button
@@ -703,7 +723,47 @@ exports[`UU5.Bricks.Button props testing disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Button props testing disabled=false 3`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Button props testing disabled=true 1`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-common-disabled uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    disabled={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Button props testing disabled=true 3`] = `
 <Fragment>
   <button
     className="uu5-bricks-button uu-bricks-1py3saz uu5-common-disabled uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
@@ -803,6 +863,46 @@ exports[`UU5.Bricks.Button props testing dynamic=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Button props testing elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Button props testing fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu-fulltextsearch-0 uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Button props testing hidden=false 1`] = `
 <Fragment>
   <button
@@ -823,7 +923,47 @@ exports[`UU5.Bricks.Button props testing hidden=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Button props testing hidden=false 3`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Button props testing hidden=true 1`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-common-hidden uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Button props testing hidden=true 3`] = `
 <Fragment>
   <button
     className="uu5-bricks-button uu-bricks-1py3saz uu5-common-hidden uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
@@ -958,6 +1098,26 @@ exports[`UU5.Bricks.Button props testing id="myId" 1`] = `
   <button
     className="uu5-bricks-button uu-bricks-1py3saz uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
     id="myId"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Button props testing id="test-id" 1`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="test-id"
     onClick={[Function]}
     style={Object {}}
     title={null}
@@ -1114,6 +1274,26 @@ exports[`UU5.Bricks.Button props testing nestingLevel="box" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Button props testing nestingLevel="box" 3`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Button props testing nestingLevel="boxCollection" 1`] = `
 <Fragment>
   <button
@@ -1155,6 +1335,23 @@ exports[`UU5.Bricks.Button props testing nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Button props testing nestingLevel="inline" 1`] = `
+<Fragment>
+  <Link
+    baseline={false}
+    bgStyle="filled"
+    borderRadius={null}
+    displayBlock={false}
+    elevation={null}
+    elevationHover={null}
+    id="uuID"
+    nestingLevel="inline"
+    pressed={false}
+    size="m"
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Button props testing nestingLevel="inline" 3`] = `
 <Fragment>
   <Link
     baseline={false}
@@ -1274,7 +1471,47 @@ exports[`UU5.Bricks.Button props testing noIndex=false 1`] = `
 exports[`UU5.Bricks.Button props testing noIndex=true 1`] = `
 <Fragment>
   <button
-    className="uu5-bricks-button uu-bricks-1py3saz uu5-noindex uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-noindex uu-fulltextsearch-0 uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Button props testing noPrint=false 1`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Button props testing noPrint=true 1`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
     id="uuID"
     onClick={[Function]}
     style={Object {}}
@@ -1526,6 +1763,30 @@ exports[`UU5.Bricks.Button props testing style={"backgroundColor":"red","color":
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+    title={null}
+    type="button"
+  >
+    <span
+      className="uu5-bricks-button-text"
+      key="0"
+    >
+      Button
+    </span>
+  </button>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Button props testing style={"margin":8} 1`] = `
+<Fragment>
+  <button
+    className="uu5-bricks-button uu-bricks-1py3saz uu5-bricks-button-m uu5-bricks-button-filled uu-bricks-zsiwht uu-bricks-1scckva"
+    id="uuID"
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": 8,
       }
     }
     title={null}

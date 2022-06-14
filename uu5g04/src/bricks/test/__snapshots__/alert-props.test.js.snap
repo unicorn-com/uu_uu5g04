@@ -456,6 +456,56 @@ exports[`UU5.Bricks.Alert props className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Alert props className="test-classname" 1`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert test-classname uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Alert props closeDisabled=false 1`] = `
 <div
   className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
@@ -1893,7 +1943,111 @@ exports[`UU5.Bricks.Alert props disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Alert props disabled=false 3`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Alert props disabled=true 1`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-common-disabled uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Alert props disabled=true 3`] = `
 <div
   className="uu-bricks-9me4w6 uu5-bricks-alert uu5-common-disabled uu5-bricks-alert-center uu5-bricks-alert-with-header"
   id="uuID"
@@ -2047,7 +2201,157 @@ exports[`UU5.Bricks.Alert props dynamic=true 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Alert props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Alert props fullTextSearchPriority=0 1`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu-fulltextsearch-0 uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Alert props hidden=false 1`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Alert props hidden=false 3`] = `
 <div
   className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
   id="uuID"
@@ -2147,10 +2451,110 @@ exports[`UU5.Bricks.Alert props hidden=true 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Alert props hidden=true 3`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-common-hidden uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Alert props id="myId" 1`] = `
 <div
   className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
   id="myId"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Alert props id="test-id" 1`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="test-id"
   style={
     Object {
       "MozTransitionDuration": "0.15s",
@@ -2548,6 +2952,56 @@ exports[`UU5.Bricks.Alert props nestingLevel="box" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Alert props nestingLevel="box" 3`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Alert props nestingLevel="boxCollection" 1`] = `
 <div
   className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
@@ -2649,6 +3103,28 @@ exports[`UU5.Bricks.Alert props nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Alert props nestingLevel="inline" 1`] = `
+<span
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header uu-bricks-1dw0pkm"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Alert props nestingLevel="inline" 3`] = `
 <span
   className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header uu-bricks-1dw0pkm"
   id="uuID"
@@ -2866,7 +3342,107 @@ exports[`UU5.Bricks.Alert props noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Alert props noIndex=true 1`] = `
 <div
-  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-noindex uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-noindex uu-fulltextsearch-0 uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Alert props noPrint=false 1`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Alert props noPrint=true 1`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
   id="uuID"
   style={
     Object {
@@ -3394,6 +3970,57 @@ exports[`UU5.Bricks.Alert props style={"backgroundColor":"red","color":"blue"} 1
       "WebkitTransitionDuration": "0.15s",
       "backgroundColor": "red",
       "color": "blue",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-alert-header-wrapper"
+    key="header"
+  >
+    <div
+      className="uu5-bricks-alert-header"
+    >
+      Header content
+    </div>
+    <div
+      className="uu-bricks-1u4gepp"
+    >
+      <Link
+        className="uu5-bricks-alert-close"
+        colorSchema="custom"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="mdi-close"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    className="uu5-bricks-alert-content"
+    key="content"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Alert props style={"margin":8} 1`] = `
+<div
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "margin": 8,
       "transitionDuration": "0.15s",
     }
   }

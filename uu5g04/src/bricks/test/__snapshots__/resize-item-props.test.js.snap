@@ -14,6 +14,8 @@ exports[`UU5.Bricks.Resize.Item checkSpaces=true 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item className="my-classname" 1`] = `"Content"`;
 
+exports[`UU5.Bricks.Resize.Item className="test-classname" 1`] = `"Content"`;
+
 exports[`UU5.Bricks.Resize.Item content="This is Content from ContentMixin" 1`] = `"This is Content from ContentMixin"`;
 
 exports[`UU5.Bricks.Resize.Item content=12345 1`] = `12345`;
@@ -26,17 +28,31 @@ exports[`UU5.Bricks.Resize.Item default props 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item disabled=false 1`] = `"Content"`;
 
+exports[`UU5.Bricks.Resize.Item disabled=false 3`] = `"Content"`;
+
 exports[`UU5.Bricks.Resize.Item disabled=true 1`] = `"Content"`;
+
+exports[`UU5.Bricks.Resize.Item disabled=true 3`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item dynamic=false 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item dynamic=true 1`] = `"Content"`;
 
+exports[`UU5.Bricks.Resize.Item elementAttrs={"data":{"test":"data-test-value"}} 1`] = `"Content"`;
+
+exports[`UU5.Bricks.Resize.Item fullTextSearchPriority=0 1`] = `"Content"`;
+
 exports[`UU5.Bricks.Resize.Item hidden=false 1`] = `"Content"`;
+
+exports[`UU5.Bricks.Resize.Item hidden=false 3`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item hidden=true 1`] = `"Content"`;
 
+exports[`UU5.Bricks.Resize.Item hidden=true 3`] = `"Content"`;
+
 exports[`UU5.Bricks.Resize.Item id="myId" 1`] = `"Content"`;
+
+exports[`UU5.Bricks.Resize.Item id="test-id" 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item ignoreHTML=false 1`] = `"Content"`;
 
@@ -56,11 +72,15 @@ exports[`UU5.Bricks.Resize.Item nestingLevel="bigBoxCollection" 1`] = `"Content"
 
 exports[`UU5.Bricks.Resize.Item nestingLevel="box" 1`] = `"Content"`;
 
+exports[`UU5.Bricks.Resize.Item nestingLevel="box" 3`] = `"Content"`;
+
 exports[`UU5.Bricks.Resize.Item nestingLevel="boxCollection" 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item nestingLevel="container" 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item nestingLevel="inline" 1`] = `"Content"`;
+
+exports[`UU5.Bricks.Resize.Item nestingLevel="inline" 3`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item nestingLevel="page" 1`] = `"Content"`;
 
@@ -74,6 +94,10 @@ exports[`UU5.Bricks.Resize.Item noIndex=false 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item noIndex=true 1`] = `"Content"`;
 
+exports[`UU5.Bricks.Resize.Item noPrint=false 1`] = `"Content"`;
+
+exports[`UU5.Bricks.Resize.Item noPrint=true 1`] = `"Content"`;
+
 exports[`UU5.Bricks.Resize.Item selected=false 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item selected=true 1`] = `"Content"`;
@@ -81,6 +105,8 @@ exports[`UU5.Bricks.Resize.Item selected=true 1`] = `"Content"`;
 exports[`UU5.Bricks.Resize.Item style="padding:8px; borderRadius: 2px" 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item style={"backgroundColor":"red","color":"blue"} 1`] = `"Content"`;
+
+exports[`UU5.Bricks.Resize.Item style={"margin":8} 1`] = `"Content"`;
 
 exports[`UU5.Bricks.Resize.Item textCorrector=false 1`] = `"Content"`;
 

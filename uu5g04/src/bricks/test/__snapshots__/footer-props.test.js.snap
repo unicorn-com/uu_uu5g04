@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Footer className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Footer className="test-classname" 1`] = `
+<footer
+  className="uu5-bricks-footer test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Footer content="This is Content from ContentMixin" 1`] = `
 <footer
   className="uu5-bricks-footer"
@@ -124,7 +133,25 @@ exports[`UU5.Bricks.Footer disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Footer disabled=false 3`] = `
+<footer
+  className="uu5-bricks-footer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Footer disabled=true 1`] = `
+<footer
+  className="uu5-bricks-footer uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Footer disabled=true 3`] = `
 <footer
   className="uu5-bricks-footer uu5-common-disabled"
   id="uuID"
@@ -151,7 +178,34 @@ exports[`UU5.Bricks.Footer dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Footer elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<footer
+  className="uu5-bricks-footer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Footer fullTextSearchPriority=0 1`] = `
+<footer
+  className="uu5-bricks-footer uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Footer hidden=false 1`] = `
+<footer
+  className="uu5-bricks-footer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Footer hidden=false 3`] = `
 <footer
   className="uu5-bricks-footer"
   id="uuID"
@@ -169,10 +223,28 @@ exports[`UU5.Bricks.Footer hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Footer hidden=true 3`] = `
+<footer
+  className="uu5-bricks-footer uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Footer id="myId" 1`] = `
 <footer
   className="uu5-bricks-footer"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Footer id="test-id" 1`] = `
+<footer
+  className="uu5-bricks-footer"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -368,6 +440,15 @@ exports[`UU5.Bricks.Footer nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Footer nestingLevel="box" 3`] = `
+<footer
+  className="uu5-bricks-footer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Footer nestingLevel="boxCollection" 1`] = `
 <footer
   className="uu5-bricks-footer"
@@ -387,6 +468,15 @@ exports[`UU5.Bricks.Footer nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Footer nestingLevel="inline" 1`] = `
+<footer
+  className="uu5-bricks-footer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Footer nestingLevel="inline" 3`] = `
 <footer
   className="uu5-bricks-footer"
   id="uuID"
@@ -442,7 +532,25 @@ exports[`UU5.Bricks.Footer noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Footer noIndex=true 1`] = `
 <footer
-  className="uu5-bricks-footer uu5-noindex"
+  className="uu5-bricks-footer uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Footer noPrint=false 1`] = `
+<footer
+  className="uu5-bricks-footer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Footer noPrint=true 1`] = `
+<footer
+  className="uu5-bricks-footer"
   id="uuID"
   style={Object {}}
   title={null}
@@ -507,6 +615,19 @@ exports[`UU5.Bricks.Footer style={"backgroundColor":"red","color":"blue"} 1`] = 
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Footer style={"margin":8} 1`] = `
+<footer
+  className="uu5-bricks-footer"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

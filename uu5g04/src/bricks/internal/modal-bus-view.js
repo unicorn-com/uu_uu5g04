@@ -51,6 +51,7 @@ const classNames = {
     flex: 1 1 auto;
     position: relative;
     min-height: 0;
+    min-width: 0;
 
     .uu5-bricks-modal-layout-wrapper {
       background-color: #fff;
@@ -64,6 +65,8 @@ const classNames = {
         ? `& > :nth-child(${itemList.findIndex((item) => item.id === activeItemId) + 2}) {
             // increase index to skip focusCapturer
             display: flex;
+            flex-grow: 1;
+            min-width: 0;
           }`
         : ""
     }

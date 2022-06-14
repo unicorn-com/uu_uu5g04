@@ -9,6 +9,15 @@ exports[`UU5.Bricks.Table.Col className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Col className="test-classname" 1`] = `
+<col
+  className="uu5-bricks-table-col test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Col colorSchema="brown" 1`] = `
 <col
   className="color-schema-brown uu5-bricks-table-col uu5-common-bg"
@@ -216,7 +225,25 @@ exports[`UU5.Bricks.Table.Col disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Col disabled=false 3`] = `
+<col
+  className="uu5-bricks-table-col"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Col disabled=true 1`] = `
+<col
+  className="uu5-bricks-table-col uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Col disabled=true 3`] = `
 <col
   className="uu5-bricks-table-col uu5-common-disabled"
   id="uuID"
@@ -295,7 +322,34 @@ exports[`UU5.Bricks.Table.Col docKit examples UU5.Bricks.Table.Col should render
 </div>
 `;
 
+exports[`UU5.Bricks.Table.Col elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<col
+  className="uu5-bricks-table-col"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Col fullTextSearchPriority=0 1`] = `
+<col
+  className="uu5-bricks-table-col uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Col hidden=false 1`] = `
+<col
+  className="uu5-bricks-table-col"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Col hidden=false 3`] = `
 <col
   className="uu5-bricks-table-col"
   id="uuID"
@@ -313,10 +367,28 @@ exports[`UU5.Bricks.Table.Col hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Col hidden=true 3`] = `
+<col
+  className="uu5-bricks-table-col uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Col id="myId" 1`] = `
 <col
   className="uu5-bricks-table-col"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Col id="test-id" 1`] = `
+<col
+  className="uu5-bricks-table-col"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -368,6 +440,15 @@ exports[`UU5.Bricks.Table.Col nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Col nestingLevel="box" 3`] = `
+<col
+  className="uu5-bricks-table-col"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Col nestingLevel="boxCollection" 1`] = `
 <col
   className="uu5-bricks-table-col"
@@ -387,6 +468,8 @@ exports[`UU5.Bricks.Table.Col nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Table.Col nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Table.Col nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Table.Col nestingLevel="page" 1`] = `
 <col
@@ -435,7 +518,25 @@ exports[`UU5.Bricks.Table.Col noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Table.Col noIndex=true 1`] = `
 <col
-  className="uu5-bricks-table-col uu5-noindex"
+  className="uu5-bricks-table-col uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Col noPrint=false 1`] = `
+<col
+  className="uu5-bricks-table-col"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Col noPrint=true 1`] = `
+<col
+  className="uu5-bricks-table-col"
   id="uuID"
   style={Object {}}
   title={null}
@@ -520,6 +621,19 @@ exports[`UU5.Bricks.Table.Col style={"backgroundColor":"red","color":"blue"} 1`]
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Col style={"margin":8} 1`] = `
+<col
+  className="uu5-bricks-table-col"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

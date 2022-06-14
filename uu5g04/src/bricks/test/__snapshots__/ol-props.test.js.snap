@@ -4,7 +4,7 @@ exports[`UU5.Bricks.Ol checkGrammar=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_39",
+      "counterId": "uu5_bricks_list_counter_53",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -31,7 +31,7 @@ exports[`UU5.Bricks.Ol checkGrammar=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_38",
+      "counterId": "uu5_bricks_list_counter_52",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -58,7 +58,7 @@ exports[`UU5.Bricks.Ol checkHighlight=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_41",
+      "counterId": "uu5_bricks_list_counter_55",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -85,7 +85,7 @@ exports[`UU5.Bricks.Ol checkHighlight=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_40",
+      "counterId": "uu5_bricks_list_counter_54",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -112,7 +112,7 @@ exports[`UU5.Bricks.Ol checkSpaces=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_37",
+      "counterId": "uu5_bricks_list_counter_51",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -139,7 +139,7 @@ exports[`UU5.Bricks.Ol checkSpaces=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_36",
+      "counterId": "uu5_bricks_list_counter_50",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -166,7 +166,7 @@ exports[`UU5.Bricks.Ol className="my-classname" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_4",
+      "counterId": "uu5_bricks_list_counter_18",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -189,11 +189,38 @@ exports[`UU5.Bricks.Ol className="my-classname" 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ol className="test-classname" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_3",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol test-classname"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ol content="This is Content from ContentMixin" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_33",
+      "counterId": "uu5_bricks_list_counter_47",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -214,7 +241,7 @@ exports[`UU5.Bricks.Ol content=12345 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_32",
+      "counterId": "uu5_bricks_list_counter_46",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -235,7 +262,7 @@ exports[`UU5.Bricks.Ol controlled=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_17",
+      "counterId": "uu5_bricks_list_counter_31",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -262,7 +289,7 @@ exports[`UU5.Bricks.Ol controlled=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_16",
+      "counterId": "uu5_bricks_list_counter_30",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -316,7 +343,34 @@ exports[`UU5.Bricks.Ol disabled=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_13",
+      "counterId": "uu5_bricks_list_counter_5",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol disabled=false 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_27",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -343,7 +397,38 @@ exports[`UU5.Bricks.Ol disabled=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_12",
+      "counterId": "uu5_bricks_list_counter_6",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol uu5-common-disabled"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol disabled=true 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_26",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -374,7 +459,7 @@ exports[`UU5.Bricks.Ol dynamic=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_45",
+      "counterId": "uu5_bricks_list_counter_59",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -401,7 +486,34 @@ exports[`UU5.Bricks.Ol dynamic=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_44",
+      "counterId": "uu5_bricks_list_counter_58",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_9",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -428,7 +540,7 @@ exports[`UU5.Bricks.Ol footer={"type":"div","key":null,"ref":null,"props":{"chil
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_19",
+      "counterId": "uu5_bricks_list_counter_33",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -460,11 +572,38 @@ exports[`UU5.Bricks.Ol footer={"type":"div","key":null,"ref":null,"props":{"chil
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ol fullTextSearchPriority=0 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_10",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol uu-fulltextsearch-0"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ol header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_18",
+      "counterId": "uu5_bricks_list_counter_32",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -501,7 +640,34 @@ exports[`UU5.Bricks.Ol hidden=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_11",
+      "counterId": "uu5_bricks_list_counter_7",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol hidden=false 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_25",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -528,7 +694,34 @@ exports[`UU5.Bricks.Ol hidden=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_10",
+      "counterId": "uu5_bricks_list_counter_8",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol uu5-common-hidden"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol hidden=true 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_24",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -555,7 +748,7 @@ exports[`UU5.Bricks.Ol id="myId" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_1",
+      "counterId": "uu5_bricks_list_counter_15",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -578,331 +771,34 @@ exports[`UU5.Bricks.Ol id="myId" 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ol id="test-id" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_2",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="test-id"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ol ignoreHTML=false 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_35",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol ignoreHTML=true 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_34",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level="0" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_53",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level="1" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_54",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level="2" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_55",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level="3" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_56",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level="4" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_57",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level="5" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_58",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level="6" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_59",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level=0 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_46",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level=1 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_47",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level=2 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": "uu5_bricks_list_counter_48",
-      "listLevel": 1,
-      "ordered": true,
-      "type": null,
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      content="Li text"
-      id="childID"
-      key="childID"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level=3 1`] = `
 <ContextProvider
   value={
     Object {
@@ -929,11 +825,335 @@ exports[`UU5.Bricks.Ol level=3 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ol ignoreHTML=true 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_48",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level="0" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_67",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level="1" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_68",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level="2" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_69",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level="3" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_70",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level="4" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_71",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level="5" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_72",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level="6" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_73",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level=0 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_60",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level=1 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_61",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level=2 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_62",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol level=3 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_63",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ol level=4 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_50",
+      "counterId": "uu5_bricks_list_counter_64",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -960,7 +1180,7 @@ exports[`UU5.Bricks.Ol level=5 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_51",
+      "counterId": "uu5_bricks_list_counter_65",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -987,7 +1207,7 @@ exports[`UU5.Bricks.Ol level=6 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_52",
+      "counterId": "uu5_bricks_list_counter_66",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1014,7 +1234,7 @@ exports[`UU5.Bricks.Ol mainAttrs=undefined 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_7",
+      "counterId": "uu5_bricks_list_counter_21",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1041,7 +1261,7 @@ exports[`UU5.Bricks.Ol name="myName" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_2",
+      "counterId": "uu5_bricks_list_counter_16",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1069,7 +1289,7 @@ exports[`UU5.Bricks.Ol nestingLevel="bigBox" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_26",
+      "counterId": "uu5_bricks_list_counter_40",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1096,7 +1316,7 @@ exports[`UU5.Bricks.Ol nestingLevel="bigBoxCollection" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_25",
+      "counterId": "uu5_bricks_list_counter_39",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1123,7 +1343,34 @@ exports[`UU5.Bricks.Ol nestingLevel="box" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_28",
+      "counterId": "uu5_bricks_list_counter_13",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol nestingLevel="box" 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_42",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1150,7 +1397,7 @@ exports[`UU5.Bricks.Ol nestingLevel="boxCollection" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_27",
+      "counterId": "uu5_bricks_list_counter_41",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1177,7 +1424,7 @@ exports[`UU5.Bricks.Ol nestingLevel="container" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_23",
+      "counterId": "uu5_bricks_list_counter_37",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1204,7 +1451,34 @@ exports[`UU5.Bricks.Ol nestingLevel="inline" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_31",
+      "counterId": "uu5_bricks_list_counter_14",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol uu-bricks-6b65vc"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol nestingLevel="inline" 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_45",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1231,7 +1505,7 @@ exports[`UU5.Bricks.Ol nestingLevel="page" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_24",
+      "counterId": "uu5_bricks_list_counter_38",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1258,7 +1532,7 @@ exports[`UU5.Bricks.Ol nestingLevel="smallBox" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_30",
+      "counterId": "uu5_bricks_list_counter_44",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1285,7 +1559,7 @@ exports[`UU5.Bricks.Ol nestingLevel="smallBoxCollection" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_29",
+      "counterId": "uu5_bricks_list_counter_43",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1312,7 +1586,7 @@ exports[`UU5.Bricks.Ol nestingLevel="spa" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_22",
+      "counterId": "uu5_bricks_list_counter_36",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1339,7 +1613,7 @@ exports[`UU5.Bricks.Ol noIndex=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_9",
+      "counterId": "uu5_bricks_list_counter_23",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1366,7 +1640,7 @@ exports[`UU5.Bricks.Ol noIndex=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_8",
+      "counterId": "uu5_bricks_list_counter_22",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1374,7 +1648,61 @@ exports[`UU5.Bricks.Ol noIndex=true 1`] = `
   }
 >
   <ol
-    className="uu5-bricks-ol uu5-noindex"
+    className="uu5-bricks-ol uu5-noindex uu-fulltextsearch-0"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol noPrint=false 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_11",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol noPrint=true 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_12",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
     id="uuID"
     style={Object {}}
     title={null}
@@ -1393,7 +1721,7 @@ exports[`UU5.Bricks.Ol selected=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_15",
+      "counterId": "uu5_bricks_list_counter_29",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1420,7 +1748,7 @@ exports[`UU5.Bricks.Ol selected=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_14",
+      "counterId": "uu5_bricks_list_counter_28",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1447,7 +1775,7 @@ exports[`UU5.Bricks.Ol style="padding:8px; borderRadius: 2px" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_5",
+      "counterId": "uu5_bricks_list_counter_19",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1479,7 +1807,7 @@ exports[`UU5.Bricks.Ol style={"backgroundColor":"red","color":"blue"} 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_6",
+      "counterId": "uu5_bricks_list_counter_20",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1507,11 +1835,42 @@ exports[`UU5.Bricks.Ol style={"backgroundColor":"red","color":"blue"} 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ol style={"margin":8} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_4",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ol textCorrector=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_43",
+      "counterId": "uu5_bricks_list_counter_57",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1538,7 +1897,7 @@ exports[`UU5.Bricks.Ol textCorrector=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_42",
+      "counterId": "uu5_bricks_list_counter_56",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1565,7 +1924,7 @@ exports[`UU5.Bricks.Ol tooltip="My Tooltip" 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_3",
+      "counterId": "uu5_bricks_list_counter_17",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1592,7 +1951,7 @@ exports[`UU5.Bricks.Ol underline=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_21",
+      "counterId": "uu5_bricks_list_counter_35",
       "listLevel": 1,
       "ordered": true,
       "type": null,
@@ -1619,7 +1978,7 @@ exports[`UU5.Bricks.Ol underline=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "counterId": "uu5_bricks_list_counter_20",
+      "counterId": "uu5_bricks_list_counter_34",
       "listLevel": 1,
       "ordered": true,
       "type": null,

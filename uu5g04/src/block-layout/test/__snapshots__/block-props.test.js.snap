@@ -41,7 +41,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"activeContent":"Phone","
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -93,7 +92,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"activeContent":"Phone","
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -164,7 +162,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-email","conte
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -217,7 +214,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-phone","activ
               mainAttrs={null}
               name={null}
               nestingLevel={null}
-              noIndex={false}
               parent={null}
               pureRender={false}
               ref_={null}
@@ -226,6 +222,7 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-phone","activ
               style={null}
               tooltip={null}
             />,
+            null,
           ]
         }
         key="0"
@@ -250,7 +247,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-phone","activ
               mainAttrs={null}
               name={null}
               nestingLevel={null}
-              noIndex={false}
               parent={null}
               pureRender={false}
               ref_={null}
@@ -259,6 +255,7 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-phone","activ
               style={null}
               tooltip={null}
             />,
+            null,
           ]
         }
         disabled={true}
@@ -295,7 +292,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-phone","activ
                 mainAttrs={null}
                 name={null}
                 nestingLevel={null}
-                noIndex={false}
                 params={null}
                 parent={null}
                 pureRender={false}
@@ -322,7 +318,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-phone","activ
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -392,7 +387,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-phone","conte
                 mainAttrs={null}
                 name={null}
                 nestingLevel={null}
-                noIndex={false}
                 params={null}
                 parent={null}
                 pureRender={false}
@@ -419,7 +413,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-phone","conte
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -470,7 +463,6 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-settings","co
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -479,6 +471,7 @@ exports[`UU5.BlockLayout.Block props testing actions=[{"icon":"mdi-settings","co
             style={null}
             tooltip={null}
           />,
+          null,
         ]
       }
       onClick={[Function]}
@@ -593,6 +586,21 @@ exports[`UU5.BlockLayout.Block props testing className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Block props testing className="test-classname" 1`] = `
+<div
+  className="uublocklayout-1519s3b test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
 exports[`UU5.BlockLayout.Block props testing content="This is Content from ContentMixin" 1`] = `
 <div
   className="uublocklayout-1519s3b"
@@ -678,7 +686,41 @@ exports[`UU5.BlockLayout.Block props testing disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Block props testing disabled=false 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
 exports[`UU5.BlockLayout.Block props testing disabled=true 1`] = `
+<div
+  className="uublocklayout-1519s3b uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing disabled=true 3`] = `
 <div
   className="uublocklayout-1519s3b uu5-common-disabled"
   id="uuID"
@@ -727,7 +769,52 @@ exports[`UU5.BlockLayout.Block props testing dynamic=true 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Block props testing elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing fullTextSearchPriority=0 1`] = `
+<div
+  className="uublocklayout-1519s3b uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
 exports[`UU5.BlockLayout.Block props testing hidden=false 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing hidden=false 3`] = `
 <div
   className="uublocklayout-1519s3b"
   id="uuID"
@@ -757,10 +844,40 @@ exports[`UU5.BlockLayout.Block props testing hidden=true 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Block props testing hidden=true 3`] = `
+<div
+  className="uublocklayout-1519s3b uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
 exports[`UU5.BlockLayout.Block props testing id="myId" 1`] = `
 <div
   className="uublocklayout-1519s3b"
   id="myId"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing id="test-id" 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="test-id"
   style={Object {}}
   title={null}
 >
@@ -878,6 +995,21 @@ exports[`UU5.BlockLayout.Block props testing nestingLevel="box" 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Block props testing nestingLevel="box" 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
 exports[`UU5.BlockLayout.Block props testing nestingLevel="boxCollection" 1`] = `
 <div
   className="uublocklayout-1519s3b"
@@ -909,6 +1041,21 @@ exports[`UU5.BlockLayout.Block props testing nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.BlockLayout.Block props testing nestingLevel="inline" 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel="inline" 3`] = `
 <div
   className="uublocklayout-1519s3b"
   id="uuID"
@@ -1000,7 +1147,37 @@ exports[`UU5.BlockLayout.Block props testing noIndex=false 1`] = `
 
 exports[`UU5.BlockLayout.Block props testing noIndex=true 1`] = `
 <div
-  className="uublocklayout-1519s3b uu5-noindex"
+  className="uublocklayout-1519s3b uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing noPrint=false 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing noPrint=true 1`] = `
+<div
+  className="uublocklayout-1519s3b"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1101,6 +1278,25 @@ exports[`UU5.BlockLayout.Block props testing style={"backgroundColor":"red","col
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing style={"margin":8} 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

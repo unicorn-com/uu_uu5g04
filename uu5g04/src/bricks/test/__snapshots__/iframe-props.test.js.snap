@@ -18,6 +18,24 @@ exports[`UU5.Bricks.Iframe className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Iframe className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-iframe test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Iframe controlled=false 1`] = `
 <div
   className="uu5-bricks-iframe"
@@ -90,7 +108,47 @@ exports[`UU5.Bricks.Iframe disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Iframe disabled=false 3`] = `
+<div
+  className="uu5-bricks-iframe"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Iframe disabled=true 1`] = `
+<div
+  className="uu5-bricks-iframe uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Iframe disabled=true 3`] = `
 <div
   className="uu5-bricks-iframe uu5-common-disabled"
   id="uuID"
@@ -138,6 +196,42 @@ exports[`UU5.Bricks.Iframe docKit examples UU5.Bricks.Iframe example01 1`] = `
       src="https://plus4u.net"
     />
   </Column>
+</div>
+`;
+
+exports[`UU5.Bricks.Iframe elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-iframe"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Iframe fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-iframe uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
 </div>
 `;
 
@@ -195,7 +289,43 @@ exports[`UU5.Bricks.Iframe hidden=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Iframe hidden=false 3`] = `
+<div
+  className="uu5-bricks-iframe"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Iframe hidden=true 1`] = `
+<div
+  className="uu5-bricks-iframe uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Iframe hidden=true 3`] = `
 <div
   className="uu5-bricks-iframe uu5-common-hidden"
   id="uuID"
@@ -222,6 +352,24 @@ exports[`UU5.Bricks.Iframe id="myId" 1`] = `
 >
   <iframe
     id="myId-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Iframe id="test-id" 1`] = `
+<div
+  className="uu5-bricks-iframe"
+  id="test-id"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="test-id-iframe"
     style={
       Object {
         "height": "250px",
@@ -377,6 +525,24 @@ exports[`UU5.Bricks.Iframe nestingLevel="box" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Iframe nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-iframe"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Iframe nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-iframe"
@@ -414,6 +580,12 @@ exports[`UU5.Bricks.Iframe nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Iframe nestingLevel="inline" 1`] = `
+<Link
+  target="_blank"
+/>
+`;
+
+exports[`UU5.Bricks.Iframe nestingLevel="inline" 3`] = `
 <Link
   target="_blank"
 />
@@ -487,7 +659,43 @@ exports[`UU5.Bricks.Iframe noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Iframe noIndex=true 1`] = `
 <div
-  className="uu5-bricks-iframe uu5-noindex"
+  className="uu5-bricks-iframe uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Iframe noPrint=false 1`] = `
+<div
+  className="uu5-bricks-iframe"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Iframe noPrint=true 1`] = `
+<div
+  className="uu5-bricks-iframe"
   id="uuID"
   style={Object {}}
   title={null}
@@ -659,6 +867,28 @@ exports[`UU5.Bricks.Iframe style={"backgroundColor":"red","color":"blue"} 1`] = 
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Iframe style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-iframe"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

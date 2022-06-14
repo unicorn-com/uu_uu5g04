@@ -32,7 +32,6 @@ exports[`Check default props value Forms.TriStateCheckbox own props 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -82,7 +81,6 @@ exports[`UU5.Forms.TriStateCheckbox props bgStyleChecked="filled" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -132,7 +130,6 @@ exports[`UU5.Forms.TriStateCheckbox props bgStyleChecked="outline" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -182,7 +179,6 @@ exports[`UU5.Forms.TriStateCheckbox props bgStyleIndeterminate="filled" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -232,7 +228,6 @@ exports[`UU5.Forms.TriStateCheckbox props bgStyleIndeterminate="outline" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -282,7 +277,55 @@ exports[`UU5.Forms.TriStateCheckbox props className="my-classname" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props className="test-classname" 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox test-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -332,7 +375,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="brown" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -382,7 +424,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="brown-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -432,7 +473,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="cyan" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -482,7 +522,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="cyan-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -532,7 +571,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="default" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -582,7 +620,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="green" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -632,7 +669,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="green-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -682,7 +718,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="grey" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -732,7 +767,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="grey-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -782,7 +816,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="orange" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -832,7 +865,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="orange-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -882,7 +914,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="pink" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -932,7 +963,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="pink-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -982,7 +1012,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="purple" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1032,7 +1061,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="purple-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1082,7 +1110,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="red" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1132,7 +1159,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="red-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1182,7 +1208,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="yellow" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1232,7 +1257,6 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema="yellow-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1282,7 +1306,6 @@ exports[`UU5.Forms.TriStateCheckbox props controlled=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1332,7 +1355,6 @@ exports[`UU5.Forms.TriStateCheckbox props controlled=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1382,7 +1404,6 @@ exports[`UU5.Forms.TriStateCheckbox props default props 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1432,7 +1453,55 @@ exports[`UU5.Forms.TriStateCheckbox props disabled=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props disabled=false 3`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1482,7 +1551,6 @@ exports[`UU5.Forms.TriStateCheckbox props disabled=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1498,6 +1566,109 @@ exports[`UU5.Forms.TriStateCheckbox props disabled=true 1`] = `
             "disabled": true,
           }
         }
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props disabled=true 3`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={true}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        disabled={true}
+        mainAttrs={
+          Object {
+            "disabled": true,
+          }
+        }
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
         ref_={[Function]}
       />
     </Div>
@@ -1538,7 +1709,6 @@ exports[`UU5.Forms.TriStateCheckbox props feedback="error" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1588,7 +1758,6 @@ exports[`UU5.Forms.TriStateCheckbox props feedback="initial" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1665,7 +1834,6 @@ exports[`UU5.Forms.TriStateCheckbox props feedback="success" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1716,7 +1884,55 @@ exports[`UU5.Forms.TriStateCheckbox props feedback="warning" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1820,7 +2036,55 @@ exports[`UU5.Forms.TriStateCheckbox props hidden=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props hidden=false 3`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1870,7 +2134,55 @@ exports[`UU5.Forms.TriStateCheckbox props hidden=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props hidden=true 3`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1920,7 +2232,55 @@ exports[`UU5.Forms.TriStateCheckbox props id="myId" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props id="test-id" 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="test-id"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1970,7 +2330,6 @@ exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon="mdi-book" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2020,7 +2379,6 @@ exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon="mdi-stop" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2070,7 +2428,6 @@ exports[`UU5.Forms.TriStateCheckbox props inputAttrs={"type":"email","width":"15
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2125,7 +2482,6 @@ exports[`UU5.Forms.TriStateCheckbox props inputColWidth="xs12 s6 m8 l9" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2175,7 +2531,6 @@ exports[`UU5.Forms.TriStateCheckbox props inputColWidth="xs12 s9" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2229,7 +2584,6 @@ exports[`UU5.Forms.TriStateCheckbox props label="Your personal email" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2279,7 +2633,6 @@ exports[`UU5.Forms.TriStateCheckbox props labelAlignment="xs-left s-right" 1`] =
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2329,7 +2682,6 @@ exports[`UU5.Forms.TriStateCheckbox props labelAlignment="xs-right s-left" 1`] =
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2379,7 +2731,6 @@ exports[`UU5.Forms.TriStateCheckbox props labelColWidth="xs12 s3" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2429,7 +2780,6 @@ exports[`UU5.Forms.TriStateCheckbox props labelColWidth="xs12 s6 m4 l3" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2479,7 +2829,6 @@ exports[`UU5.Forms.TriStateCheckbox props labelPosition="left" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2529,7 +2878,6 @@ exports[`UU5.Forms.TriStateCheckbox props labelPosition="right" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2579,7 +2927,6 @@ exports[`UU5.Forms.TriStateCheckbox props mainAttrs=undefined 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2630,7 +2977,6 @@ exports[`UU5.Forms.TriStateCheckbox props message="Your password is too short!" 
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2681,7 +3027,104 @@ exports[`UU5.Forms.TriStateCheckbox props name="myName" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props nestingLevel="box" 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props nestingLevel="inline" 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2731,7 +3174,6 @@ exports[`UU5.Forms.TriStateCheckbox props noIndex=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2751,7 +3193,7 @@ exports[`UU5.Forms.TriStateCheckbox props noIndex=false 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props noIndex=true 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  className="uu5-forms-tri-state-checkbox uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2781,7 +3223,104 @@ exports[`UU5.Forms.TriStateCheckbox props noIndex=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props noPrint=false 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props noPrint=true 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2831,7 +3370,6 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon="mdi-battery" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2881,7 +3419,6 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon="mdi-check" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2931,7 +3468,6 @@ exports[`UU5.Forms.TriStateCheckbox props onIcon="mdi-close" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2981,7 +3517,6 @@ exports[`UU5.Forms.TriStateCheckbox props onIcon="mdi-email" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3031,7 +3566,6 @@ exports[`UU5.Forms.TriStateCheckbox props pureRender=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3081,7 +3615,6 @@ exports[`UU5.Forms.TriStateCheckbox props pureRender=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3131,7 +3664,6 @@ exports[`UU5.Forms.TriStateCheckbox props readOnly=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3181,7 +3713,6 @@ exports[`UU5.Forms.TriStateCheckbox props readOnly=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3235,7 +3766,6 @@ exports[`UU5.Forms.TriStateCheckbox props required=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3286,7 +3816,6 @@ exports[`UU5.Forms.TriStateCheckbox props required=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3336,7 +3865,6 @@ exports[`UU5.Forms.TriStateCheckbox props requiredMessage="Succes" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3386,7 +3914,6 @@ exports[`UU5.Forms.TriStateCheckbox props requiredMessage="Wrong value" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3436,7 +3963,6 @@ exports[`UU5.Forms.TriStateCheckbox props selected=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3486,7 +4012,6 @@ exports[`UU5.Forms.TriStateCheckbox props selected=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3536,7 +4061,6 @@ exports[`UU5.Forms.TriStateCheckbox props size="l" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3586,7 +4110,6 @@ exports[`UU5.Forms.TriStateCheckbox props size="m" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3636,7 +4159,6 @@ exports[`UU5.Forms.TriStateCheckbox props size="s" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3691,7 +4213,6 @@ exports[`UU5.Forms.TriStateCheckbox props style="padding:8px; borderRadius: 2px"
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3746,7 +4267,59 @@ exports[`UU5.Forms.TriStateCheckbox props style={"backgroundColor":"red","color"
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props style={"margin":8} 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3796,7 +4369,6 @@ exports[`UU5.Forms.TriStateCheckbox props tooltip="My Tooltip" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3846,7 +4418,6 @@ exports[`UU5.Forms.TriStateCheckbox props value=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3896,7 +4467,6 @@ exports[`UU5.Forms.TriStateCheckbox props value=null 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3946,7 +4516,6 @@ exports[`UU5.Forms.TriStateCheckbox props value=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}

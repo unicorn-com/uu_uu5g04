@@ -104,6 +104,20 @@ exports[`UU5.BlockLayout.Column props testing className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Column props testing className="test-classname" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Column props testing content="This is Content from ContentMixin" 1`] = `
 <div
   className="uublocklayout-1mtb9qv"
@@ -185,7 +199,39 @@ exports[`UU5.BlockLayout.Column props testing disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Column props testing disabled=false 3`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Column props testing disabled=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing disabled=true 3`] = `
 <div
   className="uublocklayout-1mtb9qv uu5-common-disabled"
   id="uuID"
@@ -231,7 +277,49 @@ exports[`UU5.BlockLayout.Column props testing dynamic=true 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Column props testing elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing fullTextSearchPriority=0 1`] = `
+<div
+  className="uublocklayout-1mtb9qv uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Column props testing hidden=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing hidden=false 3`] = `
 <div
   className="uublocklayout-1mtb9qv"
   id="uuID"
@@ -259,10 +347,38 @@ exports[`UU5.BlockLayout.Column props testing hidden=true 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Column props testing hidden=true 3`] = `
+<div
+  className="uublocklayout-1mtb9qv uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Column props testing id="myId" 1`] = `
 <div
   className="uublocklayout-1mtb9qv"
   id="myId"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing id="test-id" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="test-id"
   style={Object {}}
   title={null}
 >
@@ -372,6 +488,20 @@ exports[`UU5.BlockLayout.Column props testing nestingLevel="box" 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Column props testing nestingLevel="box" 3`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Column props testing nestingLevel="boxCollection" 1`] = `
 <div
   className="uublocklayout-1mtb9qv"
@@ -401,6 +531,20 @@ exports[`UU5.BlockLayout.Column props testing nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.BlockLayout.Column props testing nestingLevel="inline" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="inline" 3`] = `
 <div
   className="uublocklayout-1mtb9qv"
   id="uuID"
@@ -486,7 +630,35 @@ exports[`UU5.BlockLayout.Column props testing noIndex=false 1`] = `
 
 exports[`UU5.BlockLayout.Column props testing noIndex=true 1`] = `
 <div
-  className="uublocklayout-1mtb9qv uu5-noindex"
+  className="uublocklayout-1mtb9qv uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing noPrint=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing noPrint=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
   id="uuID"
   style={Object {}}
   title={null}
@@ -581,6 +753,24 @@ exports[`UU5.BlockLayout.Column props testing style={"backgroundColor":"red","co
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing style={"margin":8} 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

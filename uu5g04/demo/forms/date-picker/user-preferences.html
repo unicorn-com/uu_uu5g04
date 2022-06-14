@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>Example 00</title>
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        imports: {
+          react: "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+          "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import { createComponent, useState, useEffect, useRef } from "uu5g04-hooks";
+
+      const loadDate = new Date();
+
+      const FORMAT_LIST = ["YYYY-MM-DD", "D.M.YYYY", "YY/MM/DD", "M/D/Y", "D/M/Y"];
+
+      const UserPreferencesWithControls = createComponent({
+        render(props) {
+          const [format, setFormat] = useState(FORMAT_LIST[0]);
+          const { children } = props;
+          return (
+            <UU5.Common.UserPreferencesProvider shortDateFormat={format} onChange={() => {}}>
+              <h4>shortDateFormat on UserPreferencesProvider</h4>
+              <div>
+                {FORMAT_LIST.map((itemFormat) => (
+                  <UU5.Bricks.Button
+                    key={itemFormat}
+                    onClick={() => setFormat(itemFormat)}
+                    pressed={itemFormat === format}
+                  >
+                    {itemFormat}
+                  </UU5.Bricks.Button>
+                ))}
+              </div>
+              {children}
+            </UU5.Common.UserPreferencesProvider>
+          );
+        },
+      });
+
+      const GetValue = createComponent({
+        render(props) {
+          const { componentRef } = props;
+          const [lastValue, setLastValue] = useState();
+          const needsReRenderRef = useRef();
+          needsReRenderRef.current ??= true;
+          useEffect(() => {
+            if (needsReRenderRef.current === false) {
+              needsReRenderRef.current = undefined;
+              return;
+            }
+            needsReRenderRef.current = false;
+            setLastValue(componentRef.current.getValue());
+          });
+          return lastValue + "";
+        },
+      });
+
+      const DatePicker = createComponent({
+        render(props) {
+          const [value, setValue] = useState(props.value);
+          const ref = useRef();
+          useEffect(() => {
+            console.log(props.label, { value });
+          });
+          return (
+            <div>
+              <UU5.Forms.DatePicker {...props} value={value} onChange={(e) => setValue(e.value)} ref_={ref} />
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="s-5">&nbsp;</UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="s-7">
+                  <div>parent state value: {value + ""}</div>
+                  <div>
+                    component.getValue(): <GetValue componentRef={ref} />
+                  </div>
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+            </div>
+          );
+        },
+      });
+
+      const Page = createComponent({
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              <UserPreferencesWithControls>
+                <h4>valueType</h4>
+                <DatePicker valueType="iso" label="iso" value={loadDate.toISOString().replace(/T.*/, "")} />
+                <DatePicker valueType="date" label="date" value={new Date(loadDate)} />
+                <DatePicker valueType="string" label="string (shouldn't use preferences)" value={new Date(loadDate)} />
+                <DatePicker label="undefined (shouldn't use preferences)" value={new Date(loadDate)} />
+              </UserPreferencesWithControls>
+            </UU5.Bricks.Container>
+          );
+        },
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
+    </script>
+  </body>
+</html>

@@ -144,6 +144,18 @@ exports[`UU5.Bricks.Heading className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Heading className="test-classname" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading test-classname"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Heading content="This is Content from ContentMixin" 1`] = `
 <Fragment>
   <div
@@ -223,7 +235,36 @@ exports[`UU5.Bricks.Heading disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Heading disabled=false 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Heading disabled=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading uu5-common-disabled"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  >
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading disabled=true 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-heading uu5-common-disabled"
@@ -279,6 +320,18 @@ exports[`UU5.Bricks.Heading dynamic=false 1`] = `
 `;
 
 exports[`UU5.Bricks.Heading dynamic=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
 <Fragment>
   <div
     className="uu5-bricks-heading"
@@ -347,6 +400,18 @@ exports[`UU5.Bricks.Heading fixedOnScroll=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Heading fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading uu-fulltextsearch-0"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Heading hidden=false 1`] = `
 <Fragment>
   <div
@@ -359,7 +424,31 @@ exports[`UU5.Bricks.Heading hidden=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Heading hidden=false 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Heading hidden=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading uu5-common-hidden"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading hidden=true 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-heading uu5-common-hidden"
@@ -400,6 +489,18 @@ exports[`UU5.Bricks.Heading id="myId" 1`] = `
   <div
     className="uu5-bricks-heading"
     id="myId"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading id="test-id" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="test-id"
     key="main"
     style={Object {}}
     title={null}
@@ -492,6 +593,18 @@ exports[`UU5.Bricks.Heading nestingLevel="box" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Heading nestingLevel="box" 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Heading nestingLevel="boxCollection" 1`] = `
 <Fragment>
   <div
@@ -517,6 +630,8 @@ exports[`UU5.Bricks.Heading nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Heading nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Heading nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Heading nestingLevel="page" 1`] = `
 <Fragment>
@@ -561,7 +676,31 @@ exports[`UU5.Bricks.Heading noIndex=false 1`] = `
 exports[`UU5.Bricks.Heading noIndex=true 1`] = `
 <Fragment>
   <div
-    className="uu5-bricks-heading uu5-noindex"
+    className="uu5-bricks-heading uu5-noindex uu-fulltextsearch-0"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading noPrint=false 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading noPrint=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
     id="uuID"
     key="main"
     style={Object {}}
@@ -669,6 +808,22 @@ exports[`UU5.Bricks.Heading style={"backgroundColor":"red","color":"blue"} 1`] =
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading style={"margin":8} 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID"
+    key="main"
+    style={
+      Object {
+        "margin": 8,
       }
     }
     title={null}

@@ -56,6 +56,7 @@ let Image = UU5.Common.VisualComponent.create({
     elevation: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
     width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     height: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    onPrintReady: UU5.PropTypes.func.isRequired, // provided by withVisibilityCheck HOC, should not be documented as it is only used internally
   },
   //@@viewOff:propTypes
 
@@ -161,12 +162,16 @@ let Image = UU5.Common.VisualComponent.create({
           (blob) => {
             result.preloading = false;
             result.preloadedUri = URL.createObjectURL(blob);
+            props.onPrintReady(); // loaded by fetch call
           },
           (err) => {
             result.preloading = false;
             result.preloadedUri = "data:image/gif;base64,ZZZZZZZZ"; // invalid image
+            props.onPrintReady(); // failed to load, but still counts as done
           }
         );
+      } else {
+        props.onPrintReady(); // resolved from cache
       }
       let runId = (this._preloadImageLastRunId = cacheKey);
       result.promise.then(() => {
@@ -240,6 +245,18 @@ let Image = UU5.Common.VisualComponent.create({
       }
     }
 
+    const originalOnLoad = mainAttrs.onLoad;
+    mainAttrs.onLoad = (...args) => {
+      this.props.onPrintReady(); // loaded by browser
+      if (originalOnLoad) return originalOnLoad(...args);
+    };
+
+    const originalOnError = mainAttrs.onError;
+    mainAttrs.onError = (...args) => {
+      this.props.onPrintReady(); // failed to load by browser (but still ready to print)
+      if (originalOnError) return originalOnError(...args);
+    };
+
     var image = <img {...mainAttrs} />;
 
     if (this.isDisabled()) {
@@ -278,7 +295,7 @@ let Image = UU5.Common.VisualComponent.create({
   },
   //@@viewOff:render
 });
-Image = UU5.Common.withVisibilityCheck(Image);
+Image = UU5.Common.withVisibilityCheck(Image, undefined, true);
 
 export { Image };
 export default Image;

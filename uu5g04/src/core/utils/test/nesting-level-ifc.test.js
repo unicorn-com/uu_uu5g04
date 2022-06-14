@@ -1,5 +1,6 @@
 import React from "react";
 import UU5 from "uu5g04";
+import { Utils as g05Utils } from "uu5g05";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
@@ -104,6 +105,68 @@ describe("UU5.Utils.NestingLevel", () => {
     expect(level).toBe("boxCollection");
   });
 
+  it("getNestingLevel() - integration with uu5g05 (when uu5g05 component is nested in NestingLevelMixin component)", async () => {
+    let level;
+
+    // test finding of nearest parent with NestingLevelMixin and using its nestingLevel
+    // (which child will then use to derive its own nesting level)
+    let child;
+    let wrapper = mount(
+      <NLMComponent nestingLevel="bigBoxCollection">
+        <NLMComponent ref={(ref) => (child = ref)} />
+      </NLMComponent>
+    );
+    expect(child && child.props && child.props.parent).toBeTruthy();
+
+    // g05Utils should return new values, such as "area" instead of "bigBox" (unless statics.nestingLevel contains old value)
+    level = UU5.Utils.NestingLevel.getNestingLevel(child.props, { nestingLevel: ["boxCollection", "box"] });
+    expect(level).toBe("boxCollection");
+    level = g05Utils.NestingLevel.getNestingLevel(child.props, { nestingLevel: ["boxCollection", "box"] });
+    expect(level).toBe("boxCollection");
+    level = g05Utils.NestingLevel.getNestingLevel(child.props, { nestingLevel: ["bigBox", "box"] });
+    expect(level).toBe("bigBox");
+    level = g05Utils.NestingLevel.getNestingLevel(child.props, { nestingLevel: ["area", "box"] });
+    expect(level).toBe("area");
+
+    level = UU5.Utils.NestingLevel.getNestingLevel(child.props, { nestingLevel: ["spa"] });
+    expect(level).toBeFalsy();
+    level = g05Utils.NestingLevel.getNestingLevel(child.props, { nestingLevel: ["spa"] });
+    expect(level).toBeFalsy();
+
+    level = UU5.Utils.NestingLevel.getNestingLevel(child.props, {});
+    expect(level).toBe("bigBoxCollection");
+    level = g05Utils.NestingLevel.getNestingLevel(child.props, {});
+    expect(level).toBe("areaCollection");
+
+    wrapper.setProps({ nestingLevel: "box" });
+    level = UU5.Utils.NestingLevel.getNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection", "inline"],
+    });
+    expect(level).toBe("smallBoxCollection");
+    level = g05Utils.NestingLevel.getNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection", "inline"],
+    });
+    expect(level).toBe("smallBoxCollection");
+    level = g05Utils.NestingLevel.getNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "spotCollection", "inline"],
+    });
+    expect(level).toBe("spotCollection");
+
+    wrapper.setProps({ nestingLevel: "boxCollection" });
+    level = UU5.Utils.NestingLevel.getNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection"],
+    });
+    expect(level).toBe("boxCollection");
+    level = g05Utils.NestingLevel.getNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection"],
+    });
+    expect(level).toBe("boxCollection");
+    level = g05Utils.NestingLevel.getNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "spotCollection"],
+    });
+    expect(level).toBe("boxCollection");
+  });
+
   it("getChildNestingLevel()", async () => {
     let level;
 
@@ -183,6 +246,67 @@ describe("UU5.Utils.NestingLevel", () => {
     wrapper.setProps({ nestingLevel: "boxCollection" });
     level = UU5.Utils.NestingLevel.getChildNestingLevel(child.props, {
       nestingLevel: ["boxCollection", "box", "smallBoxCollection"],
+    });
+    expect(level).toBe("boxCollection");
+  });
+
+  it("getChildNestingLevel() - integration with uu5g05 (when uu5g05 component is nested in NestingLevelMixin component)", async () => {
+    let level;
+
+    // test finding of nearest parent with NestingLevelMixin and using its nestingLevel
+    // (which child will then use to derive its own nesting level)
+    let child;
+    let wrapper = mount(
+      <NLMComponent nestingLevel="bigBoxCollection">
+        <NLMComponent ref={(ref) => (child = ref)} />
+      </NLMComponent>
+    );
+    expect(child && child.props && child.props.parent).toBeTruthy();
+
+    level = UU5.Utils.NestingLevel.getChildNestingLevel(child.props, { nestingLevel: ["boxCollection", "box"] });
+    expect(level).toBe("boxCollection");
+    level = g05Utils.NestingLevel.getChildNestingLevel(child.props, { nestingLevel: ["boxCollection", "box"] });
+    expect(level).toBe("boxCollection");
+    level = g05Utils.NestingLevel.getChildNestingLevel(child.props, { nestingLevel: ["box", "smallBox"] });
+    expect(level).toBe("smallBoxCollection"); // mine is "box", child is "smallBoxCollection"
+    level = g05Utils.NestingLevel.getChildNestingLevel(child.props, { nestingLevel: ["box", "spot"] });
+    expect(level).toBe("spotCollection");
+
+    level = UU5.Utils.NestingLevel.getChildNestingLevel(child.props, { nestingLevel: ["spa"] });
+    expect(level).toBeFalsy();
+    level = g05Utils.NestingLevel.getChildNestingLevel(child.props, { nestingLevel: ["spa"] });
+    expect(level).toBeFalsy();
+
+    level = UU5.Utils.NestingLevel.getChildNestingLevel(child.props, {});
+    expect(level).toBe("bigBoxCollection");
+    level = g05Utils.NestingLevel.getChildNestingLevel(child.props, {});
+    expect(level).toBe("areaCollection");
+
+    wrapper.setProps({ nestingLevel: "box" });
+    level = UU5.Utils.NestingLevel.getChildNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection", "inline"],
+    });
+    expect(level).toBe("smallBoxCollection");
+    level = g05Utils.NestingLevel.getChildNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection", "inline"],
+    });
+    expect(level).toBe("smallBoxCollection");
+    level = g05Utils.NestingLevel.getChildNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "spotCollection", "inline"],
+    });
+    expect(level).toBe("spotCollection");
+
+    wrapper.setProps({ nestingLevel: "boxCollection" });
+    level = UU5.Utils.NestingLevel.getChildNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection"],
+    });
+    expect(level).toBe("boxCollection");
+    level = g05Utils.NestingLevel.getChildNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection"],
+    });
+    expect(level).toBe("boxCollection");
+    level = g05Utils.NestingLevel.getChildNestingLevel(child.props, {
+      nestingLevel: ["boxCollection", "box", "spotCollection"],
     });
     expect(level).toBe("boxCollection");
   });

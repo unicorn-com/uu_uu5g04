@@ -11,6 +11,17 @@ exports[`UU5.Bricks.Line className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Line className="test-classname" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg test-classname uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Line colorSchema="brown" 1`] = `
 <Fragment>
   <div
@@ -264,7 +275,34 @@ exports[`UU5.Bricks.Line disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Line disabled=false 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Line disabled=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-common-disabled uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Line disabled=true 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-line uu5-common-bg uu5-common-disabled uu5-bricks-line-size-m"
@@ -328,7 +366,40 @@ exports[`UU5.Bricks.Line docKit examples UU5.Bricks.Line should render without c
 </div>
 `;
 
+exports[`UU5.Bricks.Line elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Line fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu-fulltextsearch-0 uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Line hidden=false 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Line hidden=false 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
@@ -350,11 +421,33 @@ exports[`UU5.Bricks.Line hidden=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Line hidden=true 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-common-hidden uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Line id="myId" 1`] = `
 <Fragment>
   <div
     className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
     id="myId"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Line id="test-id" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+    id="test-id"
     style={Object {}}
     title={null}
   />
@@ -417,6 +510,17 @@ exports[`UU5.Bricks.Line nestingLevel="box" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Line nestingLevel="box" 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Line nestingLevel="boxCollection" 1`] = `
 <Fragment>
   <div
@@ -440,6 +544,8 @@ exports[`UU5.Bricks.Line nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Line nestingLevel="inline" 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Line nestingLevel="inline" 3`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Line nestingLevel="page" 1`] = `
 <Fragment>
@@ -499,7 +605,29 @@ exports[`UU5.Bricks.Line noIndex=false 1`] = `
 exports[`UU5.Bricks.Line noIndex=true 1`] = `
 <Fragment>
   <div
-    className="uu5-bricks-line uu5-common-bg uu5-noindex uu5-bricks-line-size-m"
+    className="uu5-bricks-line uu5-common-bg uu5-noindex uu-fulltextsearch-0 uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Line noPrint=false 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Line noPrint=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
     id="uuID"
     style={Object {}}
     title={null}
@@ -620,6 +748,21 @@ exports[`UU5.Bricks.Line style={"backgroundColor":"red","color":"blue"} 1`] = `
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Line style={"margin":8} 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+    id="uuID"
+    style={
+      Object {
+        "margin": 8,
       }
     }
     title={null}

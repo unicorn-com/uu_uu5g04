@@ -55,6 +55,15 @@ exports[`UU5.Bricks.AlertBus className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.AlertBus className="test-classname" 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus test-classname"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.AlertBus closeDisabled=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
@@ -325,10 +334,38 @@ exports[`UU5.Bricks.AlertBus disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.AlertBus disabled=false 3`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.AlertBus disabled=true 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   disabled={true}
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus disabled=true 3`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  disabled={true}
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
   hidden={true}
   id="uuID-inner"
   mainAttrs={Object {}}
@@ -353,7 +390,25 @@ exports[`UU5.Bricks.AlertBus forceRender=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.AlertBus fullTextSearchPriority=0 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus uu-fulltextsearch-0"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.AlertBus hidden=false 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus hidden=false 3`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
@@ -371,11 +426,29 @@ exports[`UU5.Bricks.AlertBus hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.AlertBus hidden=true 3`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.AlertBus id="myId" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
   id="myId-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus id="test-id" 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="test-id-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -429,6 +502,16 @@ exports[`UU5.Bricks.AlertBus nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.AlertBus nestingLevel="box" 3`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+/>
+`;
+
 exports[`UU5.Bricks.AlertBus nestingLevel="boxCollection" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
@@ -450,6 +533,8 @@ exports[`UU5.Bricks.AlertBus nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.AlertBus nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.AlertBus nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.AlertBus nestingLevel="page" 1`] = `
 <Alert
@@ -486,7 +571,25 @@ exports[`UU5.Bricks.AlertBus noIndex=false 1`] = `
 
 exports[`UU5.Bricks.AlertBus noIndex=true 1`] = `
 <Alert
-  className="uu5-bricks-alert-bus uu5-noindex"
+  className="uu5-bricks-alert-bus uu5-noindex uu-fulltextsearch-0"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus noPrint=false 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus noPrint=true 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
   hidden={true}
   id="uuID-inner"
   mainAttrs={Object {}}
@@ -585,6 +688,20 @@ exports[`UU5.Bricks.AlertBus style={"backgroundColor":"red","color":"blue"} 1`] 
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus style={"margin":8} 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  style={
+    Object {
+      "margin": 8,
     }
   }
 />

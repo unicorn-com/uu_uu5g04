@@ -81,6 +81,15 @@ exports[`UU5.Bricks.ProgressBus className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ProgressBus className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-progress-bus test-classname uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ProgressBus content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
@@ -135,7 +144,25 @@ exports[`UU5.Bricks.ProgressBus disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ProgressBus disabled=false 3`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ProgressBus disabled=true 1`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-common-disabled uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ProgressBus disabled=true 3`] = `
 <div
   className="uu5-bricks-progress-bus uu5-common-disabled uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -162,7 +189,34 @@ exports[`UU5.Bricks.ProgressBus dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ProgressBus elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ProgressBus fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-progress-bus uu-fulltextsearch-0 uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ProgressBus hidden=false 1`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ProgressBus hidden=false 3`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -180,10 +234,28 @@ exports[`UU5.Bricks.ProgressBus hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ProgressBus hidden=true 3`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-common-hidden uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ProgressBus id="myId" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ProgressBus id="test-id" 1`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -253,6 +325,15 @@ exports[`UU5.Bricks.ProgressBus nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ProgressBus nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ProgressBus nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
@@ -272,6 +353,8 @@ exports[`UU5.Bricks.ProgressBus nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.ProgressBus nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.ProgressBus nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.ProgressBus nestingLevel="page" 1`] = `
 <div
@@ -306,7 +389,25 @@ exports[`UU5.Bricks.ProgressBus noIndex=false 1`] = `
 
 exports[`UU5.Bricks.ProgressBus noIndex=true 1`] = `
 <div
-  className="uu5-bricks-progress-bus uu5-noindex uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  className="uu5-bricks-progress-bus uu5-noindex uu-fulltextsearch-0 uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ProgressBus noPrint=false 1`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ProgressBus noPrint=true 1`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
   style={Object {}}
   title={null}
@@ -398,6 +499,19 @@ exports[`UU5.Bricks.ProgressBus style={"backgroundColor":"red","color":"blue"} 1
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ProgressBus style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

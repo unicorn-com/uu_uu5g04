@@ -249,6 +249,37 @@ exports[`UU5.Forms.TextArea props className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TextArea props className="test-classname" 1`] = `
+<div
+  className="uu5-forms-text-area test-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TextArea props colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
@@ -981,6 +1012,37 @@ exports[`UU5.Forms.TextArea props disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TextArea props disabled=false 3`] = `
+<div
+  className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TextArea props disabled=true 1`] = `
 <div
   className="uu5-forms-text-area uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
@@ -995,6 +1057,69 @@ exports[`UU5.Forms.TextArea props disabled=true 1`] = `
   >
     <text-input
       disabled={true}
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextArea props disabled=true 3`] = `
+<div
+  className="uu5-forms-text-area uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={true}
+    readonly={false}
+  >
+    <text-input
+      disabled={true}
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextArea props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
       feedback="initial"
       id="uuID-input"
       key="input"
@@ -1177,6 +1302,37 @@ exports[`UU5.Forms.TextArea props feedback="warning" 1`] = `
 exports[`UU5.Forms.TextArea props focusMessage="Bedlivě hlídám co píšete." 1`] = `
 <div
   className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextArea props fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-forms-text-area uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1503,7 +1659,69 @@ exports[`UU5.Forms.TextArea props hidden=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TextArea props hidden=false 3`] = `
+<div
+  className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TextArea props hidden=true 1`] = `
+<div
+  className="uu5-forms-text-area uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextArea props hidden=true 3`] = `
 <div
   className="uu5-forms-text-area uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
   id="uuID"
@@ -1552,6 +1770,37 @@ exports[`UU5.Forms.TextArea props id="myId" 1`] = `
       key="input"
       mainAttrs={Object {}}
       name="myId-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextArea props id="test-id" 1`] = `
+<div
+  className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="test-id"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="test-id-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="test-id-input"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1949,6 +2198,69 @@ exports[`UU5.Forms.TextArea props name="myName" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TextArea props nestingLevel="box" 1`] = `
+<div
+  className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextArea props nestingLevel="inline" 1`] = `
+<div
+  className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      inputWidth="auto"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TextArea props noIndex=false 1`] = `
 <div
   className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
@@ -1982,7 +2294,69 @@ exports[`UU5.Forms.TextArea props noIndex=false 1`] = `
 
 exports[`UU5.Forms.TextArea props noIndex=true 1`] = `
 <div
-  className="uu5-forms-text-area uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-text-area uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextArea props noPrint=false 1`] = `
+<div
+  className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextArea props noPrint=true 1`] = `
+<div
+  className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2556,6 +2930,41 @@ exports[`UU5.Forms.TextArea props style={"backgroundColor":"red","color":"blue"}
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      rows={3}
+      type="textarea"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextArea props style={"margin":8} 1`] = `
+<div
+  className="uu5-forms-text-area uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

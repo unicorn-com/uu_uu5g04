@@ -51,6 +51,23 @@ exports[`UU5.Bricks.YoutubeVideo className="my-classname" 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.YoutubeVideo className="test-classname" 1`] = `
+<Span
+  className="uu5-bricks-youtube-video test-classname"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video test-classname uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
 exports[`UU5.Bricks.YoutubeVideo controlled=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
@@ -255,7 +272,46 @@ exports[`UU5.Bricks.YoutubeVideo disabled=false 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.YoutubeVideo disabled=false 3`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
 exports[`UU5.Bricks.YoutubeVideo disabled=true 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  disabled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-common-disabled uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo disabled=true 3`] = `
 <Span
   className="uu5-bricks-youtube-video"
   disabled={true}
@@ -295,7 +351,58 @@ exports[`UU5.Bricks.YoutubeVideo docKit examples UU5.Bricks.YoutubeVideo should 
 </Span>
 `;
 
+exports[`UU5.Bricks.YoutubeVideo elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo fullTextSearchPriority=0 1`] = `
+<Span
+  className="uu5-bricks-youtube-video uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu-fulltextsearch-0 uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
 exports[`UU5.Bricks.YoutubeVideo hidden=false 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo hidden=false 3`] = `
 <Span
   className="uu5-bricks-youtube-video"
   id="uuID-inner"
@@ -330,6 +437,24 @@ exports[`UU5.Bricks.YoutubeVideo hidden=true 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.YoutubeVideo hidden=true 3`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-common-hidden uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
 exports[`UU5.Bricks.YoutubeVideo id="myId" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
@@ -341,6 +466,23 @@ exports[`UU5.Bricks.YoutubeVideo id="myId" 1`] = `
     allowFullScreen={true}
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
     id="myId"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo id="test-id" 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="test-id-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="test-id"
     style={Object {}}
     title={null}
   />
@@ -468,6 +610,23 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="box" 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="box" 3`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
 exports[`UU5.Bricks.YoutubeVideo nestingLevel="boxCollection" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
@@ -526,6 +685,7 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="inline" 1`] = `
         "disableInfo": undefined,
         "disableRelatedVideos": undefined,
         "disabled": false,
+        "fullTextSearchPriority": undefined,
         "hidden": false,
         "id": "uuID",
         "loop": undefined,
@@ -533,7 +693,62 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="inline" 1`] = `
         "muted": undefined,
         "name": null,
         "nestingLevel": "inline",
-        "noIndex": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "src": "",
+        "style": null,
+        "tooltip": null,
+      },
+      "refs": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.YoutubeVideo",
+    }
+  }
+  linkTitle=""
+  modalHeader="YoutubeVideo"
+/>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="inline" 3`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "autoplay": undefined,
+        "className": null,
+        "controlled": true,
+        "disableControls": undefined,
+        "disableFullscreen": undefined,
+        "disableInfo": undefined,
+        "disableRelatedVideos": undefined,
+        "disabled": false,
+        "fullTextSearchPriority": undefined,
+        "hidden": false,
+        "id": "uuID",
+        "loop": undefined,
+        "mainAttrs": null,
+        "muted": undefined,
+        "name": null,
+        "nestingLevel": "inline",
         "parent": null,
         "pureRender": false,
         "ref_": null,
@@ -599,6 +814,7 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBox" 1`] = `
         "disableInfo": undefined,
         "disableRelatedVideos": undefined,
         "disabled": false,
+        "fullTextSearchPriority": undefined,
         "hidden": false,
         "id": "uuID",
         "loop": undefined,
@@ -606,7 +822,6 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBox" 1`] = `
         "muted": undefined,
         "name": null,
         "nestingLevel": "smallBox",
-        "noIndex": false,
         "parent": null,
         "pureRender": false,
         "ref_": null,
@@ -655,6 +870,7 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBoxCollection" 1`] = `
         "disableInfo": undefined,
         "disableRelatedVideos": undefined,
         "disabled": false,
+        "fullTextSearchPriority": undefined,
         "hidden": false,
         "id": "uuID",
         "loop": undefined,
@@ -662,7 +878,6 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBoxCollection" 1`] = `
         "muted": undefined,
         "name": null,
         "nestingLevel": "smallBoxCollection",
-        "noIndex": false,
         "parent": null,
         "pureRender": false,
         "ref_": null,
@@ -723,14 +938,48 @@ exports[`UU5.Bricks.YoutubeVideo noIndex=false 1`] = `
 
 exports[`UU5.Bricks.YoutubeVideo noIndex=true 1`] = `
 <Span
-  className="uu5-bricks-youtube-video uu5-noindex"
+  className="uu5-bricks-youtube-video uu5-noindex uu-fulltextsearch-0"
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel={null}
 >
   <iframe
     allowFullScreen={true}
-    className="uu5-bricks-youtube-video uu5-noindex uu5-bricks-youtube-video-m"
+    className="uu5-bricks-youtube-video uu5-noindex uu-fulltextsearch-0 uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo noPrint=false 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo noPrint=true 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
     id="uuID"
     style={Object {}}
     title={null}
@@ -943,6 +1192,32 @@ exports[`UU5.Bricks.YoutubeVideo style={"backgroundColor":"red","color":"blue"} 
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo style={"margin":8} 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={
+      Object {
+        "margin": 8,
       }
     }
     title={null}

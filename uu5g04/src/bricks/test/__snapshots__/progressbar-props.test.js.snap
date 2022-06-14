@@ -252,6 +252,28 @@ exports[`UU5.Bricks.ProgressBar className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ProgressBar className="test-classname" 1`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar test-classname uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ProgressBar colorSchema="brown" 1`] = `
 <Fragment>
   <progress-bar-cover
@@ -786,7 +808,52 @@ exports[`UU5.Bricks.ProgressBar disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ProgressBar disabled=false 3`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ProgressBar disabled=true 1`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    disabled={true}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ProgressBar disabled=true 3`] = `
 <Fragment>
   <progress-bar-cover
     className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
@@ -880,7 +947,73 @@ exports[`UU5.Bricks.ProgressBar dynamic=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ProgressBar elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ProgressBar fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu-fulltextsearch-0 uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ProgressBar hidden=false 1`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ProgressBar hidden=false 3`] = `
 <Fragment>
   <progress-bar-cover
     className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
@@ -925,6 +1058,29 @@ exports[`UU5.Bricks.ProgressBar hidden=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ProgressBar hidden=true 3`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    hidden={true}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ProgressBar id="myId" 1`] = `
 <Fragment>
   <progress-bar-cover
@@ -932,6 +1088,28 @@ exports[`UU5.Bricks.ProgressBar id="myId" 1`] = `
     content={null}
     dynamic={false}
     id="myId-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ProgressBar id="test-id" 1`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="test-id-inner"
     ignoreInnerHTML={false}
     mainAttrs={Object {}}
     nestingLevel={null}
@@ -1102,6 +1280,28 @@ exports[`UU5.Bricks.ProgressBar nestingLevel="box" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ProgressBar nestingLevel="box" 3`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel="box"
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ProgressBar nestingLevel="boxCollection" 1`] = `
 <Fragment>
   <progress-bar-cover
@@ -1147,6 +1347,19 @@ exports[`UU5.Bricks.ProgressBar nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.ProgressBar nestingLevel="inline" 1`] = `
+<span>
+  <Text
+    className="uu-bricks-1ox5g05"
+    colorSchema="blue"
+    key="0"
+  >
+    25
+    %
+  </Text>
+</span>
+`;
+
+exports[`UU5.Bricks.ProgressBar nestingLevel="inline" 3`] = `
 <span>
   <Text
     className="uu-bricks-1ox5g05"
@@ -1254,7 +1467,51 @@ exports[`UU5.Bricks.ProgressBar noIndex=false 1`] = `
 exports[`UU5.Bricks.ProgressBar noIndex=true 1`] = `
 <Fragment>
   <progress-bar-cover
-    className="uu5-bricks-progress-bar uu5-noindex uu5-bricks-progress-bar-size-m"
+    className="uu5-bricks-progress-bar uu5-noindex uu-fulltextsearch-0 uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ProgressBar noPrint=false 1`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ProgressBar noPrint=true 1`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
     content={null}
     dynamic={false}
     id="uuID-inner"
@@ -1603,6 +1860,33 @@ exports[`UU5.Bricks.ProgressBar style={"backgroundColor":"red","color":"blue"} 1
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="childID"
+      key="childID"
+      progress={25}
+      striped={true}
+    />
+  </progress-bar-cover>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ProgressBar style={"margin":8} 1`] = `
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+    style={
+      Object {
+        "margin": 8,
       }
     }
   >

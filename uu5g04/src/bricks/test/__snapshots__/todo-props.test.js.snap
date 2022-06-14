@@ -341,7 +341,6 @@ exports[`UU5.Bricks.Todo nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       props={null}
       ref_={null}
@@ -382,7 +381,6 @@ exports[`UU5.Bricks.Todo nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       props={null}
       ref_={null}
@@ -416,7 +414,6 @@ exports[`UU5.Bricks.Todo nestingLevel="smallBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       props={null}
       ref_={null}
@@ -441,6 +438,7 @@ exports[`UU5.Bricks.Todo nestingLevel="spa" 1`] = `
 exports[`UU5.Bricks.Todo noIndex=false 1`] = `
 <Todo
   id="uuID"
+  noIndex={false}
 />
 `;
 

@@ -1011,6 +1011,108 @@ exports[`UU5.Bricks.Pagination className="my-classname" 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.Pagination className="test-classname" 1`] = `
+<ul
+  className="uu5-bricks-pagination test-classname uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
 exports[`UU5.Bricks.Pagination colorSchema="brown" 1`] = `
 <ul
   className="color-schema-brown uu5-bricks-pagination uu5-bricks-pagination-m"
@@ -3357,7 +3459,215 @@ exports[`UU5.Bricks.Pagination disabled=false 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.Pagination disabled=false 3`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
 exports[`UU5.Bricks.Pagination disabled=true 1`] = `
+<ul
+  className="uu5-bricks-pagination uu5-common-disabled uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</ul>
+`;
+
+exports[`UU5.Bricks.Pagination disabled=true 3`] = `
 <ul
   className="uu5-bricks-pagination uu5-common-disabled uu5-bricks-pagination-m"
   id="uuID"
@@ -3514,6 +3824,108 @@ exports[`UU5.Bricks.Pagination docKit examples UU5.Bricks.Pagination should rend
     range={3}
   />
 </div>
+`;
+
+exports[`UU5.Bricks.Pagination elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
 `;
 
 exports[`UU5.Bricks.Pagination firstIcon="uu5-plus" 1`] = `
@@ -3720,7 +4132,211 @@ exports[`UU5.Bricks.Pagination firstLabel="První" 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.Pagination fullTextSearchPriority=0 1`] = `
+<ul
+  className="uu5-bricks-pagination uu-fulltextsearch-0 uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
 exports[`UU5.Bricks.Pagination hidden=false 1`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
+exports[`UU5.Bricks.Pagination hidden=false 3`] = `
 <ul
   className="uu5-bricks-pagination uu5-bricks-pagination-m"
   id="uuID"
@@ -3924,10 +4540,214 @@ exports[`UU5.Bricks.Pagination hidden=true 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.Pagination hidden=true 3`] = `
+<ul
+  className="uu5-bricks-pagination uu5-common-hidden uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
 exports[`UU5.Bricks.Pagination id="myId" 1`] = `
 <ul
   className="uu5-bricks-pagination uu5-bricks-pagination-m"
   id="myId"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
+exports[`UU5.Bricks.Pagination id="test-id" 1`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  id="test-id"
   style={Object {}}
   title={null}
 >
@@ -4918,6 +5738,108 @@ exports[`UU5.Bricks.Pagination nestingLevel="box" 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.Pagination nestingLevel="box" 3`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="box"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="box"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="box"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="box"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="box"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
 exports[`UU5.Bricks.Pagination nestingLevel="boxCollection" 1`] = `
 <ul
   className="uu5-bricks-pagination uu5-bricks-pagination-m"
@@ -5123,6 +6045,103 @@ exports[`UU5.Bricks.Pagination nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Pagination nestingLevel="inline" 1`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
+exports[`UU5.Bricks.Pagination nestingLevel="inline" 3`] = `
 <ul
   className="uu5-bricks-pagination uu5-bricks-pagination-m"
   id="uuID"
@@ -5935,7 +6954,211 @@ exports[`UU5.Bricks.Pagination noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Pagination noIndex=true 1`] = `
 <ul
-  className="uu5-bricks-pagination uu5-noindex uu5-bricks-pagination-m"
+  className="uu5-bricks-pagination uu5-noindex uu-fulltextsearch-0 uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
+exports[`UU5.Bricks.Pagination noPrint=false 1`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
+exports[`UU5.Bricks.Pagination noPrint=true 1`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7587,6 +8810,112 @@ exports[`UU5.Bricks.Pagination style={"backgroundColor":"red","color":"blue"} 1`
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      nestingLevel="bigBoxCollection"
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      nestingLevel="bigBoxCollection"
+      onClick={[Function]}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+    >
+      5
+    </Button>
+  </li>
+</ul>
+`;
+
+exports[`UU5.Bricks.Pagination style={"margin":8} 1`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

@@ -34,7 +34,7 @@ export class VisualComponent {
     hidden: PropTypes.bool,
     mainAttrs: PropTypes.object,
     fullTextSearchPriority: PropTypes.oneOf([0, 1, 2, 3, 4, 5]),
-    nestingLevel: PropTypes.oneOf(Environment.nestingLevelList),
+    nestingLevel: PropTypes.oneOf([...new Set([...Environment.nestingLevelList, ...Utils.NestingLevel.valueList])]),
   });
 
   static defaultProps = Object.freeze({

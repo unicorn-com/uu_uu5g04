@@ -1163,6 +1163,98 @@ exports[`UU5.Forms.DateTimePicker props className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.DateTimePicker props className="test-classname" 1`] = `
+<div
+  className="uu5-forms-datetimepicker test-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.DateTimePicker props colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
@@ -3889,6 +3981,98 @@ exports[`UU5.Forms.DateTimePicker props disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.DateTimePicker props disabled=false 3`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.DateTimePicker props disabled=true 1`] = `
 <div
   className="uu5-forms-datetimepicker uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
@@ -3945,6 +4129,187 @@ exports[`UU5.Forms.DateTimePicker props disabled=true 1`] = `
         message={null}
         name="uuID-time-input"
         onChange={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimePicker props disabled=true 3`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={true}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        disabled={true}
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        disabled={true}
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimePicker props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
         onKeyDown={[Function]}
         readonly={false}
         ref_={[Function]}
@@ -4905,6 +5270,98 @@ exports[`UU5.Forms.DateTimePicker props format="dd-mm-Y" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.DateTimePicker props fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-forms-datetimepicker uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.DateTimePicker props function parseDate(), valueType is date 1`] = `
 <div
   className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
@@ -5279,7 +5736,191 @@ exports[`UU5.Forms.DateTimePicker props hidden=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.DateTimePicker props hidden=false 3`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.DateTimePicker props hidden=true 1`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimePicker props hidden=true 3`] = `
 <div
   className="uu5-forms-datetimepicker uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
@@ -5822,6 +6463,98 @@ exports[`UU5.Forms.DateTimePicker props id="myId" 1`] = `
         fitHeightToViewport={false}
         forceRender={true}
         id="myId-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimePicker props id="test-id" 1`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="test-id"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="test-id-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="test-id-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="test-id-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="test-id-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="test-id-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="test-id-time-popover"
         location="local"
         ref_={[Function]}
         shown={false}
@@ -6943,6 +7676,192 @@ exports[`UU5.Forms.DateTimePicker props nanMessage="Prosím zadejte validní dat
 </div>
 `;
 
+exports[`UU5.Forms.DateTimePicker props nestingLevel="box" 1`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimePicker props nestingLevel="inline" 1`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        inputWidth="auto"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        inputWidth="auto"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.DateTimePicker props noIndex=false 1`] = `
 <div
   className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
@@ -7037,7 +7956,191 @@ exports[`UU5.Forms.DateTimePicker props noIndex=false 1`] = `
 
 exports[`UU5.Forms.DateTimePicker props noIndex=true 1`] = `
 <div
-  className="uu5-forms-datetimepicker uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-datetimepicker uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimePicker props noPrint=false 1`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimePicker props noPrint=true 1`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8708,6 +9811,102 @@ exports[`UU5.Forms.DateTimePicker props style={"backgroundColor":"red","color":"
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    datetimepicker={true}
+    disabled={false}
+    readonly={false}
+  >
+    <div
+      className="uu5-forms-datetimepicker-date-wrapper"
+      key="1"
+    >
+      <text-input
+        className="uu5-forms-date-input"
+        feedback="initial"
+        icon="mdi-calendar"
+        iconClickable={false}
+        id="uuID-date-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-date-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-time-wrapper"
+      key="2"
+    >
+      <text-input
+        className="uu5-forms-time-input"
+        feedback="initial"
+        icon="mdi-clock-outline"
+        iconClickable={false}
+        id="uuID-time-input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onClick": [Function],
+          }
+        }
+        message={null}
+        name="uuID-time-input"
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+      />
+    </div>
+    <div
+      className="uu5-forms-datetimepicker-popover-wrapper"
+      key="3"
+    >
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        forceRender={true}
+        id="uuID-date-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+      <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
+        disableBackdrop={true}
+        fitHeightToViewport={false}
+        forceRender={true}
+        id="uuID-time-popover"
+        location="local"
+        ref_={[Function]}
+        shown={false}
+      />
+    </div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimePicker props style={"margin":8} 1`] = `
+<div
+  className="uu5-forms-datetimepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

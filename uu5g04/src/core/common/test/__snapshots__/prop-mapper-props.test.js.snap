@@ -14,6 +14,18 @@ exports[`UU5.Common.PropMapper props testing className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Common.PropMapper props testing className="test-classname" 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
 exports[`UU5.Common.PropMapper props testing default props 1`] = `
 <Container
   age={25}
@@ -26,7 +38,91 @@ exports[`UU5.Common.PropMapper props testing default props 1`] = `
 />
 `;
 
+exports[`UU5.Common.PropMapper props testing disabled=false 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
+exports[`UU5.Common.PropMapper props testing disabled=true 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
+exports[`UU5.Common.PropMapper props testing elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
+exports[`UU5.Common.PropMapper props testing fullTextSearchPriority=0 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
+exports[`UU5.Common.PropMapper props testing hidden=false 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
+exports[`UU5.Common.PropMapper props testing hidden=true 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
 exports[`UU5.Common.PropMapper props testing id="myId" 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
+exports[`UU5.Common.PropMapper props testing id="test-id" 1`] = `
 <Container
   age={25}
   city="Los Angeles"
@@ -80,6 +176,30 @@ exports[`UU5.Common.PropMapper props testing name="myName" 1`] = `
 />
 `;
 
+exports[`UU5.Common.PropMapper props testing nestingLevel="box" 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
+exports[`UU5.Common.PropMapper props testing nestingLevel="inline" 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
 exports[`UU5.Common.PropMapper props testing noIndex=false 1`] = `
 <Container
   age={25}
@@ -104,6 +224,30 @@ exports[`UU5.Common.PropMapper props testing noIndex=true 1`] = `
 />
 `;
 
+exports[`UU5.Common.PropMapper props testing noPrint=false 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
+exports[`UU5.Common.PropMapper props testing noPrint=true 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
 exports[`UU5.Common.PropMapper props testing style="padding:8px; borderRadius: 2px" 1`] = `
 <Container
   age={25}
@@ -117,6 +261,18 @@ exports[`UU5.Common.PropMapper props testing style="padding:8px; borderRadius: 2
 `;
 
 exports[`UU5.Common.PropMapper props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
+exports[`UU5.Common.PropMapper props testing style={"margin":8} 1`] = `
 <Container
   age={25}
   city="Los Angeles"

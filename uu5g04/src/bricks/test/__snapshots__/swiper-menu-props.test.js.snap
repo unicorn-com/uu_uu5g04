@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Swiper.Menu className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Menu className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-swiper-menu test-classname uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Menu content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
@@ -124,7 +133,30 @@ exports[`UU5.Bricks.Swiper.Menu disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Menu disabled=false 3`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Menu disabled=true 1`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-common-disabled uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper.Menu disabled=true 3`] = `
 <div
   className="uu5-bricks-swiper-menu uu5-common-disabled uu5-bricks-swiper-menu-left"
   id="uuID"
@@ -201,7 +233,34 @@ exports[`UU5.Bricks.Swiper.Menu dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Menu elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Menu fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-swiper-menu uu-fulltextsearch-0 uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Menu hidden=false 1`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Menu hidden=false 3`] = `
 <div
   className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
   id="uuID"
@@ -219,10 +278,28 @@ exports[`UU5.Bricks.Swiper.Menu hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Menu hidden=true 3`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-common-hidden uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Menu id="myId" 1`] = `
 <div
   className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Menu id="test-id" 1`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -292,6 +369,15 @@ exports[`UU5.Bricks.Swiper.Menu nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Menu nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Menu nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
@@ -311,6 +397,8 @@ exports[`UU5.Bricks.Swiper.Menu nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Swiper.Menu nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Swiper.Menu nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Swiper.Menu nestingLevel="page" 1`] = `
 <div
@@ -345,7 +433,25 @@ exports[`UU5.Bricks.Swiper.Menu noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Swiper.Menu noIndex=true 1`] = `
 <div
-  className="uu5-bricks-swiper-menu uu5-noindex uu5-bricks-swiper-menu-left"
+  className="uu5-bricks-swiper-menu uu5-noindex uu-fulltextsearch-0 uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Menu noPrint=false 1`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Menu noPrint=true 1`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
   id="uuID"
   style={Object {}}
   title={null}
@@ -419,6 +525,19 @@ exports[`UU5.Bricks.Swiper.Menu style={"backgroundColor":"red","color":"blue"} 1
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Menu style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

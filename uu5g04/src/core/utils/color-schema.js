@@ -39,6 +39,7 @@ export const ColorSchema = {
     return result;
   },
 
+  // NOTE Used also in uu_plus4u5g02 for converting colorSchema-s of g04 Alert-s.
   _toGdsColorScheme(colorSchema) {
     return ColorSchema._SCHEMA_TO_GDS_MAP[colorSchema?.replace(/-rich$/, "")];
   },

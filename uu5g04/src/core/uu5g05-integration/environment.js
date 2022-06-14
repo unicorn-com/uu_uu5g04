@@ -68,6 +68,8 @@ for (let k in Environment) {
 
 if (Environment._constants) {
   adaptedG04Environment.showProductionWarning = ["debug", "info", "warn"].includes(Environment._constants.logLevel);
+  adaptedG04Environment._inStyleRootElement = Environment._constants.inStyleRootElement;
+  adaptedG04Environment._styleRootElementClassName = Environment._constants.styleRootElementClassName;
 }
 
 // NOTE Environment.statisticsLogLibrariesUri has no direct mapping into g04 and is therefore

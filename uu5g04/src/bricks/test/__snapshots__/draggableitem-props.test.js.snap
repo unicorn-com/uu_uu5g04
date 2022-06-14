@@ -140,6 +140,26 @@ exports[`UU5.Bricks.DraggableItem className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.DraggableItem className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-draggable-item test-classname"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.DraggableItem content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-draggable-item"
@@ -262,7 +282,51 @@ exports[`UU5.Bricks.DraggableItem disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.DraggableItem disabled=false 3`] = `
+<div
+  className="uu5-bricks-draggable-item"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.DraggableItem disabled=true 1`] = `
+<div
+  className="uu5-bricks-draggable-item uu5-common-disabled"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.DraggableItem disabled=true 3`] = `
 <div
   className="uu5-bricks-draggable-item uu5-common-disabled"
   id="uuID"
@@ -349,7 +413,67 @@ exports[`UU5.Bricks.DraggableItem dynamic=true 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.DraggableItem elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-draggable-item"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.DraggableItem fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-draggable-item uu-fulltextsearch-0"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.DraggableItem hidden=false 1`] = `
+<div
+  className="uu5-bricks-draggable-item"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.DraggableItem hidden=false 3`] = `
 <div
   className="uu5-bricks-draggable-item"
   id="uuID"
@@ -389,10 +513,50 @@ exports[`UU5.Bricks.DraggableItem hidden=true 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.DraggableItem hidden=true 3`] = `
+<div
+  className="uu5-bricks-draggable-item uu5-common-hidden"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.DraggableItem id="myId" 1`] = `
 <div
   className="uu5-bricks-draggable-item"
   id="myId"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.DraggableItem id="test-id" 1`] = `
+<div
+  className="uu5-bricks-draggable-item"
+  id="test-id"
   onMouseDown={[Function]}
   onTouchStart={[Function]}
   style={
@@ -550,6 +714,26 @@ exports[`UU5.Bricks.DraggableItem nestingLevel="box" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.DraggableItem nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-draggable-item"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.DraggableItem nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-draggable-item"
@@ -591,6 +775,8 @@ exports[`UU5.Bricks.DraggableItem nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.DraggableItem nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.DraggableItem nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.DraggableItem nestingLevel="page" 1`] = `
 <div
@@ -658,7 +844,47 @@ exports[`UU5.Bricks.DraggableItem noIndex=false 1`] = `
 
 exports[`UU5.Bricks.DraggableItem noIndex=true 1`] = `
 <div
-  className="uu5-bricks-draggable-item uu5-noindex"
+  className="uu5-bricks-draggable-item uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.DraggableItem noPrint=false 1`] = `
+<div
+  className="uu5-bricks-draggable-item"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.DraggableItem noPrint=true 1`] = `
+<div
+  className="uu5-bricks-draggable-item"
   id="uuID"
   onMouseDown={[Function]}
   onTouchStart={[Function]}
@@ -867,6 +1093,26 @@ exports[`UU5.Bricks.DraggableItem style="padding:8px; borderRadius: 2px" 1`] = `
 `;
 
 exports[`UU5.Bricks.DraggableItem style={"backgroundColor":"red","color":"blue"} 1`] = `
+<div
+  className="uu5-bricks-draggable-item"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.DraggableItem style={"margin":8} 1`] = `
 <div
   className="uu5-bricks-draggable-item"
   id="uuID"

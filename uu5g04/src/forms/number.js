@@ -782,6 +782,18 @@ let NumberComponent = Context.withContext(
         e.target.value = newLocalizedValue;
       }
 
+      let separatorCount = newLocalizedValue.split(/[.,]/).length;
+
+      if (separatorCount >= 3) {
+        let parsedValue = this._parseNumberFromLocalizedString(newLocalizedValue);
+        if (typeof parsedValue === "number" && !Number.isNaN(parsedValue)) {
+          newLocalizedValue = this._formatNumberToLocalizedStringEditable(parsedValue);
+        }
+      }
+
+      // Always interpret ., as decimal separator
+      newLocalizedValue = newLocalizedValue.replace(/[.,]/g, () => this._currentProps.decimalSeparator);
+
       let nanFeedbackObject = this._checkNaNAndGetFeedback(newLocalizedValue);
       if (nanFeedbackObject) {
         // newLocalizedValue is invalid; if user had valid value before (or "-") then forbid changing
@@ -1061,7 +1073,15 @@ let NumberComponent = Context.withContext(
       if (this.state.value) {
         value = this._prefix();
         if (this._isFocused || Number.isNaN(this._parseNumberFromLocalizedString(this.state.value))) {
-          value += this.state.value;
+          if (this._isFocused) {
+            let inputValue = this.state.value.replaceAll(this.props.thousandSeparator, "");
+            if ([".", ","].indexOf(this.props.decimalSeparator) === -1) {
+              inputValue = inputValue.replaceAll(this.props.decimalSeparator, ".");
+            }
+            value += inputValue;
+          } else {
+            value += this.state.value;
+          }
         } else {
           value += this._formatToUnfocusedValue(this.state.value, this.props.decimalsView, true);
         }

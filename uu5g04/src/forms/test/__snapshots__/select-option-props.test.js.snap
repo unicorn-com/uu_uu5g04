@@ -83,6 +83,17 @@ exports[`UU5.Forms.Select.Option props className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Forms.Select.Option props className="test-classname" 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item test-classname"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
 exports[`UU5.Forms.Select.Option props content="This is Content from ContentMixin" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
@@ -149,7 +160,30 @@ exports[`UU5.Forms.Select.Option props disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Forms.Select.Option props disabled=false 3`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
 exports[`UU5.Forms.Select.Option props disabled=true 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  disabled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props disabled=true 3`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
   content="option value"
@@ -184,7 +218,40 @@ exports[`UU5.Forms.Select.Option props dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Forms.Select.Option props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props fullTextSearchPriority=0 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item uu-fulltextsearch-0"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
 exports[`UU5.Forms.Select.Option props hidden=false 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props hidden=false 3`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
   content="option value"
@@ -207,11 +274,34 @@ exports[`UU5.Forms.Select.Option props hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Forms.Select.Option props hidden=true 3`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
 exports[`UU5.Forms.Select.Option props id="myId" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
   content="option value"
   id="myId-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props id="test-id" 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  id="test-id-inner"
   mainAttrs={Object {}}
   onClick={[Function]}
   ref_={[Function]}
@@ -263,6 +353,28 @@ exports[`UU5.Forms.Select.Option props name="myName" 1`] = `
 />
 `;
 
+exports[`UU5.Forms.Select.Option props nestingLevel="box" 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props nestingLevel="inline" 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
 exports[`UU5.Forms.Select.Option props noIndex=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
@@ -276,7 +388,29 @@ exports[`UU5.Forms.Select.Option props noIndex=false 1`] = `
 
 exports[`UU5.Forms.Select.Option props noIndex=true 1`] = `
 <Link
-  className="uu5-forms-select-option uu5-forms-group-item uu5-noindex"
+  className="uu5-forms-select-option uu5-forms-group-item uu5-noindex uu-fulltextsearch-0"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props noPrint=false 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props noPrint=true 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
   content="option value"
   id="uuID-inner"
   mainAttrs={Object {}}
@@ -389,6 +523,22 @@ exports[`UU5.Forms.Select.Option props style={"backgroundColor":"red","color":"b
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props style={"margin":8} 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+  style={
+    Object {
+      "margin": 8,
     }
   }
 />

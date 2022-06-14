@@ -18,6 +18,24 @@ exports[`UU5.Bricks.GoogleMap className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.GoogleMap className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-google-map test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.GoogleMap controlled=false 1`] = `
 <div
   className="uu5-bricks-google-map"
@@ -162,7 +180,47 @@ exports[`UU5.Bricks.GoogleMap disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.GoogleMap disabled=false 3`] = `
+<div
+  className="uu5-bricks-google-map"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.GoogleMap disabled=true 1`] = `
+<div
+  className="uu5-bricks-google-map uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.GoogleMap disabled=true 3`] = `
 <div
   className="uu5-bricks-google-map uu5-common-disabled"
   id="uuID"
@@ -546,6 +604,42 @@ exports[`UU5.Bricks.GoogleMap draggable=true 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.GoogleMap elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-google-map"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.GoogleMap fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-google-map uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.GoogleMap googleApiKey="AIzaSyBkv-K9tpS-MrvvRKOpIGEj7H5wwdHD9pA" 1`] = `
 <div
   className="uu5-bricks-google-map"
@@ -600,7 +694,43 @@ exports[`UU5.Bricks.GoogleMap hidden=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.GoogleMap hidden=false 3`] = `
+<div
+  className="uu5-bricks-google-map"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.GoogleMap hidden=true 1`] = `
+<div
+  className="uu5-bricks-google-map uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.GoogleMap hidden=true 3`] = `
 <div
   className="uu5-bricks-google-map uu5-common-hidden"
   id="uuID"
@@ -622,6 +752,24 @@ exports[`UU5.Bricks.GoogleMap id="myId" 1`] = `
 <div
   className="uu5-bricks-google-map"
   id="myId"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.GoogleMap id="test-id" 1`] = `
+<div
+  className="uu5-bricks-google-map"
+  id="test-id"
   style={Object {}}
   title={null}
 >
@@ -931,7 +1079,43 @@ exports[`UU5.Bricks.GoogleMap noIndex=false 1`] = `
 
 exports[`UU5.Bricks.GoogleMap noIndex=true 1`] = `
 <div
-  className="uu5-bricks-google-map uu5-noindex"
+  className="uu5-bricks-google-map uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.GoogleMap noPrint=false 1`] = `
+<div
+  className="uu5-bricks-google-map"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.GoogleMap noPrint=true 1`] = `
+<div
+  className="uu5-bricks-google-map"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1050,6 +1234,28 @@ exports[`UU5.Bricks.GoogleMap style={"backgroundColor":"red","color":"blue"} 1`]
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.GoogleMap style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-google-map"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>Example 00</title>
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css"
+    />
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        imports: {
+          react: "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      //@@viewOn:imports
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import { createVisualComponent, useState, useEffect } from "uu5g04-hooks";
+      //@@viewOff:imports
+
+      //@@viewOn:example
+      const TestComponent = createVisualComponent({
+        //@@viewOn:statics
+        displayName: "UU5.Demo.TestComponent",
+        nestingLevel: "box",
+        //@@viewOff:statics
+
+        //@@viewOn:propTypes
+        propTypes: {
+          onPrintReady: UU5.PropTypes.func.isRequired, // provided by withVisibilityCheck HOC
+        },
+        //@@viewOff:propTypes
+
+        //@@viewOn:defaultProps
+        defaultProps: {},
+        //@@viewOff:defaultProps
+
+        render(props) {
+          //@@viewOn:private
+          const [isReady, setIsReady] = useState(false);
+          useEffect(() => {
+            setTimeout(() => {
+              setIsReady(true);
+              props.onPrintReady(true);
+            }, 3000);
+          }, []);
+          //@@viewOff:private
+
+          //@@viewOn:interface
+          //@@viewOff:interface
+
+          //@@viewOn:render
+          return isReady ? <b>Ready!</b> : <UU5.Bricks.Loading />;
+          //@@viewOff:render
+        },
+      });
+
+      const TestComponentWithVisibilityCheck = UU5.Common.withVisibilityCheck(TestComponent, undefined, true);
+
+      const Page = createVisualComponent({
+        //@@viewOn:statics
+        displayName: "UU5.Demo.WithVisibilityCheck",
+        nestingLevel: "box",
+        //@@viewOff:statics
+
+        //@@viewOn:propTypes
+        propTypes: {},
+        //@@viewOff:propTypes
+
+        //@@viewOn:defaultProps
+        defaultProps: {},
+        //@@viewOff:defaultProps
+
+        render(props) {
+          //@@viewOn:private
+          //@@viewOff:private
+
+          //@@viewOn:interface
+          //@@viewOff:interface
+
+          //@@viewOn:render
+          return (
+            <UU5.Bricks.Container>
+              <b>
+                Content at the bottom will start loading after you scroll down or start printing. Until then, a warning
+                will be shown when you try to print.
+              </b>
+              <div style={{ opacity: 0.2 }}>
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph />
+              </div>
+              <TestComponentWithVisibilityCheck />
+            </UU5.Bricks.Container>
+          );
+          //@@viewOff:render
+        },
+      });
+
+      //@@viewOff:example
+
+      UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
+    </script>
+  </body>
+</html>

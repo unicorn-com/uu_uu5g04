@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -13,11 +25,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -29,11 +53,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -45,11 +81,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -61,11 +109,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -77,11 +137,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 1`] = 
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -93,11 +165,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 2`] = 
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -108,11 +192,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 1`] 
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -123,11 +219,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 2`] 
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -138,11 +246,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -153,11 +273,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -168,11 +300,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 1`] 
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -183,11 +327,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 2`] 
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -198,11 +354,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 1`] = 
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -213,11 +381,23 @@ exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 2`] = 
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -228,11 +408,23 @@ exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 1`]
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -243,11 +435,23 @@ exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 2`]
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -259,11 +463,23 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 1
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -275,11 +491,23 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 2
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -291,11 +519,23 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -307,11 +547,23 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -323,11 +575,23 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -339,11 +603,23 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -354,11 +630,23 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled pro
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -369,11 +657,23 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled pro
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -384,11 +684,23 @@ exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender pro
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -399,176 +711,644 @@ exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender pro
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test basePath="/uu-dockitg01-main/12345-890890908" 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' />" 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test className="my-classname" 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test className="test-classname" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test controlled=false 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test controlled=true 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test default props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test disabled=false 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test disabled=false 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test disabled=true 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test disabled=true 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test fullTextSearchPriority=0 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test hidden=false 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test hidden=false 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test hidden=true 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test hidden=true 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test id="myId" 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test id="test-id" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test mainAttrs=undefined 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test name="myName" 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test nestingLevel="box" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test nestingLevel="inline" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test noIndex=false 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test noIndex=true 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
-exports[`UU5.Common.Router Test Tool API test notFoundRoute={"key":null,"ref":null,"props":{"id":null,"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"params":null},"_owner":null,"_store":{}} 1`] = `
-<Fragment>
+exports[`UU5.Common.Router Test Tool API test noPrint=false 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test noPrint=true 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test notFoundRoute={"key":null,"ref":null,"props":{"id":null,"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"hidden":false,"disabled":false,"selected":false,"controlled":true,"params":null},"_owner":null,"_store":{}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <NotFoundRoute
     key=".0"
     params={
@@ -583,33 +1363,69 @@ exports[`UU5.Common.Router Test Tool API test notFoundRoute={"key":null,"ref":nu
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test pureRender=false 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test pureRender=true 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
-exports[`UU5.Common.Router Test Tool API test route={"key":null,"ref":null,"props":{"content":"initial route","id":null,"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"params":null},"_owner":null,"_store":{}} 1`] = `
-<Fragment>
+exports[`UU5.Common.Router Test Tool API test route={"key":null,"ref":null,"props":{"content":"initial route","id":null,"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"hidden":false,"disabled":false,"selected":false,"controlled":true,"params":null},"_owner":null,"_store":{}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -621,110 +1437,253 @@ exports[`UU5.Common.Router Test Tool API test route={"key":null,"ref":null,"prop
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test selected=false 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test selected=true 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=false 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=null 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=true 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test strictProps=false 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test strictProps=true 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test style="padding:8px; borderRadius: 2px" 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
+`;
+
+exports[`UU5.Common.Router Test Tool API test style={"margin":8} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test test 01 - routes props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -736,11 +1695,23 @@ exports[`UU5.Common.Router Test Tool API test test 01 - routes props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test test 01 - routes props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -752,33 +1723,69 @@ exports[`UU5.Common.Router Test Tool API test test 01 - routes props 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test tooltip="My Tooltip" 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router Test Tool API test urlBuilder=[Function] 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router props test 01 - default props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -790,11 +1797,23 @@ exports[`UU5.Common.Router props test 01 - default props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router props test 02 - basePath props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -806,11 +1825,23 @@ exports[`UU5.Common.Router props test 02 - basePath props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router props test 02 - basePath props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -822,11 +1853,23 @@ exports[`UU5.Common.Router props test 02 - basePath props 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router props test 03 - notFoundRoute props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -838,11 +1881,23 @@ exports[`UU5.Common.Router props test 03 - notFoundRoute props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router props test 04 - route props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.About
     key=".0"
     params={Object {}}
@@ -853,11 +1908,23 @@ exports[`UU5.Common.Router props test 04 - route props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router props test 05 - routes props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -868,11 +1935,23 @@ exports[`UU5.Common.Router props test 05 - routes props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router props test 05 - routes props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -883,11 +1962,23 @@ exports[`UU5.Common.Router props test 05 - routes props 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router props test 06 - urlBuilder props 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -898,11 +1989,23 @@ exports[`UU5.Common.Router props test 06 - urlBuilder props 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router props test 06 - urlBuilder props 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <UU5.Home
     key=".0"
     params={Object {}}
@@ -913,5 +2016,5 @@ exports[`UU5.Common.Router props test 06 - urlBuilder props 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;

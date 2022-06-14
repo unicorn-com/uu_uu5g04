@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Tabs.Item className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Tabs.Item className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Tabs.Item colorSchema="brown" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
@@ -295,7 +304,30 @@ exports[`UU5.Bricks.Tabs.Item disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Tabs.Item disabled=false 3`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Tabs.Item disabled=true 1`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Tabs.Item disabled=true 3`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-disabled"
   id="uuID"
@@ -312,7 +344,7 @@ exports[`UU5.Bricks.Tabs.Item disabled=true 1`] = `
 exports[`UU5.Bricks.Tabs.Item docKit examples UU5.Bricks.Tabs.Item should render without crash 1`] = `
 <Fragment>
   <div
-    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    className="uu5-bricks-tabs"
     id="uuID01"
     style={Object {}}
     title={null}
@@ -409,9 +441,27 @@ exports[`UU5.Bricks.Tabs.Item dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Tabs.Item elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Tabs.Item footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Tabs.Item fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}
@@ -436,7 +486,25 @@ exports[`UU5.Bricks.Tabs.Item hidden=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Tabs.Item hidden=false 3`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Tabs.Item hidden=true 1`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Tabs.Item hidden=true 3`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-hidden"
   id="uuID"
@@ -449,6 +517,15 @@ exports[`UU5.Bricks.Tabs.Item id="myId" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Tabs.Item id="test-id" 1`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -644,6 +721,15 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Tabs.Item nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Tabs.Item nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
@@ -663,6 +749,8 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Tabs.Item nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Tabs.Item nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Tabs.Item nestingLevel="page" 1`] = `
 <div
@@ -711,7 +799,25 @@ exports[`UU5.Bricks.Tabs.Item noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Tabs.Item noIndex=true 1`] = `
 <div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-noindex"
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Tabs.Item noPrint=false 1`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Tabs.Item noPrint=true 1`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
   style={Object {}}
   title={null}
@@ -776,6 +882,19 @@ exports[`UU5.Bricks.Tabs.Item style={"backgroundColor":"red","color":"blue"} 1`]
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Tabs.Item style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

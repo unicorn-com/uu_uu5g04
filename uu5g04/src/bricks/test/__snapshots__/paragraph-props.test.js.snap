@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Paragraph className="my-classname" 1`] = `
 </p>
 `;
 
+exports[`UU5.Bricks.Paragraph className="test-classname" 1`] = `
+<p
+  className="uu5-bricks-paragraph test-classname"
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
 exports[`UU5.Bricks.Paragraph content="This is Content from ContentMixin" 1`] = `
 <p
   className="uu5-bricks-paragraph"
@@ -118,7 +127,27 @@ exports[`UU5.Bricks.Paragraph disabled=false 1`] = `
 </p>
 `;
 
+exports[`UU5.Bricks.Paragraph disabled=false 3`] = `
+<p
+  className="uu5-bricks-paragraph"
+  disabled={false}
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
 exports[`UU5.Bricks.Paragraph disabled=true 1`] = `
+<p
+  className="uu5-bricks-paragraph"
+  disabled={true}
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
+exports[`UU5.Bricks.Paragraph disabled=true 3`] = `
 <p
   className="uu5-bricks-paragraph"
   disabled={true}
@@ -155,7 +184,35 @@ exports[`UU5.Bricks.Paragraph dynamic=true 1`] = `
 </p>
 `;
 
+exports[`UU5.Bricks.Paragraph elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<p
+  className="uu5-bricks-paragraph"
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
+exports[`UU5.Bricks.Paragraph fullTextSearchPriority=0 1`] = `
+<p
+  className="uu5-bricks-paragraph uu-fulltextsearch-0"
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
 exports[`UU5.Bricks.Paragraph hidden=false 1`] = `
+<p
+  className="uu5-bricks-paragraph"
+  hidden={false}
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
+exports[`UU5.Bricks.Paragraph hidden=false 3`] = `
 <p
   className="uu5-bricks-paragraph"
   hidden={false}
@@ -175,10 +232,29 @@ exports[`UU5.Bricks.Paragraph hidden=true 1`] = `
 </p>
 `;
 
+exports[`UU5.Bricks.Paragraph hidden=true 3`] = `
+<p
+  className="uu5-bricks-paragraph"
+  hidden={true}
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
 exports[`UU5.Bricks.Paragraph id="myId" 1`] = `
 <p
   className="uu5-bricks-paragraph"
   id="myId"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
+exports[`UU5.Bricks.Paragraph id="test-id" 1`] = `
+<p
+  className="uu5-bricks-paragraph"
+  id="test-id"
 >
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
 </p>
@@ -220,6 +296,26 @@ exports[`UU5.Bricks.Paragraph name="myName" 1`] = `
 </p>
 `;
 
+exports[`UU5.Bricks.Paragraph nestingLevel="box" 1`] = `
+<p
+  className="uu5-bricks-paragraph"
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
+exports[`UU5.Bricks.Paragraph nestingLevel="inline" 1`] = `
+<ForwardRef
+  className="uu5-bricks-paragraph"
+  id="uuID"
+  nestingLevel="inline"
+  ref_={null}
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</ForwardRef>
+`;
+
 exports[`UU5.Bricks.Paragraph noIndex=false 1`] = `
 <p
   className="uu5-bricks-paragraph"
@@ -231,7 +327,25 @@ exports[`UU5.Bricks.Paragraph noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Paragraph noIndex=true 1`] = `
 <p
-  className="uu5-bricks-paragraph uu5-noindex"
+  className="uu5-bricks-paragraph uu-fulltextsearch-0 uu5-noindex"
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
+exports[`UU5.Bricks.Paragraph noPrint=false 1`] = `
+<p
+  className="uu5-bricks-paragraph"
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
+exports[`UU5.Bricks.Paragraph noPrint=true 1`] = `
+<p
+  className="uu5-bricks-paragraph uug-1ak6bum"
   id="uuID"
 >
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
@@ -279,6 +393,20 @@ exports[`UU5.Bricks.Paragraph style={"backgroundColor":"red","color":"blue"} 1`]
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
+exports[`UU5.Bricks.Paragraph style={"margin":8} 1`] = `
+<p
+  className="uu5-bricks-paragraph"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
 >

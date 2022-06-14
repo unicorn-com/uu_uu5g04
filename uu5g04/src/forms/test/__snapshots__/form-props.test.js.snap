@@ -79,6 +79,50 @@ exports[`UU5.Forms.Form props className="my-classname" 1`] = `
 </form>
 `;
 
+exports[`UU5.Forms.Form props className="test-classname" 1`] = `
+<form
+  className="uu5-forms-form test-classname uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
 exports[`UU5.Forms.Form props controlled=false 1`] = `
 <form
   className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
@@ -255,9 +299,141 @@ exports[`UU5.Forms.Form props disabled=false 1`] = `
 </form>
 `;
 
+exports[`UU5.Forms.Form props disabled=false 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
 exports[`UU5.Forms.Form props disabled=true 1`] = `
 <form
   className="uu5-forms-form uu5-common-disabled uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props disabled=true 3`] = `
+<form
+  className="uu5-forms-form uu5-common-disabled uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
   id="uuID"
   onSubmit={[Function]}
   style={Object {}}
@@ -339,6 +515,50 @@ exports[`UU5.Forms.Form props footer={"type":"div","key":null,"ref":null,"props"
       }
       id="uuID-footer"
       key="2"
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props fullTextSearchPriority=0 1`] = `
+<form
+  className="uu5-forms-form uu-fulltextsearch-0 uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
     />
   </ContextProvider>
   <button
@@ -450,7 +670,95 @@ exports[`UU5.Forms.Form props hidden=false 1`] = `
 </form>
 `;
 
+exports[`UU5.Forms.Form props hidden=false 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
 exports[`UU5.Forms.Form props hidden=true 1`] = `
+<form
+  className="uu5-forms-form uu5-common-hidden uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props hidden=true 3`] = `
 <form
   className="uu5-forms-form uu5-common-hidden uu5-common-form uu-forms-ifp1tt"
   id="uuID"
@@ -498,6 +806,50 @@ exports[`UU5.Forms.Form props id="myId" 1`] = `
 <form
   className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
   id="myId"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props id="test-id" 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
+  id="test-id"
   onSubmit={[Function]}
   style={Object {}}
   title={null}
@@ -627,6 +979,94 @@ exports[`UU5.Forms.Form props name="myName" 1`] = `
 </form>
 `;
 
+exports[`UU5.Forms.Form props nestingLevel="box" 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props nestingLevel="inline" 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
 exports[`UU5.Forms.Form props noIndex=false 1`] = `
 <form
   className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
@@ -673,7 +1113,95 @@ exports[`UU5.Forms.Form props noIndex=false 1`] = `
 
 exports[`UU5.Forms.Form props noIndex=true 1`] = `
 <form
-  className="uu5-forms-form uu5-noindex uu5-common-form uu-forms-ifp1tt"
+  className="uu5-forms-form uu5-noindex uu-fulltextsearch-0 uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props noPrint=false 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props noPrint=true 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
   id="uuID"
   onSubmit={[Function]}
   style={Object {}}
@@ -1121,6 +1649,54 @@ exports[`UU5.Forms.Form props style={"backgroundColor":"red","color":"blue"} 1`]
 </form>
 `;
 
+exports[`UU5.Forms.Form props style={"margin":8} 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
 exports[`UU5.Forms.Form props tooltip="My Tooltip" 1`] = `
 <form
   className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
@@ -1323,7 +1899,6 @@ exports[`UU5.Forms.FormMixin props.function testing onCancel() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1353,7 +1928,6 @@ exports[`UU5.Forms.FormMixin props.function testing onCancel() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1416,7 +1990,6 @@ exports[`UU5.Forms.FormMixin props.function testing onCancel() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1446,7 +2019,6 @@ exports[`UU5.Forms.FormMixin props.function testing onCancel() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1509,7 +2081,6 @@ exports[`UU5.Forms.FormMixin props.function testing onInit() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1539,7 +2110,6 @@ exports[`UU5.Forms.FormMixin props.function testing onInit() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1602,7 +2172,6 @@ exports[`UU5.Forms.FormMixin props.function testing onInit() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1632,7 +2201,6 @@ exports[`UU5.Forms.FormMixin props.function testing onInit() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1695,7 +2263,6 @@ exports[`UU5.Forms.FormMixin props.function testing onReset() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1725,7 +2292,6 @@ exports[`UU5.Forms.FormMixin props.function testing onReset() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1788,7 +2354,6 @@ exports[`UU5.Forms.FormMixin props.function testing onReset() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1818,7 +2383,6 @@ exports[`UU5.Forms.FormMixin props.function testing onReset() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1881,7 +2445,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSave() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1911,7 +2474,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSave() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -1974,7 +2536,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSave() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2004,7 +2565,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSave() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2067,7 +2627,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2097,7 +2656,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2160,7 +2718,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2190,7 +2747,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2253,7 +2809,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2283,7 +2838,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2346,7 +2900,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2376,7 +2929,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2439,7 +2991,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2469,7 +3020,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2532,7 +3082,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2562,7 +3111,6 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2625,7 +3173,6 @@ exports[`UU5.Forms.FormMixin props.function testing onValidate() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2655,7 +3202,6 @@ exports[`UU5.Forms.FormMixin props.function testing onValidate() 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2718,7 +3264,6 @@ exports[`UU5.Forms.FormMixin props.function testing onValidate() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}
@@ -2748,7 +3293,6 @@ exports[`UU5.Forms.FormMixin props.function testing onValidate() 2`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         parent={null}
         pureRender={false}
         ref_={null}

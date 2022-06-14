@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Div className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Div className="test-classname" 1`] = `
+<div
+  className="uu5-common-div test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Div content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-common-div"
@@ -124,7 +133,30 @@ exports[`UU5.Bricks.Div disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Div disabled=false 3`] = `
+<div
+  className="uu5-common-div"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Div disabled=true 1`] = `
+<div
+  className="uu5-common-div uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Div disabled=true 3`] = `
 <div
   className="uu5-common-div uu5-common-disabled"
   id="uuID"
@@ -156,6 +188,15 @@ exports[`UU5.Bricks.Div dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Div elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-common-div"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Div example docKit UU5.Bricks.Div render without crash 1`] = `
 <div
   className="uu5-common-div"
@@ -170,7 +211,25 @@ exports[`UU5.Bricks.Div example docKit UU5.Bricks.Div render without crash 1`] =
 </div>
 `;
 
+exports[`UU5.Bricks.Div fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-common-div uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Div hidden=false 1`] = `
+<div
+  className="uu5-common-div"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Div hidden=false 3`] = `
 <div
   className="uu5-common-div"
   id="uuID"
@@ -188,10 +247,28 @@ exports[`UU5.Bricks.Div hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Div hidden=true 3`] = `
+<div
+  className="uu5-common-div uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Div id="myId" 1`] = `
 <div
   className="uu5-common-div"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Div id="test-id" 1`] = `
+<div
+  className="uu5-common-div"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -234,6 +311,24 @@ exports[`UU5.Bricks.Div name="myName" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Div nestingLevel="box" 1`] = `
+<div
+  className="uu5-common-div"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Div nestingLevel="inline" 1`] = `
+<span
+  className="uu5-common-div"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Div noIndex=false 1`] = `
 <div
   className="uu5-common-div"
@@ -245,7 +340,25 @@ exports[`UU5.Bricks.Div noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Div noIndex=true 1`] = `
 <div
-  className="uu5-common-div uu5-noindex"
+  className="uu5-common-div uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Div noPrint=false 1`] = `
+<div
+  className="uu5-common-div"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Div noPrint=true 1`] = `
+<div
+  className="uu5-common-div"
   id="uuID"
   style={Object {}}
   title={null}
@@ -292,6 +405,19 @@ exports[`UU5.Bricks.Div style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Div style={"margin":8} 1`] = `
+<div
+  className="uu5-common-div"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

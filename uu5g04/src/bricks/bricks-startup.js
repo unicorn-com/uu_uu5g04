@@ -26,16 +26,29 @@ UU5.Environment.addRuntimeLibrary({
 
 UU5.Environment.Lsi.Bricks = BricksLsi;
 
+const { _inStyleRootElement } = UU5.Environment;
+
+// TODO Remove? #uu5-modals doesn't seem to be used anywhere...
 Css.injectGlobal`
   #uu5-modals > * {
     z-index: 1050;
   }
-
-  /* make last .uu5-bricks-container (with footer) be displayed at the bottom edge of the window
-     (or below if there's too much content in the page) */
-  html, body, body > div:first-child,
-  body > div:first-child .uu5-bricks-container {
-    box-sizing: border-box;
-    height: 100%;
-  }
 `;
+
+if (!_inStyleRootElement) {
+  // uu5g04 comes with default layout styles which are not always wanted - to be backward compatible,
+  // tie default uu5g04 layout with "known" CSS class, so that other layouts (such as uu_plus4u5g02)
+  // can simply remove this class when used
+  document.documentElement.classList.add("uu5g04-layout");
+  Css.injectGlobal`
+    /* make last .uu5-bricks-container (with footer) be displayed at the bottom edge of the window
+      (or below if there's too much content in the page) */
+    html:where(.uu5g04-layout),
+    :where(html.uu5g04-layout) > body,
+    :where(html.uu5g04-layout) > body > div:first-child,
+    :where(html.uu5g04-layout) > body > div:first-child .uu5-bricks-container {
+      box-sizing: border-box;
+      height: 100%;
+    }
+  `;
+}

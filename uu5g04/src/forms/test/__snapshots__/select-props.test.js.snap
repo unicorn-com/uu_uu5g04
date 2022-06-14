@@ -560,6 +560,52 @@ exports[`UU5.Forms.Select props className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Select props className="test-classname" 1`] = `
+<div
+  className="uu5-forms-select test-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Select props colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
@@ -1821,7 +1867,94 @@ exports[`UU5.Forms.Select props disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Select props disabled=false 3`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Select props disabled=true 1`] = `
+<div
+  className="uu5-forms-select uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={true}
+    readonly={false}
+  >
+    <items-input
+      disabled={true}
+      feedback="initial"
+      icon={null}
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      disabled={true}
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select props disabled=true 3`] = `
 <div
   className="uu5-forms-select uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
@@ -1909,6 +2042,52 @@ exports[`UU5.Forms.Select props dynamic=false 1`] = `
 `;
 
 exports[`UU5.Forms.Select props dynamic=true 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
 <div
   className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
@@ -2183,6 +2362,52 @@ exports[`UU5.Forms.Select props feedback="warning" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Select props fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-forms-select uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Select props function -> InputMixin onChange() 1`] = `
 <Select
   id="checkID"
@@ -2298,7 +2523,99 @@ exports[`UU5.Forms.Select props hidden=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Select props hidden=false 3`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Select props hidden=true 1`] = `
+<div
+  className="uu5-forms-select uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select props hidden=true 3`] = `
 <div
   className="uu5-forms-select uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
@@ -2472,6 +2789,52 @@ exports[`UU5.Forms.Select props id="myId" 1`] = `
       className="uu5-forms-select-popover"
       hidden={true}
       id="myId-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select props id="test-id" 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="test-id"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="test-id-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="test-id-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="test-id-popover"
       key="itemList"
       multiple={false}
       onChange={[Function]}
@@ -3641,6 +4004,98 @@ exports[`UU5.Forms.Select props name="myName" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Select props nestingLevel="box" 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select props nestingLevel="inline" 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth="auto"
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Select props noIndex=false 1`] = `
 <div
   className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
@@ -3689,7 +4144,99 @@ exports[`UU5.Forms.Select props noIndex=false 1`] = `
 
 exports[`UU5.Forms.Select props noIndex=true 1`] = `
 <div
-  className="uu5-forms-select uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  className="uu5-forms-select uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select props noPrint=false 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select props noPrint=true 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4478,6 +5025,56 @@ exports[`UU5.Forms.Select props style={"backgroundColor":"red","color":"blue"} 1
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      feedback="initial"
+      icon="mdi-menu-down"
+      id="uuID-input"
+      inputWidth={null}
+      key="input"
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      name="uuID-input"
+      onItemClick={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className="uu5-forms-select-popover"
+      hidden={true}
+      id="uuID-popover"
+      key="itemList"
+      multiple={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select props style={"margin":8} 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
+  id="uuID"
+  onClick={[Function]}
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

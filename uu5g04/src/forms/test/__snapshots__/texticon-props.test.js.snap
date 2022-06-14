@@ -186,6 +186,37 @@ exports[`UU5.Forms.TextIcon props className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TextIcon props className="test-classname" 1`] = `
+<div
+  className="uu5-forms-text-icon test-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TextIcon props colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
@@ -918,6 +949,37 @@ exports[`UU5.Forms.TextIcon props disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TextIcon props disabled=false 3`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TextIcon props disabled=true 1`] = `
 <div
   className="uu5-forms-text-icon uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
@@ -939,6 +1001,67 @@ exports[`UU5.Forms.TextIcon props disabled=true 1`] = `
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextIcon props disabled=true 3`] = `
+<div
+  className="uu5-forms-text-icon uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={true}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      disabled={true}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextIcon props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
@@ -1110,6 +1233,37 @@ exports[`UU5.Forms.TextIcon props feedback="warning" 1`] = `
 exports[`UU5.Forms.TextIcon props focusMessage="Bedlivě hlídám co píšete." 1`] = `
 <div
   className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextIcon props fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-forms-text-icon uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1447,7 +1601,69 @@ exports[`UU5.Forms.TextIcon props hidden=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TextIcon props hidden=false 3`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TextIcon props hidden=true 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextIcon props hidden=true 3`] = `
 <div
   className="uu5-forms-text-icon uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
   id="uuID"
@@ -1591,6 +1807,37 @@ exports[`UU5.Forms.TextIcon props id="myId" 1`] = `
       id="myId-input"
       mainAttrs={Object {}}
       name="myId-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextIcon props id="test-id" 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="test-id"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="test-id-input"
+      mainAttrs={Object {}}
+      name="test-id-input"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1955,6 +2202,69 @@ exports[`UU5.Forms.TextIcon props name="myName" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TextIcon props nestingLevel="box" 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextIcon props nestingLevel="inline" 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      inputWidth="auto"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TextIcon props noIndex=false 1`] = `
 <div
   className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
@@ -1988,7 +2298,69 @@ exports[`UU5.Forms.TextIcon props noIndex=false 1`] = `
 
 exports[`UU5.Forms.TextIcon props noIndex=true 1`] = `
 <div
-  className="uu5-forms-text-icon uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  className="uu5-forms-text-icon uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextIcon props noPrint=false 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextIcon props noPrint=true 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2686,6 +3058,41 @@ exports[`UU5.Forms.TextIcon props style={"backgroundColor":"red","color":"blue"}
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextIcon props style={"margin":8} 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

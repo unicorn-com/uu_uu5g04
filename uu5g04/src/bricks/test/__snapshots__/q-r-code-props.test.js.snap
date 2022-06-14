@@ -20,7 +20,147 @@ exports[`UU5.Bricks.QRCode className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.QRCode className="test-classname" 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij test-classname"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.QRCode default props 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode disabled=false 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode disabled=true 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij uu-fulltextsearch-0"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode hidden=false 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode hidden=true 1`] = `
 <Fragment>
   <span
     className="uu5-bricks-q-r-code uu-bricks-1w73uij"
@@ -45,6 +185,26 @@ exports[`UU5.Bricks.QRCode id="myId" 1`] = `
   <span
     className="uu5-bricks-q-r-code uu-bricks-1w73uij"
     id="myId"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode id="test-id" 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
+    id="test-id"
   >
     <Suspense
       fallback=""
@@ -101,6 +261,140 @@ exports[`UU5.Bricks.QRCode name="myName" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.QRCode nestingLevel="box" 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode nestingLevel="inline" 1`] = `
+<Fragment>
+  <UU5.BricksEditable.InlineMode
+    Component={[Function]}
+    component={
+      Object {
+        "__isMounted": true,
+        "_domNode": null,
+        "_isMounted": true,
+        "_resizeCallbacks": Object {},
+        "context": Object {},
+        "id": "uuID",
+        "mixinRegister": Array [
+          "UU5.Common.BaseMixin",
+          "UU5.Common.EditableMixin",
+          "UU5.Common.NestingLevelMixin",
+        ],
+        "props": Object {
+          "className": null,
+          "correction": "low",
+          "fullTextSearchPriority": undefined,
+          "getEditablePropValue": undefined,
+          "id": "uuID",
+          "mainAttrs": null,
+          "name": null,
+          "nestingLevel": "inline",
+          "parent": null,
+          "ref_": null,
+          "size": 128,
+          "style": null,
+          "tooltip": null,
+          "value": "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode",
+        },
+        "refs": Object {},
+        "state": Object {
+          "editableComponentLazyLoaded": false,
+          "editation": false,
+          "nestingLevel": null,
+        },
+        "tagName": "UU5.Bricks.QRCode",
+      }
+    }
+    editModalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Upravit QR kód",
+            "en": "Edit QR code",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    getPropsToSave={[Function]}
+    linkTitle="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+    modalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "QR kód",
+            "en": "QR code",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    modalProps={
+      Object {
+        "size": "auto",
+      }
+    }
+    renderEditationMode={[Function]}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.QRCode noIndex=false 1`] = `
 <Fragment>
   <span
@@ -124,7 +418,47 @@ exports[`UU5.Bricks.QRCode noIndex=false 1`] = `
 exports[`UU5.Bricks.QRCode noIndex=true 1`] = `
 <Fragment>
   <span
-    className="uu5-bricks-q-r-code uu-bricks-1w73uij uu5-noindex"
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij uu5-noindex uu-fulltextsearch-0"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode noPrint=false 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode noPrint=true 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
     id="uuID"
   >
     <Suspense
@@ -176,6 +510,31 @@ exports[`UU5.Bricks.QRCode style={"backgroundColor":"red","color":"blue"} 1`] = 
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.QRCode style={"margin":8} 1`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
+    id="uuID"
+    style={
+      Object {
+        "margin": 8,
       }
     }
   >

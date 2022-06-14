@@ -1870,7 +1870,6 @@ exports[`UU5.Forms.Text interface test TextInputMixin  isValid() should return f
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1983,6 +1982,7 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               "elevation": null,
               "feedback": "initial",
               "focusMessage": null,
+              "fullTextSearchPriority": undefined,
               "hidden": false,
               "id": "idText",
               "inputAttrs": null,
@@ -2007,7 +2007,6 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               "mainAttrs": null,
               "message": null,
               "name": null,
-              "noIndex": false,
               "onBlur": null,
               "onChange": null,
               "onEnter": null,
@@ -2139,7 +2138,6 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               }
             }
             name={null}
-            noIndex={false}
             onClick={null}
             parent={null}
             pureRender={false}
@@ -2166,7 +2164,6 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               }
             }
             name={null}
-            noIndex={false}
             onClick={null}
             parent={null}
             pureRender={false}
@@ -2193,7 +2190,6 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               }
             }
             name={null}
-            noIndex={false}
             onClick={null}
             parent={null}
             pureRender={false}
@@ -2220,7 +2216,6 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               }
             }
             name={null}
-            noIndex={false}
             onClick={null}
             parent={null}
             pureRender={false}
@@ -2262,6 +2257,7 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               "elevation": null,
               "feedback": "initial",
               "focusMessage": null,
+              "fullTextSearchPriority": undefined,
               "hidden": false,
               "id": "idText",
               "inputAttrs": null,
@@ -2286,7 +2282,6 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               "mainAttrs": null,
               "message": null,
               "name": null,
-              "noIndex": false,
               "onBlur": null,
               "onChange": null,
               "onEnter": null,

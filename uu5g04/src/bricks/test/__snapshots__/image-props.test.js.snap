@@ -22,6 +22,17 @@ exports[`UU5.Bricks.Image className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Image className="test-classname" 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image test-classname uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Image controlled=false 1`] = `
 <img
   alt=""
@@ -66,7 +77,37 @@ exports[`UU5.Bricks.Image disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Image disabled=false 3`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Image disabled=true 1`] = `
+<div
+  className="uu5-common-disabled-cover-wrapper"
+>
+  <img
+    alt=""
+    className="uu5-bricks-image uu5-common-disabled uu5-bricks-image-responsive"
+    id="uuID"
+    src=""
+    style={Object {}}
+    title={null}
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Image disabled=true 3`] = `
 <div
   className="uu5-common-disabled-cover-wrapper"
 >
@@ -229,6 +270,28 @@ exports[`UU5.Bricks.Image docKit examples UU5.Bricks.Image should render without
 </div>
 `;
 
+exports[`UU5.Bricks.Image elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image fullTextSearchPriority=0 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu-fulltextsearch-0 uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Image height="50px" 1`] = `
 <img
   alt=""
@@ -281,7 +344,29 @@ exports[`UU5.Bricks.Image hidden=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Image hidden=false 3`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Image hidden=true 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-common-hidden uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image hidden=true 3`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-common-hidden uu5-bricks-image-responsive"
@@ -297,6 +382,17 @@ exports[`UU5.Bricks.Image id="myId" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="myId"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image id="test-id" 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="test-id"
   src=""
   style={Object {}}
   title={null}
@@ -359,6 +455,17 @@ exports[`UU5.Bricks.Image nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Image nestingLevel="box" 3`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Image nestingLevel="boxCollection" 1`] = `
 <img
   alt=""
@@ -404,13 +511,13 @@ exports[`UU5.Bricks.Image nestingLevel="inline" 1`] = `
         "controlled": true,
         "disabled": false,
         "elevation": null,
+        "fullTextSearchPriority": undefined,
         "height": undefined,
         "hidden": false,
         "id": "uuID",
         "mainAttrs": null,
         "name": null,
         "nestingLevel": "inline",
-        "noIndex": false,
         "parent": null,
         "pureRender": false,
         "ref_": null,
@@ -455,7 +562,6 @@ exports[`UU5.Bricks.Image nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -486,7 +592,127 @@ exports[`UU5.Bricks.Image nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalProps={
+    Object {
+      "size": "auto",
+    }
+  }
+/>
+`;
+
+exports[`UU5.Bricks.Image nestingLevel="inline" 3`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "alt": undefined,
+        "authenticate": false,
+        "borderRadius": null,
+        "className": null,
+        "controlled": true,
+        "disabled": false,
+        "elevation": null,
+        "fullTextSearchPriority": undefined,
+        "height": undefined,
+        "hidden": false,
+        "id": "uuID",
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "inline",
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "responsive": true,
+        "selected": false,
+        "src": "",
+        "style": null,
+        "tooltip": null,
+        "type": null,
+        "width": undefined,
+      },
+      "refs": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "nestingLevel": null,
+        "preloadedUri": null,
+        "preloading": false,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Image",
+    }
+  }
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Obrázek",
+          "en": "Image",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Obrázek",
+          "en": "Image",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       params={null}
       parent={null}
       pureRender={false}
@@ -538,13 +764,13 @@ exports[`UU5.Bricks.Image nestingLevel="smallBox" 1`] = `
         "controlled": true,
         "disabled": false,
         "elevation": null,
+        "fullTextSearchPriority": undefined,
         "height": undefined,
         "hidden": false,
         "id": "uuID",
         "mainAttrs": null,
         "name": null,
         "nestingLevel": "smallBox",
-        "noIndex": false,
         "parent": null,
         "pureRender": false,
         "ref_": null,
@@ -589,7 +815,6 @@ exports[`UU5.Bricks.Image nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -620,7 +845,6 @@ exports[`UU5.Bricks.Image nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -661,13 +885,13 @@ exports[`UU5.Bricks.Image nestingLevel="smallBoxCollection" 1`] = `
         "controlled": true,
         "disabled": false,
         "elevation": null,
+        "fullTextSearchPriority": undefined,
         "height": undefined,
         "hidden": false,
         "id": "uuID",
         "mainAttrs": null,
         "name": null,
         "nestingLevel": "smallBoxCollection",
-        "noIndex": false,
         "parent": null,
         "pureRender": false,
         "ref_": null,
@@ -712,7 +936,6 @@ exports[`UU5.Bricks.Image nestingLevel="smallBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -743,7 +966,6 @@ exports[`UU5.Bricks.Image nestingLevel="smallBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -786,7 +1008,29 @@ exports[`UU5.Bricks.Image noIndex=false 1`] = `
 exports[`UU5.Bricks.Image noIndex=true 1`] = `
 <img
   alt=""
-  className="uu5-bricks-image uu5-noindex uu5-bricks-image-responsive"
+  className="uu5-bricks-image uu5-noindex uu-fulltextsearch-0 uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image noPrint=false 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image noPrint=true 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
   src=""
   style={Object {}}
@@ -897,6 +1141,21 @@ exports[`UU5.Bricks.Image style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image style={"margin":8} 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

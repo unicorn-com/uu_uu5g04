@@ -27,6 +27,15 @@ exports[`UU5.Bricks.Pager className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Pager className="test-classname" 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text test-classname uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Pager colorSchema="brown" 1`] = `
 <Row
   className="color-schema-brown uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
@@ -234,7 +243,26 @@ exports[`UU5.Bricks.Pager disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Pager disabled=false 3`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Pager disabled=true 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  disabled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Pager disabled=true 3`] = `
 <Row
   className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
   disabled={true}
@@ -325,7 +353,6 @@ exports[`UU5.Bricks.Pager downLink={"href":"#downlink","text":"Dolů","icon":"uu
           ignoreInnerHTML={false}
           mainAttrs={null}
           name={null}
-          noIndex={false}
           parent={null}
           pureRender={false}
           ref_={null}
@@ -345,7 +372,6 @@ exports[`UU5.Bricks.Pager downLink={"href":"#downlink","text":"Dolů","icon":"uu
           mainAttrs={null}
           name={null}
           nestingLevel={null}
-          noIndex={false}
           parent={null}
           pureRender={false}
           ref_={null}
@@ -363,7 +389,34 @@ exports[`UU5.Bricks.Pager downLink={"href":"#downlink","text":"Dolů","icon":"uu
 </Row>
 `;
 
+exports[`UU5.Bricks.Pager elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Pager fullTextSearchPriority=0 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu-fulltextsearch-0 uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Pager hidden=false 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Pager hidden=false 3`] = `
 <Row
   className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
   id="uuID-inner"
@@ -382,10 +435,29 @@ exports[`UU5.Bricks.Pager hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Pager hidden=true 3`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Pager id="myId" 1`] = `
 <Row
   className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
   id="myId-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Pager id="test-id" 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  id="test-id-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 />
@@ -415,7 +487,6 @@ exports[`UU5.Bricks.Pager leftLink={"href":"#leftlink","text":"Předchozí člá
           mainAttrs={null}
           name={null}
           nestingLevel={null}
-          noIndex={false}
           parent={null}
           pureRender={false}
           ref_={null}
@@ -435,7 +506,6 @@ exports[`UU5.Bricks.Pager leftLink={"href":"#leftlink","text":"Předchozí člá
           ignoreInnerHTML={false}
           mainAttrs={null}
           name={null}
-          noIndex={false}
           parent={null}
           pureRender={false}
           ref_={null}
@@ -498,6 +568,15 @@ exports[`UU5.Bricks.Pager nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Pager nestingLevel="box" 3`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+/>
+`;
+
 exports[`UU5.Bricks.Pager nestingLevel="boxCollection" 1`] = `
 <Row
   className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
@@ -517,6 +596,14 @@ exports[`UU5.Bricks.Pager nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Pager nestingLevel="inline" 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Pager nestingLevel="inline" 3`] = `
 <Row
   className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
   id="uuID-inner"
@@ -571,7 +658,25 @@ exports[`UU5.Bricks.Pager noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Pager noIndex=true 1`] = `
 <Row
-  className="uu5-bricks-pager uu5-common-text uu5-noindex uu5-bricks-pager-size-m"
+  className="uu5-bricks-pager uu5-common-text uu5-noindex uu-fulltextsearch-0 uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Pager noPrint=false 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Pager noPrint=true 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
@@ -620,7 +725,6 @@ exports[`UU5.Bricks.Pager rightLink={"href":"#rightlink","text":"Další článe
           ignoreInnerHTML={false}
           mainAttrs={null}
           name={null}
-          noIndex={false}
           parent={null}
           pureRender={false}
           ref_={null}
@@ -640,7 +744,6 @@ exports[`UU5.Bricks.Pager rightLink={"href":"#rightlink","text":"Další článe
           mainAttrs={null}
           name={null}
           nestingLevel={null}
-          noIndex={false}
           parent={null}
           pureRender={false}
           ref_={null}
@@ -743,6 +846,20 @@ exports[`UU5.Bricks.Pager style={"backgroundColor":"red","color":"blue"} 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Pager style={"margin":8} 1`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+/>
+`;
+
 exports[`UU5.Bricks.Pager tooltip="My Tooltip" 1`] = `
 <Row
   className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
@@ -781,7 +898,6 @@ exports[`UU5.Bricks.Pager upLink={"href":"#uplink","text":"Nahoru","icon":"uu5-p
           mainAttrs={null}
           name={null}
           nestingLevel={null}
-          noIndex={false}
           parent={null}
           pureRender={false}
           ref_={null}
@@ -801,7 +917,6 @@ exports[`UU5.Bricks.Pager upLink={"href":"#uplink","text":"Nahoru","icon":"uu5-p
           ignoreInnerHTML={false}
           mainAttrs={null}
           name={null}
-          noIndex={false}
           parent={null}
           pureRender={false}
           ref_={null}

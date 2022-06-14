@@ -421,6 +421,24 @@ exports[`UU5.Bricks.NavBar.Nav props className="my-classname" 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.NavBar.Nav props className="test-classname" 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav test-classname uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav props content="This is Content from ContentMixin" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
@@ -511,7 +529,47 @@ exports[`UU5.Bricks.NavBar.Nav props disabled=false 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.NavBar.Nav props disabled=false 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav props disabled=true 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-disabled uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props disabled=true 3`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-disabled uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -569,7 +627,61 @@ exports[`UU5.Bricks.NavBar.Nav props dynamic=true 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.NavBar.Nav props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props fullTextSearchPriority=0 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu-fulltextsearch-0 uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav props hidden=false 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props hidden=false 3`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -605,10 +717,46 @@ exports[`UU5.Bricks.NavBar.Nav props hidden=true 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.NavBar.Nav props hidden=true 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-hidden uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav props id="myId" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="myId"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props id="test-id" 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="test-id"
   style={Object {}}
   title={null}
 >
@@ -696,6 +844,42 @@ exports[`UU5.Bricks.NavBar.Nav props name="myName" 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.NavBar.Nav props nestingLevel="box" 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props nestingLevel="inline" 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav props noIndex=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
@@ -716,7 +900,43 @@ exports[`UU5.Bricks.NavBar.Nav props noIndex=false 1`] = `
 
 exports[`UU5.Bricks.NavBar.Nav props noIndex=true 1`] = `
 <ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-noindex uu5-bricks-nav-bar-nav-left"
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-noindex uu-fulltextsearch-0 uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props noPrint=false 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props noPrint=true 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
   style={Object {}}
   title={null}
@@ -871,6 +1091,28 @@ exports[`UU5.Bricks.NavBar.Nav props style={"backgroundColor":"red","color":"blu
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props style={"margin":8} 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

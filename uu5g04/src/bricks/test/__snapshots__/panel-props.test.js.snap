@@ -276,6 +276,37 @@ exports[`UU5.Bricks.Panel className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Panel className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-panel test-classname uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Panel colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
@@ -1115,7 +1146,73 @@ exports[`UU5.Bricks.Panel disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Panel disabled=false 3`] = `
+<div
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Panel disabled=true 1`] = `
+<div
+  className="uu5-bricks-panel uu5-common-disabled uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel disabled=true 3`] = `
 <div
   className="uu5-bricks-panel uu5-common-disabled uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
@@ -1182,6 +1279,37 @@ exports[`UU5.Bricks.Panel dynamic=false 1`] = `
 `;
 
 exports[`UU5.Bricks.Panel dynamic=true 1`] = `
+<div
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
 <div
   className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
@@ -1306,6 +1434,37 @@ exports[`UU5.Bricks.Panel footer={"type":"div","key":null,"ref":null,"props":{"c
 </div>
 `;
 
+exports[`UU5.Bricks.Panel fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-panel uu-fulltextsearch-0 uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Panel header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
@@ -1372,7 +1531,69 @@ exports[`UU5.Bricks.Panel hidden=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Panel hidden=false 3`] = `
+<div
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Panel hidden=true 1`] = `
+<div
+  className="uu5-bricks-panel uu5-common-hidden uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel hidden=true 3`] = `
 <div
   className="uu5-bricks-panel uu5-common-hidden uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
@@ -1492,6 +1713,37 @@ exports[`UU5.Bricks.Panel id="myId" 1`] = `
     content="noBody"
     id="myId-body"
     key="myId-body"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel id="test-id" 1`] = `
+<div
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="test-id"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="test-id-header"
+    key="test-id-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="test-id-body"
+    key="test-id-body"
   />
 </div>
 `;
@@ -2239,6 +2491,37 @@ exports[`UU5.Bricks.Panel nestingLevel="box" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Panel nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Panel nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
@@ -2344,6 +2627,7 @@ exports[`UU5.Bricks.Panel nestingLevel="inline" 1`] = `
         "elevation": null,
         "expanded": false,
         "footer": null,
+        "fullTextSearchPriority": undefined,
         "getEditablePropValue": undefined,
         "header": null,
         "hidden": false,
@@ -2358,7 +2642,6 @@ exports[`UU5.Bricks.Panel nestingLevel="inline" 1`] = `
         "mountContent": undefined,
         "name": null,
         "nestingLevel": "inline",
-        "noIndex": false,
         "onClick": null,
         "openClick": null,
         "parent": null,
@@ -2414,7 +2697,134 @@ exports[`UU5.Bricks.Panel nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle="Panel"
+  modalHeader="Panel"
+/>
+`;
+
+exports[`UU5.Bricks.Panel nestingLevel="inline" 3`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_blockNextChildUpdate": false,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "alwaysExpanded": false,
+        "bgStyle": null,
+        "bgStyleContent": null,
+        "bgStyleHeader": null,
+        "borderRadius": null,
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "contentEditable": true,
+        "controlled": true,
+        "disableHeaderClick": undefined,
+        "disabled": false,
+        "dynamic": false,
+        "elevation": null,
+        "expanded": false,
+        "footer": null,
+        "fullTextSearchPriority": undefined,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "iconAlign": null,
+        "iconCollapsed": null,
+        "iconExpanded": null,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "mountContent": undefined,
+        "name": null,
+        "nestingLevel": "inline",
+        "onClick": null,
+        "openClick": null,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "expanded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "renderChild": true,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Panel",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit panel",
+          "en": "Edit panel",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       params={null}
       parent={null}
       pureRender={false}
@@ -2504,6 +2914,7 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBox" 1`] = `
         "elevation": null,
         "expanded": false,
         "footer": null,
+        "fullTextSearchPriority": undefined,
         "getEditablePropValue": undefined,
         "header": null,
         "hidden": false,
@@ -2518,7 +2929,6 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBox" 1`] = `
         "mountContent": undefined,
         "name": null,
         "nestingLevel": "smallBox",
-        "noIndex": false,
         "onClick": null,
         "openClick": null,
         "parent": null,
@@ -2574,7 +2984,6 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -2633,6 +3042,7 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBoxCollection" 1`] = `
         "elevation": null,
         "expanded": false,
         "footer": null,
+        "fullTextSearchPriority": undefined,
         "getEditablePropValue": undefined,
         "header": null,
         "hidden": false,
@@ -2647,7 +3057,6 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBoxCollection" 1`] = `
         "mountContent": undefined,
         "name": null,
         "nestingLevel": "smallBoxCollection",
-        "noIndex": false,
         "onClick": null,
         "openClick": null,
         "parent": null,
@@ -2703,7 +3112,6 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -2783,7 +3191,69 @@ exports[`UU5.Bricks.Panel noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Panel noIndex=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-noindex uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-noindex uu-fulltextsearch-0 uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel noPrint=false 1`] = `
+<div
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel noPrint=true 1`] = `
+<div
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3113,6 +3583,41 @@ exports[`UU5.Bricks.Panel style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

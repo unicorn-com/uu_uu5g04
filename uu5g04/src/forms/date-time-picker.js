@@ -32,6 +32,7 @@ import withUserPreferences from "../common/user-preferences";
 
 import "./calendar.less";
 import "./date-time-picker.less";
+import withUserPreferencesDateAdapter from "./internal/with-user-preferences-date-adapter.js";
 //@@viewOff:imports
 
 const TIME_FORMAT_AM = "AM";
@@ -1968,7 +1969,12 @@ let DateTimePicker = Context.withContext(
   })
 );
 
-DateTimePicker = withUserPreferences(DateTimePicker, { weekStartDay: "weekStartDay", timeFormat: "hourFormat" });
+DateTimePicker = withUserPreferencesDateAdapter(DateTimePicker);
+DateTimePicker = withUserPreferences(DateTimePicker, {
+  weekStartDay: "weekStartDay",
+  timeFormat: "hourFormat",
+  _dateFormat: "shortDateFormat",
+});
 const Datetimepicker = DateTimePicker;
 
 export { DateTimePicker, Datetimepicker };

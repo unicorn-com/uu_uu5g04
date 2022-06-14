@@ -72,6 +72,15 @@ exports[`UU5.Bricks.Table.Tr className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Tr className="test-classname" 1`] = `
+<tr
+  className="uu5-bricks-table-tr test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Tr colorSchema="brown" 1`] = `
 <tr
   className="color-schema-brown uu5-bricks-table-tr"
@@ -297,7 +306,30 @@ exports[`UU5.Bricks.Table.Tr disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Tr disabled=false 3`] = `
+<tr
+  className="uu5-bricks-table-tr"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Tr disabled=true 1`] = `
+<tr
+  className="uu5-bricks-table-tr uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</tr>
+`;
+
+exports[`UU5.Bricks.Table.Tr disabled=true 3`] = `
 <tr
   className="uu5-bricks-table-tr uu5-common-disabled"
   id="uuID"
@@ -329,7 +361,34 @@ exports[`UU5.Bricks.Table.Tr dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Tr elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<tr
+  className="uu5-bricks-table-tr"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Tr fullTextSearchPriority=0 1`] = `
+<tr
+  className="uu5-bricks-table-tr uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Tr hidden=false 1`] = `
+<tr
+  className="uu5-bricks-table-tr"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Tr hidden=false 3`] = `
 <tr
   className="uu5-bricks-table-tr"
   id="uuID"
@@ -347,10 +406,28 @@ exports[`UU5.Bricks.Table.Tr hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Tr hidden=true 3`] = `
+<tr
+  className="uu5-bricks-table-tr uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Tr id="myId" 1`] = `
 <tr
   className="uu5-bricks-table-tr"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Tr id="test-id" 1`] = `
+<tr
+  className="uu5-bricks-table-tr"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -420,6 +497,15 @@ exports[`UU5.Bricks.Table.Tr nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Tr nestingLevel="box" 3`] = `
+<tr
+  className="uu5-bricks-table-tr"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Tr nestingLevel="boxCollection" 1`] = `
 <tr
   className="uu5-bricks-table-tr"
@@ -439,6 +525,8 @@ exports[`UU5.Bricks.Table.Tr nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Table.Tr nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Table.Tr nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Table.Tr nestingLevel="page" 1`] = `
 <tr
@@ -487,7 +575,25 @@ exports[`UU5.Bricks.Table.Tr noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Table.Tr noIndex=true 1`] = `
 <tr
-  className="uu5-bricks-table-tr uu5-noindex"
+  className="uu5-bricks-table-tr uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Tr noPrint=false 1`] = `
+<tr
+  className="uu5-bricks-table-tr"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Tr noPrint=true 1`] = `
+<tr
+  className="uu5-bricks-table-tr"
   id="uuID"
   style={Object {}}
   title={null}
@@ -644,6 +750,19 @@ exports[`UU5.Bricks.Table.Tr style={"backgroundColor":"red","color":"blue"} 1`] 
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Tr style={"margin":8} 1`] = `
+<tr
+  className="uu5-bricks-table-tr"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

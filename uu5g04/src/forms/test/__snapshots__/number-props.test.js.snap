@@ -290,6 +290,87 @@ exports[`UU5.Forms.Number props className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Number props className="test-classname" 1`] = `
+<div
+  className="uu5-forms-number test-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Number props colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
@@ -2731,6 +2812,87 @@ exports[`UU5.Forms.Number props disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Number props disabled=false 3`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Number props disabled=true 1`] = `
 <div
   className="uu5-forms-number uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
@@ -2779,6 +2941,169 @@ exports[`UU5.Forms.Number props disabled=true 1`] = `
   >
     <text-input
       disabled={true}
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props disabled=true 3`] = `
+<div
+  className="uu5-forms-number uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": true,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": true,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={true}
+    readonly={false}
+  >
+    <text-input
+      disabled={true}
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
       feedback="initial"
       id="uuID-input"
       key="uuID-input"
@@ -3191,6 +3516,87 @@ exports[`UU5.Forms.Number props feedback="warning" 1`] = `
   >
     <text-input
       feedback="warning"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-forms-number uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
       id="uuID-input"
       key="uuID-input"
       mainAttrs={
@@ -3682,7 +4088,169 @@ exports[`UU5.Forms.Number props hidden=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Number props hidden=false 3`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Number props hidden=true 1`] = `
+<div
+  className="uu5-forms-number uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props hidden=true 3`] = `
 <div
   className="uu5-forms-number uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
@@ -4161,6 +4729,87 @@ exports[`UU5.Forms.Number props id="myId" 1`] = `
     <Backdrop
       hidden={true}
       id="myId-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props id="test-id" 1`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="test-id"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="test-id-input"
+      key="test-id-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="test-id-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="test-id-backdrop"
       key="backdrop"
       onClick={[Function]}
     />
@@ -5391,6 +6040,169 @@ exports[`UU5.Forms.Number props nanMessage=null 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Number props nestingLevel="box" 1`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props nestingLevel="inline" 1`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      inputWidth="auto"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Number props noIndex=false 1`] = `
 <div
   className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
@@ -5474,7 +6286,169 @@ exports[`UU5.Forms.Number props noIndex=false 1`] = `
 
 exports[`UU5.Forms.Number props noIndex=true 1`] = `
 <div
-  className="uu5-forms-number uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-number uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props noPrint=false 1`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props noPrint=true 1`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6749,6 +7723,91 @@ exports[`UU5.Forms.Number props style={"backgroundColor":"red","color":"blue"} 1
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      id="uuID-input"
+      key="uuID-input"
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <item-list
+      className="uu5-forms-input-m"
+      hidden={true}
+      key="item-list"
+      onChange={[Function]}
+      value=""
+    />
+    <Backdrop
+      hidden={true}
+      id="uuID-backdrop"
+      key="backdrop"
+      onClick={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props style={"margin":8} 1`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

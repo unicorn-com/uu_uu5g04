@@ -72,6 +72,15 @@ exports[`UU5.Bricks.Dl className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Dl className="test-classname" 1`] = `
+<dl
+  className="uu5-bricks-dl test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Dl content="This is Content from ContentMixin" 1`] = `
 <dl
   className="uu5-bricks-dl"
@@ -126,7 +135,30 @@ exports[`UU5.Bricks.Dl disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Dl disabled=false 3`] = `
+<dl
+  className="uu5-bricks-dl"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Dl disabled=true 1`] = `
+<dl
+  className="uu5-bricks-dl uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</dl>
+`;
+
+exports[`UU5.Bricks.Dl disabled=true 3`] = `
 <dl
   className="uu5-bricks-dl uu5-common-disabled"
   id="uuID"
@@ -150,6 +182,15 @@ exports[`UU5.Bricks.Dl dynamic=false 1`] = `
 `;
 
 exports[`UU5.Bricks.Dl dynamic=true 1`] = `
+<dl
+  className="uu5-bricks-dl"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Dl elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
 <dl
   className="uu5-bricks-dl"
   id="uuID"
@@ -197,6 +238,15 @@ exports[`UU5.Bricks.Dl footer={"type":"div","key":null,"ref":null,"props":{"chil
 </dl>
 `;
 
+exports[`UU5.Bricks.Dl fullTextSearchPriority=0 1`] = `
+<dl
+  className="uu5-bricks-dl uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Dl header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <dl
   className="uu5-bricks-dl"
@@ -226,7 +276,25 @@ exports[`UU5.Bricks.Dl hidden=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Dl hidden=false 3`] = `
+<dl
+  className="uu5-bricks-dl"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Dl hidden=true 1`] = `
+<dl
+  className="uu5-bricks-dl uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Dl hidden=true 3`] = `
 <dl
   className="uu5-bricks-dl uu5-common-hidden"
   id="uuID"
@@ -239,6 +307,15 @@ exports[`UU5.Bricks.Dl id="myId" 1`] = `
 <dl
   className="uu5-bricks-dl"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Dl id="test-id" 1`] = `
+<dl
+  className="uu5-bricks-dl"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -434,6 +511,15 @@ exports[`UU5.Bricks.Dl nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Dl nestingLevel="box" 3`] = `
+<dl
+  className="uu5-bricks-dl"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Dl nestingLevel="boxCollection" 1`] = `
 <dl
   className="uu5-bricks-dl"
@@ -453,6 +539,15 @@ exports[`UU5.Bricks.Dl nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Dl nestingLevel="inline" 1`] = `
+<dl
+  className="uu5-bricks-dl uu-bricks-g4nixu"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Dl nestingLevel="inline" 3`] = `
 <dl
   className="uu5-bricks-dl uu-bricks-g4nixu"
   id="uuID"
@@ -508,7 +603,25 @@ exports[`UU5.Bricks.Dl noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Dl noIndex=true 1`] = `
 <dl
-  className="uu5-bricks-dl uu5-noindex"
+  className="uu5-bricks-dl uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Dl noPrint=false 1`] = `
+<dl
+  className="uu5-bricks-dl"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Dl noPrint=true 1`] = `
+<dl
+  className="uu5-bricks-dl"
   id="uuID"
   style={Object {}}
   title={null}
@@ -573,6 +686,19 @@ exports[`UU5.Bricks.Dl style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Dl style={"margin":8} 1`] = `
+<dl
+  className="uu5-bricks-dl"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

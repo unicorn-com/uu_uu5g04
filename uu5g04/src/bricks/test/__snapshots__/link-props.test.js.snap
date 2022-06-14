@@ -119,6 +119,19 @@ exports[`UU5.Bricks.Link className="my-classname" 1`] = `
 </a>
 `;
 
+exports[`UU5.Bricks.Link className="test-classname" 1`] = `
+<a
+  className="uu5-bricks-link test-classname"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
 exports[`UU5.Bricks.Link colorSchema="brown" 1`] = `
 <a
   className="color-schema-brown uu5-bricks-link"
@@ -447,7 +460,31 @@ exports[`UU5.Bricks.Link disabled=false 1`] = `
 </a>
 `;
 
+exports[`UU5.Bricks.Link disabled=false 3`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
 exports[`UU5.Bricks.Link disabled=true 1`] = `
+<a
+  className="uu5-bricks-link uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  noText
+</a>
+`;
+
+exports[`UU5.Bricks.Link disabled=true 3`] = `
 <a
   className="uu5-bricks-link uu5-common-disabled"
   id="uuID"
@@ -528,6 +565,32 @@ exports[`UU5.Bricks.Link dynamic=true 1`] = `
 </a>
 `;
 
+exports[`UU5.Bricks.Link elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
+exports[`UU5.Bricks.Link fullTextSearchPriority=0 1`] = `
+<a
+  className="uu5-bricks-link uu-fulltextsearch-0"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
 exports[`UU5.Bricks.Link hidden=false 1`] = `
 <a
   className="uu5-bricks-link"
@@ -541,7 +604,33 @@ exports[`UU5.Bricks.Link hidden=false 1`] = `
 </a>
 `;
 
+exports[`UU5.Bricks.Link hidden=false 3`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
 exports[`UU5.Bricks.Link hidden=true 1`] = `
+<a
+  className="uu5-bricks-link uu5-common-hidden"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
+exports[`UU5.Bricks.Link hidden=true 3`] = `
 <a
   className="uu5-bricks-link uu5-common-hidden"
   download={false}
@@ -631,6 +720,19 @@ exports[`UU5.Bricks.Link id="myId" 1`] = `
   className="uu5-bricks-link"
   download={false}
   id="myId"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
+exports[`UU5.Bricks.Link id="test-id" 1`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  id="test-id"
   style={Object {}}
   target="_self"
   title={null}
@@ -731,6 +833,19 @@ exports[`UU5.Bricks.Link nestingLevel="box" 1`] = `
 </a>
 `;
 
+exports[`UU5.Bricks.Link nestingLevel="box" 3`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
 exports[`UU5.Bricks.Link nestingLevel="boxCollection" 1`] = `
 <a
   className="uu5-bricks-link"
@@ -758,6 +873,19 @@ exports[`UU5.Bricks.Link nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Link nestingLevel="inline" 1`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
+exports[`UU5.Bricks.Link nestingLevel="inline" 3`] = `
 <a
   className="uu5-bricks-link"
   download={false}
@@ -837,7 +965,33 @@ exports[`UU5.Bricks.Link noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Link noIndex=true 1`] = `
 <a
-  className="uu5-bricks-link uu5-noindex"
+  className="uu5-bricks-link uu5-noindex uu-fulltextsearch-0"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
+exports[`UU5.Bricks.Link noPrint=false 1`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
+exports[`UU5.Bricks.Link noPrint=true 1`] = `
+<a
+  className="uu5-bricks-link"
   download={false}
   id="uuID"
   style={Object {}}
@@ -1009,6 +1163,23 @@ exports[`UU5.Bricks.Link style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
+exports[`UU5.Bricks.Link style={"margin":8} 1`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   target="_self"

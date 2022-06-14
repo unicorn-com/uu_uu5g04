@@ -17,6 +17,7 @@
 import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
 
+import "../mixins/input-mixin.less"; // must be present and before label.less because label.less overrides some styles using the same specificity
 import "./label.less";
 //@@viewOff:imports
 

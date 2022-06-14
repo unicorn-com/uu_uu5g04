@@ -197,6 +197,33 @@ exports[`UU5.Bricks.Rating className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Rating className="test-classname" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating test-classname uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Rating colorSchema="brown" 1`] = `
 <Fragment>
   <div
@@ -910,7 +937,65 @@ exports[`UU5.Bricks.Rating disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Rating disabled=false 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Rating disabled=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-common-disabled uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+    <span
+      className="uu5-common-disabled-cover-transparent"
+      key="disabledCoverTransparent"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Rating disabled=true 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-rating uu5-common-disabled uu5-bricks-rating-size-m"
@@ -1015,6 +1100,60 @@ exports[`UU5.Bricks.Rating dynamic=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Rating elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Rating fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu-fulltextsearch-0 uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Rating hidden=false 1`] = `
 <Fragment>
   <div
@@ -1042,7 +1181,61 @@ exports[`UU5.Bricks.Rating hidden=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Rating hidden=false 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Rating hidden=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-common-hidden uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Rating hidden=true 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-rating uu5-common-hidden uu5-bricks-rating-size-m"
@@ -1106,6 +1299,33 @@ exports[`UU5.Bricks.Rating id="myId" 1`] = `
   <div
     className="uu5-bricks-rating uu5-bricks-rating-size-m"
     id="myId"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Rating id="test-id" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-bricks-rating-size-m"
+    id="test-id"
     style={Object {}}
     title={null}
   >
@@ -1318,6 +1538,33 @@ exports[`UU5.Bricks.Rating nestingLevel="box" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Rating nestingLevel="box" 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Rating nestingLevel="boxCollection" 1`] = `
 <Fragment>
   <div
@@ -1373,6 +1620,8 @@ exports[`UU5.Bricks.Rating nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Rating nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Rating nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Rating nestingLevel="page" 1`] = `
 <Fragment>
@@ -1512,7 +1761,61 @@ exports[`UU5.Bricks.Rating noIndex=false 1`] = `
 exports[`UU5.Bricks.Rating noIndex=true 1`] = `
 <Fragment>
   <div
-    className="uu5-bricks-rating uu5-noindex uu5-bricks-rating-size-m"
+    className="uu5-bricks-rating uu5-noindex uu-fulltextsearch-0 uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Rating noPrint=false 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Rating noPrint=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-bricks-rating-size-m"
     id="uuID"
     style={Object {}}
     title={null}
@@ -1739,6 +2042,37 @@ exports[`UU5.Bricks.Rating style={"backgroundColor":"red","color":"blue"} 1`] = 
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Rating style={"margin":8} 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu5-bricks-rating-size-m"
+    id="uuID"
+    style={
+      Object {
+        "margin": 8,
       }
     }
     title={null}

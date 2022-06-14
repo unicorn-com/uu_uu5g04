@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Swiper.Body className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Body className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-swiper-body test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Body content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
@@ -124,7 +133,30 @@ exports[`UU5.Bricks.Swiper.Body disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Body disabled=false 3`] = `
+<div
+  className="uu5-bricks-swiper-body"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Body disabled=true 1`] = `
+<div
+  className="uu5-bricks-swiper-body uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper.Body disabled=true 3`] = `
 <div
   className="uu5-bricks-swiper-body uu5-common-disabled"
   id="uuID"
@@ -156,7 +188,34 @@ exports[`UU5.Bricks.Swiper.Body dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Body elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-swiper-body"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Body fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-swiper-body uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Body hidden=false 1`] = `
+<div
+  className="uu5-bricks-swiper-body"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Body hidden=false 3`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -174,10 +233,28 @@ exports[`UU5.Bricks.Swiper.Body hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Body hidden=true 3`] = `
+<div
+  className="uu5-bricks-swiper-body uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Body id="myId" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Body id="test-id" 1`] = `
+<div
+  className="uu5-bricks-swiper-body"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -247,6 +324,15 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Body nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-swiper-body"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Body nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
@@ -266,6 +352,8 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Swiper.Body nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Swiper.Body nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Swiper.Body nestingLevel="page" 1`] = `
 <div
@@ -300,7 +388,25 @@ exports[`UU5.Bricks.Swiper.Body noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Swiper.Body noIndex=true 1`] = `
 <div
-  className="uu5-bricks-swiper-body uu5-noindex"
+  className="uu5-bricks-swiper-body uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Body noPrint=false 1`] = `
+<div
+  className="uu5-bricks-swiper-body"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Body noPrint=true 1`] = `
+<div
+  className="uu5-bricks-swiper-body"
   id="uuID"
   style={Object {}}
   title={null}
@@ -365,6 +471,19 @@ exports[`UU5.Bricks.Swiper.Body style={"backgroundColor":"red","color":"blue"} 1
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Body style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-swiper-body"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

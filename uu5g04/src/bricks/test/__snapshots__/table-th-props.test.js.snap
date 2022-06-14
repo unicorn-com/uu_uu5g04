@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Table.Th className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Th className="test-classname" 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Th colSpan="3" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
@@ -315,7 +324,30 @@ exports[`UU5.Bricks.Table.Th disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Th disabled=false 3`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Th disabled=true 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</th>
+`;
+
+exports[`UU5.Bricks.Table.Th disabled=true 3`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text uu5-common-disabled"
   id="uuID"
@@ -414,7 +446,34 @@ exports[`UU5.Bricks.Table.Th dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Th elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th fullTextSearchPriority=0 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Th hidden=false 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th hidden=false 3`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -432,10 +491,28 @@ exports[`UU5.Bricks.Table.Th hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Th hidden=true 3`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Th id="myId" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th id="test-id" 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -505,6 +582,15 @@ exports[`UU5.Bricks.Table.Th nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Th nestingLevel="box" 3`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Th nestingLevel="boxCollection" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
@@ -524,6 +610,15 @@ exports[`UU5.Bricks.Table.Th nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Table.Th nestingLevel="inline" 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th nestingLevel="inline" 3`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -579,7 +674,25 @@ exports[`UU5.Bricks.Table.Th noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Table.Th noIndex=true 1`] = `
 <th
-  className="uu5-bricks-table-th uu5-common-text uu5-noindex"
+  className="uu5-bricks-table-th uu5-common-text uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th noPrint=false 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th noPrint=true 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
   style={Object {}}
   title={null}
@@ -664,6 +777,19 @@ exports[`UU5.Bricks.Table.Th style={"backgroundColor":"red","color":"blue"} 1`] 
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th style={"margin":8} 1`] = `
+<th
+  className="uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

@@ -70,6 +70,16 @@ exports[`UU5.Bricks.Mark className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Mark className="test-classname" 1`] = `
+<mark
+  className="uu5-bricks-mark test-classname"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Mark content="This is Content from ContentMixin" 1`] = `
 <mark
   className="uu5-bricks-mark"
@@ -137,7 +147,32 @@ exports[`UU5.Bricks.Mark disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Mark disabled=false 3`] = `
+<mark
+  className="uu5-bricks-mark"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Mark disabled=true 1`] = `
+<mark
+  className="uu5-bricks-mark uu5-common-disabled"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</mark>
+`;
+
+exports[`UU5.Bricks.Mark disabled=true 3`] = `
 <mark
   className="uu5-bricks-mark uu5-common-disabled"
   id="uuID"
@@ -187,7 +222,37 @@ exports[`UU5.Bricks.Mark dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Mark elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<mark
+  className="uu5-bricks-mark"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Mark fullTextSearchPriority=0 1`] = `
+<mark
+  className="uu5-bricks-mark uu-fulltextsearch-0"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Mark hidden=false 1`] = `
+<mark
+  className="uu5-bricks-mark"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Mark hidden=false 3`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -207,10 +272,30 @@ exports[`UU5.Bricks.Mark hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Mark hidden=true 3`] = `
+<mark
+  className="uu5-bricks-mark uu5-common-hidden"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Mark id="myId" 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="myId"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Mark id="test-id" 1`] = `
+<mark
+  className="uu5-bricks-mark"
+  id="test-id"
   key="mark"
   style={Object {}}
   title={null}
@@ -258,6 +343,26 @@ exports[`UU5.Bricks.Mark name="myName" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Mark nestingLevel="box" 1`] = `
+<mark
+  className="uu5-bricks-mark"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Mark nestingLevel="inline" 1`] = `
+<mark
+  className="uu5-bricks-mark"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Mark noIndex=false 1`] = `
 <mark
   className="uu5-bricks-mark"
@@ -270,7 +375,27 @@ exports[`UU5.Bricks.Mark noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Mark noIndex=true 1`] = `
 <mark
-  className="uu5-bricks-mark uu5-noindex"
+  className="uu5-bricks-mark uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Mark noPrint=false 1`] = `
+<mark
+  className="uu5-bricks-mark"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Mark noPrint=true 1`] = `
+<mark
+  className="uu5-bricks-mark"
   id="uuID"
   key="mark"
   style={Object {}}
@@ -322,6 +447,20 @@ exports[`UU5.Bricks.Mark style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Mark style={"margin":8} 1`] = `
+<mark
+  className="uu5-bricks-mark"
+  id="uuID"
+  key="mark"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

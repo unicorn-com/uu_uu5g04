@@ -90,6 +90,18 @@ exports[`UU5.BlockLayout.Line props testing className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.BlockLayout.Line props testing className="test-classname" 1`] = `
+<Line
+  className="uublocklayout-1unjvdi test-classname"
+  content={null}
+  dynamic={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+/>
+`;
+
 exports[`UU5.BlockLayout.Line props testing colorSchema="brown" 1`] = `
 <Line
   className="color-schema-brown uublocklayout-1unjvdi"
@@ -409,7 +421,32 @@ exports[`UU5.BlockLayout.Line props testing disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.BlockLayout.Line props testing disabled=false 3`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  dynamic={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+/>
+`;
+
 exports[`UU5.BlockLayout.Line props testing disabled=true 1`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  disabled={true}
+  dynamic={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+/>
+`;
+
+exports[`UU5.BlockLayout.Line props testing disabled=true 3`] = `
 <Line
   className="uublocklayout-1unjvdi"
   content={null}
@@ -446,7 +483,51 @@ exports[`UU5.BlockLayout.Line props testing dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.BlockLayout.Line props testing elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  dynamic={false}
+  elementAttrs={
+    Object {
+      "data": Object {
+        "test": "data-test-value",
+      },
+    }
+  }
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+/>
+`;
+
+exports[`UU5.BlockLayout.Line props testing fullTextSearchPriority=0 1`] = `
+<Line
+  className="uublocklayout-1unjvdi uu-fulltextsearch-0"
+  content={null}
+  dynamic={false}
+  fullTextSearchPriority={0}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+/>
+`;
+
 exports[`UU5.BlockLayout.Line props testing hidden=false 1`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  dynamic={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+/>
+`;
+
+exports[`UU5.BlockLayout.Line props testing hidden=false 3`] = `
 <Line
   className="uublocklayout-1unjvdi"
   content={null}
@@ -471,12 +552,37 @@ exports[`UU5.BlockLayout.Line props testing hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.BlockLayout.Line props testing hidden=true 3`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  dynamic={false}
+  hidden={true}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+/>
+`;
+
 exports[`UU5.BlockLayout.Line props testing id="myId" 1`] = `
 <Line
   className="uublocklayout-1unjvdi"
   content={null}
   dynamic={false}
   id="myId-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+/>
+`;
+
+exports[`UU5.BlockLayout.Line props testing id="test-id" 1`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  dynamic={false}
+  id="test-id-inner"
   ignoreInnerHTML={false}
   mainAttrs={Object {}}
   size="s"
@@ -573,6 +679,19 @@ exports[`UU5.BlockLayout.Line props testing nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.BlockLayout.Line props testing nestingLevel="box" 3`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  dynamic={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  nestingLevel="box"
+  size="s"
+/>
+`;
+
 exports[`UU5.BlockLayout.Line props testing nestingLevel="boxCollection" 1`] = `
 <Line
   className="uublocklayout-1unjvdi"
@@ -600,6 +719,8 @@ exports[`UU5.BlockLayout.Line props testing nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.BlockLayout.Line props testing nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.BlockLayout.Line props testing nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.BlockLayout.Line props testing nestingLevel="page" 1`] = `
 <Line
@@ -639,19 +760,46 @@ exports[`UU5.BlockLayout.Line props testing noIndex=false 1`] = `
   id="uuID-inner"
   ignoreInnerHTML={false}
   mainAttrs={Object {}}
+  noIndex={false}
   size="s"
 />
 `;
 
 exports[`UU5.BlockLayout.Line props testing noIndex=true 1`] = `
 <Line
-  className="uublocklayout-1unjvdi uu5-noindex"
+  className="uublocklayout-1unjvdi uu5-noindex uu-fulltextsearch-0"
   content={null}
   dynamic={false}
   id="uuID-inner"
   ignoreInnerHTML={false}
   mainAttrs={Object {}}
   noIndex={true}
+  size="s"
+/>
+`;
+
+exports[`UU5.BlockLayout.Line props testing noPrint=false 1`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  dynamic={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  noPrint={false}
+  size="s"
+/>
+`;
+
+exports[`UU5.BlockLayout.Line props testing noPrint=true 1`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  dynamic={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  noPrint={true}
   size="s"
 />
 `;
@@ -737,6 +885,23 @@ exports[`UU5.BlockLayout.Line props testing style={"backgroundColor":"red","colo
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+/>
+`;
+
+exports[`UU5.BlockLayout.Line props testing style={"margin":8} 1`] = `
+<Line
+  className="uublocklayout-1unjvdi"
+  content={null}
+  dynamic={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+  style={
+    Object {
+      "margin": 8,
     }
   }
 />

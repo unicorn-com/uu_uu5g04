@@ -579,6 +579,52 @@ exports[`UU5.Bricks.Carousel className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Carousel className="test-classname" 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel test-classname"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Carousel colorSchema="brown" 1`] = `
 <Fragment>
   <div
@@ -1729,7 +1775,103 @@ exports[`UU5.Bricks.Carousel disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Carousel disabled=false 3`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Carousel disabled=true 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel uu5-common-disabled"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Carousel disabled=true 3`] = `
 <Fragment>
   <div
     className="color-schema-default uu5-bricks-carousel uu5-common-disabled"
@@ -2055,6 +2197,98 @@ exports[`UU5.Bricks.Carousel dynamic=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Carousel elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Carousel fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel uu-fulltextsearch-0"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Carousel hidden=false 1`] = `
 <Fragment>
   <div
@@ -2101,7 +2335,99 @@ exports[`UU5.Bricks.Carousel hidden=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Carousel hidden=false 3`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Carousel hidden=true 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel uu5-common-hidden"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Carousel hidden=true 3`] = `
 <Fragment>
   <div
     className="color-schema-default uu5-bricks-carousel uu5-common-hidden"
@@ -2315,6 +2641,52 @@ exports[`UU5.Bricks.Carousel id="myId" 1`] = `
   <div
     className="color-schema-default uu5-bricks-carousel"
     id="myId"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Carousel id="test-id" 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel"
+    id="test-id"
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
     onTouchEnd={[Function]}
@@ -2677,6 +3049,192 @@ exports[`UU5.Bricks.Carousel name="myName" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Carousel nestingLevel="box" 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Carousel nestingLevel="inline" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "lastSwipe": Object {
+        "angle": 0,
+        "down": false,
+        "dx": 0,
+        "dy": 0,
+        "endTime": null,
+        "ex": 0,
+        "ey": 0,
+        "fast": null,
+        "left": false,
+        "length": 0,
+        "long": null,
+        "right": false,
+        "speed": 0,
+        "startTime": null,
+        "up": false,
+        "x": 0,
+        "y": 0,
+      },
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.SwipeMixin",
+        "UU5.Common.EditableMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "activeIndex": 0,
+        "allowTags": Array [],
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "children": Array [
+          "UU5.Bricks.Carousel.Item",
+        ],
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "contentEditable": false,
+        "controlled": true,
+        "disabled": false,
+        "displayedItems": 1,
+        "dynamic": false,
+        "fullTextSearchPriority": undefined,
+        "getEditablePropValue": undefined,
+        "height": null,
+        "hidden": false,
+        "hideControls": false,
+        "hideIndicators": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "interval": 5000,
+        "mainAttrs": null,
+        "minHeight": null,
+        "name": null,
+        "nestingLevel": "inline",
+        "nextIcon": "mdi-chevron-right",
+        "onIndexChange": undefined,
+        "parent": null,
+        "prevIcon": "mdi-chevron-left",
+        "ref_": null,
+        "selected": false,
+        "stepByOne": false,
+        "style": null,
+        "swiped": null,
+        "swipedFast": null,
+        "swipedLong": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "type": "final",
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "state": Object {
+        "activeIndex": 0,
+        "children": Array [],
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "hidden": false,
+        "mode": undefined,
+        "nestingLevel": null,
+        "renderedChildren": Array [],
+        "rowHeight": 0,
+        "selected": false,
+        "tmpChildren": Array [],
+      },
+      "tagName": "UU5.Bricks.Carousel",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit carousel",
+          "en": "Edit carousel",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle="Carousel"
+  modalHeader="Carousel"
+  renderEditationMode={[Function]}
+/>
+`;
+
 exports[`UU5.Bricks.Carousel nextIcon="mdi-chevron-right" 1`] = `
 <Fragment>
   <div
@@ -2772,7 +3330,99 @@ exports[`UU5.Bricks.Carousel noIndex=false 1`] = `
 exports[`UU5.Bricks.Carousel noIndex=true 1`] = `
 <Fragment>
   <div
-    className="color-schema-default uu5-bricks-carousel uu5-noindex"
+    className="color-schema-default uu5-bricks-carousel uu5-noindex uu-fulltextsearch-0"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Carousel noPrint=false 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Carousel noPrint=true 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel"
     id="uuID"
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
@@ -3200,6 +3850,53 @@ exports[`UU5.Bricks.Carousel style={"backgroundColor":"red","color":"blue"} 1`] 
         "backgroundColor": "red",
         "color": "blue",
         "height": "0px",
+      }
+    }
+    title={null}
+  >
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Carousel style={"margin":8} 1`] = `
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+        "margin": 8,
       }
     }
     title={null}

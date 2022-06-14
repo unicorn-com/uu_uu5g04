@@ -294,6 +294,48 @@ exports[`UU5.Bricks.Slider className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Slider className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-slider test-classname uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Slider colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-bricks-slider uu5-bricks-slider-size-m"
@@ -1344,7 +1386,85 @@ exports[`UU5.Bricks.Slider disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Slider disabled=false 3`] = `
+<div
+  className="uu5-bricks-slider uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Slider disabled=true 1`] = `
+<div
+  className="uu5-bricks-slider uu5-common-disabled uu5-bricks-slider-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      disabled={true}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Slider disabled=true 3`] = `
 <div
   className="uu5-bricks-slider uu5-common-disabled uu5-bricks-slider-size-m"
   id="uuID"
@@ -1487,7 +1607,133 @@ exports[`UU5.Bricks.Slider dynamic=true 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Slider elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-slider uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Slider fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-slider uu-fulltextsearch-0 uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Slider hidden=false 1`] = `
+<div
+  className="uu5-bricks-slider uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Slider hidden=false 3`] = `
 <div
   className="uu5-bricks-slider uu5-bricks-slider-size-m"
   id="uuID"
@@ -1571,6 +1817,48 @@ exports[`UU5.Bricks.Slider hidden=true 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Slider hidden=true 3`] = `
+<div
+  className="uu5-bricks-slider uu5-common-hidden uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Slider id="myId" 1`] = `
 <div
   className="uu5-bricks-slider uu5-bricks-slider-size-m"
@@ -1607,6 +1895,48 @@ exports[`UU5.Bricks.Slider id="myId" 1`] = `
       _step={1}
       id="myId-0"
       key="myId-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Slider id="test-id" 1`] = `
+<div
+  className="uu5-bricks-slider uu5-bricks-slider-size-m"
+  id="test-id"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="test-id-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="test-id-0"
+      key="test-id-0"
       ref_={[Function]}
     />
   </div>
@@ -1993,6 +2323,48 @@ exports[`UU5.Bricks.Slider nestingLevel="box" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Slider nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-slider uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Slider nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-slider uu5-bricks-slider-size-m"
@@ -2078,6 +2450,8 @@ exports[`UU5.Bricks.Slider nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Slider nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Slider nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Slider nestingLevel="page" 1`] = `
 <div
@@ -2211,7 +2585,91 @@ exports[`UU5.Bricks.Slider noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Slider noIndex=true 1`] = `
 <div
-  className="uu5-bricks-slider uu5-noindex uu5-bricks-slider-size-m"
+  className="uu5-bricks-slider uu5-noindex uu-fulltextsearch-0 uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Slider noPrint=false 1`] = `
+<div
+  className="uu5-bricks-slider uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Slider noPrint=true 1`] = `
+<div
+  className="uu5-bricks-slider uu5-bricks-slider-size-m"
   id="uuID"
   onMouseDown={[Function]}
   onMouseLeave={[Function]}
@@ -2709,6 +3167,52 @@ exports[`UU5.Bricks.Slider style={"backgroundColor":"red","color":"blue"} 1`] = 
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Slider style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-slider uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

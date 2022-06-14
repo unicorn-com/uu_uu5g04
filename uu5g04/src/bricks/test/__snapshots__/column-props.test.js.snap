@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Column className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Column className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-column test-classname uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Column colWidth="xs-6 s-6 m-4 l-3 xl-3" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs6 uu5-col-s6 uu5-col-m4 uu5-col-l3 uu5-col-xl3"
@@ -151,7 +160,30 @@ exports[`UU5.Bricks.Column disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Column disabled=false 3`] = `
+<div
+  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Column disabled=true 1`] = `
+<div
+  className="uu5-bricks-column uu5-common-disabled uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Column disabled=true 3`] = `
 <div
   className="uu5-bricks-column uu5-common-disabled uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -183,6 +215,15 @@ exports[`UU5.Bricks.Column dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Column elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Column footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
@@ -200,6 +241,15 @@ exports[`UU5.Bricks.Column footer={"type":"div","key":null,"ref":null,"props":{"
     key="uuID-footer"
   />
 </div>
+`;
+
+exports[`UU5.Bricks.Column fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-column uu-fulltextsearch-0 uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
 `;
 
 exports[`UU5.Bricks.Column header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
@@ -231,7 +281,25 @@ exports[`UU5.Bricks.Column hidden=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Column hidden=false 3`] = `
+<div
+  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Column hidden=true 1`] = `
+<div
+  className="uu5-bricks-column uu5-common-hidden uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Column hidden=true 3`] = `
 <div
   className="uu5-bricks-column uu5-common-hidden uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -244,6 +312,15 @@ exports[`UU5.Bricks.Column id="myId" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Column id="test-id" 1`] = `
+<div
+  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -555,6 +632,15 @@ exports[`UU5.Bricks.Column nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Column nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Column nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
@@ -574,6 +660,8 @@ exports[`UU5.Bricks.Column nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Column nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Column nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Column nestingLevel="page" 1`] = `
 <div
@@ -615,7 +703,25 @@ exports[`UU5.Bricks.Column noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Column noIndex=true 1`] = `
 <div
-  className="uu5-bricks-column uu5-noindex uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  className="uu5-bricks-column uu5-noindex uu-fulltextsearch-0 uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Column noPrint=false 1`] = `
+<div
+  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Column noPrint=true 1`] = `
+<div
+  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
   style={Object {}}
   title={null}
@@ -698,6 +804,19 @@ exports[`UU5.Bricks.Column style={"backgroundColor":"red","color":"blue"} 1`] = 
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Column style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Common.Router - Internal Interface test allowPageLeave() 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -13,11 +25,23 @@ exports[`UU5.Common.Router - Internal Interface test allowPageLeave() 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router - Internal Interface test allowPageLeave() 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -29,11 +53,23 @@ exports[`UU5.Common.Router - Internal Interface test allowPageLeave() 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router - Internal Interface test preventPageLeave() 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -45,11 +81,23 @@ exports[`UU5.Common.Router - Internal Interface test preventPageLeave() 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router - Internal Interface test preventPageLeave() 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -61,11 +109,23 @@ exports[`UU5.Common.Router - Internal Interface test preventPageLeave() 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router - Internal Interface test scrollToFragment() 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -77,11 +137,23 @@ exports[`UU5.Common.Router - Internal Interface test scrollToFragment() 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router - Internal Interface test scrollToFragment() 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -93,11 +165,23 @@ exports[`UU5.Common.Router - Internal Interface test scrollToFragment() 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router - Internal Interface test setRoute() 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="initial route"
     key=".0"
@@ -109,11 +193,23 @@ exports[`UU5.Common.Router - Internal Interface test setRoute() 1`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;
 
 exports[`UU5.Common.Router - Internal Interface test setRoute() 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
   <RouteComponent
     content="component, UC direct, no history"
     key=".0"
@@ -129,5 +225,5 @@ exports[`UU5.Common.Router - Internal Interface test setRoute() 2`] = `
     location="portal"
     ref_={[Function]}
   />
-</Fragment>
+</ContextProvider>
 `;

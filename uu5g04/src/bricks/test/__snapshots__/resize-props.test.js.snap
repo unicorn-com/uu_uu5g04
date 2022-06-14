@@ -167,6 +167,29 @@ exports[`UU5.Bricks.Resize className="my-classname" 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.Resize className="test-classname" 1`] = `
+<Div
+  className="uu5-bricks-resize test-classname"
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
 exports[`UU5.Bricks.Resize content="This is Content from ContentMixin" 1`] = `
 <Div
   className="uu5-bricks-resize"
@@ -294,7 +317,54 @@ exports[`UU5.Bricks.Resize disabled=false 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.Resize disabled=false 3`] = `
+<Div
+  className="uu5-bricks-resize"
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
 exports[`UU5.Bricks.Resize disabled=true 1`] = `
+<Div
+  className="uu5-bricks-resize"
+  disabled={true}
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Bricks.Resize disabled=true 3`] = `
 <Div
   className="uu5-bricks-resize"
   disabled={true}
@@ -365,7 +435,76 @@ exports[`UU5.Bricks.Resize dynamic=true 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.Resize elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Div
+  className="uu5-bricks-resize"
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Bricks.Resize fullTextSearchPriority=0 1`] = `
+<Div
+  className="uu5-bricks-resize uu-fulltextsearch-0"
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
 exports[`UU5.Bricks.Resize hidden=false 1`] = `
+<Div
+  className="uu5-bricks-resize"
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Bricks.Resize hidden=false 3`] = `
 <Div
   className="uu5-bricks-resize"
   id="uuID"
@@ -412,10 +551,57 @@ exports[`UU5.Bricks.Resize hidden=true 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.Resize hidden=true 3`] = `
+<Div
+  className="uu5-bricks-resize"
+  hidden={true}
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
 exports[`UU5.Bricks.Resize id="myId" 1`] = `
 <Div
   className="uu5-bricks-resize"
   id="myId"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Bricks.Resize id="test-id" 1`] = `
+<Div
+  className="uu5-bricks-resize"
+  id="test-id"
   mainAttrs={Object {}}
 >
   <ResizeItem
@@ -600,6 +786,30 @@ exports[`UU5.Bricks.Resize nestingLevel="box" 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.Resize nestingLevel="box" 3`] = `
+<Div
+  className="uu5-bricks-resize"
+  id="uuID"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
 exports[`UU5.Bricks.Resize nestingLevel="boxCollection" 1`] = `
 <Div
   className="uu5-bricks-resize"
@@ -649,6 +859,30 @@ exports[`UU5.Bricks.Resize nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Resize nestingLevel="inline" 1`] = `
+<Div
+  className="uu5-bricks-resize"
+  id="uuID"
+  mainAttrs={Object {}}
+  nestingLevel="inline"
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Bricks.Resize nestingLevel="inline" 3`] = `
 <Div
   className="uu5-bricks-resize"
   id="uuID"
@@ -793,7 +1027,53 @@ exports[`UU5.Bricks.Resize noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Resize noIndex=true 1`] = `
 <Div
-  className="uu5-bricks-resize uu5-noindex"
+  className="uu5-bricks-resize uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Bricks.Resize noPrint=false 1`] = `
+<Div
+  className="uu5-bricks-resize"
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Bricks.Resize noPrint=true 1`] = `
+<Div
+  className="uu5-bricks-resize"
   id="uuID"
   mainAttrs={Object {}}
 >
@@ -899,6 +1179,34 @@ exports[`UU5.Bricks.Resize style={"backgroundColor":"red","color":"blue"} 1`] = 
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Bricks.Resize style={"margin":8} 1`] = `
+<Div
+  className="uu5-bricks-resize"
+  id="uuID"
+  mainAttrs={Object {}}
+  style={
+    Object {
+      "margin": 8,
     }
   }
 >

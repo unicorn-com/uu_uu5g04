@@ -182,6 +182,10 @@ const _Modal = UU5.Common.VisualComponent.create({
             margin-left: 0px;
             margin-right: 0px;
             width: 100%;
+
+            .uu5-bricks-modal-layout-wrapper {
+              width: 100%;
+            }
           }
         `;
 

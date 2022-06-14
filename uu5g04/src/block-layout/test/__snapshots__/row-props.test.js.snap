@@ -104,6 +104,20 @@ exports[`UU5.BlockLayout.Row props testing className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Row props testing className="test-classname" 1`] = `
+<div
+  className="uublocklayout-9jisyu test-classname uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Row props testing content="This is Content from ContentMixin" 1`] = `
 <div
   className="uublocklayout-9jisyu uublocklayout-1ardydz"
@@ -185,7 +199,39 @@ exports[`UU5.BlockLayout.Row props testing disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Row props testing disabled=false 3`] = `
+<div
+  className="uublocklayout-9jisyu uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Row props testing disabled=true 1`] = `
+<div
+  className="uublocklayout-9jisyu uu5-common-disabled uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing disabled=true 3`] = `
 <div
   className="uublocklayout-9jisyu uu5-common-disabled uublocklayout-1ardydz"
   id="uuID"
@@ -231,6 +277,20 @@ exports[`UU5.BlockLayout.Row props testing dynamic=true 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Row props testing elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uublocklayout-9jisyu uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Row props testing ellipsis=false 1`] = `
 <div
   className="uublocklayout-9jisyu uublocklayout-1ardydz"
@@ -259,7 +319,35 @@ exports[`UU5.BlockLayout.Row props testing ellipsis=true 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Row props testing fullTextSearchPriority=0 1`] = `
+<div
+  className="uublocklayout-9jisyu uu-fulltextsearch-0 uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Row props testing hidden=false 1`] = `
+<div
+  className="uublocklayout-9jisyu uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing hidden=false 3`] = `
 <div
   className="uublocklayout-9jisyu uublocklayout-1ardydz"
   id="uuID"
@@ -287,10 +375,38 @@ exports[`UU5.BlockLayout.Row props testing hidden=true 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Row props testing hidden=true 3`] = `
+<div
+  className="uublocklayout-9jisyu uu5-common-hidden uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Row props testing id="myId" 1`] = `
 <div
   className="uublocklayout-9jisyu uublocklayout-1ardydz"
   id="myId"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing id="test-id" 1`] = `
+<div
+  className="uublocklayout-9jisyu uublocklayout-1ardydz"
+  id="test-id"
   style={Object {}}
   title={null}
 >
@@ -400,6 +516,20 @@ exports[`UU5.BlockLayout.Row props testing nestingLevel="box" 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Row props testing nestingLevel="box" 3`] = `
+<div
+  className="uublocklayout-9jisyu uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Row props testing nestingLevel="boxCollection" 1`] = `
 <div
   className="uublocklayout-9jisyu uublocklayout-1ardydz"
@@ -429,6 +559,20 @@ exports[`UU5.BlockLayout.Row props testing nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.BlockLayout.Row props testing nestingLevel="inline" 1`] = `
+<div
+  className="uublocklayout-9jisyu uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel="inline" 3`] = `
 <div
   className="uublocklayout-9jisyu uublocklayout-1ardydz"
   id="uuID"
@@ -514,7 +658,35 @@ exports[`UU5.BlockLayout.Row props testing noIndex=false 1`] = `
 
 exports[`UU5.BlockLayout.Row props testing noIndex=true 1`] = `
 <div
-  className="uublocklayout-9jisyu uu5-noindex uublocklayout-1ardydz"
+  className="uublocklayout-9jisyu uu5-noindex uu-fulltextsearch-0 uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing noPrint=false 1`] = `
+<div
+  className="uublocklayout-9jisyu uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing noPrint=true 1`] = `
+<div
+  className="uublocklayout-9jisyu uublocklayout-1ardydz"
   id="uuID"
   style={Object {}}
   title={null}
@@ -637,6 +809,24 @@ exports[`UU5.BlockLayout.Row props testing style={"backgroundColor":"red","color
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing style={"margin":8} 1`] = `
+<div
+  className="uublocklayout-9jisyu uublocklayout-1ardydz"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

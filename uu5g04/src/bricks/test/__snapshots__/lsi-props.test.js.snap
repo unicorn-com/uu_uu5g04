@@ -90,6 +90,16 @@ exports[`UU5.Bricks.Lsi props className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi props className="test-classname" 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Lsi props content="This is Content from ContentMixin" 1`] = `
 <UU5.Common.TextCorrectorContextConsumer
   key="0"
@@ -140,7 +150,28 @@ exports[`UU5.Bricks.Lsi props disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi props disabled=false 3`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Lsi props disabled=true 1`] = `
+<lsi-item
+  content="Text in Children"
+  disabled={true}
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props disabled=true 3`] = `
 <lsi-item
   content="Text in Children"
   disabled={true}
@@ -171,7 +202,37 @@ exports[`UU5.Bricks.Lsi props dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props fullTextSearchPriority=0 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Lsi props hidden=false 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props hidden=false 3`] = `
 <lsi-item
   content="Text in Children"
   id="childID"
@@ -192,7 +253,28 @@ exports[`UU5.Bricks.Lsi props hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi props hidden=true 3`] = `
+<lsi-item
+  content="Text in Children"
+  hidden={true}
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Lsi props id="myId" 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props id="test-id" 1`] = `
 <lsi-item
   content="Text in Children"
   id="childID"
@@ -382,6 +464,16 @@ exports[`UU5.Bricks.Lsi props nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi props nestingLevel="box" 3`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="box"
+/>
+`;
+
 exports[`UU5.Bricks.Lsi props nestingLevel="boxCollection" 1`] = `
 <lsi-item
   content="Text in Children"
@@ -403,6 +495,16 @@ exports[`UU5.Bricks.Lsi props nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Lsi props nestingLevel="inline" 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="inline"
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props nestingLevel="inline" 3`] = `
 <lsi-item
   content="Text in Children"
   id="childID"
@@ -463,6 +565,26 @@ exports[`UU5.Bricks.Lsi props noIndex=false 1`] = `
 `;
 
 exports[`UU5.Bricks.Lsi props noIndex=true 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props noPrint=false 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props noPrint=true 1`] = `
 <lsi-item
   content="Text in Children"
   id="childID"
@@ -534,6 +656,16 @@ exports[`UU5.Bricks.Lsi props style="padding:8px; borderRadius: 2px" 1`] = `
 `;
 
 exports[`UU5.Bricks.Lsi props style={"backgroundColor":"red","color":"blue"} 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props style={"margin":8} 1`] = `
 <lsi-item
   content="Text in Children"
   id="childID"

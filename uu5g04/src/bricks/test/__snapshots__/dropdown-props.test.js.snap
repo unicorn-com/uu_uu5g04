@@ -31,7 +31,6 @@ exports[`UU5.Bricks.Dropdown AllowTags + Dockit example UU5.Bricks.DropDown - pr
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -79,7 +78,6 @@ exports[`UU5.Bricks.Dropdown AllowTags + Dockit example UU5.Bricks.Dropdown exam
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -158,7 +156,6 @@ exports[`UU5.Bricks.Dropdown allowTags=undefined 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -205,7 +202,6 @@ exports[`UU5.Bricks.Dropdown checkGrammar=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -252,7 +248,6 @@ exports[`UU5.Bricks.Dropdown checkGrammar=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -299,7 +294,6 @@ exports[`UU5.Bricks.Dropdown checkHighlight=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -346,7 +340,6 @@ exports[`UU5.Bricks.Dropdown checkHighlight=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -393,7 +386,6 @@ exports[`UU5.Bricks.Dropdown checkSpaces=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -440,7 +432,6 @@ exports[`UU5.Bricks.Dropdown checkSpaces=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -487,7 +478,52 @@ exports[`UU5.Bricks.Dropdown className="my-classname" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-dropdown test-classname uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -534,7 +570,6 @@ exports[`UU5.Bricks.Dropdown closedOnLeave=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -581,7 +616,6 @@ exports[`UU5.Bricks.Dropdown closedOnLeave=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -629,7 +663,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="brown" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -677,7 +710,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="brown-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -725,7 +757,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="cyan" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -773,7 +804,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="cyan-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -821,7 +851,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="default" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -869,7 +898,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="green" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -917,7 +945,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="green-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -965,7 +992,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="grey" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1013,7 +1039,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="grey-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1061,7 +1086,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="orange" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1109,7 +1133,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="orange-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1157,7 +1180,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="pink" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1205,7 +1227,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="pink-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1253,7 +1274,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="purple" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1301,7 +1321,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="purple-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1349,7 +1368,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="red" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1397,7 +1415,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="red-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1445,7 +1462,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="yellow" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1493,7 +1509,6 @@ exports[`UU5.Bricks.Dropdown colorSchema="yellow-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1540,7 +1555,6 @@ exports[`UU5.Bricks.Dropdown content="This is Content from ContentMixin" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1587,7 +1601,6 @@ exports[`UU5.Bricks.Dropdown content=12345 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1634,7 +1647,6 @@ exports[`UU5.Bricks.Dropdown controlled=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1681,7 +1693,6 @@ exports[`UU5.Bricks.Dropdown controlled=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1728,7 +1739,6 @@ exports[`UU5.Bricks.Dropdown default props 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1775,7 +1785,6 @@ exports[`UU5.Bricks.Dropdown disableBackdrop=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1822,7 +1831,6 @@ exports[`UU5.Bricks.Dropdown disableBackdrop=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1869,7 +1877,52 @@ exports[`UU5.Bricks.Dropdown disabled=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown disabled=false 3`] = `
+<div
+  className="uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1916,7 +1969,57 @@ exports[`UU5.Bricks.Dropdown disabled=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      disabled={true}
+      onClick={[Function]}
+    />
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown disabled=true 3`] = `
+<div
+  className="uu5-bricks-dropdown uu5-common-disabled uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1968,7 +2071,6 @@ exports[`UU5.Bricks.Dropdown dropup=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2015,7 +2117,6 @@ exports[`UU5.Bricks.Dropdown dropup=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2062,7 +2163,6 @@ exports[`UU5.Bricks.Dropdown dynamic=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2109,7 +2209,98 @@ exports[`UU5.Bricks.Dropdown dynamic=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-dropdown uu-fulltextsearch-0 uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2156,7 +2347,52 @@ exports[`UU5.Bricks.Dropdown hidden=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown hidden=false 3`] = `
+<div
+  className="uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2203,7 +2439,52 @@ exports[`UU5.Bricks.Dropdown hidden=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown hidden=true 3`] = `
+<div
+  className="uu5-bricks-dropdown uu5-common-hidden uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2250,7 +2531,6 @@ exports[`UU5.Bricks.Dropdown iconClosed="uu5-minus" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2297,7 +2577,6 @@ exports[`UU5.Bricks.Dropdown iconHidden=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2371,7 +2650,6 @@ exports[`UU5.Bricks.Dropdown iconOpen="uu5-plus" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2418,7 +2696,52 @@ exports[`UU5.Bricks.Dropdown id="myId" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown id="test-id" 1`] = `
+<div
+  className="uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="test-id"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="test-id-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2465,7 +2788,6 @@ exports[`UU5.Bricks.Dropdown ignoreHTML=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2512,7 +2834,6 @@ exports[`UU5.Bricks.Dropdown ignoreHTML=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2559,7 +2880,6 @@ exports[`UU5.Bricks.Dropdown items=[{"label":"Rock","href":"#Rock"},{"label":"Me
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2606,7 +2926,6 @@ exports[`UU5.Bricks.Dropdown label="Rozbal mě" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2653,7 +2972,6 @@ exports[`UU5.Bricks.Dropdown mainAttrs=undefined 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2701,7 +3019,6 @@ exports[`UU5.Bricks.Dropdown name="myName" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2748,7 +3065,6 @@ exports[`UU5.Bricks.Dropdown nestingLevel="bigBox" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2795,7 +3111,6 @@ exports[`UU5.Bricks.Dropdown nestingLevel="bigBoxCollection" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2842,7 +3157,52 @@ exports[`UU5.Bricks.Dropdown nestingLevel="box" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2889,7 +3249,6 @@ exports[`UU5.Bricks.Dropdown nestingLevel="boxCollection" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2936,7 +3295,6 @@ exports[`UU5.Bricks.Dropdown nestingLevel="container" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2983,7 +3341,52 @@ exports[`UU5.Bricks.Dropdown nestingLevel="inline" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown nestingLevel="inline" 3`] = `
+<div
+  className="uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3030,7 +3433,6 @@ exports[`UU5.Bricks.Dropdown nestingLevel="page" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3077,7 +3479,6 @@ exports[`UU5.Bricks.Dropdown nestingLevel="smallBox" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3124,7 +3525,6 @@ exports[`UU5.Bricks.Dropdown nestingLevel="smallBoxCollection" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3171,7 +3571,6 @@ exports[`UU5.Bricks.Dropdown nestingLevel="spa" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3218,7 +3617,6 @@ exports[`UU5.Bricks.Dropdown noIndex=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3237,7 +3635,7 @@ exports[`UU5.Bricks.Dropdown noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Dropdown noIndex=true 1`] = `
 <div
-  className="uu5-bricks-dropdown uu5-noindex uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  className="uu5-bricks-dropdown uu5-noindex uu-fulltextsearch-0 uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
   id="uuID"
   onMouseLeave={null}
   onMouseOver={null}
@@ -3265,7 +3663,98 @@ exports[`UU5.Bricks.Dropdown noIndex=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown noPrint=false 1`] = `
+<div
+  className="uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown noPrint=true 1`] = `
+<div
+  className="uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3312,7 +3801,6 @@ exports[`UU5.Bricks.Dropdown offset=70 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3359,7 +3847,6 @@ exports[`UU5.Bricks.Dropdown openOnHover=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3406,7 +3893,6 @@ exports[`UU5.Bricks.Dropdown openOnHover=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3453,7 +3939,6 @@ exports[`UU5.Bricks.Dropdown pullRight=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3500,7 +3985,6 @@ exports[`UU5.Bricks.Dropdown pullRight=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3547,7 +4031,6 @@ exports[`UU5.Bricks.Dropdown pureRender=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3594,7 +4077,6 @@ exports[`UU5.Bricks.Dropdown pureRender=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3641,7 +4123,6 @@ exports[`UU5.Bricks.Dropdown selected=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3688,7 +4169,6 @@ exports[`UU5.Bricks.Dropdown selected=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3735,7 +4215,6 @@ exports[`UU5.Bricks.Dropdown size="l" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3783,7 +4262,6 @@ exports[`UU5.Bricks.Dropdown size="m" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3830,7 +4308,6 @@ exports[`UU5.Bricks.Dropdown size="s" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3878,7 +4355,6 @@ exports[`UU5.Bricks.Dropdown size="xl" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3926,7 +4402,6 @@ exports[`UU5.Bricks.Dropdown smoothScroll=3000 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3973,7 +4448,6 @@ exports[`UU5.Bricks.Dropdown split=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -4059,7 +4533,6 @@ exports[`UU5.Bricks.Dropdown style="padding:8px; borderRadius: 2px" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -4111,7 +4584,56 @@ exports[`UU5.Bricks.Dropdown style={"backgroundColor":"red","color":"blue"} 1`] 
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID-cover"
+  >
+    <Button
+      className="uu5-bricks-dropdown-button"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -4158,7 +4680,6 @@ exports[`UU5.Bricks.Dropdown textCorrector=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -4205,7 +4726,6 @@ exports[`UU5.Bricks.Dropdown textCorrector=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -4252,7 +4772,6 @@ exports[`UU5.Bricks.Dropdown tooltip="My Tooltip" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}

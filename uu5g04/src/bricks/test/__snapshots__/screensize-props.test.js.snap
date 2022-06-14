@@ -66,7 +66,6 @@ exports[`Mixin Props testing props of ContentMixin 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             ref_={null}
             screenSize="xl"
@@ -85,7 +84,6 @@ exports[`Mixin Props testing props of ContentMixin 1`] = `
               ignoreInnerHTML={false}
               mainAttrs={null}
               name={null}
-              noIndex={false}
               parent={null}
               pureRender={false}
               ref_={null}
@@ -99,6 +97,7 @@ exports[`Mixin Props testing props of ContentMixin 1`] = `
           "controlled": true,
           "disabled": false,
           "dynamic": true,
+          "fullTextSearchPriority": undefined,
           "getEditablePropValue": undefined,
           "hidden": false,
           "id": "uuIDroot",
@@ -108,7 +107,6 @@ exports[`Mixin Props testing props of ContentMixin 1`] = `
           "mode": "outline",
           "name": null,
           "nestingLevel": null,
-          "noIndex": false,
           "parent": null,
           "ref_": null,
           "screenSize": null,
@@ -428,6 +426,28 @@ exports[`UU5.Bricks.ScreenSize className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ScreenSize className="test-classname" 1`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ScreenSize content="This is Content from ContentMixin" 1`] = `
 <Fragment>
   <UU5.Common.TextCorrectorContextConsumer
@@ -532,7 +552,52 @@ exports[`UU5.Bricks.ScreenSize disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ScreenSize disabled=false 3`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ScreenSize disabled=true 1`] = `
+<Fragment>
+  <screen-size-item
+    disabled={true}
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ScreenSize disabled=true 3`] = `
 <Fragment>
   <screen-size-item
     disabled={true}
@@ -620,7 +685,73 @@ exports[`UU5.Bricks.ScreenSize dynamic=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ScreenSize elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ScreenSize fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ScreenSize hidden=false 1`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ScreenSize hidden=false 3`] = `
 <Fragment>
   <screen-size-item
     id="childID"
@@ -665,7 +796,52 @@ exports[`UU5.Bricks.ScreenSize hidden=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ScreenSize hidden=true 3`] = `
+<Fragment>
+  <screen-size-item
+    hidden={true}
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ScreenSize id="myId" 1`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ScreenSize id="test-id" 1`] = `
 <Fragment>
   <screen-size-item
     id="childID"
@@ -841,6 +1017,28 @@ exports[`UU5.Bricks.ScreenSize nestingLevel="box" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ScreenSize nestingLevel="box" 3`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="box"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ScreenSize nestingLevel="boxCollection" 1`] = `
 <Fragment>
   <screen-size-item
@@ -886,6 +1084,28 @@ exports[`UU5.Bricks.ScreenSize nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="inline" 1`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="inline"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel="inline" 3`] = `
 <Fragment>
   <screen-size-item
     id="childID"
@@ -1018,6 +1238,50 @@ exports[`UU5.Bricks.ScreenSize noIndex=false 1`] = `
 `;
 
 exports[`UU5.Bricks.ScreenSize noIndex=true 1`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ScreenSize noPrint=false 1`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ScreenSize noPrint=true 1`] = `
 <Fragment>
   <screen-size-item
     id="childID"
@@ -1217,6 +1481,28 @@ exports[`UU5.Bricks.ScreenSize style="padding:8px; borderRadius: 2px" 1`] = `
 `;
 
 exports[`UU5.Bricks.ScreenSize style={"backgroundColor":"red","color":"blue"} 1`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.ScreenSize style={"margin":8} 1`] = `
 <Fragment>
   <screen-size-item
     id="childID"

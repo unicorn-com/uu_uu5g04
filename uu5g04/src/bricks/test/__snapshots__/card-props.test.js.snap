@@ -109,6 +109,16 @@ exports[`UU5.Bricks.Card props testing className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Card props testing className="test-classname" 1`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card test-classname uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Card props testing content="This is Content from ContentMixin" 1`] = `
 <Fragment>
   <Section
@@ -171,7 +181,28 @@ exports[`UU5.Bricks.Card props testing disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Card props testing disabled=false 3`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Card props testing disabled=true 1`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    disabled={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Card props testing disabled=true 3`] = `
 <Fragment>
   <Section
     className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
@@ -197,6 +228,16 @@ exports[`UU5.Bricks.Card props testing dynamic=true 1`] = `
   <Section
     className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
     dynamic={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Card props testing elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
     id="uuID-inner"
     mainAttrs={Object {}}
   />
@@ -458,6 +499,16 @@ exports[`UU5.Bricks.Card props testing footer={"type":"div","key":null,"ref":nul
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Card props testing fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu-fulltextsearch-0 uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Card props testing header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <Fragment>
   <Section
@@ -483,7 +534,28 @@ exports[`UU5.Bricks.Card props testing hidden=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Card props testing hidden=false 3`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Card props testing hidden=true 1`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    hidden={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Card props testing hidden=true 3`] = `
 <Fragment>
   <Section
     className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
@@ -499,6 +571,16 @@ exports[`UU5.Bricks.Card props testing id="myId" 1`] = `
   <Section
     className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
     id="myId-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Card props testing id="test-id" 1`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="test-id-inner"
     mainAttrs={Object {}}
   />
 </Fragment>
@@ -782,6 +864,17 @@ exports[`UU5.Bricks.Card props testing nestingLevel="box" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Card props testing nestingLevel="box" 3`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="box"
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Card props testing nestingLevel="boxCollection" 1`] = `
 <Fragment>
   <Section
@@ -842,6 +935,7 @@ exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `
           "elevation": 1,
           "elevationHover": 1,
           "footer": null,
+          "fullTextSearchPriority": undefined,
           "getEditablePropValue": undefined,
           "header": null,
           "hidden": false,
@@ -854,7 +948,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `
           "minWidth": null,
           "name": null,
           "nestingLevel": "inline",
-          "noIndex": false,
           "noSpaces": false,
           "parent": null,
           "pureRender": false,
@@ -906,7 +999,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -938,7 +1030,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -969,7 +1060,183 @@ exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    renderEditationMode={[Function]}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="inline" 3`] = `
+<Fragment>
+  <UU5.BricksEditable.InlineMode
+    Component={[Function]}
+    component={
+      Object {
+        "__isMounted": true,
+        "_domNode": null,
+        "_isMounted": true,
+        "_resizeCallbacks": Object {},
+        "context": Object {},
+        "id": "uuID",
+        "mixinRegister": Array [
+          "UU5.Common.BaseMixin",
+          "UU5.Common.ElementaryMixin",
+          "UU5.Common.NestingLevelMixin",
+          "UU5.Common.ContentMixin",
+          "UU5.Common.LevelMixin",
+          "UU5.Common.SectionMixin",
+          "UU5.Common.PureRenderMixin",
+          "UU5.Common.ColorSchemaMixin",
+          "UU5.Common.EditableMixin",
+        ],
+        "props": Object {
+          "bgStyle": "filled",
+          "borderRadius": null,
+          "checkGrammar": undefined,
+          "checkHighlight": undefined,
+          "checkSpaces": undefined,
+          "className": null,
+          "colorSchema": null,
+          "content": null,
+          "controlled": true,
+          "disabled": false,
+          "dynamic": false,
+          "elevation": 1,
+          "elevationHover": 1,
+          "footer": null,
+          "fullTextSearchPriority": undefined,
+          "getEditablePropValue": undefined,
+          "header": null,
+          "hidden": false,
+          "id": "uuID",
+          "ignoreInnerHTML": false,
+          "increaseLevel": false,
+          "inline": false,
+          "level": null,
+          "mainAttrs": null,
+          "minWidth": null,
+          "name": null,
+          "nestingLevel": "inline",
+          "noSpaces": false,
+          "parent": null,
+          "pureRender": false,
+          "ref_": null,
+          "selected": false,
+          "style": null,
+          "textCorrector": undefined,
+          "tooltip": null,
+          "underline": false,
+          "width": null,
+        },
+        "refs": Object {},
+        "renderedChildren": Array [],
+        "renderedChildrenIdList": Object {},
+        "renderedChildrenNameList": Object {},
+        "renderedFooterChild": null,
+        "renderedHeaderChild": null,
+        "state": Object {
+          "disabled": false,
+          "editableComponentLazyLoaded": false,
+          "editation": false,
+          "hidden": false,
+          "level": 0,
+          "mode": undefined,
+          "nestingLevel": null,
+          "selected": false,
+        },
+        "tagName": "UU5.Bricks.Card",
+      }
+    }
+    editModalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Upravit kartu",
+            "en": "Edit card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    getPropsToSave={[Function]}
+    linkTitle={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Karta",
+            "en": "Card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    modalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Karta",
+            "en": "Card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
         params={null}
         parent={null}
         pureRender={false}
@@ -1033,6 +1300,7 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `
           "elevation": 1,
           "elevationHover": 1,
           "footer": null,
+          "fullTextSearchPriority": undefined,
           "getEditablePropValue": undefined,
           "header": null,
           "hidden": false,
@@ -1045,7 +1313,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `
           "minWidth": null,
           "name": null,
           "nestingLevel": "smallBox",
-          "noIndex": false,
           "noSpaces": false,
           "parent": null,
           "pureRender": false,
@@ -1097,7 +1364,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1129,7 +1395,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1160,7 +1425,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1213,6 +1477,7 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `
           "elevation": 1,
           "elevationHover": 1,
           "footer": null,
+          "fullTextSearchPriority": undefined,
           "getEditablePropValue": undefined,
           "header": null,
           "hidden": false,
@@ -1225,7 +1490,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `
           "minWidth": null,
           "name": null,
           "nestingLevel": "smallBoxCollection",
-          "noIndex": false,
           "noSpaces": false,
           "parent": null,
           "pureRender": false,
@@ -1277,7 +1541,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1309,7 +1572,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1340,7 +1602,6 @@ exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `
         mainAttrs={null}
         name={null}
         nestingLevel={null}
-        noIndex={false}
         params={null}
         parent={null}
         pureRender={false}
@@ -1379,7 +1640,27 @@ exports[`UU5.Bricks.Card props testing noIndex=false 1`] = `
 exports[`UU5.Bricks.Card props testing noIndex=true 1`] = `
 <Fragment>
   <Section
-    className="uu5-bricks-card uu5-noindex uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    className="uu5-bricks-card uu5-noindex uu-fulltextsearch-0 uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Card props testing noPrint=false 1`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Card props testing noPrint=true 1`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
     id="uuID-inner"
     mainAttrs={Object {}}
   />
@@ -1474,6 +1755,21 @@ exports[`UU5.Bricks.Card props testing style={"backgroundColor":"red","color":"b
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Card props testing style={"margin":8} 1`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "margin": 8,
       }
     }
   />

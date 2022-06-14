@@ -77,6 +77,17 @@ exports[`UU5.Bricks.Jumbotron className="my-classname" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Jumbotron className="test-classname" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron test-classname uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Jumbotron colorSchema="brown" 1`] = `
 <Fragment>
   <div
@@ -359,7 +370,34 @@ exports[`UU5.Bricks.Jumbotron disabled=false 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Jumbotron disabled=false 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Jumbotron disabled=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-disabled uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Jumbotron disabled=true 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-jumbotron uu5-common-disabled uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
@@ -414,7 +452,40 @@ exports[`UU5.Bricks.Jumbotron dynamic=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Jumbotron elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Jumbotron fullTextSearchPriority=0 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Jumbotron hidden=false 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Jumbotron hidden=false 3`] = `
 <Fragment>
   <div
     className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
@@ -436,11 +507,33 @@ exports[`UU5.Bricks.Jumbotron hidden=true 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Jumbotron hidden=true 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-hidden uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Jumbotron id="myId" 1`] = `
 <Fragment>
   <div
     className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
     id="myId"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Jumbotron id="test-id" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="test-id"
     style={Object {}}
     title={null}
   />
@@ -525,6 +618,17 @@ exports[`UU5.Bricks.Jumbotron nestingLevel="box" 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Jumbotron nestingLevel="box" 3`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Jumbotron nestingLevel="boxCollection" 1`] = `
 <Fragment>
   <div
@@ -548,6 +652,8 @@ exports[`UU5.Bricks.Jumbotron nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Jumbotron nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="page" 1`] = `
 <Fragment>
@@ -589,7 +695,29 @@ exports[`UU5.Bricks.Jumbotron noIndex=false 1`] = `
 exports[`UU5.Bricks.Jumbotron noIndex=true 1`] = `
 <Fragment>
   <div
-    className="uu5-bricks-jumbotron uu5-noindex uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    className="uu5-bricks-jumbotron uu5-noindex uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Jumbotron noPrint=false 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Jumbotron noPrint=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
     id="uuID"
     style={Object {}}
     title={null}
@@ -666,6 +794,21 @@ exports[`UU5.Bricks.Jumbotron style={"backgroundColor":"red","color":"blue"} 1`]
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+    title={null}
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Jumbotron style={"margin":8} 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={
+      Object {
+        "margin": 8,
       }
     }
     title={null}

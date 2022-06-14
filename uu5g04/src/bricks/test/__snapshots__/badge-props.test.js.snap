@@ -14,6 +14,8 @@ exports[`UU5.Bricks.Badge checkSpaces=true 1`] = `""`;
 
 exports[`UU5.Bricks.Badge className="my-classname" 1`] = `""`;
 
+exports[`UU5.Bricks.Badge className="test-classname" 1`] = `""`;
+
 exports[`UU5.Bricks.Badge colorSchema="brown" 1`] = `""`;
 
 exports[`UU5.Bricks.Badge colorSchema="brown-rich" 1`] = `""`;
@@ -85,17 +87,31 @@ exports[`UU5.Bricks.Badge default props 1`] = `""`;
 
 exports[`UU5.Bricks.Badge disabled=false 1`] = `""`;
 
+exports[`UU5.Bricks.Badge disabled=false 3`] = `""`;
+
 exports[`UU5.Bricks.Badge disabled=true 1`] = `""`;
+
+exports[`UU5.Bricks.Badge disabled=true 3`] = `""`;
 
 exports[`UU5.Bricks.Badge dynamic=false 1`] = `""`;
 
 exports[`UU5.Bricks.Badge dynamic=true 1`] = `""`;
 
+exports[`UU5.Bricks.Badge elementAttrs={"data":{"test":"data-test-value"}} 1`] = `""`;
+
+exports[`UU5.Bricks.Badge fullTextSearchPriority=0 1`] = `""`;
+
 exports[`UU5.Bricks.Badge hidden=false 1`] = `""`;
+
+exports[`UU5.Bricks.Badge hidden=false 3`] = `""`;
 
 exports[`UU5.Bricks.Badge hidden=true 1`] = `""`;
 
+exports[`UU5.Bricks.Badge hidden=true 3`] = `""`;
+
 exports[`UU5.Bricks.Badge id="myId" 1`] = `""`;
+
+exports[`UU5.Bricks.Badge id="test-id" 1`] = `""`;
 
 exports[`UU5.Bricks.Badge ignoreHTML=false 1`] = `""`;
 
@@ -111,11 +127,15 @@ exports[`UU5.Bricks.Badge nestingLevel="bigBoxCollection" 1`] = `""`;
 
 exports[`UU5.Bricks.Badge nestingLevel="box" 1`] = `""`;
 
+exports[`UU5.Bricks.Badge nestingLevel="box" 3`] = `""`;
+
 exports[`UU5.Bricks.Badge nestingLevel="boxCollection" 1`] = `""`;
 
 exports[`UU5.Bricks.Badge nestingLevel="container" 1`] = `""`;
 
 exports[`UU5.Bricks.Badge nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Badge nestingLevel="page" 1`] = `""`;
 
@@ -129,6 +149,10 @@ exports[`UU5.Bricks.Badge noIndex=false 1`] = `""`;
 
 exports[`UU5.Bricks.Badge noIndex=true 1`] = `""`;
 
+exports[`UU5.Bricks.Badge noPrint=false 1`] = `""`;
+
+exports[`UU5.Bricks.Badge noPrint=true 1`] = `""`;
+
 exports[`UU5.Bricks.Badge pureRender=false 1`] = `""`;
 
 exports[`UU5.Bricks.Badge pureRender=true 1`] = `""`;
@@ -140,6 +164,8 @@ exports[`UU5.Bricks.Badge selected=true 1`] = `""`;
 exports[`UU5.Bricks.Badge style="padding:8px; borderRadius: 2px" 1`] = `""`;
 
 exports[`UU5.Bricks.Badge style={"backgroundColor":"red","color":"blue"} 1`] = `""`;
+
+exports[`UU5.Bricks.Badge style={"margin":8} 1`] = `""`;
 
 exports[`UU5.Bricks.Badge textCorrector=false 1`] = `""`;
 

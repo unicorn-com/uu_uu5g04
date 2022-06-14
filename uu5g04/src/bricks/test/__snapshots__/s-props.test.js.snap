@@ -49,6 +49,13 @@ exports[`UU5.Bricks.S className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.S className="test-classname" 1`] = `
+<s
+  className="uu5-bricks-s test-classname"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.S content="This is Content from ContentMixin" 1`] = `
 <s
   className="uu5-bricks-s"
@@ -96,7 +103,23 @@ exports[`UU5.Bricks.S disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.S disabled=false 3`] = `
+<s
+  className="uu5-bricks-s"
+  disabled={false}
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.S disabled=true 1`] = `
+<s
+  className="uu5-bricks-s"
+  disabled={true}
+  id="uuID"
+/>
+`;
+
+exports[`UU5.Bricks.S disabled=true 3`] = `
 <s
   className="uu5-bricks-s"
   disabled={true}
@@ -145,7 +168,29 @@ exports[`UU5.Bricks.S dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.S elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<s
+  className="uu5-bricks-s"
+  id="uuID"
+/>
+`;
+
+exports[`UU5.Bricks.S fullTextSearchPriority=0 1`] = `
+<s
+  className="uu5-bricks-s uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.S hidden=false 1`] = `
+<s
+  className="uu5-bricks-s"
+  hidden={false}
+  id="uuID"
+/>
+`;
+
+exports[`UU5.Bricks.S hidden=false 3`] = `
 <s
   className="uu5-bricks-s"
   hidden={false}
@@ -161,10 +206,25 @@ exports[`UU5.Bricks.S hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.S hidden=true 3`] = `
+<s
+  className="uu5-bricks-s"
+  hidden={true}
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.S id="myId" 1`] = `
 <s
   className="uu5-bricks-s"
   id="myId"
+/>
+`;
+
+exports[`UU5.Bricks.S id="test-id" 1`] = `
+<s
+  className="uu5-bricks-s"
+  id="test-id"
 />
 `;
 
@@ -196,6 +256,20 @@ exports[`UU5.Bricks.S name="myName" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.S nestingLevel="box" 1`] = `
+<s
+  className="uu5-bricks-s"
+  id="uuID"
+/>
+`;
+
+exports[`UU5.Bricks.S nestingLevel="inline" 1`] = `
+<s
+  className="uu5-bricks-s"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.S noIndex=false 1`] = `
 <s
   className="uu5-bricks-s"
@@ -205,7 +279,21 @@ exports[`UU5.Bricks.S noIndex=false 1`] = `
 
 exports[`UU5.Bricks.S noIndex=true 1`] = `
 <s
-  className="uu5-bricks-s uu5-noindex"
+  className="uu5-bricks-s uu-fulltextsearch-0 uu5-noindex"
+  id="uuID"
+/>
+`;
+
+exports[`UU5.Bricks.S noPrint=false 1`] = `
+<s
+  className="uu5-bricks-s"
+  id="uuID"
+/>
+`;
+
+exports[`UU5.Bricks.S noPrint=true 1`] = `
+<s
+  className="uu5-bricks-s uug-1ak6bum"
   id="uuID"
 />
 `;
@@ -245,6 +333,18 @@ exports[`UU5.Bricks.S style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+/>
+`;
+
+exports[`UU5.Bricks.S style={"margin":8} 1`] = `
+<s
+  className="uu5-bricks-s"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
 />

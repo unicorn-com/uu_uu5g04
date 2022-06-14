@@ -46,6 +46,29 @@ exports[`UU5.Bricks.HomeScreen className="my-classname" 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.HomeScreen className="test-classname" 1`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
 exports[`UU5.Bricks.HomeScreen controlled=false 1`] = `
 <Div
   className="ath-viewport"
@@ -230,7 +253,53 @@ exports[`UU5.Bricks.HomeScreen disabled=false 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.HomeScreen disabled=false 3`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
 exports[`UU5.Bricks.HomeScreen disabled=true 1`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.HomeScreen disabled=true 3`] = `
 <Div
   className="ath-viewport"
   nestingLevel="bigBoxCollection"
@@ -276,7 +345,76 @@ exports[`UU5.Bricks.HomeScreen displayPace=2880 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.HomeScreen elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.HomeScreen fullTextSearchPriority=0 1`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
 exports[`UU5.Bricks.HomeScreen hidden=false 1`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.HomeScreen hidden=false 3`] = `
 <Div
   className="ath-viewport"
   nestingLevel="bigBoxCollection"
@@ -322,7 +460,53 @@ exports[`UU5.Bricks.HomeScreen hidden=true 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.HomeScreen hidden=true 3`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
 exports[`UU5.Bricks.HomeScreen id="myId" 1`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.HomeScreen id="test-id" 1`] = `
 <Div
   className="ath-viewport"
   nestingLevel="bigBoxCollection"
@@ -760,6 +944,29 @@ exports[`UU5.Bricks.HomeScreen nestingLevel="box" 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.HomeScreen nestingLevel="box" 3`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="box"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
 exports[`UU5.Bricks.HomeScreen nestingLevel="boxCollection" 1`] = `
 <Div
   className="ath-viewport"
@@ -807,6 +1014,28 @@ exports[`UU5.Bricks.HomeScreen nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.HomeScreen nestingLevel="inline" 1`] = `
+<Div
+  className="ath-viewport"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.HomeScreen nestingLevel="inline" 3`] = `
 <Div
   className="ath-viewport"
 >
@@ -942,6 +1171,52 @@ exports[`UU5.Bricks.HomeScreen noIndex=false 1`] = `
 `;
 
 exports[`UU5.Bricks.HomeScreen noIndex=true 1`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.HomeScreen noPrint=false 1`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.HomeScreen noPrint=true 1`] = `
 <Div
   className="ath-viewport"
   nestingLevel="bigBoxCollection"
@@ -1149,6 +1424,29 @@ exports[`UU5.Bricks.HomeScreen style="padding:8px; borderRadius: 2px" 1`] = `
 `;
 
 exports[`UU5.Bricks.HomeScreen style={"backgroundColor":"red","color":"blue"} 1`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.HomeScreen style={"margin":8} 1`] = `
 <Div
   className="ath-viewport"
   nestingLevel="bigBoxCollection"

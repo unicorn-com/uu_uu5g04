@@ -582,7 +582,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
     mainAttrs.className = mainAttrs.className.replace(/color-schema-[a-z-]+ ?/, "");
 
     let contentColorSchema = this.props.contentColorSchema ? this.props.contentColorSchema : this.props.colorSchema;
-    contentColorSchema = "color-schema-" + contentColorSchema;
+    let contentColorSchemaClassName = contentColorSchema ? " color-schema-" + contentColorSchema : "";
 
     return this.getNestingLevel() ? (
       <UU5.Common.Fragment>
@@ -592,7 +592,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
             {this.props.underline ? <Line {...this._getLineProps()} /> : null}
           </ul>
 
-          <div className={this.getClassName().content + " " + contentColorSchema}>{children}</div>
+          <div className={this.getClassName().content + contentColorSchemaClassName}>{children}</div>
           {this.getDisabledCover()}
         </div>
         {this.state.editation ? this._renderEditationMode() : null}

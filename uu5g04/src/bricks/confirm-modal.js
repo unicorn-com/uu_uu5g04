@@ -37,6 +37,7 @@ function g04ButtonToG05ButtonProps(g04Props) {
     baseline,
     displayBlock,
     offset,
+    content,
     // TODO href, target, onWheelClick, onCtrlClick
     ...result
   } = g04Props;
@@ -46,6 +47,7 @@ function g04ButtonToG05ButtonProps(g04Props) {
   else if (bgStyle === "outline" || bgStyle === "underline") significance = "distinct";
   else if (bgStyle === "transparent") significance = "subdued";
   if (significance) result.significance = significance;
+  if (content != null) result.children = <Content nestingLevel="smallBox">{content}</Content>;
   return result;
 }
 
@@ -198,7 +200,7 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
       ...this.props,
       ...this.state.props,
     };
-    let { size, children, content } = modalProps;
+    let { size, children, content, header } = modalProps;
 
     let result;
     let { Uu5Elements } = OptionalLibraries;
@@ -229,8 +231,9 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
             actionList={actionList}
             width={size === "s" ? 300 : size === "m" ? 600 : size === "l" ? 900 : size === "max" ? "full" : null}
             actionDirection="horizontal"
+            header={header != null ? <Content nestingLevel="spotCollection">{header}</Content> : undefined}
           >
-            {content != null ? <Content>{content}</Content> : children}
+            {content != null ? <Content nestingLevel="bigBoxCollection">{content}</Content> : children}
           </Uu5Elements.Dialog>
         ) : null;
     } else {

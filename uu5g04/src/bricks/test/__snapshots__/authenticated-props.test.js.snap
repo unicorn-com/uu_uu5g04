@@ -18,17 +18,33 @@ exports[`UU5.Bricks.Authenticated checkSpaces=true 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated className="my-classname" 1`] = `<Fragment />`;
 
+exports[`UU5.Bricks.Authenticated className="test-classname" 1`] = `<Fragment />`;
+
 exports[`UU5.Bricks.Authenticated content="This is Content from ContentMixin" 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated content=12345 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated default props 1`] = `<Fragment />`;
 
+exports[`UU5.Bricks.Authenticated disabled=false 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Authenticated disabled=true 1`] = `<Fragment />`;
+
 exports[`UU5.Bricks.Authenticated dynamic=false 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated dynamic=true 1`] = `<Fragment />`;
 
+exports[`UU5.Bricks.Authenticated elementAttrs={"data":{"test":"data-test-value"}} 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Authenticated fullTextSearchPriority=0 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Authenticated hidden=false 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Authenticated hidden=true 1`] = `<Fragment />`;
+
 exports[`UU5.Bricks.Authenticated id="myId" 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Authenticated id="test-id" 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated ignoreHTML=false 1`] = `<Fragment />`;
 
@@ -38,9 +54,17 @@ exports[`UU5.Bricks.Authenticated mainAttrs=undefined 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated name="myName" 1`] = `<Fragment />`;
 
+exports[`UU5.Bricks.Authenticated nestingLevel="box" 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Authenticated nestingLevel="inline" 1`] = `<Fragment />`;
+
 exports[`UU5.Bricks.Authenticated noIndex=false 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated noIndex=true 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Authenticated noPrint=false 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Authenticated noPrint=true 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated notAuthenticated=false 1`] = `<Fragment />`;
 
@@ -60,6 +84,8 @@ exports[`UU5.Bricks.Authenticated pending=true 1`] = `
 exports[`UU5.Bricks.Authenticated style="padding:8px; borderRadius: 2px" 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated style={"backgroundColor":"red","color":"blue"} 1`] = `<Fragment />`;
+
+exports[`UU5.Bricks.Authenticated style={"margin":8} 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated textCorrector=false 1`] = `<Fragment />`;
 

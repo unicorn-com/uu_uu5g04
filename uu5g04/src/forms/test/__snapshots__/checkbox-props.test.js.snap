@@ -33,7 +33,6 @@ exports[`Check default props value CheckBox type is 1 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -82,7 +81,6 @@ exports[`Check default props value CheckBox type is 2 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -136,7 +134,6 @@ exports[`Check default props value Forms.Checkbox own props 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -186,7 +183,6 @@ exports[`UU5.Forms.Checkbox props bgStyleChecked="filled" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -237,7 +233,6 @@ exports[`UU5.Forms.Checkbox props bgStyleChecked="outline" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -288,7 +283,56 @@ exports[`UU5.Forms.Checkbox props className="my-classname" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props className="test-classname" 1`] = `
+<div
+  className="uu5-forms-checkbox test-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -339,7 +383,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="brown" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -390,7 +433,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="brown-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -441,7 +483,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="cyan" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -492,7 +533,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="cyan-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -543,7 +583,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="default" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -594,7 +633,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="green" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -645,7 +683,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="green-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -696,7 +733,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="grey" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -747,7 +783,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="grey-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -798,7 +833,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="orange" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -849,7 +883,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="orange-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -900,7 +933,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="pink" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -951,7 +983,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="pink-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1002,7 +1033,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="purple" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1053,7 +1083,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="purple-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1104,7 +1133,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="red" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1155,7 +1183,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="red-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1206,7 +1233,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="yellow" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1257,7 +1283,6 @@ exports[`UU5.Forms.Checkbox props colorSchema="yellow-rich" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1308,7 +1333,6 @@ exports[`UU5.Forms.Checkbox props controlled=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1359,7 +1383,6 @@ exports[`UU5.Forms.Checkbox props controlled=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1410,7 +1433,6 @@ exports[`UU5.Forms.Checkbox props default props 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1461,7 +1483,56 @@ exports[`UU5.Forms.Checkbox props disabled=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props disabled=false 3`] = `
+<div
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1512,7 +1583,6 @@ exports[`UU5.Forms.Checkbox props disabled=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1528,6 +1598,111 @@ exports[`UU5.Forms.Checkbox props disabled=true 1`] = `
             "disabled": true,
           }
         }
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props disabled=true 3`] = `
+<div
+  className="uu5-forms-checkbox uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={true}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        disabled={true}
+        mainAttrs={
+          Object {
+            "disabled": true,
+          }
+        }
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
         ref_={[Function]}
       />
     </Div>
@@ -1569,7 +1744,6 @@ exports[`UU5.Forms.Checkbox props feedback="error" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1620,7 +1794,6 @@ exports[`UU5.Forms.Checkbox props feedback="initial" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1698,7 +1871,6 @@ exports[`UU5.Forms.Checkbox props feedback="success" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1750,7 +1922,56 @@ exports[`UU5.Forms.Checkbox props feedback="warning" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-forms-checkbox uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1853,7 +2074,56 @@ exports[`UU5.Forms.Checkbox props hidden=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props hidden=false 3`] = `
+<div
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1904,7 +2174,56 @@ exports[`UU5.Forms.Checkbox props hidden=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props hidden=true 3`] = `
+<div
+  className="uu5-forms-checkbox uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1955,7 +2274,56 @@ exports[`UU5.Forms.Checkbox props id="myId" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props id="test-id" 1`] = `
+<div
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="test-id"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2006,7 +2374,6 @@ exports[`UU5.Forms.Checkbox props inputAttrs={"type":"email","width":"150px"} 1`
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2062,7 +2429,6 @@ exports[`UU5.Forms.Checkbox props inputColWidth="xs12 s6 m8 l9" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2113,7 +2479,6 @@ exports[`UU5.Forms.Checkbox props inputColWidth="xs12 s9" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2168,7 +2533,6 @@ exports[`UU5.Forms.Checkbox props label="Your personal email" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2219,7 +2583,6 @@ exports[`UU5.Forms.Checkbox props labelAlignment="xs-left s-right" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2270,7 +2633,6 @@ exports[`UU5.Forms.Checkbox props labelAlignment="xs-right s-left" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2321,7 +2683,6 @@ exports[`UU5.Forms.Checkbox props labelColWidth="xs12 s3" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2372,7 +2733,6 @@ exports[`UU5.Forms.Checkbox props labelColWidth="xs12 s6 m4 l3" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2423,7 +2783,6 @@ exports[`UU5.Forms.Checkbox props labelPosition="left" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2474,7 +2833,6 @@ exports[`UU5.Forms.Checkbox props labelPosition="right" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2525,7 +2883,6 @@ exports[`UU5.Forms.Checkbox props mainAttrs=undefined 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2577,7 +2934,6 @@ exports[`UU5.Forms.Checkbox props message="Your password is too short!" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2629,7 +2985,106 @@ exports[`UU5.Forms.Checkbox props name="myName" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props nestingLevel="box" 1`] = `
+<div
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props nestingLevel="inline" 1`] = `
+<div
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2680,7 +3135,6 @@ exports[`UU5.Forms.Checkbox props noIndex=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2700,7 +3154,7 @@ exports[`UU5.Forms.Checkbox props noIndex=false 1`] = `
 
 exports[`UU5.Forms.Checkbox props noIndex=true 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  className="uu5-forms-checkbox uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2731,7 +3185,106 @@ exports[`UU5.Forms.Checkbox props noIndex=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props noPrint=false 1`] = `
+<div
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props noPrint=true 1`] = `
+<div
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2782,7 +3335,6 @@ exports[`UU5.Forms.Checkbox props offIcon="mdi-check" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2833,7 +3385,6 @@ exports[`UU5.Forms.Checkbox props onIcon="mdi-close" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2884,7 +3435,6 @@ exports[`UU5.Forms.Checkbox props pureRender=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2935,7 +3485,6 @@ exports[`UU5.Forms.Checkbox props pureRender=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -2986,7 +3535,6 @@ exports[`UU5.Forms.Checkbox props readOnly=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3037,7 +3585,6 @@ exports[`UU5.Forms.Checkbox props readOnly=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3092,7 +3639,6 @@ exports[`UU5.Forms.Checkbox props selected=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3143,7 +3689,6 @@ exports[`UU5.Forms.Checkbox props selected=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3194,7 +3739,6 @@ exports[`UU5.Forms.Checkbox props size="l" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3245,7 +3789,6 @@ exports[`UU5.Forms.Checkbox props size="m" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3296,7 +3839,6 @@ exports[`UU5.Forms.Checkbox props size="s" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3352,7 +3894,6 @@ exports[`UU5.Forms.Checkbox props style="padding:8px; borderRadius: 2px" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3408,7 +3949,60 @@ exports[`UU5.Forms.Checkbox props style={"backgroundColor":"red","color":"blue"}
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Checkbox props style={"margin":8} 1`] = `
+<div
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3459,7 +4053,6 @@ exports[`UU5.Forms.Checkbox props tooltip="My Tooltip" 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3510,7 +4103,6 @@ exports[`UU5.Forms.Checkbox props type=1 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3559,7 +4151,6 @@ exports[`UU5.Forms.Checkbox props type=2 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3613,7 +4204,6 @@ exports[`UU5.Forms.Checkbox props value=false 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -3664,7 +4254,6 @@ exports[`UU5.Forms.Checkbox props value=true 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}

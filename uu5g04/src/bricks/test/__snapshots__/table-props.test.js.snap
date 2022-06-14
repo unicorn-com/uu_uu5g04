@@ -534,6 +534,29 @@ exports[`UU5.Bricks.Table className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Table className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-table test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
 exports[`UU5.Bricks.Table colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-bricks-table"
@@ -1135,7 +1158,57 @@ exports[`UU5.Bricks.Table disabled=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Table disabled=false 3`] = `
+<div
+  className="uu5-bricks-table"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
 exports[`UU5.Bricks.Table disabled=true 1`] = `
+<div
+  className="uu5-bricks-table uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Table disabled=true 3`] = `
 <div
   className="uu5-bricks-table uu5-common-disabled"
   id="uuID"
@@ -1208,6 +1281,29 @@ exports[`UU5.Bricks.Table dynamic=true 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Table elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-table"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
 exports[`UU5.Bricks.Table footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-table"
@@ -1237,6 +1333,29 @@ exports[`UU5.Bricks.Table footer={"type":"div","key":null,"ref":null,"props":{"c
     id="uuID-footer"
     key="uuID-footer"
   />
+</div>
+`;
+
+exports[`UU5.Bricks.Table fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-table uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
 </div>
 `;
 
@@ -1296,7 +1415,53 @@ exports[`UU5.Bricks.Table hidden=false 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Table hidden=false 3`] = `
+<div
+  className="uu5-bricks-table"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
 exports[`UU5.Bricks.Table hidden=true 1`] = `
+<div
+  className="uu5-bricks-table uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
+exports[`UU5.Bricks.Table hidden=true 3`] = `
 <div
   className="uu5-bricks-table uu5-common-hidden"
   id="uuID"
@@ -1369,6 +1534,29 @@ exports[`UU5.Bricks.Table id="myId" 1`] = `
 <div
   className="uu5-bricks-table"
   id="myId"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
+exports[`UU5.Bricks.Table id="test-id" 1`] = `
+<div
+  className="uu5-bricks-table"
+  id="test-id"
   style={Object {}}
   title={null}
 >
@@ -1803,6 +1991,240 @@ exports[`UU5.Bricks.Table name="myName" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Table nestingLevel="box" 1`] = `
+<div
+  className="uu5-bricks-table"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
+exports[`UU5.Bricks.Table nestingLevel="inline" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "allowTags": Array [],
+        "bordered": false,
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "children": Array [
+          <table-tr
+            allowTags={Array []}
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="child01"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <table-td
+              className={null}
+              colSpan={null}
+              colorSchema={null}
+              content="Rimmer"
+              controlled={true}
+              disabled={false}
+              dynamic={false}
+              hidden={false}
+              id="child02"
+              ignoreInnerHTML={false}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              rowSpan={null}
+              selected={false}
+              style={null}
+              tooltip={null}
+            />
+          </table-tr>,
+        ],
+        "className": null,
+        "colorSchema": null,
+        "condensed": false,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "footer": null,
+        "fullTextSearchPriority": undefined,
+        "header": null,
+        "hidden": false,
+        "hover": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "inline",
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "responsive": false,
+        "selected": false,
+        "striped": false,
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Table",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Tabulka",
+          "en": "Table",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Tabulka",
+          "en": "Table",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Tabulka",
+          "en": "Table",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+/>
+`;
+
 exports[`UU5.Bricks.Table noIndex=false 1`] = `
 <div
   className="uu5-bricks-table"
@@ -1828,7 +2250,53 @@ exports[`UU5.Bricks.Table noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Table noIndex=true 1`] = `
 <div
-  className="uu5-bricks-table uu5-noindex"
+  className="uu5-bricks-table uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
+exports[`UU5.Bricks.Table noPrint=false 1`] = `
+<div
+  className="uu5-bricks-table"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
+exports[`UU5.Bricks.Table noPrint=true 1`] = `
+<div
+  className="uu5-bricks-table"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2069,6 +2537,33 @@ exports[`UU5.Bricks.Table style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
+exports[`UU5.Bricks.Table style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-table"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

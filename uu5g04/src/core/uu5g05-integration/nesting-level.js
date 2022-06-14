@@ -37,7 +37,7 @@ function _getNestingLevel(props, statics, isG04 = false) {
   if (nestingLevelList && !Array.isArray(nestingLevelList)) {
     nestingLevelList = [nestingLevelList];
   } else if (!nestingLevelList) {
-    nestingLevelList = NestingLevel.values;
+    nestingLevelList = isG04 ? NestingLevel.values : Utils.NestingLevel.valueList;
   }
 
   let actualValidNestingLevel;
@@ -57,7 +57,9 @@ function _getNestingLevel(props, statics, isG04 = false) {
           /Collection$/.test(parentNestingLevel) || parentNLComponent.getOpt("nestingLevelWrapper")
             ? index
             : Math.min(index + 1, NestingLevel.values.length - 1);
-        actualValidNestingLevel = nestingLevelList.find((it) => NestingLevel.values.indexOf(it) >= minIndex);
+        actualValidNestingLevel = nestingLevelList.find(
+          (it) => NestingLevel.values.indexOf(Utils.NestingLevel._denormalizeLevel?.(it) ?? it) >= minIndex
+        );
         if (!actualValidNestingLevel) {
           actualValidNestingLevel = null;
         }
@@ -68,8 +70,12 @@ function _getNestingLevel(props, statics, isG04 = false) {
   if (actualValidNestingLevel !== undefined) {
     // we computed the final value from parent mixin component
     if (!isG04) {
+      // normalize for uu5g05 (e.g. "bigBox" -> "area"), but not if uu5g05 component uses deprecated value in statics
       actualValidNestingLevel =
-        Utils.NestingLevel._normalizeLevel?.(actualValidNestingLevel) ?? actualValidNestingLevel; // normalize for uu5g05 (e.g. "bigBox" -> "area")
+        Utils.NestingLevel._normalizeLevel &&
+        nestingLevelList.some((it) => Utils.NestingLevel._normalizeLevel(it) !== it)
+          ? Utils.NestingLevel._denormalizeLevel(actualValidNestingLevel)
+          : actualValidNestingLevel;
     }
   } else {
     // compute the final value like in uu5g05

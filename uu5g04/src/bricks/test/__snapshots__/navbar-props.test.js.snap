@@ -502,6 +502,56 @@ exports[`UU5.Bricks.NavBar props className="my-classname" 1`] = `
 </nav>
 `;
 
+exports[`UU5.Bricks.NavBar props className="test-classname" 1`] = `
+<nav
+  className="uu5-bricks-nav-bar test-classname uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
 exports[`UU5.Bricks.NavBar props colorSchema="brown" 1`] = `
 <nav
   className="color-schema-brown uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
@@ -1738,7 +1788,111 @@ exports[`UU5.Bricks.NavBar props disabled=false 1`] = `
 </nav>
 `;
 
+exports[`UU5.Bricks.NavBar props disabled=false 3`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
 exports[`UU5.Bricks.NavBar props disabled=true 1`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-common-disabled uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar props disabled=true 3`] = `
 <nav
   className="uu5-bricks-nav-bar uu5-common-disabled uu5-bricks-nav-bar-size-m"
   id="uuID"
@@ -1892,6 +2046,56 @@ exports[`UU5.Bricks.NavBar props dynamic=true 1`] = `
 </nav>
 `;
 
+exports[`UU5.Bricks.NavBar props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
 exports[`UU5.Bricks.NavBar props fixed="bottom" 1`] = `
 <nav
   className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom"
@@ -1992,6 +2196,56 @@ exports[`UU5.Bricks.NavBar props fixed="top" 1`] = `
 </nav>
 `;
 
+exports[`UU5.Bricks.NavBar props fullTextSearchPriority=0 1`] = `
+<nav
+  className="uu5-bricks-nav-bar uu-fulltextsearch-0 uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
 exports[`UU5.Bricks.NavBar props hidden=false 1`] = `
 <nav
   className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
@@ -2042,7 +2296,107 @@ exports[`UU5.Bricks.NavBar props hidden=false 1`] = `
 </nav>
 `;
 
+exports[`UU5.Bricks.NavBar props hidden=false 3`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
 exports[`UU5.Bricks.NavBar props hidden=true 1`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-common-hidden uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar props hidden=true 3`] = `
 <nav
   className="uu5-bricks-nav-bar uu5-common-hidden uu5-bricks-nav-bar-size-m"
   id="uuID"
@@ -2226,6 +2580,56 @@ exports[`UU5.Bricks.NavBar props id="myId" 1`] = `
       <div
         className="uu5-bricks-nav-bar-container"
         id="myId-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar props id="test-id" 1`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="test-id"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="test-id-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="test-id-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="test-id-navContainer"
       >
         <nav-bar-nav
           id="child01"
@@ -2594,6 +2998,56 @@ exports[`UU5.Bricks.NavBar props nestingLevel="box" 1`] = `
 </nav>
 `;
 
+exports[`UU5.Bricks.NavBar props nestingLevel="box" 3`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
 exports[`UU5.Bricks.NavBar props nestingLevel="boxCollection" 1`] = `
 <nav
   className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
@@ -2695,6 +3149,56 @@ exports[`UU5.Bricks.NavBar props nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.NavBar props nestingLevel="inline" 1`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar props nestingLevel="inline" 3`] = `
 <nav
   className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
   id="uuID"
@@ -2996,7 +3500,107 @@ exports[`UU5.Bricks.NavBar props noIndex=false 1`] = `
 
 exports[`UU5.Bricks.NavBar props noIndex=true 1`] = `
 <nav
-  className="uu5-bricks-nav-bar uu5-noindex uu5-bricks-nav-bar-size-m"
+  className="uu5-bricks-nav-bar uu5-noindex uu-fulltextsearch-0 uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar props noPrint=false 1`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar props noPrint=true 1`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
   id="uuID"
   style={
     Object {
@@ -3715,6 +4319,57 @@ exports[`UU5.Bricks.NavBar props style={"backgroundColor":"red","color":"blue"} 
       "WebkitTransitionDuration": "0.25s",
       "backgroundColor": "red",
       "color": "blue",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar props style={"margin":8} 1`] = `
+<nav
+  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "margin": 8,
       "transitionDuration": "0.25s",
     }
   }

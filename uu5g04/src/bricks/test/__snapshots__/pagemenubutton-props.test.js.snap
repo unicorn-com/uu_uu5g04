@@ -32,7 +32,6 @@ exports[`UU5.Bricks.Page.MenuButton bgStyle="filled" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -65,7 +64,6 @@ exports[`UU5.Bricks.Page.MenuButton bgStyle="outline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -98,7 +96,6 @@ exports[`UU5.Bricks.Page.MenuButton bgStyle="transparent" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -130,7 +127,6 @@ exports[`UU5.Bricks.Page.MenuButton ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -163,7 +159,6 @@ exports[`UU5.Bricks.Page.MenuButton checkGrammar=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -196,7 +191,6 @@ exports[`UU5.Bricks.Page.MenuButton checkGrammar=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -229,7 +223,6 @@ exports[`UU5.Bricks.Page.MenuButton checkHighlight=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -262,7 +255,6 @@ exports[`UU5.Bricks.Page.MenuButton checkHighlight=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -295,7 +287,6 @@ exports[`UU5.Bricks.Page.MenuButton checkSpaces=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -328,7 +319,6 @@ exports[`UU5.Bricks.Page.MenuButton checkSpaces=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -360,7 +350,37 @@ exports[`UU5.Bricks.Page.MenuButton className="my-classname" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton className="test-classname" 1`] = `
+<Button
+  className="uu5-bricks-page-menu-button test-classname uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -392,7 +412,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="brown" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -424,7 +443,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="brown-rich" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -456,7 +474,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="cyan" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -488,7 +505,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="cyan-rich" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -520,7 +536,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="default" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -552,7 +567,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="green" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -584,7 +598,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="green-rich" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -616,7 +629,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="grey" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -648,7 +660,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="grey-rich" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -680,7 +691,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="orange" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -712,7 +722,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="orange-rich" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -744,7 +753,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="pink" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -776,7 +784,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="pink-rich" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -808,7 +815,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="purple" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -840,7 +846,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="purple-rich" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -872,7 +877,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="red" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -904,7 +908,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="red-rich" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -936,7 +939,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="yellow" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -968,7 +970,6 @@ exports[`UU5.Bricks.Page.MenuButton colorSchema="yellow-rich" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1020,7 +1021,6 @@ exports[`UU5.Bricks.Page.MenuButton controlled=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1052,7 +1052,6 @@ exports[`UU5.Bricks.Page.MenuButton controlled=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1084,7 +1083,6 @@ exports[`UU5.Bricks.Page.MenuButton default props 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1116,7 +1114,37 @@ exports[`UU5.Bricks.Page.MenuButton disabled=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton disabled=false 3`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1148,7 +1176,38 @@ exports[`UU5.Bricks.Page.MenuButton disabled=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  disabled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton disabled=true 3`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1181,7 +1240,6 @@ exports[`UU5.Bricks.Page.MenuButton displayBlock=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1213,7 +1271,6 @@ exports[`UU5.Bricks.Page.MenuButton displayBlock=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1246,7 +1303,6 @@ exports[`UU5.Bricks.Page.MenuButton dynamic=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1278,7 +1334,6 @@ exports[`UU5.Bricks.Page.MenuButton dynamic=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1289,6 +1344,68 @@ exports[`UU5.Bricks.Page.MenuButton dynamic=true 1`] = `
     />
   }
   dynamic={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton fullTextSearchPriority=0 1`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu-fulltextsearch-0 uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
   id="uuID-inner"
   mainAttrs={Object {}}
   onClick={[Function]}
@@ -1311,7 +1428,37 @@ exports[`UU5.Bricks.Page.MenuButton hidden=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton hidden=false 3`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1343,7 +1490,38 @@ exports[`UU5.Bricks.Page.MenuButton hidden=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton hidden=true 3`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1376,7 +1554,6 @@ exports[`UU5.Bricks.Page.MenuButton id="myId" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1387,6 +1564,37 @@ exports[`UU5.Bricks.Page.MenuButton id="myId" 1`] = `
     />
   }
   id="myId-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton id="test-id" 1`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="test-id-inner"
   mainAttrs={Object {}}
   onClick={[Function]}
 />
@@ -1408,7 +1616,6 @@ exports[`UU5.Bricks.Page.MenuButton ignoreHTML=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1440,7 +1647,6 @@ exports[`UU5.Bricks.Page.MenuButton ignoreHTML=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1472,7 +1678,6 @@ exports[`UU5.Bricks.Page.MenuButton mainAttrs=undefined 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1504,7 +1709,6 @@ exports[`UU5.Bricks.Page.MenuButton menu="left" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1536,7 +1740,6 @@ exports[`UU5.Bricks.Page.MenuButton menu="right" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1568,7 +1771,6 @@ exports[`UU5.Bricks.Page.MenuButton name="myName" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1601,7 +1803,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="bigBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1634,7 +1835,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="bigBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1667,7 +1867,38 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="box" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton nestingLevel="box" 3`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1700,7 +1931,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="boxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1733,7 +1963,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="container" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1752,6 +1981,8 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="container" 1`] = `
 
 exports[`UU5.Bricks.Page.MenuButton nestingLevel="inline" 1`] = `""`;
 
+exports[`UU5.Bricks.Page.MenuButton nestingLevel="inline" 3`] = `""`;
+
 exports[`UU5.Bricks.Page.MenuButton nestingLevel="page" 1`] = `
 <Button
   className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
@@ -1768,7 +1999,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="page" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1801,7 +2031,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1834,7 +2063,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="smallBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1867,7 +2095,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="spa" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1900,7 +2127,6 @@ exports[`UU5.Bricks.Page.MenuButton noIndex=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1918,7 +2144,7 @@ exports[`UU5.Bricks.Page.MenuButton noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Page.MenuButton noIndex=true 1`] = `
 <Button
-  className="uu5-bricks-page-menu-button uu5-noindex uu5-bricks-page-menu-button-left"
+  className="uu5-bricks-page-menu-button uu5-noindex uu-fulltextsearch-0 uu5-bricks-page-menu-button-left"
   content={
     <Icon
       authenticate={false}
@@ -1932,7 +2158,68 @@ exports[`UU5.Bricks.Page.MenuButton noIndex=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton noPrint=false 1`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Page.MenuButton noPrint=true 1`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1964,7 +2251,6 @@ exports[`UU5.Bricks.Page.MenuButton pageKey=null 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -1996,7 +2282,6 @@ exports[`UU5.Bricks.Page.MenuButton pressed=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2028,7 +2313,6 @@ exports[`UU5.Bricks.Page.MenuButton pressed=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2061,7 +2345,6 @@ exports[`UU5.Bricks.Page.MenuButton selected=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2093,7 +2376,6 @@ exports[`UU5.Bricks.Page.MenuButton selected=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2126,7 +2408,6 @@ exports[`UU5.Bricks.Page.MenuButton size="l" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2159,7 +2440,6 @@ exports[`UU5.Bricks.Page.MenuButton size="m" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2191,7 +2471,6 @@ exports[`UU5.Bricks.Page.MenuButton size="s" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2224,7 +2503,6 @@ exports[`UU5.Bricks.Page.MenuButton size="xl" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2257,7 +2535,6 @@ exports[`UU5.Bricks.Page.MenuButton style="padding:8px; borderRadius: 2px" 1`] =
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2295,7 +2572,6 @@ exports[`UU5.Bricks.Page.MenuButton style={"backgroundColor":"red","color":"blue
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2317,6 +2593,42 @@ exports[`UU5.Bricks.Page.MenuButton style={"backgroundColor":"red","color":"blue
 />
 `;
 
+exports[`UU5.Bricks.Page.MenuButton style={"margin":8} 1`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+/>
+`;
+
 exports[`UU5.Bricks.Page.MenuButton textCorrector=false 1`] = `
 <Button
   className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
@@ -2333,7 +2645,6 @@ exports[`UU5.Bricks.Page.MenuButton textCorrector=false 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2366,7 +2677,6 @@ exports[`UU5.Bricks.Page.MenuButton textCorrector=true 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -2399,7 +2709,6 @@ exports[`UU5.Bricks.Page.MenuButton tooltip="My Tooltip" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}

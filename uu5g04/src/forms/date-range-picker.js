@@ -1102,6 +1102,7 @@ let DateRangePicker = Context.withContext(
           }
         } else {
           fromInputValue = fromInputValue || this.parseDate(newValue);
+          toInputValue = toInputValue || this.parseDate(this.state.toInputValue);
           validateResult = this._getInputValidationResult(newValue, toInputValue);
 
           if (validateResult.fromFeedback.feedback !== "error") {
@@ -1214,9 +1215,12 @@ let DateRangePicker = Context.withContext(
       }
 
       if (opt._data.executeOnChange) {
-        opt.value = innerState.value;
-        opt.feedback = feedback && feedback.feedback;
-        opt.message = feedback && feedback.message;
+        opt = {
+          ...opt,
+          value: innerState.value,
+          feedback: feedback && feedback.feedback,
+          message: feedback && feedback.message,
+        };
 
         if (this.props.validateOnChange) {
           _callCallback = false;

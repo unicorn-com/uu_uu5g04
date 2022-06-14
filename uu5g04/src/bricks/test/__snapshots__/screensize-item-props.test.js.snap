@@ -212,6 +212,14 @@ exports[`UU5.Bricks.ScreenSize.Item className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ScreenSize.Item className="test-classname" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item test-classname"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.ScreenSize.Item content="This is Content from ContentMixin" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
@@ -262,7 +270,24 @@ exports[`UU5.Bricks.ScreenSize.Item disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ScreenSize.Item disabled=false 3`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.ScreenSize.Item disabled=true 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  disabled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item disabled=true 3`] = `
 <Div
   className="uu5-bricks-screen-size-item"
   disabled={true}
@@ -309,7 +334,31 @@ exports[`UU5.Bricks.ScreenSize.Item dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ScreenSize.Item elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item fullTextSearchPriority=0 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.ScreenSize.Item hidden=false 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item hidden=false 3`] = `
 <Div
   className="uu5-bricks-screen-size-item"
   id="uuID-inner"
@@ -326,10 +375,27 @@ exports[`UU5.Bricks.ScreenSize.Item hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ScreenSize.Item hidden=true 3`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.ScreenSize.Item id="myId" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
   id="myId-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item id="test-id" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="test-id-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -394,6 +460,15 @@ exports[`UU5.Bricks.ScreenSize.Item nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="box" 3`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+/>
+`;
+
 exports[`UU5.Bricks.ScreenSize.Item nestingLevel="boxCollection" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
@@ -413,6 +488,15 @@ exports[`UU5.Bricks.ScreenSize.Item nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.ScreenSize.Item nestingLevel="inline" 1`] = `
+<Span
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="inline"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="inline" 3`] = `
 <Span
   className="uu5-bricks-screen-size-item"
   id="uuID-inner"
@@ -467,7 +551,23 @@ exports[`UU5.Bricks.ScreenSize.Item noIndex=false 1`] = `
 
 exports[`UU5.Bricks.ScreenSize.Item noIndex=true 1`] = `
 <Div
-  className="uu5-bricks-screen-size-item uu5-noindex"
+  className="uu5-bricks-screen-size-item uu5-noindex uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item noPrint=false 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item noPrint=true 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
   id="uuID-inner"
   mainAttrs={Object {}}
 />
@@ -553,6 +653,19 @@ exports[`UU5.Bricks.ScreenSize.Item style={"backgroundColor":"red","color":"blue
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item style={"margin":8} 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  style={
+    Object {
+      "margin": 8,
     }
   }
 />

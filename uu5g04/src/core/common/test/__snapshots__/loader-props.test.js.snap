@@ -7,6 +7,13 @@ exports[`UU5.Common.Loader props testing className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Common.Loader props testing className="test-classname" 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
 exports[`UU5.Common.Loader props testing default props 1`] = `
 <TestReady
   data="data"
@@ -14,7 +21,56 @@ exports[`UU5.Common.Loader props testing default props 1`] = `
 />
 `;
 
+exports[`UU5.Common.Loader props testing disabled=false 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
+exports[`UU5.Common.Loader props testing disabled=true 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
+exports[`UU5.Common.Loader props testing elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
+exports[`UU5.Common.Loader props testing fullTextSearchPriority=0 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
+exports[`UU5.Common.Loader props testing hidden=false 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
+exports[`UU5.Common.Loader props testing hidden=true 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
 exports[`UU5.Common.Loader props testing id="myId" 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
+exports[`UU5.Common.Loader props testing id="test-id" 1`] = `
 <TestReady
   data="data"
   key=".0"
@@ -39,6 +95,20 @@ exports[`UU5.Common.Loader props testing name="myName" 1`] = `
 />
 `;
 
+exports[`UU5.Common.Loader props testing nestingLevel="box" 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
+exports[`UU5.Common.Loader props testing nestingLevel="inline" 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
 exports[`UU5.Common.Loader props testing noIndex=false 1`] = `
 <TestReady
   data="data"
@@ -53,6 +123,20 @@ exports[`UU5.Common.Loader props testing noIndex=true 1`] = `
 />
 `;
 
+exports[`UU5.Common.Loader props testing noPrint=false 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
+exports[`UU5.Common.Loader props testing noPrint=true 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
 exports[`UU5.Common.Loader props testing style="padding:8px; borderRadius: 2px" 1`] = `
 <TestReady
   data="data"
@@ -61,6 +145,13 @@ exports[`UU5.Common.Loader props testing style="padding:8px; borderRadius: 2px" 
 `;
 
 exports[`UU5.Common.Loader props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
+exports[`UU5.Common.Loader props testing style={"margin":8} 1`] = `
 <TestReady
   data="data"
   key=".0"

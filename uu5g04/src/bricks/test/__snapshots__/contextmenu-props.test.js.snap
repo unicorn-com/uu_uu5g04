@@ -285,6 +285,37 @@ exports[`UU5.Bricks.ContextMenu className="my-classname" 1`] = `
 </forwardRef(Popover)>
 `;
 
+exports[`UU5.Bricks.ContextMenu className="test-classname" 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu test-classname"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
 exports[`UU5.Bricks.ContextMenu compactSubmenu=false 1`] = `
 <forwardRef(Popover)
   className="uu5-bricks-context-menu"
@@ -533,7 +564,69 @@ exports[`UU5.Bricks.ContextMenu disabled=false 1`] = `
 </forwardRef(Popover)>
 `;
 
+exports[`UU5.Bricks.ContextMenu disabled=false 3`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
 exports[`UU5.Bricks.ContextMenu disabled=true 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={true}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
+exports[`UU5.Bricks.ContextMenu disabled=true 3`] = `
 <forwardRef(Popover)
   className="uu5-bricks-context-menu"
   content={null}
@@ -688,6 +781,37 @@ exports[`UU5.Bricks.ContextMenu dynamic=true 1`] = `
 </forwardRef(Popover)>
 `;
 
+exports[`UU5.Bricks.ContextMenu elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
 exports[`UU5.Bricks.ContextMenu footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <forwardRef(Popover)
   className="uu5-bricks-context-menu"
@@ -700,6 +824,37 @@ exports[`UU5.Bricks.ContextMenu footer={"type":"div","key":null,"ref":null,"prop
       Footer of section
     </div>
   }
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
+exports[`UU5.Bricks.ContextMenu fullTextSearchPriority=0 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu uu-fulltextsearch-0"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
   forceRender={false}
   header={null}
   hidden={false}
@@ -789,7 +944,69 @@ exports[`UU5.Bricks.ContextMenu hidden=false 1`] = `
 </forwardRef(Popover)>
 `;
 
+exports[`UU5.Bricks.ContextMenu hidden=false 3`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
 exports[`UU5.Bricks.ContextMenu hidden=true 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={true}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
+exports[`UU5.Bricks.ContextMenu hidden=true 3`] = `
 <forwardRef(Popover)
   className="uu5-bricks-context-menu"
   content={null}
@@ -832,6 +1049,37 @@ exports[`UU5.Bricks.ContextMenu id="myId" 1`] = `
   header={null}
   hidden={false}
   id="myId-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
+exports[`UU5.Bricks.ContextMenu id="test-id" 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="test-id-inner"
   ignoreInnerHTML={false}
   level={null}
   mainAttrs={Object {}}
@@ -1502,6 +1750,37 @@ exports[`UU5.Bricks.ContextMenu nestingLevel="box" 1`] = `
 </forwardRef(Popover)>
 `;
 
+exports[`UU5.Bricks.ContextMenu nestingLevel="box" 3`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="box"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
 exports[`UU5.Bricks.ContextMenu nestingLevel="boxCollection" 1`] = `
 <forwardRef(Popover)
   className="uu5-bricks-context-menu"
@@ -1565,6 +1844,37 @@ exports[`UU5.Bricks.ContextMenu nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.ContextMenu nestingLevel="inline" 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
+exports[`UU5.Bricks.ContextMenu nestingLevel="inline" 3`] = `
 <forwardRef(Popover)
   className="uu5-bricks-context-menu"
   content={null}
@@ -1752,7 +2062,69 @@ exports[`UU5.Bricks.ContextMenu noIndex=false 1`] = `
 
 exports[`UU5.Bricks.ContextMenu noIndex=true 1`] = `
 <forwardRef(Popover)
-  className="uu5-bricks-context-menu uu5-noindex"
+  className="uu5-bricks-context-menu uu5-noindex uu-fulltextsearch-0"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
+exports[`UU5.Bricks.ContextMenu noPrint=false 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
+exports[`UU5.Bricks.ContextMenu noPrint=true 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
   content={null}
   controlled={true}
   disabled={false}
@@ -2029,6 +2401,41 @@ exports[`UU5.Bricks.ContextMenu style={"backgroundColor":"red","color":"blue"} 1
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  tooltip={null}
+>
+  <ScreenSize>
+    <Component />
+  </ScreenSize>
+</forwardRef(Popover)>
+`;
+
+exports[`UU5.Bricks.ContextMenu style={"margin":8} 1`] = `
+<forwardRef(Popover)
+  className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  forceRender={false}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={
+    Object {
+      "margin": 8,
     }
   }
   tooltip={null}

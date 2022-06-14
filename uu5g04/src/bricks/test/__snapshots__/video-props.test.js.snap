@@ -133,6 +133,28 @@ exports[`UU5.Bricks.Video className="my-classname" 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.Video className="test-classname" 1`] = `
+<Span
+  className="uu5-bricks-video test-classname"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video test-classname"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
 exports[`UU5.Bricks.Video controlled=false 1`] = `
 <Span
   className="uu5-bricks-video"
@@ -265,7 +287,53 @@ exports[`UU5.Bricks.Video disabled=false 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.Video disabled=false 3`] = `
+<Span
+  className="uu5-bricks-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
 exports[`UU5.Bricks.Video disabled=true 1`] = `
+<Span
+  className="uu5-bricks-video"
+  disabled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    autoPlay={false}
+    className="uu5-bricks-video uu5-common-disabled"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
+exports[`UU5.Bricks.Video disabled=true 3`] = `
 <Span
   className="uu5-bricks-video"
   disabled={true}
@@ -374,7 +442,73 @@ exports[`UU5.Bricks.Video docKit examples UU5.Bricks.Video should render without
 </div>
 `;
 
+exports[`UU5.Bricks.Video elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Span
+  className="uu5-bricks-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
+exports[`UU5.Bricks.Video fullTextSearchPriority=0 1`] = `
+<Span
+  className="uu5-bricks-video uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video uu-fulltextsearch-0"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
 exports[`UU5.Bricks.Video hidden=false 1`] = `
+<Span
+  className="uu5-bricks-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
+exports[`UU5.Bricks.Video hidden=false 3`] = `
 <Span
   className="uu5-bricks-video"
   id="uuID-inner"
@@ -419,6 +553,29 @@ exports[`UU5.Bricks.Video hidden=true 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.Video hidden=true 3`] = `
+<Span
+  className="uu5-bricks-video"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video uu5-common-hidden"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
 exports[`UU5.Bricks.Video id="myId" 1`] = `
 <Span
   className="uu5-bricks-video"
@@ -430,6 +587,28 @@ exports[`UU5.Bricks.Video id="myId" 1`] = `
     className="uu5-bricks-video"
     controls={true}
     id="myId"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
+exports[`UU5.Bricks.Video id="test-id" 1`] = `
+<Span
+  className="uu5-bricks-video"
+  id="test-id-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video"
+    controls={true}
+    id="test-id"
     style={Object {}}
     title={null}
     type="mp4"
@@ -643,6 +822,28 @@ exports[`UU5.Bricks.Video nestingLevel="box" 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.Video nestingLevel="box" 3`] = `
+<Span
+  className="uu5-bricks-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+>
+  <video
+    className="uu5-bricks-video"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
 exports[`UU5.Bricks.Video nestingLevel="boxCollection" 1`] = `
 <Span
   className="uu5-bricks-video"
@@ -709,6 +910,7 @@ exports[`UU5.Bricks.Video nestingLevel="inline" 1`] = `
         "controlled": true,
         "disableControls": false,
         "disabled": false,
+        "fullTextSearchPriority": undefined,
         "hidden": false,
         "id": "uuID",
         "loop": false,
@@ -716,7 +918,66 @@ exports[`UU5.Bricks.Video nestingLevel="inline" 1`] = `
         "muted": false,
         "name": null,
         "nestingLevel": "inline",
-        "noIndex": false,
+        "onBeforeChunkLoad": null,
+        "parent": null,
+        "poster": "",
+        "preload": "auto",
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "src": "http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4",
+        "style": null,
+        "tooltip": null,
+        "type": null,
+      },
+      "refs": Object {},
+      "state": Object {
+        "authenticatedPosterUrl": undefined,
+        "authenticatedVideoUrl": undefined,
+        "disabled": false,
+        "hidden": false,
+        "muted": false,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Video",
+    }
+  }
+  linkTitle="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+  modalHeader="Video"
+/>
+`;
+
+exports[`UU5.Bricks.Video nestingLevel="inline" 3`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "authenticate": false,
+        "autoPlay": false,
+        "className": null,
+        "controlled": true,
+        "disableControls": false,
+        "disabled": false,
+        "fullTextSearchPriority": undefined,
+        "hidden": false,
+        "id": "uuID",
+        "loop": false,
+        "mainAttrs": null,
+        "muted": false,
+        "name": null,
+        "nestingLevel": "inline",
         "onBeforeChunkLoad": null,
         "parent": null,
         "poster": "",
@@ -791,6 +1052,7 @@ exports[`UU5.Bricks.Video nestingLevel="smallBox" 1`] = `
         "controlled": true,
         "disableControls": false,
         "disabled": false,
+        "fullTextSearchPriority": undefined,
         "hidden": false,
         "id": "uuID",
         "loop": false,
@@ -798,7 +1060,6 @@ exports[`UU5.Bricks.Video nestingLevel="smallBox" 1`] = `
         "muted": false,
         "name": null,
         "nestingLevel": "smallBox",
-        "noIndex": false,
         "onBeforeChunkLoad": null,
         "parent": null,
         "poster": "",
@@ -851,6 +1112,7 @@ exports[`UU5.Bricks.Video nestingLevel="smallBoxCollection" 1`] = `
         "controlled": true,
         "disableControls": false,
         "disabled": false,
+        "fullTextSearchPriority": undefined,
         "hidden": false,
         "id": "uuID",
         "loop": false,
@@ -858,7 +1120,6 @@ exports[`UU5.Bricks.Video nestingLevel="smallBoxCollection" 1`] = `
         "muted": false,
         "name": null,
         "nestingLevel": "smallBoxCollection",
-        "noIndex": false,
         "onBeforeChunkLoad": null,
         "parent": null,
         "poster": "",
@@ -935,13 +1196,57 @@ exports[`UU5.Bricks.Video noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Video noIndex=true 1`] = `
 <Span
-  className="uu5-bricks-video uu5-noindex"
+  className="uu5-bricks-video uu5-noindex uu-fulltextsearch-0"
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel={null}
 >
   <video
-    className="uu5-bricks-video uu5-noindex"
+    className="uu5-bricks-video uu5-noindex uu-fulltextsearch-0"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
+exports[`UU5.Bricks.Video noPrint=false 1`] = `
+<Span
+  className="uu5-bricks-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
+exports[`UU5.Bricks.Video noPrint=true 1`] = `
+<Span
+  className="uu5-bricks-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video"
     controls={true}
     id="uuID"
     style={Object {}}
@@ -1212,6 +1517,37 @@ exports[`UU5.Bricks.Video style={"backgroundColor":"red","color":"blue"} 1`] = `
       Object {
         "backgroundColor": "red",
         "color": "blue",
+      }
+    }
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
+exports[`UU5.Bricks.Video style={"margin":8} 1`] = `
+<Span
+  className="uu5-bricks-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+>
+  <video
+    className="uu5-bricks-video"
+    controls={true}
+    id="uuID"
+    style={
+      Object {
+        "margin": 8,
       }
     }
     title={null}

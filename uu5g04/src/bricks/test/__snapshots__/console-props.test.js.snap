@@ -118,7 +118,6 @@ exports[`UU5.Bricks.Console nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -163,6 +162,7 @@ exports[`UU5.Bricks.Console nestingLevel="spa" 1`] = `
 exports[`UU5.Bricks.Console noIndex=false 1`] = `
 <Console
   id="uuID"
+  noIndex={false}
 />
 `;
 

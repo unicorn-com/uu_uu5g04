@@ -83,6 +83,17 @@ exports[`UU5.Bricks.Section className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Section className="test-classname" 1`] = `
+<Div
+  className="uu5-bricks-section test-classname"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Section colorSchema="brown" 1`] = `
 <Div
   className="color-schema-brown uu5-bricks-section"
@@ -365,7 +376,30 @@ exports[`UU5.Bricks.Section disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Section disabled=false 3`] = `
+<Div
+  className="uu5-bricks-section"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Section disabled=true 1`] = `
+<Div
+  className="uu5-bricks-section"
+  disabled={true}
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Section disabled=true 3`] = `
 <Div
   className="uu5-bricks-section"
   disabled={true}
@@ -427,6 +461,17 @@ exports[`UU5.Bricks.Section dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Section elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Div
+  className="uu5-bricks-section"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Section footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-section"
@@ -446,6 +491,17 @@ exports[`UU5.Bricks.Section footer={"type":"div","key":null,"ref":null,"props":{
     key="uuID-footer"
   />
 </Div>
+`;
+
+exports[`UU5.Bricks.Section fullTextSearchPriority=0 1`] = `
+<Div
+  className="uu5-bricks-section uu-fulltextsearch-0"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
 `;
 
 exports[`UU5.Bricks.Section header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
@@ -481,7 +537,30 @@ exports[`UU5.Bricks.Section hidden=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Section hidden=false 3`] = `
+<Div
+  className="uu5-bricks-section"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Section hidden=true 1`] = `
+<Div
+  className="uu5-bricks-section"
+  footer={null}
+  header={null}
+  hidden={true}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Section hidden=true 3`] = `
 <Div
   className="uu5-bricks-section"
   footer={null}
@@ -499,6 +578,17 @@ exports[`UU5.Bricks.Section id="myId" 1`] = `
   footer={null}
   header={null}
   id="myId"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Section id="test-id" 1`] = `
+<Div
+  className="uu5-bricks-section"
+  footer={null}
+  header={null}
+  id="test-id"
   level={null}
   mainAttrs={Object {}}
 />
@@ -739,6 +829,18 @@ exports[`UU5.Bricks.Section nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Section nestingLevel="box" 3`] = `
+<Div
+  className="uu5-bricks-section"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+  nestingLevel="box"
+/>
+`;
+
 exports[`UU5.Bricks.Section nestingLevel="boxCollection" 1`] = `
 <Div
   className="uu5-bricks-section"
@@ -794,6 +896,7 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 1`] = `
         "disabled": false,
         "dynamic": false,
         "footer": null,
+        "fullTextSearchPriority": undefined,
         "getEditablePropValue": undefined,
         "header": null,
         "hidden": false,
@@ -804,7 +907,6 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 1`] = `
         "mainAttrs": null,
         "name": null,
         "nestingLevel": "inline",
-        "noIndex": false,
         "pageBreakBefore": false,
         "parent": null,
         "pureRender": false,
@@ -856,7 +958,6 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -888,7 +989,6 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -919,7 +1019,173 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.Section nestingLevel="inline" 3`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "footer": null,
+        "fullTextSearchPriority": undefined,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "inline",
+        "pageBreakBefore": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Section",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Editace sekce",
+          "en": "Section editation",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Sekce",
+          "en": "Section",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Sekce",
+          "en": "Section",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       params={null}
       parent={null}
       pureRender={false}
@@ -976,6 +1242,7 @@ exports[`UU5.Bricks.Section nestingLevel="smallBox" 1`] = `
         "disabled": false,
         "dynamic": false,
         "footer": null,
+        "fullTextSearchPriority": undefined,
         "getEditablePropValue": undefined,
         "header": null,
         "hidden": false,
@@ -986,7 +1253,6 @@ exports[`UU5.Bricks.Section nestingLevel="smallBox" 1`] = `
         "mainAttrs": null,
         "name": null,
         "nestingLevel": "smallBox",
-        "noIndex": false,
         "pageBreakBefore": false,
         "parent": null,
         "pureRender": false,
@@ -1038,7 +1304,6 @@ exports[`UU5.Bricks.Section nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -1070,7 +1335,6 @@ exports[`UU5.Bricks.Section nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -1101,7 +1365,6 @@ exports[`UU5.Bricks.Section nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -1146,6 +1409,7 @@ exports[`UU5.Bricks.Section nestingLevel="smallBoxCollection" 1`] = `
         "disabled": false,
         "dynamic": false,
         "footer": null,
+        "fullTextSearchPriority": undefined,
         "getEditablePropValue": undefined,
         "header": null,
         "hidden": false,
@@ -1156,7 +1420,6 @@ exports[`UU5.Bricks.Section nestingLevel="smallBoxCollection" 1`] = `
         "mainAttrs": null,
         "name": null,
         "nestingLevel": "smallBoxCollection",
-        "noIndex": false,
         "pageBreakBefore": false,
         "parent": null,
         "pureRender": false,
@@ -1208,7 +1471,6 @@ exports[`UU5.Bricks.Section nestingLevel="smallBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -1240,7 +1502,6 @@ exports[`UU5.Bricks.Section nestingLevel="smallBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -1271,7 +1532,6 @@ exports[`UU5.Bricks.Section nestingLevel="smallBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -1310,7 +1570,29 @@ exports[`UU5.Bricks.Section noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Section noIndex=true 1`] = `
 <Div
-  className="uu5-bricks-section uu5-noindex"
+  className="uu5-bricks-section uu5-noindex uu-fulltextsearch-0"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Section noPrint=false 1`] = `
+<Div
+  className="uu5-bricks-section"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Section noPrint=true 1`] = `
+<Div
+  className="uu5-bricks-section"
   footer={null}
   header={null}
   id="uuID"
@@ -1394,6 +1676,22 @@ exports[`UU5.Bricks.Section style={"backgroundColor":"red","color":"blue"} 1`] =
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+/>
+`;
+
+exports[`UU5.Bricks.Section style={"margin":8} 1`] = `
+<Div
+  className="uu5-bricks-section"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+  style={
+    Object {
+      "margin": 8,
     }
   }
 />

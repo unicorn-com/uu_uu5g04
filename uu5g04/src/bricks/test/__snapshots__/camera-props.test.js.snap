@@ -118,7 +118,6 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -151,7 +150,6 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -177,7 +175,6 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="smallBoxCollection" 1`] =
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       parent={null}
       pureRender={false}
       ref_={null}
@@ -201,6 +198,7 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="spa" 1`] = `
 exports[`UU5.Bricks.Camera props testing noIndex=false 1`] = `
 <Camera
   id="uuID"
+  noIndex={false}
 />
 `;
 

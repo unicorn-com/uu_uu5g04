@@ -80,6 +80,24 @@ exports[`UU5.Bricks.FileViewer className="my-classname" 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.FileViewer className="test-classname" 1`] = `
+<Table
+  className="uu5-bricks-file-viewer test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
 exports[`UU5.Bricks.FileViewer controlled=false 1`] = `
 <Table
   className="uu5-bricks-file-viewer"
@@ -152,6 +170,24 @@ exports[`UU5.Bricks.FileViewer disabled=false 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.FileViewer disabled=false 3`] = `
+<Table
+  className="uu5-bricks-file-viewer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
 exports[`UU5.Bricks.FileViewer disabled=true 1`] = `
 <Table
   className="uu5-bricks-file-viewer uu5-common-disabled"
@@ -170,7 +206,79 @@ exports[`UU5.Bricks.FileViewer disabled=true 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.FileViewer disabled=true 3`] = `
+<Table
+  className="uu5-bricks-file-viewer uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
+exports[`UU5.Bricks.FileViewer elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Table
+  className="uu5-bricks-file-viewer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
+exports[`UU5.Bricks.FileViewer fullTextSearchPriority=0 1`] = `
+<Table
+  className="uu5-bricks-file-viewer uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
 exports[`UU5.Bricks.FileViewer hidden=false 1`] = `
+<Table
+  className="uu5-bricks-file-viewer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
+exports[`UU5.Bricks.FileViewer hidden=false 3`] = `
 <Table
   className="uu5-bricks-file-viewer"
   id="uuID"
@@ -206,10 +314,46 @@ exports[`UU5.Bricks.FileViewer hidden=true 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.FileViewer hidden=true 3`] = `
+<Table
+  className="uu5-bricks-file-viewer uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
 exports[`UU5.Bricks.FileViewer id="myId" 1`] = `
 <Table
   className="uu5-bricks-file-viewer"
   id="myId"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
+exports[`UU5.Bricks.FileViewer id="test-id" 1`] = `
+<Table
+  className="uu5-bricks-file-viewer"
+  id="test-id"
   style={Object {}}
   title={null}
 >
@@ -315,6 +459,24 @@ exports[`UU5.Bricks.FileViewer nestingLevel="box" 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.FileViewer nestingLevel="box" 3`] = `
+<Table
+  className="uu5-bricks-file-viewer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
 exports[`UU5.Bricks.FileViewer nestingLevel="boxCollection" 1`] = `
 <Table
   className="uu5-bricks-file-viewer"
@@ -352,6 +514,34 @@ exports[`UU5.Bricks.FileViewer nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.FileViewer nestingLevel="inline" 1`] = `
+<span>
+  <ForwardRef
+    header="FileViewer"
+    ref_={[Function]}
+  >
+    <Table
+      className="uu5-bricks-file-viewer"
+      id="uuID"
+      style={Object {}}
+      title={null}
+    >
+      <table-tbody>
+        <table-tr>
+          <table-td
+            className="uu5-bricks-file-viewer-block-of-lines"
+            colorSchema="default"
+          />
+        </table-tr>
+      </table-tbody>
+    </Table>
+  </ForwardRef>
+  <Link
+    onClick={[Function]}
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.FileViewer nestingLevel="inline" 3`] = `
 <span>
   <ForwardRef
     header="FileViewer"
@@ -439,7 +629,43 @@ exports[`UU5.Bricks.FileViewer noIndex=false 1`] = `
 
 exports[`UU5.Bricks.FileViewer noIndex=true 1`] = `
 <Table
-  className="uu5-bricks-file-viewer uu5-noindex"
+  className="uu5-bricks-file-viewer uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
+exports[`UU5.Bricks.FileViewer noPrint=false 1`] = `
+<Table
+  className="uu5-bricks-file-viewer"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
+exports[`UU5.Bricks.FileViewer noPrint=true 1`] = `
+<Table
+  className="uu5-bricks-file-viewer"
   id="uuID"
   style={Object {}}
   title={null}
@@ -592,24 +818,6 @@ exports[`UU5.Bricks.FileViewer selected=true 1`] = `
 </Table>
 `;
 
-exports[`UU5.Bricks.FileViewer src=undefined 1`] = `
-<Table
-  className="uu5-bricks-file-viewer"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <table-tbody>
-    <table-tr>
-      <table-td
-        className="uu5-bricks-file-viewer-block-of-lines"
-        colorSchema="default"
-      />
-    </table-tr>
-  </table-tbody>
-</Table>
-`;
-
 exports[`UU5.Bricks.FileViewer style="padding:8px; borderRadius: 2px" 1`] = `
 <Table
   className="uu5-bricks-file-viewer"
@@ -641,6 +849,28 @@ exports[`UU5.Bricks.FileViewer style={"backgroundColor":"red","color":"blue"} 1`
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
+exports[`UU5.Bricks.FileViewer style={"margin":8} 1`] = `
+<Table
+  className="uu5-bricks-file-viewer"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

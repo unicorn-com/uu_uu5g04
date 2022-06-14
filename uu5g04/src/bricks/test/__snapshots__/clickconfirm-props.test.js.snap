@@ -43,6 +43,16 @@ exports[`UU5.Bricks.ClickConfirm className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ClickConfirm className="test-classname" 1`] = `
+<Div
+  className="uu5-bricks-click-confirm test-classname uu5-common-hidden"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ClickConfirm colorSchema="brown" 1`] = `
 <Div
   className="color-schema-brown uu5-bricks-click-confirm uu5-common-hidden"
@@ -273,6 +283,16 @@ exports[`UU5.Bricks.ClickConfirm disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ClickConfirm disabled=false 3`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ClickConfirm disabled=true 1`] = `
 <Div
   className="uu5-bricks-click-confirm uu5-common-hidden uu5-common-disabled"
@@ -284,7 +304,48 @@ exports[`UU5.Bricks.ClickConfirm disabled=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ClickConfirm disabled=true 3`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden uu5-common-disabled"
+  disabled={true}
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ClickConfirm elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ClickConfirm fullTextSearchPriority=0 1`] = `
+<Div
+  className="uu5-bricks-click-confirm uu-fulltextsearch-0 uu5-common-hidden"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ClickConfirm hidden=false 1`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ClickConfirm hidden=false 3`] = `
 <Div
   className="uu5-bricks-click-confirm uu5-common-hidden"
   id="uuID"
@@ -304,10 +365,30 @@ exports[`UU5.Bricks.ClickConfirm hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ClickConfirm hidden=true 3`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ClickConfirm id="myId" 1`] = `
 <Div
   className="uu5-bricks-click-confirm uu5-common-hidden"
   id="myId"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ClickConfirm id="test-id" 1`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
+  id="test-id"
   nestingLevel="bigBoxCollection"
   style={Object {}}
   title={null}
@@ -365,6 +446,16 @@ exports[`UU5.Bricks.ClickConfirm nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ClickConfirm nestingLevel="box" 3`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
+  id="uuID"
+  nestingLevel="box"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ClickConfirm nestingLevel="boxCollection" 1`] = `
 <Div
   className="uu5-bricks-click-confirm uu5-common-hidden"
@@ -386,6 +477,16 @@ exports[`UU5.Bricks.ClickConfirm nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.ClickConfirm nestingLevel="inline" 1`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
+  id="uuID"
+  nestingLevel="inline"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ClickConfirm nestingLevel="inline" 3`] = `
 <Div
   className="uu5-bricks-click-confirm uu5-common-hidden"
   id="uuID"
@@ -447,7 +548,27 @@ exports[`UU5.Bricks.ClickConfirm noIndex=false 1`] = `
 
 exports[`UU5.Bricks.ClickConfirm noIndex=true 1`] = `
 <Div
-  className="uu5-bricks-click-confirm uu5-noindex uu5-common-hidden"
+  className="uu5-bricks-click-confirm uu5-noindex uu-fulltextsearch-0 uu5-common-hidden"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ClickConfirm noPrint=false 1`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ClickConfirm noPrint=true 1`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
   id="uuID"
   nestingLevel="bigBoxCollection"
   style={Object {}}
@@ -519,6 +640,20 @@ exports[`UU5.Bricks.ClickConfirm style={"backgroundColor":"red","color":"blue"} 
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ClickConfirm style={"margin":8} 1`] = `
+<Div
+  className="uu5-bricks-click-confirm uu5-common-hidden"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

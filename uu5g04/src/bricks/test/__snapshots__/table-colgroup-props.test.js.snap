@@ -72,6 +72,15 @@ exports[`UU5.Bricks.Table.ColGroup className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.ColGroup className="test-classname" 1`] = `
+<colgroup
+  className="uu5-bricks-table-col-group test-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.ColGroup colorSchema="brown" 1`] = `
 <colgroup
   className="color-schema-brown uu5-bricks-table-col-group"
@@ -297,7 +306,25 @@ exports[`UU5.Bricks.Table.ColGroup disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.ColGroup disabled=false 3`] = `
+<colgroup
+  className="uu5-bricks-table-col-group"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.ColGroup disabled=true 1`] = `
+<colgroup
+  className="uu5-bricks-table-col-group uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.ColGroup disabled=true 3`] = `
 <colgroup
   className="uu5-bricks-table-col-group uu5-common-disabled"
   id="uuID"
@@ -388,7 +415,34 @@ exports[`UU5.Bricks.Table.ColGroup dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.ColGroup elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<colgroup
+  className="uu5-bricks-table-col-group"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.ColGroup fullTextSearchPriority=0 1`] = `
+<colgroup
+  className="uu5-bricks-table-col-group uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.ColGroup hidden=false 1`] = `
+<colgroup
+  className="uu5-bricks-table-col-group"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.ColGroup hidden=false 3`] = `
 <colgroup
   className="uu5-bricks-table-col-group"
   id="uuID"
@@ -406,10 +460,28 @@ exports[`UU5.Bricks.Table.ColGroup hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.ColGroup hidden=true 3`] = `
+<colgroup
+  className="uu5-bricks-table-col-group uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.ColGroup id="myId" 1`] = `
 <colgroup
   className="uu5-bricks-table-col-group"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.ColGroup id="test-id" 1`] = `
+<colgroup
+  className="uu5-bricks-table-col-group"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -479,6 +551,15 @@ exports[`UU5.Bricks.Table.ColGroup nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.ColGroup nestingLevel="box" 3`] = `
+<colgroup
+  className="uu5-bricks-table-col-group"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.ColGroup nestingLevel="boxCollection" 1`] = `
 <colgroup
   className="uu5-bricks-table-col-group"
@@ -498,6 +579,8 @@ exports[`UU5.Bricks.Table.ColGroup nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Table.ColGroup nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Table.ColGroup nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Table.ColGroup nestingLevel="page" 1`] = `
 <colgroup
@@ -546,7 +629,25 @@ exports[`UU5.Bricks.Table.ColGroup noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Table.ColGroup noIndex=true 1`] = `
 <colgroup
-  className="uu5-bricks-table-col-group uu5-noindex"
+  className="uu5-bricks-table-col-group uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.ColGroup noPrint=false 1`] = `
+<colgroup
+  className="uu5-bricks-table-col-group"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.ColGroup noPrint=true 1`] = `
+<colgroup
+  className="uu5-bricks-table-col-group"
   id="uuID"
   style={Object {}}
   title={null}
@@ -663,6 +764,19 @@ exports[`UU5.Bricks.Table.ColGroup style={"backgroundColor":"red","color":"blue"
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.ColGroup style={"margin":8} 1`] = `
+<colgroup
+  className="uu5-bricks-table-col-group"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

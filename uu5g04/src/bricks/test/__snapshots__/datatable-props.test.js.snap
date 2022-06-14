@@ -313,6 +313,40 @@ exports[`UU5.Bricks.DataTable className="my-classname" 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.DataTable className="test-classname" 1`] = `
+<Table
+  className="uu5-bricks-data-table test-classname"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
 exports[`UU5.Bricks.DataTable condensed=false 1`] = `
 <Table
   className="uu5-bricks-data-table"
@@ -588,7 +622,76 @@ exports[`UU5.Bricks.DataTable disabled=false 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.DataTable disabled=false 3`] = `
+<Table
+  className="uu5-bricks-data-table"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
 exports[`UU5.Bricks.DataTable disabled=true 1`] = `
+<Table
+  className="uu5-bricks-data-table"
+  disabled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
+exports[`UU5.Bricks.DataTable disabled=true 3`] = `
 <Table
   className="uu5-bricks-data-table"
   disabled={true}
@@ -661,6 +764,40 @@ exports[`UU5.Bricks.DataTable dynamic=true 1`] = `
 <Table
   className="uu5-bricks-data-table"
   dynamic={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
+exports[`UU5.Bricks.DataTable elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Table
+  className="uu5-bricks-data-table"
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
@@ -777,7 +914,6 @@ exports[`UU5.Bricks.DataTable footerRow=["Monika","Katka","Karel"] 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -800,7 +936,6 @@ exports[`UU5.Bricks.DataTable footerRow=["Monika","Katka","Karel"] 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -823,7 +958,6 @@ exports[`UU5.Bricks.DataTable footerRow=["Monika","Katka","Karel"] 1`] = `
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -835,6 +969,40 @@ exports[`UU5.Bricks.DataTable footerRow=["Monika","Katka","Karel"] 1`] = `
         ]
       }
     />
+  </table-tfoot>
+</Table>
+`;
+
+exports[`UU5.Bricks.DataTable fullTextSearchPriority=0 1`] = `
+<Table
+  className="uu5-bricks-data-table uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
   </table-tfoot>
 </Table>
 `;
@@ -903,7 +1071,6 @@ exports[`UU5.Bricks.DataTable headerRow=["Uchazeč(ka)","Nasazení","Přínos"] 
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -926,7 +1093,6 @@ exports[`UU5.Bricks.DataTable headerRow=["Uchazeč(ka)","Nasazení","Přínos"] 
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -949,7 +1115,6 @@ exports[`UU5.Bricks.DataTable headerRow=["Uchazeč(ka)","Nasazení","Přínos"] 
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -1020,7 +1185,76 @@ exports[`UU5.Bricks.DataTable hidden=false 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.DataTable hidden=false 3`] = `
+<Table
+  className="uu5-bricks-data-table"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
 exports[`UU5.Bricks.DataTable hidden=true 1`] = `
+<Table
+  className="uu5-bricks-data-table"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
+exports[`UU5.Bricks.DataTable hidden=true 3`] = `
 <Table
   className="uu5-bricks-data-table"
   hidden={true}
@@ -1128,6 +1362,40 @@ exports[`UU5.Bricks.DataTable id="myId" 1`] = `
 <Table
   className="uu5-bricks-data-table"
   id="myId-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
+exports[`UU5.Bricks.DataTable id="test-id" 1`] = `
+<Table
+  className="uu5-bricks-data-table"
+  id="test-id-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
@@ -2227,6 +2495,40 @@ exports[`UU5.Bricks.DataTable nestingLevel="box" 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.DataTable nestingLevel="box" 3`] = `
+<Table
+  className="uu5-bricks-data-table"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
 exports[`UU5.Bricks.DataTable nestingLevel="boxCollection" 1`] = `
 <Table
   className="uu5-bricks-data-table"
@@ -2319,7 +2621,70 @@ exports[`UU5.Bricks.DataTable nestingLevel="inline" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="inline"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
+exports[`UU5.Bricks.DataTable nestingLevel="inline" 3`] = `
+<Table
+  className="uu5-bricks-data-table"
+  header={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Tabulka s daty",
+          "en": "Data table",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
       params={null}
       parent={null}
       pureRender={false}
@@ -2418,7 +2783,6 @@ exports[`UU5.Bricks.DataTable nestingLevel="smallBox" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -2483,7 +2847,6 @@ exports[`UU5.Bricks.DataTable nestingLevel="smallBoxCollection" 1`] = `
       mainAttrs={null}
       name={null}
       nestingLevel={null}
-      noIndex={false}
       params={null}
       parent={null}
       pureRender={false}
@@ -2594,7 +2957,75 @@ exports[`UU5.Bricks.DataTable noIndex=false 1`] = `
 
 exports[`UU5.Bricks.DataTable noIndex=true 1`] = `
 <Table
-  className="uu5-bricks-data-table uu5-noindex"
+  className="uu5-bricks-data-table uu5-noindex uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
+exports[`UU5.Bricks.DataTable noPrint=false 1`] = `
+<Table
+  className="uu5-bricks-data-table"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
+exports[`UU5.Bricks.DataTable noPrint=true 1`] = `
+<Table
+  className="uu5-bricks-data-table"
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
@@ -2882,6 +3313,45 @@ exports[`UU5.Bricks.DataTable style={"backgroundColor":"red","color":"blue"} 1`]
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
+exports[`UU5.Bricks.DataTable style={"margin":8} 1`] = `
+<Table
+  className="uu5-bricks-data-table"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  style={
+    Object {
+      "margin": 8,
     }
   }
 >

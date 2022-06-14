@@ -141,6 +141,16 @@ exports[`UU5.Bricks.NavBar.Nav.Item props className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.NavBar.Nav.Item props className="test-classname" 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item test-classname"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav.Item props content="This is Content from ContentMixin" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
@@ -216,7 +226,32 @@ exports[`UU5.Bricks.NavBar.Nav.Item props disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.NavBar.Nav.Item props disabled=false 3`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav.Item props disabled=true 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item uu5-common-disabled"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav.Item props disabled=true 3`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item uu5-common-disabled"
   id="uuID"
@@ -251,6 +286,26 @@ exports[`UU5.Bricks.NavBar.Nav.Item props dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.NavBar.Nav.Item props elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav.Item props fullTextSearchPriority=0 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item uu-fulltextsearch-0"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav.Item props hidden=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
@@ -261,7 +316,27 @@ exports[`UU5.Bricks.NavBar.Nav.Item props hidden=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.NavBar.Nav.Item props hidden=false 3`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav.Item props hidden=true 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item uu5-common-hidden"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav.Item props hidden=true 3`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item uu5-common-hidden"
   id="uuID"
@@ -331,6 +406,16 @@ exports[`UU5.Bricks.NavBar.Nav.Item props id="myId" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.NavBar.Nav.Item props id="test-id" 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="test-id"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
@@ -372,6 +457,26 @@ exports[`UU5.Bricks.NavBar.Nav.Item props name="myName" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.NavBar.Nav.Item props nestingLevel="box" 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav.Item props nestingLevel="inline" 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav.Item props noIndex=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
@@ -384,7 +489,27 @@ exports[`UU5.Bricks.NavBar.Nav.Item props noIndex=false 1`] = `
 
 exports[`UU5.Bricks.NavBar.Nav.Item props noIndex=true 1`] = `
 <li
-  className="uu5-bricks-nav-bar-nav-item uu5-noindex"
+  className="uu5-bricks-nav-bar-nav-item uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav.Item props noPrint=false 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav.Item props noPrint=true 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -456,6 +581,20 @@ exports[`UU5.Bricks.NavBar.Nav.Item props style={"backgroundColor":"red","color"
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav.Item props style={"margin":8} 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="uuID"
+  onClick={[Function]}
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

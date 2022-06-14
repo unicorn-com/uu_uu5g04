@@ -144,6 +144,22 @@ exports[`UU5.Bricks.Dropdown.Item className="my-classname" 1`] = `
 </li>
 `;
 
+exports[`UU5.Bricks.Dropdown.Item className="test-classname" 1`] = `
+<li
+  className="uu5-bricks-dropdown-item test-classname"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
 exports[`UU5.Bricks.Dropdown.Item content="This is Content from ContentMixin" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
@@ -233,7 +249,38 @@ exports[`UU5.Bricks.Dropdown.Item disabled=false 1`] = `
 </li>
 `;
 
+exports[`UU5.Bricks.Dropdown.Item disabled=false 3`] = `
+<li
+  className="uu5-bricks-dropdown-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
 exports[`UU5.Bricks.Dropdown.Item disabled=true 1`] = `
+<li
+  className="uu5-bricks-dropdown-item uu5-common-disabled disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    disabled={true}
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.Dropdown.Item disabled=true 3`] = `
 <li
   className="uu5-bricks-dropdown-item uu5-common-disabled disabled"
   id="uuID"
@@ -311,7 +358,6 @@ exports[`UU5.Bricks.Dropdown.Item docKit examples UU5.Bricks.Dropdown.Item examp
             mainAttrs={null}
             name={null}
             nestingLevel={null}
-            noIndex={false}
             parent={null}
             pureRender={false}
             ref_={null}
@@ -393,6 +439,38 @@ exports[`UU5.Bricks.Dropdown.Item dynamic=true 1`] = `
 </li>
 `;
 
+exports[`UU5.Bricks.Dropdown.Item elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<li
+  className="uu5-bricks-dropdown-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.Dropdown.Item fullTextSearchPriority=0 1`] = `
+<li
+  className="uu5-bricks-dropdown-item uu-fulltextsearch-0"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
 exports[`UU5.Bricks.Dropdown.Item header=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
@@ -436,7 +514,39 @@ exports[`UU5.Bricks.Dropdown.Item hidden=false 1`] = `
 </li>
 `;
 
+exports[`UU5.Bricks.Dropdown.Item hidden=false 3`] = `
+<li
+  className="uu5-bricks-dropdown-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
 exports[`UU5.Bricks.Dropdown.Item hidden=true 1`] = `
+<li
+  className="uu5-bricks-dropdown-item uu5-common-hidden"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.Dropdown.Item hidden=true 3`] = `
 <li
   className="uu5-bricks-dropdown-item uu5-common-hidden"
   id="uuID"
@@ -490,6 +600,22 @@ exports[`UU5.Bricks.Dropdown.Item id="myId" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="myId"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.Dropdown.Item id="test-id" 1`] = `
+<li
+  className="uu5-bricks-dropdown-item"
+  id="test-id"
   onClick={[Function]}
   style={Object {}}
   title={null}
@@ -632,6 +758,22 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel="box" 1`] = `
 </li>
 `;
 
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="box" 3`] = `
+<li
+  className="uu5-bricks-dropdown-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
 exports[`UU5.Bricks.Dropdown.Item nestingLevel="boxCollection" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
@@ -665,6 +807,22 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Dropdown.Item nestingLevel="inline" 1`] = `
+<li
+  className="uu5-bricks-dropdown-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="inline" 3`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -762,7 +920,39 @@ exports[`UU5.Bricks.Dropdown.Item noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Dropdown.Item noIndex=true 1`] = `
 <li
-  className="uu5-bricks-dropdown-item uu5-noindex"
+  className="uu5-bricks-dropdown-item uu5-noindex uu-fulltextsearch-0"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.Dropdown.Item noPrint=false 1`] = `
+<li
+  className="uu5-bricks-dropdown-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.Dropdown.Item noPrint=true 1`] = `
+<li
+  className="uu5-bricks-dropdown-item"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -903,6 +1093,26 @@ exports[`UU5.Bricks.Dropdown.Item style={"backgroundColor":"red","color":"blue"}
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.Dropdown.Item style={"margin":8} 1`] = `
+<li
+  className="uu5-bricks-dropdown-item"
+  id="uuID"
+  onClick={[Function]}
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}

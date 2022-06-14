@@ -63,6 +63,15 @@ exports[`UU5.Bricks.Well className="my-classname" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Well className="test-classname" 1`] = `
+<div
+  className="uu5-bricks-well test-classname uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Well colorSchema="brown" 1`] = `
 <div
   className="color-schema-brown uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
@@ -295,7 +304,30 @@ exports[`UU5.Bricks.Well disabled=false 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Well disabled=false 3`] = `
+<div
+  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Well disabled=true 1`] = `
+<div
+  className="uu5-bricks-well uu5-common-disabled uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Well disabled=true 3`] = `
 <div
   className="uu5-bricks-well uu5-common-disabled uu5-common-bg-style-filled uu5-bricks-well-default"
   id="uuID"
@@ -341,7 +373,34 @@ exports[`UU5.Bricks.Well dynamic=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Well elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<div
+  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Well fullTextSearchPriority=0 1`] = `
+<div
+  className="uu5-bricks-well uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Well hidden=false 1`] = `
+<div
+  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Well hidden=false 3`] = `
 <div
   className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
   id="uuID"
@@ -359,10 +418,28 @@ exports[`UU5.Bricks.Well hidden=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Well hidden=true 3`] = `
+<div
+  className="uu5-bricks-well uu5-common-hidden uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Well id="myId" 1`] = `
 <div
   className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
   id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Well id="test-id" 1`] = `
+<div
+  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="test-id"
   style={Object {}}
   title={null}
 />
@@ -432,6 +509,15 @@ exports[`UU5.Bricks.Well nestingLevel="box" 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Well nestingLevel="box" 3`] = `
+<div
+  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Well nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
@@ -451,6 +537,8 @@ exports[`UU5.Bricks.Well nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.Well nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Well nestingLevel="inline" 3`] = `""`;
 
 exports[`UU5.Bricks.Well nestingLevel="page" 1`] = `
 <div
@@ -485,7 +573,25 @@ exports[`UU5.Bricks.Well noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Well noIndex=true 1`] = `
 <div
-  className="uu5-bricks-well uu5-noindex uu5-common-bg-style-filled uu5-bricks-well-default"
+  className="uu5-bricks-well uu5-noindex uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Well noPrint=false 1`] = `
+<div
+  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Well noPrint=true 1`] = `
+<div
+  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
   id="uuID"
   style={Object {}}
   title={null}
@@ -550,6 +656,19 @@ exports[`UU5.Bricks.Well style={"backgroundColor":"red","color":"blue"} 1`] = `
     Object {
       "backgroundColor": "red",
       "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Well style={"margin":8} 1`] = `
+<div
+  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={
+    Object {
+      "margin": 8,
     }
   }
   title={null}
