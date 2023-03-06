@@ -16,9 +16,12 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
+import { mount, shallow, omitConsoleLogs } from "uu5g05-test";
 //@@viewOff:imports
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+beforeEach(() => {
+  omitConsoleLogs("deprecated");
+});
 
 const MyAlertBus = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle

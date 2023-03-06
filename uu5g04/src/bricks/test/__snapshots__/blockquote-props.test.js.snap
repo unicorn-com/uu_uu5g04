@@ -440,6 +440,15 @@ exports[`UU5.Bricks.Blockquote fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Blockquote fullTextSearchPriority=0 2`] = `
+<blockquote
+  className="uu5-bricks-blockquote uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Blockquote hidden=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
@@ -576,15 +585,6 @@ exports[`UU5.Bricks.Blockquote nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel="container" 1`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Blockquote nestingLevel="inline" 1`] = `
 <span
   className="uu5-bricks-blockquote uu-bricks-c3o8km"
@@ -633,24 +633,6 @@ exports[`UU5.Bricks.Blockquote nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Blockquote nestingLevel="spa" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote noIndex=false 1`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote noIndex=true 1`] = `
-<blockquote
-  className="uu5-bricks-blockquote uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

@@ -486,6 +486,28 @@ exports[`UU5.Bricks.Video fullTextSearchPriority=0 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.Video fullTextSearchPriority=0 2`] = `
+<Span
+  className="uu5-bricks-video uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <video
+    className="uu5-bricks-video uu-fulltextsearch-0"
+    controls={true}
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
 exports[`UU5.Bricks.Video hidden=false 1`] = `
 <Span
   className="uu5-bricks-video"
@@ -866,28 +888,6 @@ exports[`UU5.Bricks.Video nestingLevel="boxCollection" 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.Video nestingLevel="container" 1`] = `
-<Span
-  className="uu5-bricks-video"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
->
-  <video
-    className="uu5-bricks-video"
-    controls={true}
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type="mp4"
-  >
-    <source
-      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
-    />
-  </video>
-</Span>
-`;
-
 exports[`UU5.Bricks.Video nestingLevel="inline" 1`] = `
 <UU5.BricksEditable.InlineMode
   Component={[Function]}
@@ -1159,50 +1159,6 @@ exports[`UU5.Bricks.Video nestingLevel="spa" 1`] = `
 >
   <video
     className="uu5-bricks-video"
-    controls={true}
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type="mp4"
-  >
-    <source
-      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
-    />
-  </video>
-</Span>
-`;
-
-exports[`UU5.Bricks.Video noIndex=false 1`] = `
-<Span
-  className="uu5-bricks-video"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel={null}
->
-  <video
-    className="uu5-bricks-video"
-    controls={true}
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type="mp4"
-  >
-    <source
-      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
-    />
-  </video>
-</Span>
-`;
-
-exports[`UU5.Bricks.Video noIndex=true 1`] = `
-<Span
-  className="uu5-bricks-video uu5-noindex uu-fulltextsearch-0"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel={null}
->
-  <video
-    className="uu5-bricks-video uu5-noindex uu-fulltextsearch-0"
     controls={true}
     id="uuID"
     style={Object {}}

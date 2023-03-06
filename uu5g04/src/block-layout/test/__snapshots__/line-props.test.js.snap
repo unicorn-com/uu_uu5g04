@@ -515,6 +515,19 @@ exports[`UU5.BlockLayout.Line props testing fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.BlockLayout.Line props testing fullTextSearchPriority=0 2`] = `
+<Line
+  className="uublocklayout-1unjvdi uu-fulltextsearch-0"
+  content={null}
+  dynamic={false}
+  fullTextSearchPriority={0}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  size="s"
+/>
+`;
+
 exports[`UU5.BlockLayout.Line props testing hidden=false 1`] = `
 <Line
   className="uublocklayout-1unjvdi"
@@ -705,19 +718,6 @@ exports[`UU5.BlockLayout.Line props testing nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.BlockLayout.Line props testing nestingLevel="container" 1`] = `
-<Line
-  className="uublocklayout-1unjvdi"
-  content={null}
-  dynamic={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  nestingLevel="container"
-  size="s"
-/>
-`;
-
 exports[`UU5.BlockLayout.Line props testing nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.BlockLayout.Line props testing nestingLevel="inline" 3`] = `""`;
@@ -748,32 +748,6 @@ exports[`UU5.BlockLayout.Line props testing nestingLevel="spa" 1`] = `
   ignoreInnerHTML={false}
   mainAttrs={Object {}}
   nestingLevel="spa"
-  size="s"
-/>
-`;
-
-exports[`UU5.BlockLayout.Line props testing noIndex=false 1`] = `
-<Line
-  className="uublocklayout-1unjvdi"
-  content={null}
-  dynamic={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  noIndex={false}
-  size="s"
-/>
-`;
-
-exports[`UU5.BlockLayout.Line props testing noIndex=true 1`] = `
-<Line
-  className="uublocklayout-1unjvdi uu5-noindex uu-fulltextsearch-0"
-  content={null}
-  dynamic={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  noIndex={true}
   size="s"
 />
 `;

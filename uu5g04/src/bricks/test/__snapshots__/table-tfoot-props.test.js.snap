@@ -379,6 +379,15 @@ exports[`UU5.Bricks.Table.TFoot fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.TFoot fullTextSearchPriority=0 2`] = `
+<tfoot
+  className="uu5-bricks-table-tfoot uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.TFoot hidden=false 1`] = `
 <tfoot
   className="uu5-bricks-table-tfoot"
@@ -515,15 +524,6 @@ exports[`UU5.Bricks.Table.TFoot nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.TFoot nestingLevel="container" 1`] = `
-<tfoot
-  className="uu5-bricks-table-tfoot"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Table.TFoot nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Table.TFoot nestingLevel="inline" 3`] = `""`;
@@ -558,24 +558,6 @@ exports[`UU5.Bricks.Table.TFoot nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Table.TFoot nestingLevel="spa" 1`] = `
 <tfoot
   className="uu5-bricks-table-tfoot"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.TFoot noIndex=false 1`] = `
-<tfoot
-  className="uu5-bricks-table-tfoot"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.TFoot noIndex=true 1`] = `
-<tfoot
-  className="uu5-bricks-table-tfoot uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

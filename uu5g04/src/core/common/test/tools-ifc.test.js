@@ -19,8 +19,7 @@ import "uu5g04-bricks";
 import "uu5g04-bricks";
 import "uu5g04-forms";
 import { LanguageProvider, useLanguage } from "uu5g05";
-
-const { mount, shallow, wait, initHookRenderer, act } = UU5.Test.Tools;
+import { mount, initHookRenderer, act, omitConsoleLogs } from "uu5g05-test";
 
 //NOTE: scrollToFragment and CopyToClipboard ifc will be tested by selenium.
 
@@ -380,8 +379,8 @@ describe("UU5.Common.Tools interface", () => {
     expect(resultDate).toMatchSnapshot();
   });
 
-  // TODO Mock console.
   it("Tools.error(msg, context)", () => {
+    omitConsoleLogs("is expected to be shown");
     let result;
     expect(() => {
       result = UU5.Common.Tools.error("This error is expected to be shown in console.", { errorData: "invalidToken" });
@@ -391,6 +390,7 @@ describe("UU5.Common.Tools interface", () => {
   });
 
   it("Tools.warning(msg, context)", () => {
+    omitConsoleLogs("is expected to be shown");
     let result;
     expect(() => {
       result = UU5.Common.Tools.warning("This warning is expected to be shown in console.", {

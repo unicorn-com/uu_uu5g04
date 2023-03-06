@@ -89,7 +89,7 @@
     ...STATICS,
 
     propTypes: {
-      items: UU5.PropTypes.arrayOf(UU5.PropTypes.shape(...Item.propTypes)).isRequired,
+      items: UU5.PropTypes.arrayOf(UU5.PropTypes.shape(Item.propTypes)).isRequired,
       type: UU5.PropTypes.oneOf(["disc", "square", "circle", "none"]),
       padding: UU5.PropTypes.any,
     },
@@ -281,7 +281,7 @@ console.log(this.props)
   });
   //@@viewOff:example
 
-  UU5.Demo = { List };
+  window.Uu5Demo = { List };
 
   const DccComponent = UU5.Common.Component.create({
     mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.CcrReaderMixin, UuDcc.Common.DccMixin],
@@ -306,13 +306,13 @@ console.log(this.props)
       <UU5.Bricks.Page modal={<UU5.Bricks.Modal />}>
         <UU5.Bricks.Container>
           <DccComponent
-            dccData={`<uu5string/><UU5.Demo.List spaces='<uu5json/>{"margin": { "xs": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px"}, "s": { "top": "20px", "right": "24px",  "bottom": "20px", "left": "16px" }, "l": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px" }  }, "padding": { "xs": { "top": "4px", "right": "8px", "bottom": "4px",  "left": "16px" }, "s": { "top": "12px",  "right": "16px", "bottom": "12px", "left": "20px" },  "l": { "top": "20px", "right": "28px",  "bottom": "32px",  "left": "40px" } } }'       text="cffg" screenSizeList='<uu5json/>["xs", "s", "l"]' />`}
+            dccData={`<uu5string/><Uu5Demo.List spaces='<uu5json/>{"margin": { "xs": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px"}, "s": { "top": "20px", "right": "24px",  "bottom": "20px", "left": "16px" }, "l": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px" }  }, "padding": { "xs": { "top": "4px", "right": "8px", "bottom": "4px",  "left": "16px" }, "s": { "top": "12px",  "right": "16px", "bottom": "12px", "left": "20px" },  "l": { "top": "20px", "right": "28px",  "bottom": "32px",  "left": "40px" } } }'       text="cffg" screenSizeList='<uu5json/>["xs", "s", "l"]' />`}
           />
           <DccComponent
-            dccData={`<uu5string/><UU5.Demo.List spaces='<uu5json/>{"margin": { "xs": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px"}, "s": { "top": "20px", "right": "24px",  "bottom": "20px", "left": "16px" }, "l": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px" }  }, "padding": { "xs": { "top": "4px", "right": "8px", "bottom": "4px",  "left": "16px" }, "s": { "top": "12px",  "right": "16px", "bottom": "12px", "left": "20px" },  "l": { "top": "20px", "right": "28px",  "bottom": "32px",  "left": "40px" } } }'  hidePaddingHorizontal=true   hidePaddingVertical=true        text="cffg" screenSizeList='<uu5json/>["xs", "s", "l"]' />`}
+            dccData={`<uu5string/><Uu5Demo.List spaces='<uu5json/>{"margin": { "xs": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px"}, "s": { "top": "20px", "right": "24px",  "bottom": "20px", "left": "16px" }, "l": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px" }  }, "padding": { "xs": { "top": "4px", "right": "8px", "bottom": "4px",  "left": "16px" }, "s": { "top": "12px",  "right": "16px", "bottom": "12px", "left": "20px" },  "l": { "top": "20px", "right": "28px",  "bottom": "32px",  "left": "40px" } } }'  hidePaddingHorizontal=true   hidePaddingVertical=true        text="cffg" screenSizeList='<uu5json/>["xs", "s", "l"]' />`}
           />
           <DccComponent
-            dccData={`<uu5string/><UU5.Demo.List spaces='<uu5json/>{"margin": { "xs": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px"}, "s": { "top": "20px", "right": "24px",  "bottom": "20px", "left": "16px" }, "l": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px" }  }, "padding": { "xs": { "top": "4px", "right": "8px", "bottom": "4px",  "left": "16px" }, "s": { "top": "12px",  "right": "16px", "bottom": "12px", "left": "20px" },  "l": { "top": "20px", "right": "28px",  "bottom": "32px",  "left": "40px" } } }'     hideMarginHorizontal=true   hideMarginVertical=true     text="cffg" screenSizeList='<uu5json/>["xs", "s", "l"]' />`}
+            dccData={`<uu5string/><Uu5Demo.List spaces='<uu5json/>{"margin": { "xs": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px"}, "s": { "top": "20px", "right": "24px",  "bottom": "20px", "left": "16px" }, "l": { "top": "20px", "right": "24px", "bottom": "20px", "left": "16px" }  }, "padding": { "xs": { "top": "4px", "right": "8px", "bottom": "4px",  "left": "16px" }, "s": { "top": "12px",  "right": "16px", "bottom": "12px", "left": "20px" },  "l": { "top": "20px", "right": "28px",  "bottom": "32px",  "left": "40px" } } }'     hideMarginHorizontal=true   hideMarginVertical=true     text="cffg" screenSizeList='<uu5json/>["xs", "s", "l"]' />`}
           />
         </UU5.Bricks.Container>
       </UU5.Bricks.Page>

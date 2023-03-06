@@ -481,6 +481,29 @@ exports[`UU5.Bricks.Resize fullTextSearchPriority=0 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.Resize fullTextSearchPriority=0 2`] = `
+<Div
+  className="uu5-bricks-resize uu-fulltextsearch-0"
+  id="uuID"
+  mainAttrs={Object {}}
+>
+  <ResizeItem
+    id="childID"
+    key="childID"
+  >
+    <Span
+      content="Content"
+      id="childID02"
+    />
+  </ResizeItem>
+  <ResizeObserver
+    key="ro"
+    onInitialSize={[Function]}
+    onResize={[Function]}
+  />
+</Div>
+`;
+
 exports[`UU5.Bricks.Resize hidden=false 1`] = `
 <Div
   className="uu5-bricks-resize"
@@ -834,30 +857,6 @@ exports[`UU5.Bricks.Resize nestingLevel="boxCollection" 1`] = `
 </Div>
 `;
 
-exports[`UU5.Bricks.Resize nestingLevel="container" 1`] = `
-<Div
-  className="uu5-bricks-resize"
-  id="uuID"
-  mainAttrs={Object {}}
-  nestingLevel="container"
->
-  <ResizeItem
-    id="childID"
-    key="childID"
-  >
-    <Span
-      content="Content"
-      id="childID02"
-    />
-  </ResizeItem>
-  <ResizeObserver
-    key="ro"
-    onInitialSize={[Function]}
-    onResize={[Function]}
-  />
-</Div>
-`;
-
 exports[`UU5.Bricks.Resize nestingLevel="inline" 1`] = `
 <Div
   className="uu5-bricks-resize"
@@ -984,52 +983,6 @@ exports[`UU5.Bricks.Resize nestingLevel="spa" 1`] = `
   id="uuID"
   mainAttrs={Object {}}
   nestingLevel="spa"
->
-  <ResizeItem
-    id="childID"
-    key="childID"
-  >
-    <Span
-      content="Content"
-      id="childID02"
-    />
-  </ResizeItem>
-  <ResizeObserver
-    key="ro"
-    onInitialSize={[Function]}
-    onResize={[Function]}
-  />
-</Div>
-`;
-
-exports[`UU5.Bricks.Resize noIndex=false 1`] = `
-<Div
-  className="uu5-bricks-resize"
-  id="uuID"
-  mainAttrs={Object {}}
->
-  <ResizeItem
-    id="childID"
-    key="childID"
-  >
-    <Span
-      content="Content"
-      id="childID02"
-    />
-  </ResizeItem>
-  <ResizeObserver
-    key="ro"
-    onInitialSize={[Function]}
-    onResize={[Function]}
-  />
-</Div>
-`;
-
-exports[`UU5.Bricks.Resize noIndex=true 1`] = `
-<Div
-  className="uu5-bricks-resize uu5-noindex uu-fulltextsearch-0"
-  id="uuID"
-  mainAttrs={Object {}}
 >
   <ResizeItem
     id="childID"

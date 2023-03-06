@@ -1841,6 +1841,45 @@ exports[`UU5.Bricks.Stepper props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Stepper props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-stepper uu-fulltextsearch-0 uu5-bricks-stepper-wrapper uu5-bricks-stepper-visibility uu5-bricks-stepper-left-alignment"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-stepper-inner uu5-bricks-stepper-horizontal"
+  >
+    <ContextProvider
+      key="0"
+      value={
+        Object {
+          "colorSchema": null,
+          "currentStep": 0,
+          "disabled": false,
+          "index": 0,
+          "itemProps": Object {
+            "bgStyle": "transparent",
+            "borderRadius": null,
+            "elevation": null,
+          },
+          "onClick": null,
+          "size": "m",
+          "topVisitedStep": 0,
+        }
+      }
+    >
+      <forwardRef(StepperItem)
+        id="childID"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </forwardRef(StepperItem)>
+    </ContextProvider>
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Stepper props hidden=false 1`] = `
 <div
   className="uu5-bricks-stepper uu5-bricks-stepper-wrapper uu5-bricks-stepper-visibility uu5-bricks-stepper-left-alignment"
@@ -2388,45 +2427,6 @@ exports[`UU5.Bricks.Stepper props nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Stepper props nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-stepper uu5-bricks-stepper-wrapper uu5-bricks-stepper-visibility uu5-bricks-stepper-left-alignment"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-bricks-stepper-inner uu5-bricks-stepper-horizontal"
-  >
-    <ContextProvider
-      key="0"
-      value={
-        Object {
-          "colorSchema": null,
-          "currentStep": 0,
-          "disabled": false,
-          "index": 0,
-          "itemProps": Object {
-            "bgStyle": "transparent",
-            "borderRadius": null,
-            "elevation": null,
-          },
-          "onClick": null,
-          "size": "m",
-          "topVisitedStep": 0,
-        }
-      }
-    >
-      <forwardRef(StepperItem)
-        id="childID"
-      >
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-      </forwardRef(StepperItem)>
-    </ContextProvider>
-  </div>
-</div>
-`;
-
 exports[`UU5.Bricks.Stepper props nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Stepper props nestingLevel="inline" 3`] = `""`;
@@ -2477,84 +2477,6 @@ exports[`UU5.Bricks.Stepper props nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.Stepper props nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-stepper uu5-bricks-stepper-wrapper uu5-bricks-stepper-visibility uu5-bricks-stepper-left-alignment"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-bricks-stepper-inner uu5-bricks-stepper-horizontal"
-  >
-    <ContextProvider
-      key="0"
-      value={
-        Object {
-          "colorSchema": null,
-          "currentStep": 0,
-          "disabled": false,
-          "index": 0,
-          "itemProps": Object {
-            "bgStyle": "transparent",
-            "borderRadius": null,
-            "elevation": null,
-          },
-          "onClick": null,
-          "size": "m",
-          "topVisitedStep": 0,
-        }
-      }
-    >
-      <forwardRef(StepperItem)
-        id="childID"
-      >
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-      </forwardRef(StepperItem)>
-    </ContextProvider>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Stepper props noIndex=false 1`] = `
-<div
-  className="uu5-bricks-stepper uu5-bricks-stepper-wrapper uu5-bricks-stepper-visibility uu5-bricks-stepper-left-alignment"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-bricks-stepper-inner uu5-bricks-stepper-horizontal"
-  >
-    <ContextProvider
-      key="0"
-      value={
-        Object {
-          "colorSchema": null,
-          "currentStep": 0,
-          "disabled": false,
-          "index": 0,
-          "itemProps": Object {
-            "bgStyle": "transparent",
-            "borderRadius": null,
-            "elevation": null,
-          },
-          "onClick": null,
-          "size": "m",
-          "topVisitedStep": 0,
-        }
-      }
-    >
-      <forwardRef(StepperItem)
-        id="childID"
-      >
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-      </forwardRef(StepperItem)>
-    </ContextProvider>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Stepper props noIndex=true 1`] = `
-<div
-  className="uu5-bricks-stepper uu5-noindex uu-fulltextsearch-0 uu5-bricks-stepper-wrapper uu5-bricks-stepper-visibility uu5-bricks-stepper-left-alignment"
   id="uuID"
   style={Object {}}
   title={null}

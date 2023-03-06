@@ -134,7 +134,7 @@ exports[`UU5.Bricks.Var docKit examples UU5.Bricks.Var should render without cra
 >
   <Var
     id="uuID02"
-    nestingLevel="bigBoxCollection"
+    nestingLevel="route"
   >
     redPill
   </Var>
@@ -164,6 +164,13 @@ exports[`UU5.Bricks.Var elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
 `;
 
 exports[`UU5.Bricks.Var fullTextSearchPriority=0 1`] = `
+<var
+  className="uu5-bricks-var uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
+exports[`UU5.Bricks.Var fullTextSearchPriority=0 2`] = `
 <var
   className="uu5-bricks-var uu-fulltextsearch-0"
   id="uuID"
@@ -254,20 +261,6 @@ exports[`UU5.Bricks.Var nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Var nestingLevel="inline" 1`] = `
 <var
   className="uu5-bricks-var"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Var noIndex=false 1`] = `
-<var
-  className="uu5-bricks-var"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Var noIndex=true 1`] = `
-<var
-  className="uu5-bricks-var uu-fulltextsearch-0 uu5-noindex"
   id="uuID"
 />
 `;

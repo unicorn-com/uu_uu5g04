@@ -471,6 +471,22 @@ exports[`UU5.Bricks.Dropdown.Item fullTextSearchPriority=0 1`] = `
 </li>
 `;
 
+exports[`UU5.Bricks.Dropdown.Item fullTextSearchPriority=0 2`] = `
+<li
+  className="uu5-bricks-dropdown-item uu-fulltextsearch-0"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
 exports[`UU5.Bricks.Dropdown.Item header=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
@@ -790,22 +806,6 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel="boxCollection" 1`] = `
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel="container" 1`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    offset={null}
-  />
-</li>
-`;
-
 exports[`UU5.Bricks.Dropdown.Item nestingLevel="inline" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
@@ -889,38 +889,6 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Dropdown.Item nestingLevel="spa" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    offset={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item noIndex=false 1`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    offset={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item noIndex=true 1`] = `
-<li
-  className="uu5-bricks-dropdown-item uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   onClick={[Function]}
   style={Object {}}

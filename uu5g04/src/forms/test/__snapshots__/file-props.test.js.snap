@@ -2940,6 +2940,55 @@ exports[`UU5.Forms.File props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.File props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-forms-file uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-file-no-value"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+    ref_={[Function]}
+  >
+    <Div
+      className="uu5-forms-file-input-row"
+    >
+      <items-input
+        className="uu5-forms-file-placeholder"
+        feedback="initial"
+        icon="mdi-cloud-upload"
+        iconClassName="uu5-forms-file-icon"
+        id="uuID-input"
+        inputWidth={null}
+        key="uuID-input"
+        mainAttrs={
+          Object {
+            "onBlur": [Function],
+            "onClick": [Function],
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        name="uuID-input"
+        onItemClick={[Function]}
+        readonly={false}
+      />
+      <input
+        className="uu5-forms-file-input"
+        id="uuID-file"
+        key="fileinput"
+        multiple={false}
+        onChange={[Function]}
+        type="file"
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.File props function -> Forms.InputMixin onChange() 1`] = `
 <File
   id="checkID"
@@ -4149,104 +4198,6 @@ exports[`UU5.Forms.File props nestingLevel="inline" 1`] = `
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth="auto"
-        key="uuID-input"
-        mainAttrs={
-          Object {
-            "onBlur": [Function],
-            "onClick": [Function],
-            "onFocus": [Function],
-            "tabIndex": "0",
-          }
-        }
-        name="uuID-input"
-        onItemClick={[Function]}
-        readonly={false}
-      />
-      <input
-        className="uu5-forms-file-input"
-        id="uuID-file"
-        key="fileinput"
-        multiple={false}
-        onChange={[Function]}
-        type="file"
-      />
-    </Div>
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.File props noIndex=false 1`] = `
-<div
-  className="uu5-forms-file uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-file-no-value"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-    ref_={[Function]}
-  >
-    <Div
-      className="uu5-forms-file-input-row"
-    >
-      <items-input
-        className="uu5-forms-file-placeholder"
-        feedback="initial"
-        icon="mdi-cloud-upload"
-        iconClassName="uu5-forms-file-icon"
-        id="uuID-input"
-        inputWidth={null}
-        key="uuID-input"
-        mainAttrs={
-          Object {
-            "onBlur": [Function],
-            "onClick": [Function],
-            "onFocus": [Function],
-            "tabIndex": "0",
-          }
-        }
-        name="uuID-input"
-        onItemClick={[Function]}
-        readonly={false}
-      />
-      <input
-        className="uu5-forms-file-input"
-        id="uuID-file"
-        key="fileinput"
-        multiple={false}
-        onChange={[Function]}
-        type="file"
-      />
-    </Div>
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.File props noIndex=true 1`] = `
-<div
-  className="uu5-forms-file uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-file-no-value"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-    ref_={[Function]}
-  >
-    <Div
-      className="uu5-forms-file-input-row"
-    >
-      <items-input
-        className="uu5-forms-file-placeholder"
-        feedback="initial"
-        icon="mdi-cloud-upload"
-        iconClassName="uu5-forms-file-icon"
-        id="uuID-input"
-        inputWidth={null}
         key="uuID-input"
         mainAttrs={
           Object {

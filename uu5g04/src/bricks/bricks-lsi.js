@@ -488,117 +488,144 @@ const BricksLsi = {
     text: {
       cs: "Pouze přihlášený uživatel může zobrazit tento obsah.",
       en: "You are not authenticated to view this content.",
+      uk: "Ви не автентифіковані для перегляду цього вмісту.",
     },
     login: {
       cs: "Přihlásit se",
       en: "Log in",
+      uk: "Увійти",
     },
     inlineLogin: {
       cs: "Pro zobrazení obsahu se přihlašte",
       en: "Log in to show content",
+      uk: "Увійдіть, щоб переглянути вміст",
     },
   },
   unauthorized: {
     text: {
       cs: "Nemáte potřebná práva k zobrazení tohoto obsahu.",
       en: "You don't have rights to see this content.",
+      uk: "Ви не маєте прав на перегляд цього вмісту.",
     },
   },
   modalBus: {
     collapse: {
       cs: "Sbalit",
       en: "Collapse",
+      uk: "Згорнути",
     },
     expand: {
       cs: "Rozbalit",
       en: "Expand",
+      uk: "Розгорнути",
     },
     inactiveModal: {
       cs: "Neaktivní modal",
       en: "Inactive modal",
+      uk: "Неактивне модальне вікно",
     },
   },
   inlineComponentHeaders: {
     accordionEditHeader: {
       cs: "Upravit accordion",
       en: "Edit accordion",
+      uk: "Редагувати акордеон",
     },
     accordionName: {
       cs: "Akordeon",
       en: "Accordion",
+      uk: "Акордеон",
     },
     cardEditHeader: {
       cs: "Upravit kartu",
       en: "Edit card",
+      uk: "Редагувати картку",
     },
     cardName: {
       en: "Card",
       cs: "Karta",
+      uk: "Картка",
     },
     containerEditHeader: {
       cs: "Upravit kontejner",
       en: "Edit container",
+      uk: "Редагувати контейнер",
     },
     containerName: {
       cs: "Kontejner",
       en: "Container",
+      uk: "Контейнер",
     },
     dataTableName: {
       cs: "Tabulka s daty",
       en: "Data table",
+      uk: "Таблиця даних",
     },
     googleMapName: {
       cs: "Mapa",
       en: "Map",
+      uk: "Карта",
     },
     imageName: {
       cs: "Obrázek",
       en: "Image",
+      uk: "Зображення",
     },
     newspaperName: {
       cs: "Zprávy",
       en: "Newspaper",
+      uk: "Газета",
     },
     newspaperEditHeader: {
       cs: "Upravit zprávy",
       en: "Edit newspaper",
+      uk: "Редагувати газету",
     },
     qRCodeModalHeader: {
       cs: "Upravit QR kód",
       en: "Edit QR code",
+      uk: "Редагувати QR-код",
     },
     qRCodeName: {
       cs: "QR kód",
       en: "QR code",
+      uk: "QR-код",
     },
     sectionName: {
       en: "Section",
       cs: "Sekce",
+      uk: "Розділ",
     },
     sectionEditHeader: {
       cs: "Editace sekce",
       en: "Section editation",
+      uk: "Редагування розділу",
     },
     tableName: {
       cs: "Tabulka",
       en: "Table",
+      uk: "Таблиця",
     },
     tabsName: {
       en: "Tabs",
       cs: "Taby",
+      uk: "Вкладки",
     },
     tabsEditHeader: {
       cs: "Editace záložek",
       en: "Tabs editation",
+      uk: "Редагування вкладок",
     },
     carouselEditHeader: {
       cs: "Upravit carousel",
       en: "Edit carousel",
+      uk: "Редагувати карусель",
     },
-    carouselName: { en: "Carousel", cs: "Carousel" },
+    carouselName: { en: "Carousel", cs: "Carousel", uk: "Карусель", },
     panelEditHeader: {
       cs: "Upravit panel",
       en: "Edit panel",
+      uk: "Редагувати панель",
     },
   },
   cookieBar: {

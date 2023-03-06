@@ -218,6 +218,20 @@ exports[`UU5.Bricks.Number fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Number fullTextSearchPriority=0 2`] = `
+<span
+  className="uu5-bricks-number uu-fulltextsearch-0 uu5-bricks-number-positive"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "225,658.14522",
+    }
+  }
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Number hidden=false 1`] = `
 <span
   className="uu5-bricks-number uu5-bricks-number-positive"
@@ -429,20 +443,6 @@ exports[`UU5.Bricks.Number nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Number nestingLevel="container" 1`] = `
-<span
-  className="uu5-bricks-number uu5-bricks-number-positive"
-  dangerouslySetInnerHTML={
-    Object {
-      "__html": "225,658.14522",
-    }
-  }
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Number nestingLevel="inline" 1`] = `
 <span
   className="uu5-bricks-number uu5-bricks-number-positive"
@@ -516,34 +516,6 @@ exports[`UU5.Bricks.Number nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Number nestingLevel="spa" 1`] = `
 <span
   className="uu5-bricks-number uu5-bricks-number-positive"
-  dangerouslySetInnerHTML={
-    Object {
-      "__html": "225,658.14522",
-    }
-  }
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Number noIndex=false 1`] = `
-<span
-  className="uu5-bricks-number uu5-bricks-number-positive"
-  dangerouslySetInnerHTML={
-    Object {
-      "__html": "225,658.14522",
-    }
-  }
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Number noIndex=true 1`] = `
-<span
-  className="uu5-bricks-number uu5-noindex uu-fulltextsearch-0 uu5-bricks-number-positive"
   dangerouslySetInnerHTML={
     Object {
       "__html": "225,658.14522",

@@ -424,6 +424,15 @@ exports[`UU5.Bricks.Text fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Text fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-text uu5-common-text uu-fulltextsearch-0 uu5-bricks-text-nesting-level-small-box"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Text hidden=false 1`] = `
 <div
   className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
@@ -560,15 +569,6 @@ exports[`UU5.Bricks.Text nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Text nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Text nestingLevel="inline" 1`] = `
 <span
   className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-inline"
@@ -617,24 +617,6 @@ exports[`UU5.Bricks.Text nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Text nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Text noIndex=false 1`] = `
-<div
-  className="uu5-bricks-text uu5-common-text uu5-bricks-text-nesting-level-small-box"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Text noIndex=true 1`] = `
-<div
-  className="uu5-bricks-text uu5-common-text uu5-noindex uu-fulltextsearch-0 uu5-bricks-text-nesting-level-small-box"
   id="uuID"
   style={Object {}}
   title={null}

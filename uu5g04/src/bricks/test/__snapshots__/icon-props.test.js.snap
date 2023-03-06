@@ -162,6 +162,15 @@ exports[`UU5.Bricks.Icon fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Icon fullTextSearchPriority=0 2`] = `
+<span
+  className="uu5-bricks-icon uu-fulltextsearch-0 mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Icon hidden=false 1`] = `
 <span
   className="uu5-bricks-icon mdi mdi-check"
@@ -460,15 +469,6 @@ exports[`UU5.Bricks.Icon nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Icon nestingLevel="container" 1`] = `
-<span
-  className="uu5-bricks-icon mdi mdi-check"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Icon nestingLevel="inline" 1`] = `
 <span
   className="uu5-bricks-icon mdi mdi-check"
@@ -517,24 +517,6 @@ exports[`UU5.Bricks.Icon nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Icon nestingLevel="spa" 1`] = `
 <span
   className="uu5-bricks-icon mdi mdi-check"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Icon noIndex=false 1`] = `
-<span
-  className="uu5-bricks-icon mdi mdi-check"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Icon noIndex=true 1`] = `
-<span
-  className="uu5-bricks-icon uu5-noindex uu-fulltextsearch-0 mdi mdi-check"
   id="uuID"
   style={Object {}}
   title={null}

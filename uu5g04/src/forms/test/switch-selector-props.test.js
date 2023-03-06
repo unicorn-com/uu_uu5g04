@@ -94,7 +94,7 @@ describe(`UU5.Forms.SwitchSelector props testing`, () => {
 
   it(`UU5.Forms.SwitchSelector onChange with items()`, () => {
     const onChangeFn = jest.fn();
-    const wrapper = mount(<UU5.Forms.SwitchSelector items={items} onChange={onChangeFn} />);
+    const wrapper = mount(<UU5.Forms.SwitchSelector items={items} onChange={onChangeFn} inputWidth="550px" />);
     const button = wrapper.find("button").at(2);
 
     button.simulate("click");
@@ -102,10 +102,10 @@ describe(`UU5.Forms.SwitchSelector props testing`, () => {
   });
 
   it(`UU5.Forms.SwitchSelector type rendering`, () => {
-    let wrapper = mount(<UU5.Forms.SwitchSelector items={items} />);
+    let wrapper = mount(<UU5.Forms.SwitchSelector items={items} inputWidth="400px" />);
     expect(wrapper.find(".uu5-bricks-switch-selector").length).not.toBe(0);
     MOCK_BOUNDING_CLIENT_RECT_SWITCH.width = 550; // 50 bigger than MOCK_BOUNDING_CLIENT_RECT_WRAPPER -> overflowing -> Select will be rendered
-    wrapper = mount(<UU5.Forms.SwitchSelector items={items} />);
+    wrapper = mount(<UU5.Forms.SwitchSelector items={items} inputWidth="500px" />);
     expect(wrapper.find(".uu5-forms-select-body").length).not.toBe(0);
   });
 });

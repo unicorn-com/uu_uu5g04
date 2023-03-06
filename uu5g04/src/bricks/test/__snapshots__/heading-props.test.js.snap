@@ -412,6 +412,18 @@ exports[`UU5.Bricks.Heading fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Heading fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading uu-fulltextsearch-0"
+    id="uuID"
+    key="main"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Heading hidden=false 1`] = `
 <Fragment>
   <div
@@ -617,18 +629,6 @@ exports[`UU5.Bricks.Heading nestingLevel="boxCollection" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Heading nestingLevel="container" 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-heading"
-    id="uuID"
-    key="main"
-    style={Object {}}
-    title={null}
-  />
-</Fragment>
-`;
-
 exports[`UU5.Bricks.Heading nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Heading nestingLevel="inline" 3`] = `""`;
@@ -653,30 +653,6 @@ exports[`UU5.Bricks.Heading nestingLevel="spa" 1`] = `
 <Fragment>
   <div
     className="uu5-bricks-heading"
-    id="uuID"
-    key="main"
-    style={Object {}}
-    title={null}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Heading noIndex=false 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-heading"
-    id="uuID"
-    key="main"
-    style={Object {}}
-    title={null}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Heading noIndex=true 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-heading uu5-noindex uu-fulltextsearch-0"
     id="uuID"
     key="main"
     style={Object {}}

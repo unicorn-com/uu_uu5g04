@@ -253,6 +253,14 @@ exports[`UU5.Bricks.ButtonSwitch props testing fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ButtonSwitch props testing fullTextSearchPriority=0 2`] = `
+<Button
+  className="uu5-bricks-button-switch uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.ButtonSwitch props testing hidden=false 1`] = `
 <Button
   className="uu5-bricks-button-switch"
@@ -381,15 +389,6 @@ exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="boxCollection" 1`] 
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="container" 1`] = `
-<Button
-  className="uu5-bricks-button-switch"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
-/>
-`;
-
 exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="inline" 1`] = `
 <Button
   className="uu5-bricks-button-switch"
@@ -441,22 +440,6 @@ exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="spa" 1`] = `
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="spa"
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing noIndex=false 1`] = `
-<Button
-  className="uu5-bricks-button-switch"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing noIndex=true 1`] = `
-<Button
-  className="uu5-bricks-button-switch uu5-noindex uu-fulltextsearch-0"
-  id="uuID-inner"
-  mainAttrs={Object {}}
 />
 `;
 

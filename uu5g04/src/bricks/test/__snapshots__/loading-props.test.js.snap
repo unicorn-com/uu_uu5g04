@@ -903,6 +903,29 @@ exports[`UU5.Bricks.Loading props fullTextSearchPriority=0 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.Loading props fullTextSearchPriority=0 2`] = `
+<Div
+  className="uu5-bricks-loading uu5-common-padding-xs uu-fulltextsearch-0 uu5-bricks-loading-animated"
+  id="uuID"
+  nestingLevel="bigBoxCollection"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-bricks-loading-dot"
+    key=".0"
+  />
+  <span
+    className="uu5-bricks-loading-dot"
+    key=".1"
+  />
+  <span
+    className="uu5-bricks-loading-dot"
+    key=".2"
+  />
+</Div>
+`;
+
 exports[`UU5.Bricks.Loading props hidden=false 1`] = `
 <Div
   className="uu5-bricks-loading uu5-common-padding-xs uu5-bricks-loading-animated"
@@ -1249,29 +1272,6 @@ exports[`UU5.Bricks.Loading props nestingLevel="boxCollection" 1`] = `
 </Div>
 `;
 
-exports[`UU5.Bricks.Loading props nestingLevel="container" 1`] = `
-<Div
-  className="uu5-bricks-loading uu5-common-padding-xs uu5-bricks-loading-animated"
-  id="uuID"
-  nestingLevel="bigBoxCollection"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-bricks-loading-dot"
-    key=".0"
-  />
-  <span
-    className="uu5-bricks-loading-dot"
-    key=".1"
-  />
-  <span
-    className="uu5-bricks-loading-dot"
-    key=".2"
-  />
-</Div>
-`;
-
 exports[`UU5.Bricks.Loading props nestingLevel="inline" 1`] = `
 <Span
   className="uu5-bricks-loading uu5-common-padding-xs uu5-bricks-loading-animated uu5-common-inline"
@@ -1402,52 +1402,6 @@ exports[`UU5.Bricks.Loading props nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Loading props nestingLevel="spa" 1`] = `
 <Div
   className="uu5-bricks-loading uu5-common-padding-xs uu5-bricks-loading-animated"
-  id="uuID"
-  nestingLevel="bigBoxCollection"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-bricks-loading-dot"
-    key=".0"
-  />
-  <span
-    className="uu5-bricks-loading-dot"
-    key=".1"
-  />
-  <span
-    className="uu5-bricks-loading-dot"
-    key=".2"
-  />
-</Div>
-`;
-
-exports[`UU5.Bricks.Loading props noIndex=false 1`] = `
-<Div
-  className="uu5-bricks-loading uu5-common-padding-xs uu5-bricks-loading-animated"
-  id="uuID"
-  nestingLevel="bigBoxCollection"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-bricks-loading-dot"
-    key=".0"
-  />
-  <span
-    className="uu5-bricks-loading-dot"
-    key=".1"
-  />
-  <span
-    className="uu5-bricks-loading-dot"
-    key=".2"
-  />
-</Div>
-`;
-
-exports[`UU5.Bricks.Loading props noIndex=true 1`] = `
-<Div
-  className="uu5-bricks-loading uu5-common-padding-xs uu5-noindex uu-fulltextsearch-0 uu5-bricks-loading-animated"
   id="uuID"
   nestingLevel="bigBoxCollection"
   style={Object {}}

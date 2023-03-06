@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
   <title>Example 04</title>
@@ -50,8 +50,18 @@
           <UU5.Bricks.Section header="password">
             {/*@@viewOn:0*/}
             <UU5.Forms.Text
-              label="Full name"
+              label="Password"
               password
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="revealable & password">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Password"
+              password
+              revealable
             />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>

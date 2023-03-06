@@ -1289,6 +1289,41 @@ exports[`UU5.Bricks.SwitchSelector props testing fullTextSearchPriority=0 1`] = 
 </div>
 `;
 
+exports[`UU5.Bricks.SwitchSelector props testing fullTextSearchPriority=0 2`] = `
+<div
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-xmtvzx undefined uu-fulltextsearch-0"
+  id="uuID"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  tabIndex={0}
+  title={null}
+>
+  <SwitchSelectorItem
+    active={true}
+    borderRadius={2}
+    content="low"
+    key="low"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="normal"
+    key="normal"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="high"
+    key="high"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.SwitchSelector props testing hidden=false 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-xmtvzx"
@@ -1608,76 +1643,6 @@ exports[`UU5.Bricks.SwitchSelector props testing nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.SwitchSelector props testing nestingLevel="inline" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-xmtvzx"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    borderRadius={2}
-    content="low"
-    key="low"
-    onClick={[Function]}
-    onMouseDown={[Function]}
-  />
-  <SwitchSelectorItem
-    borderRadius={2}
-    content="normal"
-    key="normal"
-    onClick={[Function]}
-    onMouseDown={[Function]}
-  />
-  <SwitchSelectorItem
-    borderRadius={2}
-    content="high"
-    key="high"
-    onClick={[Function]}
-    onMouseDown={[Function]}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing noIndex=false 1`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-xmtvzx"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    borderRadius={2}
-    content="low"
-    key="low"
-    onClick={[Function]}
-    onMouseDown={[Function]}
-  />
-  <SwitchSelectorItem
-    borderRadius={2}
-    content="normal"
-    key="normal"
-    onClick={[Function]}
-    onMouseDown={[Function]}
-  />
-  <SwitchSelectorItem
-    borderRadius={2}
-    content="high"
-    key="high"
-    onClick={[Function]}
-    onMouseDown={[Function]}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing noIndex=true 1`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-xmtvzx undefined uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   onBlur={[Function]}
   onFocus={[Function]}

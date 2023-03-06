@@ -2,15 +2,29 @@ import UU5, { createHoc } from "uu5g04";
 import Link from "./link";
 
 const getHref = (href, uveProps) => {
-  const { componentName, componentProps } = uveProps;
+  const { componentName, componentProps, ...restUveProps } = uveProps;
   const { parent, ...compProps } = componentProps;
 
   const params = {};
 
-  if (componentName) params["_component"] = componentName;
+  if (componentName) params["_uu5Tag"] = componentName;
 
-  for (let prop in uveProps) {
-    if (uveProps[prop] !== undefined) params["_" + prop] = uveProps[prop];
+  for (let prop in restUveProps) {
+    if (restUveProps[prop] !== undefined) {
+      if (prop === "languages" && Array.isArray(restUveProps[prop])) {
+        params["_" + prop] = restUveProps[prop].join(",");
+      } else if (
+        prop === "top" &&
+        typeof restUveProps[prop] !== "boolean" &&
+        restUveProps[prop] !== "true" &&
+        restUveProps[prop] !== "false"
+      ) {
+        params["_" + prop] = true;
+        if (!("_header" in params)) params["_header"] = restUveProps[prop];
+      } else {
+        params["_" + prop] = restUveProps[prop];
+      }
+    }
   }
 
   for (let prop in compProps) {
@@ -32,6 +46,7 @@ export const LinkUve = createHoc({
 
     href: UU5.PropTypes.string,
     uveProps: UU5.PropTypes.shape({
+      header: UU5.PropTypes.any, // lsi or string
       top: UU5.PropTypes.any, // lsi or string
       languages: UU5.PropTypes.array,
       title: UU5.PropTypes.any, // lsi or string

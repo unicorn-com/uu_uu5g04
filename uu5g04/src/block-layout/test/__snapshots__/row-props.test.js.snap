@@ -333,6 +333,20 @@ exports[`UU5.BlockLayout.Row props testing fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Row props testing fullTextSearchPriority=0 2`] = `
+<div
+  className="uublocklayout-9jisyu uu-fulltextsearch-0 uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
 exports[`UU5.BlockLayout.Row props testing hidden=false 1`] = `
 <div
   className="uublocklayout-9jisyu uublocklayout-1ardydz"
@@ -544,20 +558,6 @@ exports[`UU5.BlockLayout.Row props testing nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.BlockLayout.Row props testing nestingLevel="container" 1`] = `
-<div
-  className="uublocklayout-9jisyu uublocklayout-1ardydz"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</div>
-`;
-
 exports[`UU5.BlockLayout.Row props testing nestingLevel="inline" 1`] = `
 <div
   className="uublocklayout-9jisyu uublocklayout-1ardydz"
@@ -631,34 +631,6 @@ exports[`UU5.BlockLayout.Row props testing nestingLevel="smallBoxCollection" 1`]
 exports[`UU5.BlockLayout.Row props testing nestingLevel="spa" 1`] = `
 <div
   className="uublocklayout-9jisyu uublocklayout-1ardydz"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</div>
-`;
-
-exports[`UU5.BlockLayout.Row props testing noIndex=false 1`] = `
-<div
-  className="uublocklayout-9jisyu uublocklayout-1ardydz"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</div>
-`;
-
-exports[`UU5.BlockLayout.Row props testing noIndex=true 1`] = `
-<div
-  className="uublocklayout-9jisyu uu5-noindex uu-fulltextsearch-0 uublocklayout-1ardydz"
   id="uuID"
   style={Object {}}
   title={null}

@@ -1013,6 +1013,29 @@ exports[`UU5.Common.Router Test Tool API test fullTextSearchPriority=0 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Common.Router Test Tool API test fullTextSearchPriority=0 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "_intermediaryConfirm": null,
+      "allow": [Function],
+      "confirm": [Function],
+      "id": null,
+      "nextRoute": null,
+      "prevent": [Function],
+      "refuse": [Function],
+    }
+  }
+>
+  <ForwardRef
+    controlled={false}
+    key=".1"
+    location="portal"
+    ref_={[Function]}
+  />
+</ContextProvider>
+`;
+
 exports[`UU5.Common.Router Test Tool API test hidden=false 1`] = `
 <ContextProvider
   value={
@@ -1221,52 +1244,6 @@ exports[`UU5.Common.Router Test Tool API test nestingLevel="box" 1`] = `
 `;
 
 exports[`UU5.Common.Router Test Tool API test nestingLevel="inline" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "_intermediaryConfirm": null,
-      "allow": [Function],
-      "confirm": [Function],
-      "id": null,
-      "nextRoute": null,
-      "prevent": [Function],
-      "refuse": [Function],
-    }
-  }
->
-  <ForwardRef
-    controlled={false}
-    key=".1"
-    location="portal"
-    ref_={[Function]}
-  />
-</ContextProvider>
-`;
-
-exports[`UU5.Common.Router Test Tool API test noIndex=false 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "_intermediaryConfirm": null,
-      "allow": [Function],
-      "confirm": [Function],
-      "id": null,
-      "nextRoute": null,
-      "prevent": [Function],
-      "refuse": [Function],
-    }
-  }
->
-  <ForwardRef
-    controlled={false}
-    key=".1"
-    location="portal"
-    ref_={[Function]}
-  />
-</ContextProvider>
-`;
-
-exports[`UU5.Common.Router Test Tool API test noIndex=true 1`] = `
 <ContextProvider
   value={
     Object {

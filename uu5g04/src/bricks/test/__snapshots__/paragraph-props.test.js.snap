@@ -202,6 +202,15 @@ exports[`UU5.Bricks.Paragraph fullTextSearchPriority=0 1`] = `
 </p>
 `;
 
+exports[`UU5.Bricks.Paragraph fullTextSearchPriority=0 2`] = `
+<p
+  className="uu5-bricks-paragraph uu-fulltextsearch-0"
+  id="uuID"
+>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+</p>
+`;
+
 exports[`UU5.Bricks.Paragraph hidden=false 1`] = `
 <p
   className="uu5-bricks-paragraph"
@@ -314,24 +323,6 @@ exports[`UU5.Bricks.Paragraph nestingLevel="inline" 1`] = `
 >
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
 </ForwardRef>
-`;
-
-exports[`UU5.Bricks.Paragraph noIndex=false 1`] = `
-<p
-  className="uu5-bricks-paragraph"
-  id="uuID"
->
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
-</p>
-`;
-
-exports[`UU5.Bricks.Paragraph noIndex=true 1`] = `
-<p
-  className="uu5-bricks-paragraph uu-fulltextsearch-0 uu5-noindex"
-  id="uuID"
->
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
-</p>
 `;
 
 exports[`UU5.Bricks.Paragraph noPrint=false 1`] = `

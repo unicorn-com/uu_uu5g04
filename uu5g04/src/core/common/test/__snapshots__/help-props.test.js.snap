@@ -240,6 +240,17 @@ exports[`UU5.Common.Help component props testing fullTextSearchPriority=0 1`] = 
 />
 `;
 
+exports[`UU5.Common.Help component props testing fullTextSearchPriority=0 2`] = `
+<Link
+  className="uu5-common-help uu-fulltextsearch-0"
+  content="UU5.Bricks.Button"
+  href="https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=UU5BricksButton"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  target="_blank"
+/>
+`;
+
 exports[`UU5.Common.Help component props testing hidden=false 1`] = `
 <Link
   className="uu5-common-help"
@@ -367,28 +378,6 @@ exports[`UU5.Common.Help component props testing nestingLevel="box" 1`] = `
 exports[`UU5.Common.Help component props testing nestingLevel="inline" 1`] = `
 <Link
   className="uu5-common-help"
-  content="UU5.Bricks.Button"
-  href="https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=UU5BricksButton"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-/>
-`;
-
-exports[`UU5.Common.Help component props testing noIndex=false 1`] = `
-<Link
-  className="uu5-common-help"
-  content="UU5.Bricks.Button"
-  href="https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=UU5BricksButton"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-/>
-`;
-
-exports[`UU5.Common.Help component props testing noIndex=true 1`] = `
-<Link
-  className="uu5-common-help uu5-noindex uu-fulltextsearch-0"
   content="UU5.Bricks.Button"
   href="https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=UU5BricksButton"
   id="uuID-inner"

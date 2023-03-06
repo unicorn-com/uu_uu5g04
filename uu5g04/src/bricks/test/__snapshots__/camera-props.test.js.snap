@@ -39,6 +39,13 @@ exports[`UU5.Bricks.Camera props testing disabled=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Camera props testing fullTextSearchPriority=0 1`] = `
+<Camera
+  fullTextSearchPriority={0}
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Camera props testing hidden=false 1`] = `
 <Camera
   id="uuID"
@@ -96,13 +103,6 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="boxCollection" 1`] = `
 <Camera
   id="uuID"
   nestingLevel="boxCollection"
-/>
-`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel="container" 1`] = `
-<Camera
-  id="uuID"
-  nestingLevel="container"
 />
 `;
 
@@ -192,20 +192,6 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="spa" 1`] = `
 <Camera
   id="uuID"
   nestingLevel="spa"
-/>
-`;
-
-exports[`UU5.Bricks.Camera props testing noIndex=false 1`] = `
-<Camera
-  id="uuID"
-  noIndex={false}
-/>
-`;
-
-exports[`UU5.Bricks.Camera props testing noIndex=true 1`] = `
-<Camera
-  id="uuID"
-  noIndex={true}
 />
 `;
 

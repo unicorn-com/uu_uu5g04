@@ -591,6 +591,19 @@ exports[`UU5.Bricks.Link fullTextSearchPriority=0 1`] = `
 </a>
 `;
 
+exports[`UU5.Bricks.Link fullTextSearchPriority=0 2`] = `
+<a
+  className="uu5-bricks-link uu-fulltextsearch-0"
+  download={false}
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  noText
+</a>
+`;
+
 exports[`UU5.Bricks.Link hidden=false 1`] = `
 <a
   className="uu5-bricks-link"
@@ -859,19 +872,6 @@ exports[`UU5.Bricks.Link nestingLevel="boxCollection" 1`] = `
 </a>
 `;
 
-exports[`UU5.Bricks.Link nestingLevel="container" 1`] = `
-<a
-  className="uu5-bricks-link"
-  download={false}
-  id="uuID"
-  style={Object {}}
-  target="_self"
-  title={null}
->
-  noText
-</a>
-`;
-
 exports[`UU5.Bricks.Link nestingLevel="inline" 1`] = `
 <a
   className="uu5-bricks-link"
@@ -940,32 +940,6 @@ exports[`UU5.Bricks.Link nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Link nestingLevel="spa" 1`] = `
 <a
   className="uu5-bricks-link"
-  download={false}
-  id="uuID"
-  style={Object {}}
-  target="_self"
-  title={null}
->
-  noText
-</a>
-`;
-
-exports[`UU5.Bricks.Link noIndex=false 1`] = `
-<a
-  className="uu5-bricks-link"
-  download={false}
-  id="uuID"
-  style={Object {}}
-  target="_self"
-  title={null}
->
-  noText
-</a>
-`;
-
-exports[`UU5.Bricks.Link noIndex=true 1`] = `
-<a
-  className="uu5-bricks-link uu5-noindex uu-fulltextsearch-0"
   download={false}
   id="uuID"
   style={Object {}}

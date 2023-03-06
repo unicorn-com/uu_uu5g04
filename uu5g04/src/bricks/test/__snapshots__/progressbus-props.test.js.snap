@@ -207,6 +207,15 @@ exports[`UU5.Bricks.ProgressBus fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ProgressBus fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-progress-bus uu-fulltextsearch-0 uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ProgressBus hidden=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
@@ -343,15 +352,6 @@ exports[`UU5.Bricks.ProgressBus nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.ProgressBus nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.ProgressBus nestingLevel="inline" 3`] = `""`;
@@ -372,24 +372,6 @@ exports[`UU5.Bricks.ProgressBus nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.ProgressBus nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus noIndex=false 1`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus noIndex=true 1`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-noindex uu-fulltextsearch-0 uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
   style={Object {}}
   title={null}

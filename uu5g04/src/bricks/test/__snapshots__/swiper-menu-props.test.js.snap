@@ -251,6 +251,15 @@ exports[`UU5.Bricks.Swiper.Menu fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Menu fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-swiper-menu uu-fulltextsearch-0 uu5-bricks-swiper-menu-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Menu hidden=false 1`] = `
 <div
   className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
@@ -387,15 +396,6 @@ exports[`UU5.Bricks.Swiper.Menu nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Menu nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Swiper.Menu nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Swiper.Menu nestingLevel="inline" 3`] = `""`;
@@ -416,24 +416,6 @@ exports[`UU5.Bricks.Swiper.Menu nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.Swiper.Menu nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Menu noIndex=false 1`] = `
-<div
-  className="uu5-bricks-swiper-menu uu5-bricks-swiper-menu-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Menu noIndex=true 1`] = `
-<div
-  className="uu5-bricks-swiper-menu uu5-noindex uu-fulltextsearch-0 uu5-bricks-swiper-menu-left"
   id="uuID"
   style={Object {}}
   title={null}

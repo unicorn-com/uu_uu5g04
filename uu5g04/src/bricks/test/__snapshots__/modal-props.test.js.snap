@@ -858,6 +858,39 @@ exports[`UU5.Bricks.Modal props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Modal props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-modal uu-fulltextsearch-0 uu5-common-hidden"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
+  >
+    <modal-header
+      _onClose={[Function]}
+      content="noHeader"
+      id="uuID-header"
+      key="uuID-header"
+      underline={false}
+    />
+    <modal-body
+      content="noBody"
+      id="uuID-body"
+      key="uuID-body"
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Modal props fullscreen=false 1`] = `
 <div
   className="uu5-bricks-modal uu5-common-hidden"
@@ -1953,39 +1986,6 @@ exports[`UU5.Bricks.Modal props nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Modal props nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-modal uu5-common-hidden"
-  id="uuID"
-  style={
-    Object {
-      "MozTransitionDuration": "0.15s",
-      "OTransitionDuration": "0.15s",
-      "WebkitTransitionDuration": "0.15s",
-      "transitionDuration": "0.15s",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
-  >
-    <modal-header
-      _onClose={[Function]}
-      content="noHeader"
-      id="uuID-header"
-      key="uuID-header"
-      underline={false}
-    />
-    <modal-body
-      content="noBody"
-      id="uuID-body"
-      key="uuID-body"
-    />
-  </div>
-</div>
-`;
-
 exports[`UU5.Bricks.Modal props nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Modal props nestingLevel="inline" 3`] = `""`;
@@ -2030,72 +2030,6 @@ exports[`UU5.Bricks.Modal props nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.Modal props nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-modal uu5-common-hidden"
-  id="uuID"
-  style={
-    Object {
-      "MozTransitionDuration": "0.15s",
-      "OTransitionDuration": "0.15s",
-      "WebkitTransitionDuration": "0.15s",
-      "transitionDuration": "0.15s",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
-  >
-    <modal-header
-      _onClose={[Function]}
-      content="noHeader"
-      id="uuID-header"
-      key="uuID-header"
-      underline={false}
-    />
-    <modal-body
-      content="noBody"
-      id="uuID-body"
-      key="uuID-body"
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Modal props noIndex=false 1`] = `
-<div
-  className="uu5-bricks-modal uu5-common-hidden"
-  id="uuID"
-  style={
-    Object {
-      "MozTransitionDuration": "0.15s",
-      "OTransitionDuration": "0.15s",
-      "WebkitTransitionDuration": "0.15s",
-      "transitionDuration": "0.15s",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
-  >
-    <modal-header
-      _onClose={[Function]}
-      content="noHeader"
-      id="uuID-header"
-      key="uuID-header"
-      underline={false}
-    />
-    <modal-body
-      content="noBody"
-      id="uuID-body"
-      key="uuID-body"
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Modal props noIndex=true 1`] = `
-<div
-  className="uu5-bricks-modal uu5-noindex uu-fulltextsearch-0 uu5-common-hidden"
   id="uuID"
   style={
     Object {

@@ -1368,6 +1368,86 @@ exports[`UU5.Forms.Controls props fullTextSearchPriority=0 1`] = `
 </Div>
 `;
 
+exports[`UU5.Forms.Controls props fullTextSearchPriority=0 2`] = `
+<Div
+  className="uu5-forms-controls uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+            "sk": "Zrušit",
+            "uk": "Відмінити",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+            "sk": "OK",
+            "uk": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
 exports[`UU5.Forms.Controls props hidden=false 1`] = `
 <Div
   className="uu5-forms-controls"
@@ -2094,166 +2174,6 @@ exports[`UU5.Forms.Controls props nestingLevel="box" 1`] = `
 exports[`UU5.Forms.Controls props nestingLevel="inline" 1`] = `
 <Div
   className="uu5-forms-controls"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Button
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-            "sk": "Zrušit",
-            "uk": "Відмінити",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    onClick={[Function]}
-  />
-  <Button
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-            "sk": "OK",
-            "uk": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    onClick={[Function]}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props noIndex=false 1`] = `
-<Div
-  className="uu5-forms-controls"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Button
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-            "sk": "Zrušit",
-            "uk": "Відмінити",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    onClick={[Function]}
-  />
-  <Button
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-            "sk": "OK",
-            "uk": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    onClick={[Function]}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props noIndex=true 1`] = `
-<Div
-  className="uu5-forms-controls uu5-noindex uu-fulltextsearch-0"
   id="uuID-inner"
   mainAttrs={Object {}}
 >

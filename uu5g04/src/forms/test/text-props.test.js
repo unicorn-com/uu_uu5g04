@@ -128,6 +128,12 @@ const CONFIG = {
     patternMessage: {
       values: ["Toto není co jsem čekal."],
     },
+    revealable: {
+      values: [true, false],
+      requiredProps: {
+        type: "password",
+      },
+    },
   },
   requiredProps: {},
   opt: {

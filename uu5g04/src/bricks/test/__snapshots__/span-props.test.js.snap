@@ -265,6 +265,15 @@ exports[`UU5.Bricks.Span fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Span fullTextSearchPriority=0 2`] = `
+<span
+  className="uu5-bricks-span uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Span hidden=false 1`] = `
 <span
   className="uu5-bricks-span"
@@ -368,24 +377,6 @@ exports[`UU5.Bricks.Span nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Span nestingLevel="inline" 1`] = `
 <span
   className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span noIndex=false 1`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span noIndex=true 1`] = `
-<span
-  className="uu5-bricks-span uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

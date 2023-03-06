@@ -1691,6 +1691,48 @@ exports[`UU5.Bricks.Slider fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Slider fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-slider uu-fulltextsearch-0 uu5-bricks-slider-size-m"
+  id="uuID"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    hidden={true}
+    id="uuID-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    onClick={[Function]}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={10}
+      _min={0}
+      _step={1}
+      id="uuID-0"
+      key="uuID-0"
+      ref_={[Function]}
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Slider hidden=false 1`] = `
 <div
   className="uu5-bricks-slider uu5-bricks-slider-size-m"
@@ -2407,48 +2449,6 @@ exports[`UU5.Bricks.Slider nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-slider uu5-bricks-slider-size-m"
-  id="uuID"
-  onMouseDown={[Function]}
-  onMouseLeave={[Function]}
-  onMouseMove={[Function]}
-  onMouseUp={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Backdrop
-    hidden={true}
-    id="uuID-backdrop"
-    mainAttrs={
-      Object {
-        "onMouseUp": [Function],
-        "onTouchEnd": [Function],
-      }
-    }
-    onClick={[Function]}
-  />
-  <div
-    className="uu5-bricks-slider-track"
-  >
-    <slider-item
-      _checkValue={[Function]}
-      _getStyle={[Function]}
-      _max={10}
-      _min={0}
-      _step={1}
-      id="uuID-0"
-      key="uuID-0"
-      ref_={[Function]}
-    />
-  </div>
-</div>
-`;
-
 exports[`UU5.Bricks.Slider nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Slider nestingLevel="inline" 3`] = `""`;
@@ -2502,90 +2502,6 @@ exports[`UU5.Bricks.Slider nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.Slider nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-slider uu5-bricks-slider-size-m"
-  id="uuID"
-  onMouseDown={[Function]}
-  onMouseLeave={[Function]}
-  onMouseMove={[Function]}
-  onMouseUp={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Backdrop
-    hidden={true}
-    id="uuID-backdrop"
-    mainAttrs={
-      Object {
-        "onMouseUp": [Function],
-        "onTouchEnd": [Function],
-      }
-    }
-    onClick={[Function]}
-  />
-  <div
-    className="uu5-bricks-slider-track"
-  >
-    <slider-item
-      _checkValue={[Function]}
-      _getStyle={[Function]}
-      _max={10}
-      _min={0}
-      _step={1}
-      id="uuID-0"
-      key="uuID-0"
-      ref_={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider noIndex=false 1`] = `
-<div
-  className="uu5-bricks-slider uu5-bricks-slider-size-m"
-  id="uuID"
-  onMouseDown={[Function]}
-  onMouseLeave={[Function]}
-  onMouseMove={[Function]}
-  onMouseUp={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Backdrop
-    hidden={true}
-    id="uuID-backdrop"
-    mainAttrs={
-      Object {
-        "onMouseUp": [Function],
-        "onTouchEnd": [Function],
-      }
-    }
-    onClick={[Function]}
-  />
-  <div
-    className="uu5-bricks-slider-track"
-  >
-    <slider-item
-      _checkValue={[Function]}
-      _getStyle={[Function]}
-      _max={10}
-      _min={0}
-      _step={1}
-      id="uuID-0"
-      key="uuID-0"
-      ref_={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider noIndex=true 1`] = `
-<div
-  className="uu5-bricks-slider uu5-noindex uu-fulltextsearch-0 uu5-bricks-slider-size-m"
   id="uuID"
   onMouseDown={[Function]}
   onMouseLeave={[Function]}

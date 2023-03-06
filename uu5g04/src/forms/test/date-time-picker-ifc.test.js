@@ -16,8 +16,7 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
-
-const { mount, shallow, wait } = UU5.Test.Tools;
+import { mount, shallow, wait, omitConsoleLogs } from "uu5g05-test";
 
 let origDateNow = Date.now;
 let origGetLanguage = UU5.Common.Tools.getLanguage;
@@ -914,6 +913,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
   });
 
   it("open(setStateCallBack)", () => {
+    omitConsoleLogs("instead of the open() interface"); // omit deprecation warning
     const wrapper = mount(
       <UU5.Forms.DateTimePicker
         id={"idText"}

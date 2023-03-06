@@ -16,8 +16,7 @@
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks"; // UU5.Common.Loader will try to show UU5.Bricks.Loading
-
-const { mount, wait } = UU5.Test.Tools;
+import { mount, wait, omitConsoleLogs } from "uu5g05-test";
 
 const TestReady = (props) => <pre>Ready: {JSON.stringify(props.data, null, 2) + ""}</pre>;
 const TestError = (props) => <pre>Error: {JSON.stringify(props.data, null, 2) + ""}</pre>;
@@ -103,6 +102,7 @@ describe("UU5.Common.Loader behaviour", () => {
     expect(wrapper.find(TestReady).props().data).toBe("data");
 
     // TODO This logs stuff to console, mock loader.showError() somehow.
+    omitConsoleLogs("Loader error");
     wrapper.setProps({
       onLoad: async () => {
         throw new Error("TestError");

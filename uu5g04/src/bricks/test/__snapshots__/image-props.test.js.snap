@@ -5,6 +5,8 @@ exports[`UU5.Bricks.Image alt=undefined 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -16,6 +18,8 @@ exports[`UU5.Bricks.Image className="my-classname" 1`] = `
   alt=""
   className="uu5-bricks-image my-classname uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -27,6 +31,8 @@ exports[`UU5.Bricks.Image className="test-classname" 1`] = `
   alt=""
   className="uu5-bricks-image test-classname uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -38,6 +44,8 @@ exports[`UU5.Bricks.Image controlled=false 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -49,6 +57,8 @@ exports[`UU5.Bricks.Image controlled=true 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -60,6 +70,8 @@ exports[`UU5.Bricks.Image default props 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -71,6 +83,8 @@ exports[`UU5.Bricks.Image disabled=false 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -82,6 +96,8 @@ exports[`UU5.Bricks.Image disabled=false 3`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -96,6 +112,8 @@ exports[`UU5.Bricks.Image disabled=true 1`] = `
     alt=""
     className="uu5-bricks-image uu5-common-disabled uu5-bricks-image-responsive"
     id="uuID"
+    onError={[Function]}
+    onLoad={[Function]}
     src=""
     style={Object {}}
     title={null}
@@ -115,6 +133,8 @@ exports[`UU5.Bricks.Image disabled=true 3`] = `
     alt=""
     className="uu5-bricks-image uu5-common-disabled uu5-bricks-image-responsive"
     id="uuID"
+    onError={[Function]}
+    onLoad={[Function]}
     src=""
     style={Object {}}
     title={null}
@@ -275,6 +295,8 @@ exports[`UU5.Bricks.Image elementAttrs={"data":{"test":"data-test-value"}} 1`] =
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -286,6 +308,21 @@ exports[`UU5.Bricks.Image fullTextSearchPriority=0 1`] = `
   alt=""
   className="uu5-bricks-image uu-fulltextsearch-0 uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image fullTextSearchPriority=0 2`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu-fulltextsearch-0 uu5-bricks-image-responsive"
+  id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -297,6 +334,8 @@ exports[`UU5.Bricks.Image height="50px" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={
     Object {
@@ -312,6 +351,8 @@ exports[`UU5.Bricks.Image height=40 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={
     Object {
@@ -327,6 +368,8 @@ exports[`UU5.Bricks.Image height=null 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -338,6 +381,8 @@ exports[`UU5.Bricks.Image hidden=false 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -349,6 +394,8 @@ exports[`UU5.Bricks.Image hidden=false 3`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -360,6 +407,8 @@ exports[`UU5.Bricks.Image hidden=true 1`] = `
   alt=""
   className="uu5-bricks-image uu5-common-hidden uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -371,6 +420,8 @@ exports[`UU5.Bricks.Image hidden=true 3`] = `
   alt=""
   className="uu5-bricks-image uu5-common-hidden uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -382,6 +433,8 @@ exports[`UU5.Bricks.Image id="myId" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="myId"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -393,6 +446,8 @@ exports[`UU5.Bricks.Image id="test-id" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="test-id"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -404,6 +459,8 @@ exports[`UU5.Bricks.Image mainAttrs=undefined 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -416,6 +473,8 @@ exports[`UU5.Bricks.Image name="myName" 1`] = `
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
   name="myName"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -427,6 +486,8 @@ exports[`UU5.Bricks.Image nestingLevel="bigBox" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -438,6 +499,8 @@ exports[`UU5.Bricks.Image nestingLevel="bigBoxCollection" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -449,6 +512,8 @@ exports[`UU5.Bricks.Image nestingLevel="box" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -460,6 +525,8 @@ exports[`UU5.Bricks.Image nestingLevel="box" 3`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -471,17 +538,8 @@ exports[`UU5.Bricks.Image nestingLevel="boxCollection" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image nestingLevel="container" 1`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -557,6 +615,7 @@ exports[`UU5.Bricks.Image nestingLevel="inline" 1`] = `
         Object {
           "cs": "Obrázek",
           "en": "Image",
+          "uk": "Зображення",
         }
       }
       mainAttrs={null}
@@ -587,6 +646,7 @@ exports[`UU5.Bricks.Image nestingLevel="inline" 1`] = `
         Object {
           "cs": "Obrázek",
           "en": "Image",
+          "uk": "Зображення",
         }
       }
       mainAttrs={null}
@@ -678,6 +738,7 @@ exports[`UU5.Bricks.Image nestingLevel="inline" 3`] = `
         Object {
           "cs": "Obrázek",
           "en": "Image",
+          "uk": "Зображення",
         }
       }
       mainAttrs={null}
@@ -708,6 +769,7 @@ exports[`UU5.Bricks.Image nestingLevel="inline" 3`] = `
         Object {
           "cs": "Obrázek",
           "en": "Image",
+          "uk": "Зображення",
         }
       }
       mainAttrs={null}
@@ -735,6 +797,8 @@ exports[`UU5.Bricks.Image nestingLevel="page" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -810,6 +874,7 @@ exports[`UU5.Bricks.Image nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Obrázek",
           "en": "Image",
+          "uk": "Зображення",
         }
       }
       mainAttrs={null}
@@ -840,6 +905,7 @@ exports[`UU5.Bricks.Image nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Obrázek",
           "en": "Image",
+          "uk": "Зображення",
         }
       }
       mainAttrs={null}
@@ -931,6 +997,7 @@ exports[`UU5.Bricks.Image nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Obrázek",
           "en": "Image",
+          "uk": "Зображення",
         }
       }
       mainAttrs={null}
@@ -961,6 +1028,7 @@ exports[`UU5.Bricks.Image nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Obrázek",
           "en": "Image",
+          "uk": "Зображення",
         }
       }
       mainAttrs={null}
@@ -988,28 +1056,8 @@ exports[`UU5.Bricks.Image nestingLevel="spa" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image noIndex=false 1`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image noIndex=true 1`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-noindex uu-fulltextsearch-0 uu5-bricks-image-responsive"
-  id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1021,6 +1069,8 @@ exports[`UU5.Bricks.Image noPrint=false 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1032,6 +1082,8 @@ exports[`UU5.Bricks.Image noPrint=true 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1043,6 +1095,8 @@ exports[`UU5.Bricks.Image pureRender=false 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1054,6 +1108,8 @@ exports[`UU5.Bricks.Image pureRender=true 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1065,6 +1121,8 @@ exports[`UU5.Bricks.Image responsive=false 1`] = `
   alt=""
   className="uu5-bricks-image"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1076,6 +1134,8 @@ exports[`UU5.Bricks.Image responsive=true 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1087,6 +1147,8 @@ exports[`UU5.Bricks.Image selected=false 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1098,6 +1160,8 @@ exports[`UU5.Bricks.Image selected=true 1`] = `
   alt=""
   className="uu5-bricks-image uu5-common-selected uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1109,6 +1173,8 @@ exports[`UU5.Bricks.Image src=undefined 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1120,6 +1186,8 @@ exports[`UU5.Bricks.Image style="padding:8px; borderRadius: 2px" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={
     Object {
@@ -1136,6 +1204,8 @@ exports[`UU5.Bricks.Image style={"backgroundColor":"red","color":"blue"} 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={
     Object {
@@ -1152,6 +1222,8 @@ exports[`UU5.Bricks.Image style={"margin":8} 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={
     Object {
@@ -1167,6 +1239,8 @@ exports[`UU5.Bricks.Image tooltip="My Tooltip" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title="My Tooltip"
@@ -1178,6 +1252,8 @@ exports[`UU5.Bricks.Image type="circle" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-circle uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1189,6 +1265,8 @@ exports[`UU5.Bricks.Image type="rounded" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-rounded uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1200,6 +1278,8 @@ exports[`UU5.Bricks.Image type="thumbnail" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-thumbnail uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}
@@ -1211,6 +1291,8 @@ exports[`UU5.Bricks.Image width="50px" 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={
     Object {
@@ -1226,6 +1308,8 @@ exports[`UU5.Bricks.Image width=40 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={
     Object {
@@ -1241,6 +1325,8 @@ exports[`UU5.Bricks.Image width=null 1`] = `
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
+  onError={[Function]}
+  onLoad={[Function]}
   src=""
   style={Object {}}
   title={null}

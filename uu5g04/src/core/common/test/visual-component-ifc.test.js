@@ -4,7 +4,7 @@
 import { PropTypes } from "uu5g05";
 import UU5 from "uu5g04";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+const { mount } = UU5.Test.Tools;
 
 describe("UU5.Common.VisualComponent", () => {
   let Component, wrapper;
@@ -39,7 +39,6 @@ describe("UU5.Common.VisualComponent", () => {
       disabled: expect.anything(),
       hidden: expect.anything(),
       mainAttrs: expect.anything(),
-      noIndex: expect.anything(),
     });
 
     // check custom propTypes having bigger priority than default ones
@@ -60,7 +59,6 @@ describe("UU5.Common.VisualComponent", () => {
       disabled: propTypes1.disabled,
       hidden: propTypes1.hidden,
       mainAttrs: propTypes1.mainAttrs,
-      noIndex: propTypes1.noIndex,
     });
   });
 
@@ -78,7 +76,6 @@ describe("UU5.Common.VisualComponent", () => {
       disabled: undefined,
       hidden: undefined,
       mainAttrs: undefined,
-      noIndex: undefined,
     });
 
     Component = UU5.Common.VisualComponent.create({
@@ -99,7 +96,6 @@ describe("UU5.Common.VisualComponent", () => {
       disabled: defaultProps1.disabled,
       hidden: defaultProps1.hidden,
       mainAttrs: defaultProps1.mainAttrs,
-      noIndex: defaultProps1.noIndex,
     });
   });
 
@@ -118,7 +114,7 @@ describe("UU5.Common.VisualComponent", () => {
     );
     expect(result).toMatchObject({
       id: "1",
-      className: "d uu5-noindex a b",
+      className: "d uu-fulltextsearch-0 a b uu5-noindex",
       style: { color: "red" },
       disabled: true,
       hidden: false,

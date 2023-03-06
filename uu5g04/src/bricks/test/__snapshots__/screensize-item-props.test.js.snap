@@ -350,6 +350,14 @@ exports[`UU5.Bricks.ScreenSize.Item fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ScreenSize.Item fullTextSearchPriority=0 2`] = `
+<Div
+  className="uu5-bricks-screen-size-item uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.ScreenSize.Item hidden=false 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
@@ -478,15 +486,6 @@ exports[`UU5.Bricks.ScreenSize.Item nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel="container" 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
-/>
-`;
-
 exports[`UU5.Bricks.ScreenSize.Item nestingLevel="inline" 1`] = `
 <Span
   className="uu5-bricks-screen-size-item"
@@ -538,22 +537,6 @@ exports[`UU5.Bricks.ScreenSize.Item nestingLevel="spa" 1`] = `
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="spa"
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item noIndex=false 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item noIndex=true 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item uu5-noindex uu-fulltextsearch-0"
-  id="uuID-inner"
-  mainAttrs={Object {}}
 />
 `;
 

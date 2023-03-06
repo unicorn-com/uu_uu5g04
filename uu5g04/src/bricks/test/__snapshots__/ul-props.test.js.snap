@@ -559,6 +559,28 @@ exports[`UU5.Bricks.Ul fullTextSearchPriority=0 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Ul fullTextSearchPriority=0 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul uu-fulltextsearch-0"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Ul header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <ContextProvider
   value={
@@ -1231,28 +1253,6 @@ exports[`UU5.Bricks.Ul nestingLevel="boxCollection" 1`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ul nestingLevel="container" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "iconColorSchema": null,
-      "listLevel": 1,
-      "markerIcon": "mdi-default",
-      "ordered": false,
-      "type": null,
-    }
-  }
->
-  <ul
-    className="uu5-bricks-ul"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  />
-</ContextProvider>
-`;
-
 exports[`UU5.Bricks.Ul nestingLevel="inline" 1`] = `
 <ContextProvider
   value={
@@ -1377,50 +1377,6 @@ exports[`UU5.Bricks.Ul nestingLevel="spa" 1`] = `
 >
   <ul
     className="uu5-bricks-ul"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  />
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ul noIndex=false 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "iconColorSchema": null,
-      "listLevel": 1,
-      "markerIcon": "mdi-default",
-      "ordered": false,
-      "type": null,
-    }
-  }
->
-  <ul
-    className="uu5-bricks-ul"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  />
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ul noIndex=true 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "iconColorSchema": null,
-      "listLevel": 1,
-      "markerIcon": "mdi-default",
-      "ordered": false,
-      "type": null,
-    }
-  }
->
-  <ul
-    className="uu5-bricks-ul uu5-noindex uu-fulltextsearch-0"
     id="uuID"
     style={Object {}}
     title={null}

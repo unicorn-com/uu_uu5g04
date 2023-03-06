@@ -693,6 +693,69 @@ exports[`UU5.Bricks.RichLink fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.RichLink fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px uu-fulltextsearch-0"
+    fullTextSearchPriority={0}
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
+  >
+    <span
+      className="uu-bricks-ngmb4p"
+    >
+      <Image
+        className="uu-bricks-brwx6p"
+        mainAttrs={
+          Object {
+            "onError": [Function],
+          }
+        }
+        responsive={false}
+        src="http://example.com/og-image"
+      />
+    </span>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.RichLink hidden=false 1`] = `
 <Fragment>
   <Link
@@ -1325,132 +1388,6 @@ exports[`UU5.Bricks.RichLink nestingLevel="inline" 1`] = `
     id="uuID-inner"
     mainAttrs={Object {}}
     nestingLevel="inline"
-    ref_={[Function]}
-    target="_blank"
-    tooltip="https://unicorn.com/"
-  >
-    <span
-      className="uu-bricks-ngmb4p"
-    >
-      <Image
-        className="uu-bricks-brwx6p"
-        mainAttrs={
-          Object {
-            "onError": [Function],
-          }
-        }
-        responsive={false}
-        src="http://example.com/og-image"
-      />
-    </span>
-    <span
-      className="uu-bricks-1pqzjl"
-    >
-      <span
-        className="uu-bricks-14ch3ly"
-      >
-        og-title
-      </span>
-      <span
-        className="uu-bricks-8blp0o"
-      >
-        og-description
-      </span>
-      <span
-        className="uu-bricks-bpsaip"
-      >
-        <Image
-          className="uu-bricks-1r97mlz"
-          height={16}
-          key="favicon"
-          mainAttrs={
-            Object {
-              "onError": [Function],
-            }
-          }
-          responsive={false}
-          src="http://example.com/favicon.ico"
-          width={16}
-        />
-         
-        https://unicorn.com/
-      </span>
-    </span>
-  </Link>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.RichLink noIndex=false 1`] = `
-<Fragment>
-  <Link
-    className="uu5-bricks-richlink uu-bricks-1ah52px"
-    href="https://unicorn.com/"
-    id="uuID-inner"
-    mainAttrs={Object {}}
-    noIndex={false}
-    ref_={[Function]}
-    target="_blank"
-    tooltip="https://unicorn.com/"
-  >
-    <span
-      className="uu-bricks-ngmb4p"
-    >
-      <Image
-        className="uu-bricks-brwx6p"
-        mainAttrs={
-          Object {
-            "onError": [Function],
-          }
-        }
-        responsive={false}
-        src="http://example.com/og-image"
-      />
-    </span>
-    <span
-      className="uu-bricks-1pqzjl"
-    >
-      <span
-        className="uu-bricks-14ch3ly"
-      >
-        og-title
-      </span>
-      <span
-        className="uu-bricks-8blp0o"
-      >
-        og-description
-      </span>
-      <span
-        className="uu-bricks-bpsaip"
-      >
-        <Image
-          className="uu-bricks-1r97mlz"
-          height={16}
-          key="favicon"
-          mainAttrs={
-            Object {
-              "onError": [Function],
-            }
-          }
-          responsive={false}
-          src="http://example.com/favicon.ico"
-          width={16}
-        />
-         
-        https://unicorn.com/
-      </span>
-    </span>
-  </Link>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.RichLink noIndex=true 1`] = `
-<Fragment>
-  <Link
-    className="uu5-bricks-richlink uu-bricks-1ah52px uu5-noindex uu-fulltextsearch-0"
-    href="https://unicorn.com/"
-    id="uuID-inner"
-    mainAttrs={Object {}}
-    noIndex={true}
     ref_={[Function]}
     target="_blank"
     tooltip="https://unicorn.com/"

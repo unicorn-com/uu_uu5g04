@@ -2156,6 +2156,49 @@ exports[`UU5.Forms.Slider props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Slider props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-forms-slider uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+    slider={true}
+  >
+    <Slider
+      className="uu5-forms-slider-slider"
+      onChange={[Function]}
+      ref_={[Function]}
+      style={
+        Object {
+          "width": null,
+        }
+      }
+      value={0}
+    />
+    <text-input
+      className="uu5-forms-slider-number"
+      feedback="initial"
+      id="uuID-input"
+      mainAttrs={Object {}}
+      max={10}
+      min={0}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeFeedback={[Function]}
+      onFocus={[Function]}
+      readonly={false}
+      value="0"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Slider props function -> Forms.InputMixin onChangeFeedback() 1`] = `
 <Slider
   id="uuID"
@@ -3171,92 +3214,6 @@ exports[`UU5.Forms.Slider props nestingLevel="box" 1`] = `
 exports[`UU5.Forms.Slider props nestingLevel="inline" 1`] = `
 <div
   className="uu5-forms-slider uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-    slider={true}
-  >
-    <Slider
-      className="uu5-forms-slider-slider"
-      onChange={[Function]}
-      ref_={[Function]}
-      style={
-        Object {
-          "width": null,
-        }
-      }
-      value={0}
-    />
-    <text-input
-      className="uu5-forms-slider-number"
-      feedback="initial"
-      id="uuID-input"
-      mainAttrs={Object {}}
-      max={10}
-      min={0}
-      name="uuID-input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onChangeFeedback={[Function]}
-      onFocus={[Function]}
-      readonly={false}
-      value="0"
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Slider props noIndex=false 1`] = `
-<div
-  className="uu5-forms-slider uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-    slider={true}
-  >
-    <Slider
-      className="uu5-forms-slider-slider"
-      onChange={[Function]}
-      ref_={[Function]}
-      style={
-        Object {
-          "width": null,
-        }
-      }
-      value={0}
-    />
-    <text-input
-      className="uu5-forms-slider-number"
-      feedback="initial"
-      id="uuID-input"
-      mainAttrs={Object {}}
-      max={10}
-      min={0}
-      name="uuID-input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onChangeFeedback={[Function]}
-      onFocus={[Function]}
-      readonly={false}
-      value="0"
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Slider props noIndex=true 1`] = `
-<div
-  className="uu5-forms-slider uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
   id="uuID"
   style={Object {}}
   title={null}

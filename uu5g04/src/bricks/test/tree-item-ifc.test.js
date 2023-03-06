@@ -16,7 +16,7 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+const { mount, shallow } = UU5.Test.Tools;
 
 /**
  * The test requires mount () for proper functionality. Do not use snapshots due to lack of memory.
@@ -24,6 +24,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe("UU5.Bricks.Tree.Item interface testing", function () {
   it("Shallow rendering: Take snapshot without crash", () => {
+    let treeItem;
     const wrapper = shallow(
       <UU5.Bricks.Tree id={"uuID01"}>
         <UU5.Bricks.Tree.Item
@@ -31,7 +32,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
           label="Movies"
           className="MyClass"
           name={"locatorName"}
-          ref_={(treeItem) => (this.treeItem = treeItem)}
+          ref_={(_treeItem) => (treeItem = _treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -44,6 +45,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
   });
 
   it("expand(setStateCallBack)", () => {
+    let treeItem;
     const wrapper = mount(
       <UU5.Bricks.Tree id={"uuID01"}>
         <UU5.Bricks.Tree.Item
@@ -51,7 +53,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
           label="Movies"
           className="MyClass"
           name={"locatorName"}
-          ref_={(treeItem) => (this.treeItem = treeItem)}
+          ref_={(_treeItem) => (treeItem = _treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -61,16 +63,17 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
       </UU5.Bricks.Tree>
     );
     const mockFunc = jest.fn();
-    expect(this.treeItem.isExpanded()).toBeFalsy();
+    expect(treeItem.isExpanded()).toBeFalsy();
     expect(wrapper.find({ className: "MyClass" }).instance().state.expanded).toBeFalsy();
-    const returnValue = this.treeItem.expand(mockFunc);
+    treeItem.expand(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(this.treeItem.isExpanded()).toBeTruthy();
+    expect(treeItem.isExpanded()).toBeTruthy();
     expect(wrapper.find({ className: "MyClass" }).instance().state.expanded).toBeTruthy();
   });
 
   it("collapse(setStateCallBack)", () => {
+    let treeItem;
     const wrapper = mount(
       <UU5.Bricks.Tree id={"uuID01"}>
         <UU5.Bricks.Tree.Item
@@ -79,7 +82,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
           className="MyClass"
           expanded={true}
           name={"locatorName"}
-          ref_={(treeItem) => (this.treeItem = treeItem)}
+          ref_={(_treeItem) => (treeItem = _treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -89,16 +92,17 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
       </UU5.Bricks.Tree>
     );
     const mockFunc = jest.fn();
-    expect(this.treeItem.isExpanded()).toBeTruthy();
+    expect(treeItem.isExpanded()).toBeTruthy();
     expect(wrapper.find({ className: "MyClass" }).instance().state.expanded).toBeTruthy();
-    const returnValue = this.treeItem.collapse(mockFunc);
+    treeItem.collapse(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(this.treeItem.isExpanded()).toBeFalsy();
+    expect(treeItem.isExpanded()).toBeFalsy();
     expect(wrapper.find({ className: "MyClass" }).instance().state.expanded).toBeFalsy();
   });
 
   it("toggleExpanded(setStateCallBack)", () => {
+    let treeItem;
     const wrapper = mount(
       <UU5.Bricks.Tree id={"uuID01"}>
         <UU5.Bricks.Tree.Item
@@ -107,7 +111,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
           className="MyClass"
           expanded={false}
           name={"locatorName"}
-          ref_={(treeItem) => (this.treeItem = treeItem)}
+          ref_={(_treeItem) => (treeItem = _treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -117,22 +121,23 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
       </UU5.Bricks.Tree>
     );
     const mockFunc = jest.fn();
-    expect(this.treeItem.isExpanded()).toBeFalsy();
+    expect(treeItem.isExpanded()).toBeFalsy();
     expect(wrapper.find({ className: "MyClass" }).instance().state.expanded).toBeFalsy();
-    const returnValue = this.treeItem.toggleExpanded(mockFunc);
+    treeItem.toggleExpanded(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(this.treeItem.isExpanded()).toBeTruthy();
+    expect(treeItem.isExpanded()).toBeTruthy();
     expect(wrapper.find({ className: "MyClass" }).instance().state.expanded).toBeTruthy();
-    this.treeItem.toggleExpanded(mockFunc);
+    treeItem.toggleExpanded(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(this.treeItem.isExpanded()).toBeFalsy();
+    expect(treeItem.isExpanded()).toBeFalsy();
     expect(wrapper.find({ className: "MyClass" }).instance().state.expanded).toBeFalsy();
   });
 
   it("isExpanded() return true", () => {
+    let treeItem;
     const wrapper = mount(
       <UU5.Bricks.Tree id={"uuID01"}>
         <UU5.Bricks.Tree.Item
@@ -141,7 +146,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
           className="MyClass"
           expanded={true}
           name={"locatorName"}
-          ref_={(treeItem) => (this.treeItem = treeItem)}
+          ref_={(_treeItem) => (treeItem = _treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -150,11 +155,12 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
         </UU5.Bricks.Tree.Item>
       </UU5.Bricks.Tree>
     );
-    expect(this.treeItem.isExpanded()).toBeTruthy();
+    expect(treeItem.isExpanded()).toBeTruthy();
     expect(wrapper.find({ className: "MyClass" }).instance().state.expanded).toBeTruthy();
   });
 
   it("isExpanded() return false", () => {
+    let treeItem;
     const wrapper = mount(
       <UU5.Bricks.Tree id={"uuID01"}>
         <UU5.Bricks.Tree.Item
@@ -163,7 +169,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
           className="MyClass"
           expanded={false}
           name={"locatorName"}
-          ref_={(treeItem) => (this.treeItem = treeItem)}
+          ref_={(_treeItem) => (treeItem = _treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -172,7 +178,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function () {
         </UU5.Bricks.Tree.Item>
       </UU5.Bricks.Tree>
     );
-    expect(this.treeItem.isExpanded()).toBeFalsy();
+    expect(treeItem.isExpanded()).toBeFalsy();
     expect(wrapper.find({ className: "MyClass" }).instance().state.expanded).toBeFalsy();
   });
 });

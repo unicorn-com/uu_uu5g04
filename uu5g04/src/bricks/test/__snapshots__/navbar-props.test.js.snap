@@ -2246,6 +2246,56 @@ exports[`UU5.Bricks.NavBar props fullTextSearchPriority=0 1`] = `
 </nav>
 `;
 
+exports[`UU5.Bricks.NavBar props fullTextSearchPriority=0 2`] = `
+<nav
+  className="uu5-bricks-nav-bar uu-fulltextsearch-0 uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      id="uuID-header"
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          id="child01"
+          key="nav-0"
+        >
+          <nav-bar-nav-item
+            d="child02"
+          >
+            News
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
 exports[`UU5.Bricks.NavBar props hidden=false 1`] = `
 <nav
   className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
@@ -3098,56 +3148,6 @@ exports[`UU5.Bricks.NavBar props nestingLevel="boxCollection" 1`] = `
 </nav>
 `;
 
-exports[`UU5.Bricks.NavBar props nestingLevel="container" 1`] = `
-<nav
-  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
-  id="uuID"
-  style={
-    Object {
-      "MozTransitionDuration": "0.25s",
-      "MsTransitionDuration": "0.25s",
-      "OTransitionDuration": "0.25s",
-      "WebkitTransitionDuration": "0.25s",
-      "transitionDuration": "0.25s",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-nav-bar-body"
-  >
-    <nav-bar-header
-      id="uuID-header"
-    />
-    <div
-      className="uu5-bricks-nav-bar-cover"
-      id="uuID-navCover"
-      style={
-        Object {
-          "height": 0,
-        }
-      }
-    >
-      <div
-        className="uu5-bricks-nav-bar-container"
-        id="uuID-navContainer"
-      >
-        <nav-bar-nav
-          id="child01"
-          key="nav-0"
-        >
-          <nav-bar-nav-item
-            d="child02"
-          >
-            News
-          </nav-bar-nav-item>
-        </nav-bar-nav>
-      </div>
-    </div>
-  </div>
-</nav>
-`;
-
 exports[`UU5.Bricks.NavBar props nestingLevel="inline" 1`] = `
 <nav
   className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
@@ -3401,106 +3401,6 @@ exports[`UU5.Bricks.NavBar props nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.NavBar props nestingLevel="spa" 1`] = `
 <nav
   className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
-  id="uuID"
-  style={
-    Object {
-      "MozTransitionDuration": "0.25s",
-      "MsTransitionDuration": "0.25s",
-      "OTransitionDuration": "0.25s",
-      "WebkitTransitionDuration": "0.25s",
-      "transitionDuration": "0.25s",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-nav-bar-body"
-  >
-    <nav-bar-header
-      id="uuID-header"
-    />
-    <div
-      className="uu5-bricks-nav-bar-cover"
-      id="uuID-navCover"
-      style={
-        Object {
-          "height": 0,
-        }
-      }
-    >
-      <div
-        className="uu5-bricks-nav-bar-container"
-        id="uuID-navContainer"
-      >
-        <nav-bar-nav
-          id="child01"
-          key="nav-0"
-        >
-          <nav-bar-nav-item
-            d="child02"
-          >
-            News
-          </nav-bar-nav-item>
-        </nav-bar-nav>
-      </div>
-    </div>
-  </div>
-</nav>
-`;
-
-exports[`UU5.Bricks.NavBar props noIndex=false 1`] = `
-<nav
-  className="uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
-  id="uuID"
-  style={
-    Object {
-      "MozTransitionDuration": "0.25s",
-      "MsTransitionDuration": "0.25s",
-      "OTransitionDuration": "0.25s",
-      "WebkitTransitionDuration": "0.25s",
-      "transitionDuration": "0.25s",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-nav-bar-body"
-  >
-    <nav-bar-header
-      id="uuID-header"
-    />
-    <div
-      className="uu5-bricks-nav-bar-cover"
-      id="uuID-navCover"
-      style={
-        Object {
-          "height": 0,
-        }
-      }
-    >
-      <div
-        className="uu5-bricks-nav-bar-container"
-        id="uuID-navContainer"
-      >
-        <nav-bar-nav
-          id="child01"
-          key="nav-0"
-        >
-          <nav-bar-nav-item
-            d="child02"
-          >
-            News
-          </nav-bar-nav-item>
-        </nav-bar-nav>
-      </div>
-    </div>
-  </div>
-</nav>
-`;
-
-exports[`UU5.Bricks.NavBar props noIndex=true 1`] = `
-<nav
-  className="uu5-bricks-nav-bar uu5-noindex uu-fulltextsearch-0 uu5-bricks-nav-bar-size-m"
   id="uuID"
   style={
     Object {

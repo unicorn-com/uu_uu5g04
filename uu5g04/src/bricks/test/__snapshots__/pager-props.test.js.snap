@@ -407,6 +407,15 @@ exports[`UU5.Bricks.Pager fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Pager fullTextSearchPriority=0 2`] = `
+<Row
+  className="uu5-bricks-pager uu5-common-text uu-fulltextsearch-0 uu5-bricks-pager-size-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Pager hidden=false 1`] = `
 <Row
   className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
@@ -586,15 +595,6 @@ exports[`UU5.Bricks.Pager nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pager nestingLevel="container" 1`] = `
-<Row
-  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
-/>
-`;
-
 exports[`UU5.Bricks.Pager nestingLevel="inline" 1`] = `
 <Row
   className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
@@ -641,24 +641,6 @@ exports[`UU5.Bricks.Pager nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Pager nestingLevel="spa" 1`] = `
 <Row
   className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
-/>
-`;
-
-exports[`UU5.Bricks.Pager noIndex=false 1`] = `
-<Row
-  className="uu5-bricks-pager uu5-common-text uu5-bricks-pager-size-m"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
-/>
-`;
-
-exports[`UU5.Bricks.Pager noIndex=true 1`] = `
-<Row
-  className="uu5-bricks-pager uu5-common-text uu5-noindex uu-fulltextsearch-0 uu5-bricks-pager-size-m"
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"

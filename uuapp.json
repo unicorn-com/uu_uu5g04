@@ -1,6 +1,6 @@
 {
   "product": "uu_uu5g04",
-  "version": "1.55.0",
+  "version": "1.56.0",
   "license": "UAF",
   "description": "",
   "docUri": "https://uuapp.plus4u.net/uu-bookkit-maing01/ed11ec379073476db0aa295ad6c00178/book/page",
@@ -18,11 +18,711 @@
     "sourceUri": "https://cdn.plus4u.net/uu-uu5g04/%s/uu5g04.min.js",
     "componentList": [
       {
+        "name": "Accordion",
+        "code": "UU5.Bricks.Accordion",
+        "tagList": [
+          "Accordion",
+          "Bricks",
+          "UU5",
+          "Panel"
+        ],
+        "icon": "mdi-table-of-contents",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksAccordion",
+        "desc": "The UU5.Bricks.Accordion component ( accordion, harmonica ) is based on the Bootstrap standard and is intended to display information using the nested UU5.Bricks.Panel component. Each panel has a header and content. By default, a maximum of one panel can be open at once - thus the component takes up less space. You can change this setting by using the onClickNotCollapseOthers property.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksAccordion"
+      },
+      {
+        "name": "Audio",
+        "code": "UU5.Bricks.Audio",
+        "tagList": [
+          "audio",
+          "sound",
+          "play",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-radio",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksAudio",
+        "desc": "The UU5.Bricks.Audio component enables the user to insert a audio from a local or external source.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksAudio"
+      },
+      {
+        "name": "AudioButton",
+        "code": "UU5.Bricks.AudioButton",
+        "tagList": [
+          "audio",
+          "button",
+          "sound",
+          "play",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-play-circle-outline",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksAudioButton",
+        "desc": "The UU5.Bricks.AudioButton component enables the user to insert a audio from a local or external source. It implements all functionalities of the component UU5.Bricks.Audio but is a visually lighter component as it only displays a button that either plays or pauses the audio playback.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksAudioButton"
+      },
+      {
+        "name": "Authenticated",
+        "code": "UU5.Bricks.Authenticated",
+        "tagList": [
+          "Authenticated",
+          "Bricks",
+          "UU5",
+          "notAuthenticated",
+          "Login"
+        ],
+        "icon": "mdi-login-variant",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksAuthenticated",
+        "desc": "The UU5.Bricks.Authenticated component is used to display its contents only when the user's login status matches the component's set properties.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksAuthenticated"
+      },
+      {
+        "name": "Badge",
+        "code": "UU5.Bricks.Badge",
+        "tagList": [
+          "badge",
+          "label",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-alpha-b-box",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksBadge",
+        "desc": "The UU5.Bricks.Badge component is based on the Bootstrap and is designed as a numeric indicator, usually associated with a link. In the UU5 framework, the component is generalized and may include, for example, a text string. The value is entered using the content property that the component takes from the UU5.Common.ContentMixin. Therefore, the value of the component may be a complex structure in accordance with the rules defined by that mixin. This is useful, for example, for language-sensitive information.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksBadge"
+      },
+      {
+        "name": "Block",
+        "code": "UU5.Bricks.Block",
+        "tagList": [
+          "Block",
+          "Bricks",
+          "UU5",
+          "colorSchema",
+          "background"
+        ],
+        "icon": "mdi-page-layout-sidebar-left",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksBlock",
+        "desc": "The UU5.Bricks.Block component adds a vertical strip to the left of any content in a color according to the colorSchema and in a backround color based on the background property. If the colorSchema is not defined directly on the component, it is taken from the parent component which has the colorSchema defined.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksBlock"
+      },
+      {
+        "name": "Blockquote",
+        "code": "UU5.Bricks.Blockquote",
+        "tagList": [
+          "Blockquote",
+          "Bricks",
+          "UU5",
+          "alignment",
+          "footer"
+        ],
+        "icon": "mdi-page-layout-sidebar-left",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksBlockquote",
+        "desc": "The UU5.Bricks.Blockquote component is based on the blockquote component according to the Bootstrap standard. The component adds a vertical strip to the left of any content in a color according to the colorSchema and in a backround color based on the background property. If the colorSchema is not defined directly on the component, it is taken from the parent component which has the colorSchema defined.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksBlockquote"
+      },
+      {
+        "name": "Box",
+        "code": "UU5.Bricks.Box",
+        "tagList": [
+          "Box",
+          "Bricks",
+          "UU5",
+          "modal",
+          "click"
+        ],
+        "icon": "mdi-cursor-default-click",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksBox",
+        "desc": "The UU5.Bricks.Box component is intended to display an interactive block of information. If the component has the infoContent property defined, the UU5.Bricks.Modal component is displayed upon clicking the component.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksBox"
+      },
+      {
+        "name": "Button",
+        "code": "UU5.Bricks.Button",
+        "tagList": [
+          "Button",
+          "Bricks",
+          "UU5",
+          "click"
+        ],
+        "icon": "mdi-alpha-b-box-outline",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksButton",
+        "desc": "The UU5.Bricks.Button component is a button that can be used to invoke any function. Text on the button is entered using the content property that the component takes from UU5.Common.ContentMixin. Therefore, the value of the component may be a complex structure in accordance with the rules defined by that mixin. This is useful, for example, for language-sensitive information.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksButton"
+      },
+      {
+        "name": "ButtonGroup",
+        "code": "UU5.Bricks.ButtonGroup",
+        "tagList": [
+          "buttongroup",
+          "button",
+          "group",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-alpha-b-box-outline",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksButtonGroup",
+        "desc": "The UU5.Bricks.ButtonGroup component is based on the Bootstrap standard and it consists of two or more UU5.Bricks.Button and/or UU5.Bricks.Dropdown or UU5.Bricks.ButtonSwitch linked together. UU5.Bricks.Button, UU5.Bricks.Dropdown and UU5.Bricks.ButtonSwitch used in the buttonGroup have the same properties as if used separately. Only their size and alignment (horizontal or vertical) can by set on the buttonGroup component. The UU5.Bricks.ButtonGroup component is used to display buttons or actions that are related to each other.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksButtonGroup"
+      },
+      {
+        "name": "Card",
+        "code": "UU5.Bricks.Card",
+        "tagList": [
+          "card",
+          "elevation",
+          "box",
+          "shadow",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-equal-box",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksCard",
+        "desc": "The UU5.Bricks.Card component was made according to Material Design standards. It is meant as a wrapper for any content, which can have set width, intensity od the shadow in the defualt view and on hover.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksCard"
+      },
+      {
+        "name": "Carousel",
+        "code": "UU5.Bricks.Carousel",
+        "tagList": [
+          "Carousel",
+          "Bricks",
+          "UU5",
+          "slideshow"
+        ],
+        "icon": "mdi-view-carousel",
+        "template": "<UU5.Bricks.Carousel><UU5.Bricks.Carousel.Item></UU5.Bricks.Carousel.Item><UU5.Bricks.Carousel.Item></UU5.Bricks.Carousel.Item><UU5.Bricks.Carousel.Item></UU5.Bricks.Carousel.Item></UU5.Bricks.Carousel>",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksCarousel",
+        "desc": "The UU5.Bricks.Carousel component enables us to create a slideshow of items set via the UU5.Bricks.Carousel.Item which can wrap any content. It is also possible to set the number of items displayed simultaneously (displayedItems property), whether controls will be displayed and how they will look (hideControls, hideIndicators, nextIcon and prevIcon properties) or how the component should behave after the last item is displayed (type property).",
+        "uuEccReady": true,
+        "docCode": "UU5BricksCarousel"
+      },
+      {
+        "name": "Column",
+        "code": "UU5.Bricks.Column",
+        "tagList": [
+          "Column",
+          "Bricks",
+          "UU5",
+          "col"
+        ],
+        "icon": "mdi-view-column",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksColumn",
+        "desc": "The UU5.Bricks.Column component is based on the Bootstrap grid implementation (see W3Schools - Bootstrap Grid System) and represents a column. This component must be wrapped by the UU5.Bricks.Row component (otherwise, the contents of the column may overlap with the elements that follow in the document). The component width can be adjusted by built-in properties and can differ for different screen sizes.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksColumn"
+      },
+      {
+        "name": "Container",
+        "code": "UU5.Bricks.Container",
+        "tagList": [
+          "Container",
+          "Bricks",
+          "UU5",
+          "rows"
+        ],
+        "icon": "mdi-page-layout-header",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksContainer",
+        "desc": "The UU5.Bricks.Container component is used in a visual use case to wrap individual rows (UU5.Bricks.Row).",
+        "uuEccReady": true,
+        "docCode": "UU5BricksContainer"
+      },
+      {
+        "name": "Dropdown",
+        "code": "UU5.Bricks.Dropdown",
+        "tagList": [
+          "Dropdown",
+          "Bricks",
+          "UU5",
+          "menu"
+        ],
+        "icon": "mdi-arrow-down-drop-circle",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksDropdown",
+        "desc": "The UU5.Bricks.Dropdown component contains a drop-down menu that allows the user to select one item from a predefined list. The design is based on the Bootstrap standard. The Dropdown consists of a header and body. A header contains a label and an icon which can be changed or disabled. Dropdown header text is entered using the label property. A dropdown body is entered using the content property which the component takes from UU5.Common.ContentMixin. You can only put UU5.Bricks.Dropdown.Item components into the content property, all other components are ignored. These components can be also inserted as nested components. The component supports colouring the dropdown using the colorSchema property which the component takes from UU5.Common.ColorSchemaMixin.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksDropdown"
+      },
+      {
+        "name": "Jumbotron",
+        "code": "UU5.Bricks.Jumbotron",
+        "tagList": [
+          "jumbotron",
+          "header",
+          "big",
+          "banner",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-card",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksJumbotron",
+        "desc": "The UU5.Bricks.Jumbotron component is based on the Bootstrap and is intended to highlight information in a visual use case. The component color can be selected through the colorSchema property that the component has obtained by fulfilling UU5.Common.ColorSchemaMixin. The component can occupy the full width of a visual use case if it has the containerStyle='fluid' property set. The component can be used anywhere in the body of a visual use case but an appropriate use is also in the header. If UU5.Bricks.Header is used with the level='0' property, a title is rendered with the UU5.Bricks.Jumbotron component.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksJumbotron"
+      },
+      {
+        "name": "Label",
+        "code": "UU5.Bricks.Label",
+        "tagList": [
+          "label",
+          "badge",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-label",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksLabel",
+        "desc": "The UU5.Bricks.Label component is based on the Bootstrap and is usually used to display an additional information about another element (e.g., short caption, title, ...). Unlike the UU5.Bricks.Badge component, it changes the size according to the element in which it is used. Content is entered using the content property that the component takes from UU5.Common.ContentMixin.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksLabel"
+      },
+      {
+        "name": "Line",
+        "code": "UU5.Bricks.Line",
+        "tagList": [
+          "Line",
+          "Bricks",
+          "UU5",
+          "Separator"
+        ],
+        "icon": "mdi-minus",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksLine",
+        "desc": "The UU5.Bricks.Line component has been created according to the HTML <hr> tag. It is a horizontal line that can be used for the optical separation of a visual use case content.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksLine"
+      },
+      {
+        "name": "Loading",
+        "code": "UU5.Bricks.Loading",
+        "tagList": [
+          "loading",
+          "spinner",
+          "pending",
+          "progress",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-loading",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksLoading",
+        "desc": "The UU5.Bricks.Loading component may display while any other component is in the loading process. Any content, such as text or animation, can be inserted into the content of the component.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksLoading"
+      },
+      {
+        "name": "Newspaper",
+        "code": "UU5.Bricks.Newspaper",
+        "tagList": [
+          "newspaper",
+          "column",
+          "columns",
+          "responsivness",
+          "responsivity",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-format-columns",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksNewspaper",
+        "desc": "The UU5.Bricks.Newspaper component is a component that splits given content into as many columns as the user defines in the columnsCount property. The maximum number of columns is 6. Column content overflow depending on the size of a visual use case. This means that on smaller devices the column width will be smaller and words will be overflowing responsively to the next row to fit into a column. On small screens, content will appear in only one column. Component fulfils UU5.Common.SectionMixin so it is possible to add a header and footer.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksNewspaper"
+      },
+      {
+        "name": "Panel",
+        "code": "UU5.Bricks.Panel",
+        "tagList": [
+          "Panel",
+          "Bricks",
+          "UU5",
+          "dropdown"
+        ],
+        "icon": "mdi-chevron-down-box",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksPanel",
+        "desc": "The UU5.Bricks.Panel component is a drop-down panel that contains a header and any content. The header property of the component is taken from UU5.Common.SectionMixin. The Panel can be open (a header and content is shown) or closed (only a header is shown). By default, the panel opens and closes by clicking a header that may contain UU5.Bricks.Icon on the right side. (An icon usually indicates whether the panel is open or closed. The UU5.Bricks.Panel component is often used as a part of the UU5.Bricks.Accordion component but it can be also used separately.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksPanel"
+      },
+      {
+        "name": "ProgressBar",
+        "code": "UU5.Bricks.ProgressBar",
+        "tagList": [
+          "progressBar",
+          "progress",
+          "bar",
+          "indicator",
+          "loading",
+          "pending",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-progress-clock",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksProgressBar",
+        "desc": "The UU5.Bricks.ProgressBar component which is based ont the Bootstrap informs the user about a particular position in a process. In can be used, for example, graphical representation of a project fulfillment, hotel occupancy, displaying different statistical data, etc. It's possible to track multiple items in UU5.Bricks.ProgressBar by using the UU5.Bricks.ProgressBar.Item component that we place into UU5.Bricks.ProgressBar.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksProgressBar"
+      },
+      {
+        "name": "QR Code",
+        "code": "UU5.Bricks.QRCode",
+        "tagList": [
+          "QRCode",
+          "Bricks",
+          "UU5",
+          "QR",
+          "Code"
+        ],
+        "icon": "mdi-qrcode",
+        "template": "<UU5.Bricks.QRCode value=\"QR Code\"/>",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksQRCode",
+        "desc": "The UU5.Bricks.QRCode component is to display some text (e.g. a link) in a form of a QR Code.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksQRCode"
+      },
+      {
+        "name": "Rating",
+        "code": "UU5.Bricks.Rating",
+        "tagList": [
+          "rating",
+          "evaluation",
+          "mark",
+          "stars",
+          "progress",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-star",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksRating",
+        "desc": "<uu5string/>The <UU5.Bricks.Code content='UU5.Bricks.Rating'/> component is used to display a panel containing icons for assigning and(or) displaying rating.\nOnly when the component has the <UU5.Bricks.Code content='onClick'/> property defined it's possible to assign rating. If this property is passed, the\ncomponents reacts when moving across with the mouse cursor by changing the color of individual icons.\nThe behavior of the component is therefore determined by the setting of the property itself and the parent component. The component fulfils\n<UuBookKit.Bricks.GoToPageLink content='UU5.Common.ColorSchemaMixin' page='uu5CommonColorSchemaMixin'/> and can change its color by using the\n<UU5.Bricks.Code content='colorSchema'/> property.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksRating"
+      },
+      {
+        "name": {
+          "en": "Rich Link"
+        },
+        "code": "UU5.Bricks.RichLink",
+        "tagList": [
+          "richLink",
+          "richlink",
+          "link",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-link-box-outline",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksRichLink",
+        "desc": "The UU5.Bricks.RichLink component renders a link together with additional information about the target page - image, title and description.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksRichLink"
+      },
+      {
+        "name": "Row",
+        "code": "UU5.Bricks.Row",
+        "tagList": [
+          "Row",
+          "Bricks",
+          "UU5",
+          "column"
+        ],
+        "icon": "mdi-table-row",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksRow",
+        "desc": "The UU5.Bricks.Row component is used as a child component of the UU5.Bricks.Container component and represents a row. It is used to format text and components into individual rows. The component enables us to horizontally indent a row through the noSpacing property and to modify a row through the display property.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksRow"
+      },
+      {
+        "name": "Section",
+        "code": "UU5.Bricks.Section",
+        "tagList": [
+          "Section",
+          "Bricks",
+          "UU5",
+          "header"
+        ],
+        "icon": "mdi-view-day",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksSection",
+        "desc": "The UU5.Bricks.Section component fulfils UU5.Common.SectionMixin and therefore may contain the following parts: header, content and footer. These parts may include any content. It is primarly used if it is necessary to add a header or footer to a visual use case, e.g. when creating a chapter.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksSection"
+      },
+      {
+        "name": "Tabs",
+        "code": "UU5.Bricks.Tabs",
+        "tagList": [
+          "Tabs",
+          "Bricks",
+          "UU5",
+          "tab"
+        ],
+        "icon": "mdi-tab",
+        "template": "<UU5.Bricks.Tabs mountTabContent=\"onActive\"><UU5.Bricks.Tabs.Item header=\"Item 1\" name=\"Item 1\"></UU5.Bricks.Tabs.Item><UU5.Bricks.Tabs.Item header=\"Item 2\" name=\"Item 2\"></UU5.Bricks.Tabs.Item><UU5.Bricks.Tabs.Item header=\"Item 3\" name=\"Item 3\"></UU5.Bricks.Tabs.Item></UU5.Bricks.Tabs>",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksTabs",
+        "desc": "The UU5.Bricks.Tabs component is a group of tabs that are used to switch between several contents of a one visual use case. Tabs can have a different look (the type property) and be aligned next to each other (the default behavior) or below each other (the stacked property). Tabs are inserted into the component through UU5.Bricks.Tabs.Item.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksTabs"
+      },
+      {
+        "name": "Touch Icon",
+        "code": "UU5.Bricks.TouchIcon",
+        "tagList": [
+          "TouchIcon",
+          "Bricks",
+          "UU5",
+          "Icon"
+        ],
+        "icon": "mdi-checkbox-marked",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksTouchIcon",
+        "desc": "The UU5.Bricks.TouchIcon component consists of an icon and text that belongs to this icon. It is possible to enter text below the touchIcon standardly through content or nested components.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksTouchIcon"
+      },
+      {
+        "name": "Well",
+        "code": "UU5.Bricks.Well",
+        "tagList": [
+          "well",
+          "layout",
+          "box",
+          "Bricks",
+          "UU5"
+        ],
+        "icon": "mdi-card",
+        "template": null,
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuos9.plus4u.net/uu-webkit-maing02/99923616732505139-b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksWell",
+        "desc": "<uu5string />The <UU5.Bricks.Code content='UU5.Bricks.Well'/> component is a component that renders a highlighted rectangle with rounded corners around specified content.\nIt is intended to highlight and optically separate a part of a visual use case. It is based on the <UU5.Bricks.LinkBootstrap/> definition.",
+        "uuEccReady": true,
+        "docCode": "UU5BricksWell"
+      },
+      {
+        "name": {
+          "en": "Columns 1:1",
+          "cs": "Sloupce 1:1"
+        },
+        "desc": {
+          "en": "Layout with 1:1 column ratio.",
+          "cs": "Rozvržení s poměrem sloupců 1:1."
+        },
+        "code": "UU5.Bricks.Row.Template01",
+        "tagList": [
+          "Layout",
+          "Row",
+          "Column"
+        ],
+        "icon": "mdi-view-stream mdi-rotate-90",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuapp.plus4u.net/uu-webkit-maing02/2f191336c446470b9eed114b09ac55ba/UU5BricksRowTemplate01",
+        "uuEccReady": true,
+        "template": "<UU5.Bricks.Row><UU5.Bricks.Column colWidth=\"s-6\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"s-6\"></UU5.Bricks.Column></UU5.Bricks.Row>",
+        "docCode": "UU5BricksRow"
+      },
+      {
+        "name": {
+          "en": "Columns 2:1",
+          "cs": "Sloupce 2:1"
+        },
+        "desc": {
+          "en": "Layout with 2:1 column ratio.",
+          "cs": "Rozvržení s poměrem sloupců 2:1."
+        },
+        "code": "UU5.Bricks.Row.Template02",
+        "tagList": [
+          "Layout",
+          "Row",
+          "Column"
+        ],
+        "icon": "mdi-view-list mdi-flip-h",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuapp.plus4u.net/uu-webkit-maing02/2f191336c446470b9eed114b09ac55ba/UU5BricksRowTemplate02",
+        "uuEccReady": true,
+        "template": "<UU5.Bricks.Row><UU5.Bricks.Column colWidth=\"m-8\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"m-4\"></UU5.Bricks.Column></UU5.Bricks.Row>",
+        "docCode": "UU5BricksRow"
+      },
+      {
+        "name": {
+          "en": "Columns 1:2",
+          "cs": "Sloupce 1:2"
+        },
+        "desc": {
+          "en": "Layout with 1:2 column ratio.",
+          "cs": "Rozložení s poměrem sloupců 1:2."
+        },
+        "code": "UU5.Bricks.Row.Template03",
+        "tagList": [
+          "Layout",
+          "Row",
+          "Column"
+        ],
+        "icon": "mdi-view-list",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuapp.plus4u.net/uu-webkit-maing02/2f191336c446470b9eed114b09ac55ba/UU5BricksRowTemplate03",
+        "uuEccReady": true,
+        "template": "<UU5.Bricks.Row><UU5.Bricks.Column colWidth=\"m-4\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"m-8\"></UU5.Bricks.Column></UU5.Bricks.Row>",
+        "docCode": "UU5BricksRow"
+      },
+      {
+        "name": {
+          "en": "Columns 3:1",
+          "cs": "Sloupce 3:1"
+        },
+        "desc": {
+          "en": "Layout with 3:1 column ratio.",
+          "cs": "Rozvržení s poměrem sloupců 3:1."
+        },
+        "code": "UU5.Bricks.Row.Template04",
+        "tagList": [
+          "Layout",
+          "Row",
+          "Column"
+        ],
+        "icon": "mdi-view-list mdi-flip-h",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuapp.plus4u.net/uu-webkit-maing02/2f191336c446470b9eed114b09ac55ba/UU5BricksRowTemplate04",
+        "uuEccReady": true,
+        "template": "<UU5.Bricks.Row><UU5.Bricks.Column colWidth=\"m-9\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"m-3\"></UU5.Bricks.Column></UU5.Bricks.Row>",
+        "docCode": "UU5BricksRow"
+      },
+      {
+        "name": {
+          "en": "Columns 1:3",
+          "cs": "Sloupce 1:3"
+        },
+        "desc": {
+          "en": "Layout with 1:3 column ratio.",
+          "cs": "Rozvržení s poměrem sloupců 1:3."
+        },
+        "code": "UU5.Bricks.Row.Template05",
+        "tagList": [
+          "Layout",
+          "Row",
+          "Column"
+        ],
+        "icon": "mdi-view-list",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuapp.plus4u.net/uu-webkit-maing02/2f191336c446470b9eed114b09ac55ba/UU5BricksRowTemplate05",
+        "uuEccReady": true,
+        "template": "<UU5.Bricks.Row><UU5.Bricks.Column colWidth=\"m-3\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"m-9\"></UU5.Bricks.Column></UU5.Bricks.Row>",
+        "docCode": "UU5BricksRow"
+      },
+      {
+        "name": {
+          "en": "Columns 1:1:1",
+          "cs": "Sloupce 1:1:1"
+        },
+        "desc": {
+          "en": "Layout with 1:1:1 column ratio.",
+          "cs": "Rozvržení s poměrem sloupců 1:1:1."
+        },
+        "code": "UU5.Bricks.Row.Template06",
+        "tagList": [
+          "Layout",
+          "Row",
+          "Column"
+        ],
+        "icon": "mdi-view-column",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuapp.plus4u.net/uu-webkit-maing02/2f191336c446470b9eed114b09ac55ba/UU5BricksRowTemplate06",
+        "uuEccReady": true,
+        "template": "<UU5.Bricks.Row><UU5.Bricks.Column colWidth=\"s-6 m-4\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"s-6 m-4\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"m-4\"></UU5.Bricks.Column></UU5.Bricks.Row>",
+        "docCode": "UU5BricksRow"
+      },
+      {
+        "name": {
+          "en": "Columns 1:1:1:1",
+          "cs": "Sloupce 1:1:1:1"
+        },
+        "desc": {
+          "en": "Layout with 1:1:1:1 column ratio.",
+          "cs": "Rozložení s poměrem sloupců 1:1:1:1."
+        },
+        "code": "UU5.Bricks.Row.Template07",
+        "tagList": [
+          "Layout",
+          "Row",
+          "Column"
+        ],
+        "icon": "mdi-view-headline mdi-rotate-90",
+        "libraryCode": "UU5.Bricks",
+        "imageUri": "https://uuapp.plus4u.net/uu-webkit-maing02/2f191336c446470b9eed114b09ac55ba/UU5BricksRowTemplate07",
+        "uuEccReady": true,
+        "template": "<UU5.Bricks.Row><UU5.Bricks.Column colWidth=\"s-6 m-3\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"s-6 m-3\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"s-6 m-3\"></UU5.Bricks.Column><UU5.Bricks.Column colWidth=\"s-6 m-3\"></UU5.Bricks.Column></UU5.Bricks.Row>",
+        "docCode": "UU5BricksRow"
+      },
+      {
+        "code": "UU5.Bricks.ScreenSize",
+        "libraryCode": "UU5.Bricks",
         "name": {
           "en": "Screen Size",
           "cs": "Velikost obrazovky"
         },
-        "code": "UU5.Bricks.ScreenSize",
+        "imageUri": "https://uuapp.plus4u.net/uu-webkit-maing02/b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksScreenSize",
+        "icon": "mdi-cellphone-link",
+        "desc": {
+          "en": "The component enables the user to specify a different width of the viewport for different content. It is possible to create a different look for mobile devices and different for desktop. Individual content for different widths is created with UU5.Bricks.ScreenSize.Item.",
+          "cs": "Komponenta umožňuje uživateli vytvořit a zobrazovat jiný obsah pro mobilní zařízení a jiný pro počítače. Individuální obsah pro různé šířky obrazovky se vkládá do UU5.Bricks.ScreenSize.Item."
+        },
         "tagList": [
           "UU5",
           "Bricks",
@@ -31,16 +731,9 @@
           "mobile",
           "desktop"
         ],
-        "icon": "mdi-cellphone-link",
-        "template": "<UU5.Bricks.ScreenSize><UU5.Bricks.ScreenSize.Item screenSize=\"xs\"></UU5.Bricks.ScreenSize.Item><UU5.Bricks.ScreenSize.Item screenSize=\"s\"></UU5.Bricks.ScreenSize.Item><UU5.Bricks.ScreenSize.Item screenSize=\"m\"></UU5.Bricks.ScreenSize.Item><UU5.Bricks.ScreenSize.Item screenSize=\"l\"></UU5.Bricks.ScreenSize.Item><UU5.Bricks.ScreenSize.Item screenSize=\"xl\"></UU5.Bricks.ScreenSize.Item></UU5.Bricks.ScreenSize>",
-        "docCode": "UU5BricksScreenSize",
-        "imageUri": "https://uuapp.plus4u.net/uu-webkit-maing02/b6d739b46b0a4f4980891c3c54a6df5d/UU5BricksScreenSize",
-        "desc": {
-          "en": "The component enables the user to specify a different width of the viewport for different content. It is possible to create a different look for mobile devices and different for desktop. Individual content for different widths is created with UU5.Bricks.ScreenSize.Item.",
-          "cs": "Komponenta umožňuje uživateli vytvořit a zobrazovat jiný obsah pro mobilní zařízení a jiný pro počítače. Individuální obsah pro různé šířky obrazovky se vkládá do UU5.Bricks.ScreenSize.Item."
-        },
         "uuEccReady": true,
-        "libraryCode": "UU5.Bricks"
+        "template": "<UU5.Bricks.ScreenSize><UU5.Bricks.ScreenSize.Item screenSize=\"xs\"></UU5.Bricks.ScreenSize.Item><UU5.Bricks.ScreenSize.Item screenSize=\"s\"></UU5.Bricks.ScreenSize.Item><UU5.Bricks.ScreenSize.Item screenSize=\"m\"></UU5.Bricks.ScreenSize.Item><UU5.Bricks.ScreenSize.Item screenSize=\"l\"></UU5.Bricks.ScreenSize.Item><UU5.Bricks.ScreenSize.Item screenSize=\"xl\"></UU5.Bricks.ScreenSize.Item></UU5.Bricks.ScreenSize>",
+        "docCode": "UU5BricksScreenSize"
       }
     ]
   },

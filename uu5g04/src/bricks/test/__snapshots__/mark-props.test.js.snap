@@ -242,6 +242,16 @@ exports[`UU5.Bricks.Mark fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Mark fullTextSearchPriority=0 2`] = `
+<mark
+  className="uu5-bricks-mark uu-fulltextsearch-0"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Mark hidden=false 1`] = `
 <mark
   className="uu5-bricks-mark"
@@ -356,26 +366,6 @@ exports[`UU5.Bricks.Mark nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Mark nestingLevel="inline" 1`] = `
 <mark
   className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark noIndex=false 1`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark noIndex=true 1`] = `
-<mark
-  className="uu5-bricks-mark uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   key="mark"
   style={Object {}}

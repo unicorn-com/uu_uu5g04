@@ -156,7 +156,7 @@ exports[`UU5.Bricks.Del example docKit UU5.Bricks.Del render without crash 1`] =
   This is 
   <Del
     id="uuID02"
-    nestingLevel="bigBoxCollection"
+    nestingLevel="route"
   >
     deleted
   </Del>
@@ -165,6 +165,13 @@ exports[`UU5.Bricks.Del example docKit UU5.Bricks.Del render without crash 1`] =
 `;
 
 exports[`UU5.Bricks.Del fullTextSearchPriority=0 1`] = `
+<del
+  className="uu5-bricks-del uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
+exports[`UU5.Bricks.Del fullTextSearchPriority=0 2`] = `
 <del
   className="uu5-bricks-del uu-fulltextsearch-0"
   id="uuID"
@@ -255,20 +262,6 @@ exports[`UU5.Bricks.Del nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Del nestingLevel="inline" 1`] = `
 <del
   className="uu5-bricks-del"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Del noIndex=false 1`] = `
-<del
-  className="uu5-bricks-del"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Del noIndex=true 1`] = `
-<del
-  className="uu5-bricks-del uu-fulltextsearch-0 uu5-noindex"
   id="uuID"
 />
 `;

@@ -16,36 +16,38 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+const { mount } = UU5.Test.Tools;
 
 describe("UU5.Bricks.Slider.Item interface testing", function () {
   it("getValue() should return value of props value.", () => {
-    const wrapper = mount(
-      <UU5.Bricks.Slider id={"uuID01"} ref_={(slider) => (this.slider = slider)}>
-        <UU5.Bricks.Slider.Item ref_={(sliderItem1) => (this.sliderItem1 = sliderItem1)} id={"uuID02"} content="1" />
+    let slider, sliderItem1, sliderItem2;
+    mount(
+      <UU5.Bricks.Slider id={"uuID01"} ref_={(_slider) => (slider = _slider)}>
+        <UU5.Bricks.Slider.Item ref_={(_sliderItem1) => (sliderItem1 = _sliderItem1)} id={"uuID02"} content="1" />
         <UU5.Bricks.Slider.Item
-          ref_={(sliderItem2) => (this.sliderItem2 = sliderItem2)}
+          ref_={(_sliderItem2) => (sliderItem2 = _sliderItem2)}
           id={"uuID03"}
           content="2"
           value={3}
         />
       </UU5.Bricks.Slider>
     );
-    expect(this.sliderItem1.getValue()).toBe(0);
-    expect(this.sliderItem2.getValue()).toBe(3);
+    expect(sliderItem1.getValue()).toBe(0);
+    expect(sliderItem2.getValue()).toBe(3);
   });
 
   it("setValue(value, setStateCallBack)", () => {
+    let slider, sliderItem1, sliderItem2;
     const wrapper = mount(
-      <UU5.Bricks.Slider id={"uuID01"} ref_={(slider) => (this.slider = slider)}>
+      <UU5.Bricks.Slider id={"uuID01"} ref_={(_slider) => (slider = _slider)}>
         <UU5.Bricks.Slider.Item
-          ref_={(sliderItem1) => (this.sliderItem1 = sliderItem1)}
+          ref_={(_sliderItem1) => (sliderItem1 = _sliderItem1)}
           id={"uuID02"}
           content="1"
           value={0}
         />
         <UU5.Bricks.Slider.Item
-          ref_={(sliderItem2) => (this.sliderItem2 = sliderItem2)}
+          ref_={(_sliderItem2) => (sliderItem2 = _sliderItem2)}
           id={"uuID03"}
           content="2"
           value={3}
@@ -53,24 +55,25 @@ describe("UU5.Bricks.Slider.Item interface testing", function () {
       </UU5.Bricks.Slider>
     );
     const mockFunc = jest.fn();
-    expect(this.sliderItem2.getValue()).toBe(3);
-    const returnValue = this.sliderItem2.setValue(2, mockFunc);
+    expect(sliderItem2.getValue()).toBe(3);
+    sliderItem2.setValue(2, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
-    expect(this.sliderItem2.getValue(2));
+    expect(mockFunc).toHaveBeenCalledTimes(1);
+    expect(sliderItem2.getValue()).toBe(2);
   });
 
   it("increase(value, setStateCallBack)", () => {
+    let slider, sliderItem1, sliderItem2;
     const wrapper = mount(
-      <UU5.Bricks.Slider id={"uuID01"} ref_={(slider) => (this.slider = slider)} max={5}>
+      <UU5.Bricks.Slider id={"uuID01"} ref_={(_slider) => (slider = _slider)} max={5}>
         <UU5.Bricks.Slider.Item
-          ref_={(sliderItem1) => (this.sliderItem1 = sliderItem1)}
+          ref_={(_sliderItem1) => (sliderItem1 = _sliderItem1)}
           id={"uuID02"}
           content="1"
           value={0}
         />
         <UU5.Bricks.Slider.Item
-          ref_={(sliderItem2) => (this.sliderItem2 = sliderItem2)}
+          ref_={(_sliderItem2) => (sliderItem2 = _sliderItem2)}
           id={"uuID03"}
           content="2"
           value={3}
@@ -78,28 +81,29 @@ describe("UU5.Bricks.Slider.Item interface testing", function () {
       </UU5.Bricks.Slider>
     );
     const mockFunc = jest.fn();
-    expect(this.sliderItem2.getValue()).toBe(3);
-    const returnValue = this.sliderItem2.increase(2, mockFunc);
+    expect(sliderItem2.getValue()).toBe(3);
+    sliderItem2.increase(2, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
-    expect(this.sliderItem2.getValue()).toBe(5);
-    this.sliderItem2.increase(2, mockFunc);
+    expect(mockFunc).toHaveBeenCalledTimes(1);
+    expect(sliderItem2.getValue()).toBe(5);
+    sliderItem2.increase(2, mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(this.sliderItem2.getValue()).toBe(5);
+    expect(sliderItem2.getValue()).toBe(5);
   });
 
   it("decrease(value, setStateCallBack)", () => {
+    let slider, sliderItem1, sliderItem2;
     const wrapper = mount(
-      <UU5.Bricks.Slider id={"uuID01"} ref_={(slider) => (this.slider = slider)}>
+      <UU5.Bricks.Slider id={"uuID01"} ref_={(_slider) => (slider = _slider)}>
         <UU5.Bricks.Slider.Item
-          ref_={(sliderItem1) => (this.sliderItem1 = sliderItem1)}
+          ref_={(_sliderItem1) => (sliderItem1 = _sliderItem1)}
           id={"uuID02"}
           content="1"
           value={0}
         />
         <UU5.Bricks.Slider.Item
-          ref_={(sliderItem2) => (this.sliderItem2 = sliderItem2)}
+          ref_={(_sliderItem2) => (sliderItem2 = _sliderItem2)}
           id={"uuID03"}
           content="2"
           value={3}
@@ -107,14 +111,14 @@ describe("UU5.Bricks.Slider.Item interface testing", function () {
       </UU5.Bricks.Slider>
     );
     const mockFunc = jest.fn();
-    expect(this.sliderItem2.getValue()).toBe(3);
-    const returnValue = this.sliderItem2.decrease(3, mockFunc);
+    expect(sliderItem2.getValue()).toBe(3);
+    sliderItem2.decrease(3, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
-    expect(this.sliderItem2.getValue(0));
-    this.sliderItem2.decrease(3, mockFunc);
+    expect(mockFunc).toHaveBeenCalledTimes(1);
+    expect(sliderItem2.getValue()).toBe(0);
+    sliderItem2.decrease(3, mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(this.sliderItem2.getValue(0));
+    expect(sliderItem2.getValue()).toBe(0);
   });
 });

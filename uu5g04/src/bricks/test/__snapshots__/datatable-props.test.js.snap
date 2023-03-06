@@ -1007,6 +1007,40 @@ exports[`UU5.Bricks.DataTable fullTextSearchPriority=0 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.DataTable fullTextSearchPriority=0 2`] = `
+<Table
+  className="uu5-bricks-data-table uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <table-thead>
+    <table-tr />
+  </table-thead>
+  <table-tbody>
+    <table-tr
+      key="0"
+    >
+      <table-td
+        content="Eliška"
+        key="0"
+      />
+      <table-td
+        content="Vysoké"
+        key="1"
+      />
+      <table-td
+        content="Dostačující"
+        key="2"
+      />
+    </table-tr>
+  </table-tbody>
+  <table-tfoot>
+    <table-tr />
+  </table-tfoot>
+</Table>
+`;
+
 exports[`UU5.Bricks.DataTable header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <Table
   className="uu5-bricks-data-table"
@@ -2563,40 +2597,6 @@ exports[`UU5.Bricks.DataTable nestingLevel="boxCollection" 1`] = `
 </Table>
 `;
 
-exports[`UU5.Bricks.DataTable nestingLevel="container" 1`] = `
-<Table
-  className="uu5-bricks-data-table"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
->
-  <table-thead>
-    <table-tr />
-  </table-thead>
-  <table-tbody>
-    <table-tr
-      key="0"
-    >
-      <table-td
-        content="Eliška"
-        key="0"
-      />
-      <table-td
-        content="Vysoké"
-        key="1"
-      />
-      <table-td
-        content="Dostačující"
-        key="2"
-      />
-    </table-tr>
-  </table-tbody>
-  <table-tfoot>
-    <table-tr />
-  </table-tfoot>
-</Table>
-`;
-
 exports[`UU5.Bricks.DataTable nestingLevel="inline" 1`] = `
 <Table
   className="uu5-bricks-data-table"
@@ -2616,6 +2616,7 @@ exports[`UU5.Bricks.DataTable nestingLevel="inline" 1`] = `
         Object {
           "cs": "Tabulka s daty",
           "en": "Data table",
+          "uk": "Таблиця даних",
         }
       }
       mainAttrs={null}
@@ -2680,6 +2681,7 @@ exports[`UU5.Bricks.DataTable nestingLevel="inline" 3`] = `
         Object {
           "cs": "Tabulka s daty",
           "en": "Data table",
+          "uk": "Таблиця даних",
         }
       }
       mainAttrs={null}
@@ -2778,6 +2780,7 @@ exports[`UU5.Bricks.DataTable nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Tabulka s daty",
           "en": "Data table",
+          "uk": "Таблиця даних",
         }
       }
       mainAttrs={null}
@@ -2842,6 +2845,7 @@ exports[`UU5.Bricks.DataTable nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Tabulka s daty",
           "en": "Data table",
+          "uk": "Таблиця даних",
         }
       }
       mainAttrs={null}
@@ -2890,74 +2894,6 @@ exports[`UU5.Bricks.DataTable nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.DataTable nestingLevel="spa" 1`] = `
 <Table
   className="uu5-bricks-data-table"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
->
-  <table-thead>
-    <table-tr />
-  </table-thead>
-  <table-tbody>
-    <table-tr
-      key="0"
-    >
-      <table-td
-        content="Eliška"
-        key="0"
-      />
-      <table-td
-        content="Vysoké"
-        key="1"
-      />
-      <table-td
-        content="Dostačující"
-        key="2"
-      />
-    </table-tr>
-  </table-tbody>
-  <table-tfoot>
-    <table-tr />
-  </table-tfoot>
-</Table>
-`;
-
-exports[`UU5.Bricks.DataTable noIndex=false 1`] = `
-<Table
-  className="uu5-bricks-data-table"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
->
-  <table-thead>
-    <table-tr />
-  </table-thead>
-  <table-tbody>
-    <table-tr
-      key="0"
-    >
-      <table-td
-        content="Eliška"
-        key="0"
-      />
-      <table-td
-        content="Vysoké"
-        key="1"
-      />
-      <table-td
-        content="Dostačující"
-        key="2"
-      />
-    </table-tr>
-  </table-tbody>
-  <table-tfoot>
-    <table-tr />
-  </table-tfoot>
-</Table>
-`;
-
-exports[`UU5.Bricks.DataTable noIndex=true 1`] = `
-<Table
-  className="uu5-bricks-data-table uu5-noindex uu-fulltextsearch-0"
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"

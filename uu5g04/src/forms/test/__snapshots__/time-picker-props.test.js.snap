@@ -2079,6 +2079,54 @@ exports[`UU5.Forms.TimePicker props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TimePicker props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-forms-timepicker uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      icon="mdi-clock-outline"
+      iconClickable={false}
+      id="uuID-input"
+      key="input"
+      mainAttrs={
+        Object {
+          "autoComplete": "off",
+        }
+      }
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <forwardRef(Popover)
+      className="uu5-forms-timepicker-popover"
+      disableBackdrop={true}
+      fitHeightToViewport={false}
+      forceRender={true}
+      id="uuID-popover"
+      key="popover"
+      location="local"
+      ref_={[Function]}
+      shown={false}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TimePicker props function -> InputMixin onChange() 1`] = `
 <TimePicker
   id="checkID"
@@ -3416,102 +3464,6 @@ exports[`UU5.Forms.TimePicker props nestingLevel="inline" 1`] = `
       iconClickable={false}
       id="uuID-input"
       inputWidth="auto"
-      key="input"
-      mainAttrs={
-        Object {
-          "autoComplete": "off",
-        }
-      }
-      name="uuID-input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      readonly={false}
-      ref_={[Function]}
-    />
-    <forwardRef(Popover)
-      className="uu5-forms-timepicker-popover"
-      disableBackdrop={true}
-      fitHeightToViewport={false}
-      forceRender={true}
-      id="uuID-popover"
-      key="popover"
-      location="local"
-      ref_={[Function]}
-      shown={false}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.TimePicker props noIndex=false 1`] = `
-<div
-  className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
-  id="uuID"
-  onClick={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <text-input
-      feedback="initial"
-      icon="mdi-clock-outline"
-      iconClickable={false}
-      id="uuID-input"
-      key="input"
-      mainAttrs={
-        Object {
-          "autoComplete": "off",
-        }
-      }
-      name="uuID-input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      readonly={false}
-      ref_={[Function]}
-    />
-    <forwardRef(Popover)
-      className="uu5-forms-timepicker-popover"
-      disableBackdrop={true}
-      fitHeightToViewport={false}
-      forceRender={true}
-      id="uuID-popover"
-      key="popover"
-      location="local"
-      ref_={[Function]}
-      shown={false}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.TimePicker props noIndex=true 1`] = `
-<div
-  className="uu5-forms-timepicker uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
-  id="uuID"
-  onClick={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <text-input
-      feedback="initial"
-      icon="mdi-clock-outline"
-      iconClickable={false}
-      id="uuID-input"
       key="input"
       mainAttrs={
         Object {

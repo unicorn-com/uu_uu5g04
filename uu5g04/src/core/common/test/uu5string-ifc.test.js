@@ -241,7 +241,7 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
     expect(mockFilter).toHaveBeenCalledTimes(1);
     expect(ifc).toMatchSnapshot();
     expect(mockFilter.mock.calls[0][0]).toEqual(
-      expect.objectContaining({ tag: "UU5.Bricks.Section", props: { children: [], key: "uu5string-child_0" } })
+      expect.objectContaining({ tag: "UU5.Bricks.Section", props: { children: [] } })
     );
   });
 
@@ -518,9 +518,9 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
     // NOTE Result of ...render() is HTML in CheerioWrapper (much like jQuery) - https://cheerio.js.org/
     expect(wrapper.find("#d1").first().render().text()).toBe("<<");
     expect(wrapper.find("#d2").first().render().css("content")).toBe("a\\b");
-    expect(wrapper.find("#d2").first().render().text()).toBe('"Value<<😃');
+    expect(wrapper.find("#d2").first().render().text()).toBe('"Value<<🙂');
     expect(wrapper.find("#d3-1").first().render().text()).toBe('nested div "&quot;< single backslash: \\');
-    expect(wrapper.find("#d3-2").first().render().text()).toBe("😃 > \\ < text");
+    expect(wrapper.find("#d3-2").first().render().text()).toBe("🙂 > \\ < text");
 
     text = String.raw`<b>bold</b> <script>script</script> <scRipt>alert</scRipt> <b>bold</b>`;
     uu5string = new UU5.Common.UU5String("<uu5string/>" + text);

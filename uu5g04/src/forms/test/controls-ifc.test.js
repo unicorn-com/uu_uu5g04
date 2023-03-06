@@ -17,10 +17,11 @@ import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+const { mount } = UU5.Test.Tools;
 
 describe("UU5.Forms.ControlsMixin intreface testing", function () {
   it("getForm() should return instance of forms", () => {
+    let text, controls;
     const wrapper = mount(
       <UU5.Forms.Form
         id={"idForm"}
@@ -39,15 +40,15 @@ describe("UU5.Forms.ControlsMixin intreface testing", function () {
           name="subname"
           placeholder="Smith"
           required
-          ref_={(text) => (this.text = text)}
+          ref_={(_text) => (text = _text)}
         />
-        <UU5.Forms.Controls id={"controlsID"} ref_={(controls) => (this.controls = controls)} />
+        <UU5.Forms.Controls id={"controlsID"} ref_={(_controls) => (controls = _controls)} />
       </UU5.Forms.Form>
     );
-    expect(this.controls.getForm()).not.toBe(undefined);
-    expect(this.controls.getForm()).not.toBe(null);
-    expect(this.controls.getForm()).toEqual(expect.any(Object));
-    expect(() => this.controls.getForm()).not.toThrow();
-    expect(this.controls.getForm() === wrapper.instance()).toBe(true);
+    expect(controls.getForm()).not.toBe(undefined);
+    expect(controls.getForm()).not.toBe(null);
+    expect(controls.getForm()).toEqual(expect.any(Object));
+    expect(() => controls.getForm()).not.toThrow();
+    expect(controls.getForm() === wrapper.instance()).toBe(true);
   });
 });

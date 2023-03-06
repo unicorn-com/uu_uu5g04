@@ -730,6 +730,39 @@ exports[`UU5.Bricks.NavBar.Header props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.NavBar.Header props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-nav-bar-header navbar-header uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-bricks-nav-bar-header-brand"
+  >
+    <nav-bar-nav
+      id="child01"
+      key="child01"
+    >
+      <nav-bar-nav-item
+        d="child02"
+      >
+        News
+      </nav-bar-nav-item>
+    </nav-bar-nav>
+  </span>
+  <Button
+    bgStyle="transparent"
+    className="uu5-bricks-nav-bar-header-hamburger"
+    onClick={[Function]}
+  >
+    <Icon
+      icon="mdi-menu"
+    />
+  </Button>
+</div>
+`;
+
 exports[`UU5.Bricks.NavBar.Header props hidden=false 1`] = `
 <div
   className="uu5-bricks-nav-bar-header navbar-header"
@@ -1226,39 +1259,6 @@ exports[`UU5.Bricks.NavBar.Header props nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.NavBar.Header props nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-nav-bar-header navbar-header"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-bricks-nav-bar-header-brand"
-  >
-    <nav-bar-nav
-      id="child01"
-      key="child01"
-    >
-      <nav-bar-nav-item
-        d="child02"
-      >
-        News
-      </nav-bar-nav-item>
-    </nav-bar-nav>
-  </span>
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-nav-bar-header-hamburger"
-    onClick={[Function]}
-  >
-    <Icon
-      icon="mdi-menu"
-    />
-  </Button>
-</div>
-`;
-
 exports[`UU5.Bricks.NavBar.Header props nestingLevel="inline" 1`] = `
 <div
   className="uu5-bricks-nav-bar-header navbar-header"
@@ -1427,72 +1427,6 @@ exports[`UU5.Bricks.NavBar.Header props nestingLevel="smallBoxCollection" 1`] = 
 exports[`UU5.Bricks.NavBar.Header props nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-nav-bar-header navbar-header"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-bricks-nav-bar-header-brand"
-  >
-    <nav-bar-nav
-      id="child01"
-      key="child01"
-    >
-      <nav-bar-nav-item
-        d="child02"
-      >
-        News
-      </nav-bar-nav-item>
-    </nav-bar-nav>
-  </span>
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-nav-bar-header-hamburger"
-    onClick={[Function]}
-  >
-    <Icon
-      icon="mdi-menu"
-    />
-  </Button>
-</div>
-`;
-
-exports[`UU5.Bricks.NavBar.Header props noIndex=false 1`] = `
-<div
-  className="uu5-bricks-nav-bar-header navbar-header"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-bricks-nav-bar-header-brand"
-  >
-    <nav-bar-nav
-      id="child01"
-      key="child01"
-    >
-      <nav-bar-nav-item
-        d="child02"
-      >
-        News
-      </nav-bar-nav-item>
-    </nav-bar-nav>
-  </span>
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-nav-bar-header-hamburger"
-    onClick={[Function]}
-  >
-    <Icon
-      icon="mdi-menu"
-    />
-  </Button>
-</div>
-`;
-
-exports[`UU5.Bricks.NavBar.Header props noIndex=true 1`] = `
-<div
-  className="uu5-bricks-nav-bar-header navbar-header uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

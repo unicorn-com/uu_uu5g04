@@ -592,6 +592,32 @@ exports[`UU5.Bricks.Li fullTextSearchPriority=0 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Li fullTextSearchPriority=0 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu-bricks-y4d1ve uu5-bricks-li uu-fulltextsearch-0"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span
+      className="uu-bricks-j5rkb3"
+    />
+  </li>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Li hidden=false 1`] = `
 <ContextProvider
   value={
@@ -983,32 +1009,6 @@ exports[`UU5.Bricks.Li nestingLevel="boxCollection" 1`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Li nestingLevel="container" 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": undefined,
-      "iconColorSchema": null,
-      "listLevel": 1,
-      "markerIcon": "mdi-default",
-      "ordered": false,
-      "type": undefined,
-    }
-  }
->
-  <li
-    className="uu-bricks-y4d1ve uu5-bricks-li"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <span
-      className="uu-bricks-j5rkb3"
-    />
-  </li>
-</ContextProvider>
-`;
-
 exports[`UU5.Bricks.Li nestingLevel="inline" 1`] = `
 <ContextProvider
   value={
@@ -1154,58 +1154,6 @@ exports[`UU5.Bricks.Li nestingLevel="spa" 1`] = `
 >
   <li
     className="uu-bricks-y4d1ve uu5-bricks-li"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <span
-      className="uu-bricks-j5rkb3"
-    />
-  </li>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Li noIndex=false 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": undefined,
-      "iconColorSchema": null,
-      "listLevel": 1,
-      "markerIcon": "mdi-default",
-      "ordered": false,
-      "type": undefined,
-    }
-  }
->
-  <li
-    className="uu-bricks-y4d1ve uu5-bricks-li"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <span
-      className="uu-bricks-j5rkb3"
-    />
-  </li>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Li noIndex=true 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "counterId": undefined,
-      "iconColorSchema": null,
-      "listLevel": 1,
-      "markerIcon": "mdi-default",
-      "ordered": false,
-      "type": undefined,
-    }
-  }
->
-  <li
-    className="uu-bricks-y4d1ve uu5-bricks-li uu5-noindex uu-fulltextsearch-0"
     id="uuID"
     style={Object {}}
     title={null}

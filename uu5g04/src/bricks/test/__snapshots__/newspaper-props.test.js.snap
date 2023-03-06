@@ -503,6 +503,16 @@ exports[`UU5.Bricks.Newspaper fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Newspaper fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu-fulltextsearch-0 uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Newspaper header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <Fragment>
   <Section
@@ -830,17 +840,6 @@ exports[`UU5.Bricks.Newspaper nestingLevel="boxCollection" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Newspaper nestingLevel="container" 1`] = `
-<Fragment>
-  <Section
-    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-    id="uuID-inner"
-    mainAttrs={Object {}}
-    nestingLevel="container"
-  />
-</Fragment>
-`;
-
 exports[`UU5.Bricks.Newspaper nestingLevel="inline" 1`] = `
 <UU5.BricksEditable.InlineMode
   Component={[Function]}
@@ -930,6 +929,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="inline" 1`] = `
         Object {
           "cs": "Upravit zprávy",
           "en": "Edit newspaper",
+          "uk": "Редагувати газету",
         }
       }
       mainAttrs={null}
@@ -961,6 +961,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="inline" 1`] = `
         Object {
           "cs": "Zprávy",
           "en": "Newspaper",
+          "uk": "Газета",
         }
       }
       mainAttrs={null}
@@ -991,6 +992,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="inline" 1`] = `
         Object {
           "cs": "Zprávy",
           "en": "Newspaper",
+          "uk": "Газета",
         }
       }
       mainAttrs={null}
@@ -1097,6 +1099,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="inline" 3`] = `
         Object {
           "cs": "Upravit zprávy",
           "en": "Edit newspaper",
+          "uk": "Редагувати газету",
         }
       }
       mainAttrs={null}
@@ -1128,6 +1131,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="inline" 3`] = `
         Object {
           "cs": "Zprávy",
           "en": "Newspaper",
+          "uk": "Газета",
         }
       }
       mainAttrs={null}
@@ -1158,6 +1162,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="inline" 3`] = `
         Object {
           "cs": "Zprávy",
           "en": "Newspaper",
+          "uk": "Газета",
         }
       }
       mainAttrs={null}
@@ -1275,6 +1280,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Upravit zprávy",
           "en": "Edit newspaper",
+          "uk": "Редагувати газету",
         }
       }
       mainAttrs={null}
@@ -1306,6 +1312,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Zprávy",
           "en": "Newspaper",
+          "uk": "Газета",
         }
       }
       mainAttrs={null}
@@ -1336,6 +1343,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Zprávy",
           "en": "Newspaper",
+          "uk": "Газета",
         }
       }
       mainAttrs={null}
@@ -1442,6 +1450,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Upravit zprávy",
           "en": "Edit newspaper",
+          "uk": "Редагувати газету",
         }
       }
       mainAttrs={null}
@@ -1473,6 +1482,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Zprávy",
           "en": "Newspaper",
+          "uk": "Газета",
         }
       }
       mainAttrs={null}
@@ -1503,6 +1513,7 @@ exports[`UU5.Bricks.Newspaper nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Zprávy",
           "en": "Newspaper",
+          "uk": "Газета",
         }
       }
       mainAttrs={null}
@@ -1527,26 +1538,6 @@ exports[`UU5.Bricks.Newspaper nestingLevel="spa" 1`] = `
     id="uuID-inner"
     mainAttrs={Object {}}
     nestingLevel="spa"
-  />
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Newspaper noIndex=false 1`] = `
-<Fragment>
-  <Section
-    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-    id="uuID-inner"
-    mainAttrs={Object {}}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Newspaper noIndex=true 1`] = `
-<Fragment>
-  <Section
-    className="uu5-bricks-newspaper uu5-common-text uu5-noindex uu-fulltextsearch-0 uu5-common-newspaper-layout-2"
-    id="uuID-inner"
-    mainAttrs={Object {}}
   />
 </Fragment>
 `;

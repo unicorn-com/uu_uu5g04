@@ -1989,6 +1989,56 @@ exports[`UU5.Forms.Checkbox props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Checkbox props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-forms-checkbox uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+    >
+      <Button
+        bgStyle="outline"
+        className="uu5-forms-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon=""
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={Object {}}
+        ref_={[Function]}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Checkbox props function -> Forms.InputMixin onChange() 1`] = `
 <Checkbox
   id="checkID"
@@ -3055,106 +3105,6 @@ exports[`UU5.Forms.Checkbox props nestingLevel="box" 1`] = `
 exports[`UU5.Forms.Checkbox props nestingLevel="inline" 1`] = `
 <div
   className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width uu5-common-bg-style-outline"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <Div
-      className="uu5-forms-right-wrapper"
-    >
-      <Button
-        bgStyle="outline"
-        className="uu5-forms-checkbox-button"
-        colorSchema="custom"
-        content={
-          <Icon
-            authenticate={false}
-            className={null}
-            clickable={true}
-            controlled={true}
-            disabled={false}
-            hidden={false}
-            icon=""
-            id={null}
-            mainAttrs={null}
-            name={null}
-            nestingLevel={null}
-            parent={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            src=""
-            style={null}
-            tooltip={null}
-          />
-        }
-        mainAttrs={Object {}}
-        ref_={[Function]}
-      />
-    </Div>
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Checkbox props noIndex=false 1`] = `
-<div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <Div
-      className="uu5-forms-right-wrapper"
-    >
-      <Button
-        bgStyle="outline"
-        className="uu5-forms-checkbox-button"
-        colorSchema="custom"
-        content={
-          <Icon
-            authenticate={false}
-            className={null}
-            clickable={true}
-            controlled={true}
-            disabled={false}
-            hidden={false}
-            icon=""
-            id={null}
-            mainAttrs={null}
-            name={null}
-            nestingLevel={null}
-            parent={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            src=""
-            style={null}
-            tooltip={null}
-          />
-        }
-        mainAttrs={Object {}}
-        ref_={[Function]}
-      />
-    </Div>
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Checkbox props noIndex=true 1`] = `
-<div
-  className="uu5-forms-checkbox uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}

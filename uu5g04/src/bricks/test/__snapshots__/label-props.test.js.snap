@@ -819,6 +819,25 @@ exports[`UU5.Bricks.Label fullTextSearchPriority=0 1`] = `
 </span>
 `;
 
+exports[`UU5.Bricks.Label fullTextSearchPriority=0 2`] = `
+<span
+  className="uu5-bricks-label uu-fulltextsearch-0 uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    icon={null}
+    id="uuID_icon"
+    mainAttrs={
+      Object {
+        "onClick": [Function],
+      }
+    }
+  />
+</span>
+`;
+
 exports[`UU5.Bricks.Label hidden=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
@@ -1105,25 +1124,6 @@ exports[`UU5.Bricks.Label nestingLevel="boxCollection" 1`] = `
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel="container" 1`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-  />
-</span>
-`;
-
 exports[`UU5.Bricks.Label nestingLevel="inline" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
@@ -1222,44 +1222,6 @@ exports[`UU5.Bricks.Label nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Label nestingLevel="spa" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label noIndex=false 1`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label noIndex=true 1`] = `
-<span
-  className="uu5-bricks-label uu5-noindex uu-fulltextsearch-0 uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
   style={Object {}}
   title={null}

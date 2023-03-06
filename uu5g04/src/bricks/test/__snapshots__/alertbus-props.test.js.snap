@@ -399,6 +399,15 @@ exports[`UU5.Bricks.AlertBus fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.AlertBus fullTextSearchPriority=0 2`] = `
+<Alert
+  className="uu5-bricks-alert-bus uu-fulltextsearch-0"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.AlertBus hidden=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
@@ -522,16 +531,6 @@ exports[`UU5.Bricks.AlertBus nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.AlertBus nestingLevel="container" 1`] = `
-<Alert
-  className="uu5-bricks-alert-bus"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
-/>
-`;
-
 exports[`UU5.Bricks.AlertBus nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.AlertBus nestingLevel="inline" 3`] = `""`;
@@ -557,24 +556,6 @@ exports[`UU5.Bricks.AlertBus nestingLevel="spa" 1`] = `
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="spa"
-/>
-`;
-
-exports[`UU5.Bricks.AlertBus noIndex=false 1`] = `
-<Alert
-  className="uu5-bricks-alert-bus"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
-`;
-
-exports[`UU5.Bricks.AlertBus noIndex=true 1`] = `
-<Alert
-  className="uu5-bricks-alert-bus uu5-noindex uu-fulltextsearch-0"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
 />
 `;
 

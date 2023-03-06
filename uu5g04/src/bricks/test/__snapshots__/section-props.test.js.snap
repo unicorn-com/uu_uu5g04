@@ -504,6 +504,17 @@ exports[`UU5.Bricks.Section fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Section fullTextSearchPriority=0 2`] = `
+<Div
+  className="uu5-bricks-section uu-fulltextsearch-0"
+  footer={null}
+  header={null}
+  id="uuID"
+  level={null}
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Section header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-section"
@@ -853,18 +864,6 @@ exports[`UU5.Bricks.Section nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Section nestingLevel="container" 1`] = `
-<Div
-  className="uu5-bricks-section"
-  footer={null}
-  header={null}
-  id="uuID"
-  level={null}
-  mainAttrs={Object {}}
-  nestingLevel="container"
-/>
-`;
-
 exports[`UU5.Bricks.Section nestingLevel="inline" 1`] = `
 <UU5.BricksEditable.InlineMode
   Component={[Function]}
@@ -953,6 +952,7 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 1`] = `
         Object {
           "cs": "Editace sekce",
           "en": "Section editation",
+          "uk": "Редагування розділу",
         }
       }
       mainAttrs={null}
@@ -984,6 +984,7 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 1`] = `
         Object {
           "cs": "Sekce",
           "en": "Section",
+          "uk": "Розділ",
         }
       }
       mainAttrs={null}
@@ -1014,6 +1015,7 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 1`] = `
         Object {
           "cs": "Sekce",
           "en": "Section",
+          "uk": "Розділ",
         }
       }
       mainAttrs={null}
@@ -1120,6 +1122,7 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 3`] = `
         Object {
           "cs": "Editace sekce",
           "en": "Section editation",
+          "uk": "Редагування розділу",
         }
       }
       mainAttrs={null}
@@ -1151,6 +1154,7 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 3`] = `
         Object {
           "cs": "Sekce",
           "en": "Section",
+          "uk": "Розділ",
         }
       }
       mainAttrs={null}
@@ -1181,6 +1185,7 @@ exports[`UU5.Bricks.Section nestingLevel="inline" 3`] = `
         Object {
           "cs": "Sekce",
           "en": "Section",
+          "uk": "Розділ",
         }
       }
       mainAttrs={null}
@@ -1299,6 +1304,7 @@ exports[`UU5.Bricks.Section nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Editace sekce",
           "en": "Section editation",
+          "uk": "Редагування розділу",
         }
       }
       mainAttrs={null}
@@ -1330,6 +1336,7 @@ exports[`UU5.Bricks.Section nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Sekce",
           "en": "Section",
+          "uk": "Розділ",
         }
       }
       mainAttrs={null}
@@ -1360,6 +1367,7 @@ exports[`UU5.Bricks.Section nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Sekce",
           "en": "Section",
+          "uk": "Розділ",
         }
       }
       mainAttrs={null}
@@ -1466,6 +1474,7 @@ exports[`UU5.Bricks.Section nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Editace sekce",
           "en": "Section editation",
+          "uk": "Редагування розділу",
         }
       }
       mainAttrs={null}
@@ -1497,6 +1506,7 @@ exports[`UU5.Bricks.Section nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Sekce",
           "en": "Section",
+          "uk": "Розділ",
         }
       }
       mainAttrs={null}
@@ -1527,6 +1537,7 @@ exports[`UU5.Bricks.Section nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Sekce",
           "en": "Section",
+          "uk": "Розділ",
         }
       }
       mainAttrs={null}
@@ -1554,28 +1565,6 @@ exports[`UU5.Bricks.Section nestingLevel="spa" 1`] = `
   level={null}
   mainAttrs={Object {}}
   nestingLevel="spa"
-/>
-`;
-
-exports[`UU5.Bricks.Section noIndex=false 1`] = `
-<Div
-  className="uu5-bricks-section"
-  footer={null}
-  header={null}
-  id="uuID"
-  level={null}
-  mainAttrs={Object {}}
-/>
-`;
-
-exports[`UU5.Bricks.Section noIndex=true 1`] = `
-<Div
-  className="uu5-bricks-section uu5-noindex uu-fulltextsearch-0"
-  footer={null}
-  header={null}
-  id="uuID"
-  level={null}
-  mainAttrs={Object {}}
 />
 `;
 

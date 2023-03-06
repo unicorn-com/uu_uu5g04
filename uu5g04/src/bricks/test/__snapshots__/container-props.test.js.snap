@@ -304,6 +304,15 @@ exports[`UU5.Bricks.Container fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Container fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-container uu-fulltextsearch-0 uu5-bricks-container-spacing"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Container header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
@@ -629,6 +638,7 @@ exports[`UU5.Bricks.Container nestingLevel="bigBox" 1`] = `
         Object {
           "cs": "Upravit kontejner",
           "en": "Edit container",
+          "uk": "Редагувати контейнер",
         }
       }
       mainAttrs={null}
@@ -660,6 +670,7 @@ exports[`UU5.Bricks.Container nestingLevel="bigBox" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -690,6 +701,7 @@ exports[`UU5.Bricks.Container nestingLevel="bigBox" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -805,6 +817,7 @@ exports[`UU5.Bricks.Container nestingLevel="box" 1`] = `
         Object {
           "cs": "Upravit kontejner",
           "en": "Edit container",
+          "uk": "Редагувати контейнер",
         }
       }
       mainAttrs={null}
@@ -836,6 +849,7 @@ exports[`UU5.Bricks.Container nestingLevel="box" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -866,6 +880,7 @@ exports[`UU5.Bricks.Container nestingLevel="box" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -972,6 +987,7 @@ exports[`UU5.Bricks.Container nestingLevel="box" 3`] = `
         Object {
           "cs": "Upravit kontejner",
           "en": "Edit container",
+          "uk": "Редагувати контейнер",
         }
       }
       mainAttrs={null}
@@ -1003,6 +1019,7 @@ exports[`UU5.Bricks.Container nestingLevel="box" 3`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1033,6 +1050,7 @@ exports[`UU5.Bricks.Container nestingLevel="box" 3`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1139,6 +1157,7 @@ exports[`UU5.Bricks.Container nestingLevel="boxCollection" 1`] = `
         Object {
           "cs": "Upravit kontejner",
           "en": "Edit container",
+          "uk": "Редагувати контейнер",
         }
       }
       mainAttrs={null}
@@ -1170,6 +1189,7 @@ exports[`UU5.Bricks.Container nestingLevel="boxCollection" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1200,6 +1220,7 @@ exports[`UU5.Bricks.Container nestingLevel="boxCollection" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1215,15 +1236,6 @@ exports[`UU5.Bricks.Container nestingLevel="boxCollection" 1`] = `
     />
   }
   renderEditationMode={[Function]}
-/>
-`;
-
-exports[`UU5.Bricks.Container nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -1315,6 +1327,7 @@ exports[`UU5.Bricks.Container nestingLevel="inline" 1`] = `
         Object {
           "cs": "Upravit kontejner",
           "en": "Edit container",
+          "uk": "Редагувати контейнер",
         }
       }
       mainAttrs={null}
@@ -1346,6 +1359,7 @@ exports[`UU5.Bricks.Container nestingLevel="inline" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1376,6 +1390,7 @@ exports[`UU5.Bricks.Container nestingLevel="inline" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1482,6 +1497,7 @@ exports[`UU5.Bricks.Container nestingLevel="inline" 3`] = `
         Object {
           "cs": "Upravit kontejner",
           "en": "Edit container",
+          "uk": "Редагувати контейнер",
         }
       }
       mainAttrs={null}
@@ -1513,6 +1529,7 @@ exports[`UU5.Bricks.Container nestingLevel="inline" 3`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1543,6 +1560,7 @@ exports[`UU5.Bricks.Container nestingLevel="inline" 3`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1658,6 +1676,7 @@ exports[`UU5.Bricks.Container nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Upravit kontejner",
           "en": "Edit container",
+          "uk": "Редагувати контейнер",
         }
       }
       mainAttrs={null}
@@ -1689,6 +1708,7 @@ exports[`UU5.Bricks.Container nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1719,6 +1739,7 @@ exports[`UU5.Bricks.Container nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1825,6 +1846,7 @@ exports[`UU5.Bricks.Container nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Upravit kontejner",
           "en": "Edit container",
+          "uk": "Редагувати контейнер",
         }
       }
       mainAttrs={null}
@@ -1856,6 +1878,7 @@ exports[`UU5.Bricks.Container nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1886,6 +1909,7 @@ exports[`UU5.Bricks.Container nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Kontejner",
           "en": "Container",
+          "uk": "Контейнер",
         }
       }
       mainAttrs={null}
@@ -1907,24 +1931,6 @@ exports[`UU5.Bricks.Container nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Container nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container noIndex=false 1`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container noIndex=true 1`] = `
-<div
-  className="uu5-bricks-container uu5-noindex uu-fulltextsearch-0 uu5-bricks-container-spacing"
   id="uuID"
   style={Object {}}
   title={null}

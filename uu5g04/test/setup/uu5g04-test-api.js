@@ -30,6 +30,7 @@ const Tools = {
   setInputValue,
   testProperty,
   testProperties(Component, config) {
+    config.props.elementRef = false; // uu5g04 components don't implement elementRef
     testProperties(Component, config);
 
     if (config.mixins) {

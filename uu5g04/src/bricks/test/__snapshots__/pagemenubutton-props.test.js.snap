@@ -1412,6 +1412,37 @@ exports[`UU5.Bricks.Page.MenuButton fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Page.MenuButton fullTextSearchPriority=0 2`] = `
+<Button
+  className="uu5-bricks-page-menu-button uu-fulltextsearch-0 uu5-bricks-page-menu-button-left"
+  content={
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-menu"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+/>
+`;
+
 exports[`UU5.Bricks.Page.MenuButton hidden=false 1`] = `
 <Button
   className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
@@ -1947,38 +1978,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Page.MenuButton nestingLevel="container" 1`] = `
-<Button
-  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
-  content={
-    <Icon
-      authenticate={false}
-      className={null}
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-menu"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      parent={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  }
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
-  onClick={[Function]}
-/>
-`;
-
 exports[`UU5.Bricks.Page.MenuButton nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Page.MenuButton nestingLevel="inline" 3`] = `""`;
@@ -2107,68 +2106,6 @@ exports[`UU5.Bricks.Page.MenuButton nestingLevel="spa" 1`] = `
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="spa"
-  onClick={[Function]}
-/>
-`;
-
-exports[`UU5.Bricks.Page.MenuButton noIndex=false 1`] = `
-<Button
-  className="uu5-bricks-page-menu-button uu5-bricks-page-menu-button-left"
-  content={
-    <Icon
-      authenticate={false}
-      className={null}
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-menu"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      parent={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  }
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  onClick={[Function]}
-/>
-`;
-
-exports[`UU5.Bricks.Page.MenuButton noIndex=true 1`] = `
-<Button
-  className="uu5-bricks-page-menu-button uu5-noindex uu-fulltextsearch-0 uu5-bricks-page-menu-button-left"
-  content={
-    <Icon
-      authenticate={false}
-      className={null}
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-menu"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      parent={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  }
-  id="uuID-inner"
-  mainAttrs={Object {}}
   onClick={[Function]}
 />
 `;

@@ -202,6 +202,14 @@ exports[`UU5.Bricks.Lsi.Item props fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi.Item props fullTextSearchPriority=0 2`] = `
+<Span
+  className="uu5-bricks-lsi-item uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
 exports[`UU5.Bricks.Lsi.Item props hidden=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
@@ -312,22 +320,6 @@ exports[`UU5.Bricks.Lsi.Item props nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Lsi.Item props nestingLevel="inline" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props noIndex=false 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props noIndex=true 1`] = `
-<Span
-  className="uu5-bricks-lsi-item uu5-noindex uu-fulltextsearch-0"
   id="uuID-inner"
   mainAttrs={Object {}}
 />

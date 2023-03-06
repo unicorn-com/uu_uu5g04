@@ -16,9 +16,8 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
+import { mount, shallow, omitConsoleLogs } from "uu5g05-test";
 //@@viewOff:imports
-
-const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyNavBarNavItemHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
@@ -106,7 +105,6 @@ describe(`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props`, () =>
             className="Item className"
             style={{ fontSize: "20px", color: "red" }}
             mainAttrs={{ style: { backgroundColor: "black" } }}
-            noIndex={true}
           >
             <UU5.Bricks.Icon id={"uuID04"} icon="mdi-home" />
             Home
@@ -128,7 +126,6 @@ describe(`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props`, () =>
             className="Item className"
             style={{ fontSize: "20px", color: "red" }}
             mainAttrs={{ style: { backgroundColor: "black" } }}
-            noIndex={true}
           >
             <UU5.Bricks.Icon id={"uuID04"} icon="mdi-home" />
             Home
@@ -149,7 +146,6 @@ describe(`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props`, () =>
     expect(wrapper.find("nav-bar-nav-item").instance().props.mainAttrs).toEqual(
       expect.objectContaining({ style: { backgroundColor: "black" } })
     );
-    expect(wrapper.find("nav-bar-nav-item").instance().props.noIndex).toBeTruthy();
   });
 
   it(`UU5.Bricks.NavBar.Nav.Item Elementary Mixin Props`, () => {
@@ -170,6 +166,7 @@ describe(`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props`, () =>
   });
 
   it(`UU5.Bricks.NavBar.Nav.Item Content And PureRender Mixins props`, () => {
+    omitConsoleLogs("deprecated");
     const wrapper = mount(
       <UU5.Bricks.NavBar colorSchema="primary" id={"uuID01"}>
         <UU5.Bricks.NavBar.Nav id={"uuID02"}>

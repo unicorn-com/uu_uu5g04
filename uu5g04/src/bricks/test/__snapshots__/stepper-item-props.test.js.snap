@@ -282,6 +282,12 @@ exports[`UU5.Bricks.Stepper.Item props elevation=5 1`] = `
 </ContextConsumer>
 `;
 
+exports[`UU5.Bricks.Stepper.Item props fullTextSearchPriority=0 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
+
 exports[`UU5.Bricks.Stepper.Item props hidden=false 1`] = `
 <ContextConsumer>
   <Component />
@@ -319,18 +325,6 @@ exports[`UU5.Bricks.Stepper.Item props mainAttrs=undefined 1`] = `
 `;
 
 exports[`UU5.Bricks.Stepper.Item props name="myName" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;
-
-exports[`UU5.Bricks.Stepper.Item props noIndex=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;
-
-exports[`UU5.Bricks.Stepper.Item props noIndex=true 1`] = `
 <ContextConsumer>
   <Component />
 </ContextConsumer>

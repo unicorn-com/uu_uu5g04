@@ -416,6 +416,23 @@ exports[`UU5.Bricks.Row fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Row fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-row uu-fulltextsearch-0 uu5-bricks-row-standard uu5-bricks-row-spacing uu5-bricks-row-nospacing"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Column
+    colWidth="xs12 s3"
+    content="child column"
+    id="childID"
+    key="childID"
+    style="backgroundColor: yellow"
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Row header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-row uu5-bricks-row-standard uu5-bricks-row-spacing uu5-bricks-row-nospacing"
@@ -937,23 +954,6 @@ exports[`UU5.Bricks.Row nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Row nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-row uu5-bricks-row-standard uu5-bricks-row-spacing uu5-bricks-row-nospacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Column
-    colWidth="xs12 s3"
-    content="child column"
-    id="childID"
-    key="childID"
-    style="backgroundColor: yellow"
-  />
-</div>
-`;
-
 exports[`UU5.Bricks.Row nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Row nestingLevel="inline" 3`] = `""`;
@@ -997,40 +997,6 @@ exports[`UU5.Bricks.Row nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Row nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-row uu5-bricks-row-standard uu5-bricks-row-spacing uu5-bricks-row-nospacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Column
-    colWidth="xs12 s3"
-    content="child column"
-    id="childID"
-    key="childID"
-    style="backgroundColor: yellow"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Row noIndex=false 1`] = `
-<div
-  className="uu5-bricks-row uu5-bricks-row-standard uu5-bricks-row-spacing uu5-bricks-row-nospacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Column
-    colWidth="xs12 s3"
-    content="child column"
-    id="childID"
-    key="childID"
-    style="backgroundColor: yellow"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Row noIndex=true 1`] = `
-<div
-  className="uu5-bricks-row uu5-noindex uu-fulltextsearch-0 uu5-bricks-row-standard uu5-bricks-row-spacing uu5-bricks-row-nospacing"
   id="uuID"
   style={Object {}}
   title={null}

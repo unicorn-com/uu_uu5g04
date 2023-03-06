@@ -1,19 +1,10 @@
 import React from "react";
 import UU5 from "uu5g04";
 import { Utils as g05Utils } from "uu5g05";
+import { mount, shallow, wait, omitConsoleLogs } from "uu5g05-test";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
-
-let origToolsError;
 beforeEach(() => {
-  origToolsError = UU5.Common.Tools.error;
-  UU5.Common.Tools.error = jest.fn(function (msg) {
-    if (typeof msg === "string" && msg.match(/nesting/i)) return;
-    return origToolsError.apply(this, arguments);
-  });
-});
-afterEach(() => {
-  UU5.Common.Tools.error = origToolsError;
+  omitConsoleLogs(/Nesting level "asdf" is not a supported value/i);
 });
 
 const NLMComponent = UU5.Common.VisualComponent.create({

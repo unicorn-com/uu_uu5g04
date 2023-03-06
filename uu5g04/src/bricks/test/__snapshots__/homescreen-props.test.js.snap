@@ -391,6 +391,29 @@ exports[`UU5.Bricks.HomeScreen fullTextSearchPriority=0 1`] = `
 </Div>
 `;
 
+exports[`UU5.Bricks.HomeScreen fullTextSearchPriority=0 2`] = `
+<Div
+  className="ath-viewport"
+  nestingLevel="bigBoxCollection"
+>
+  <div
+    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
+  >
+    <div
+      key="1"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </div>
+    <P
+      key="2"
+    />
+  </div>
+</Div>
+`;
+
 exports[`UU5.Bricks.HomeScreen hidden=false 1`] = `
 <Div
   className="ath-viewport"
@@ -990,29 +1013,6 @@ exports[`UU5.Bricks.HomeScreen nestingLevel="boxCollection" 1`] = `
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen nestingLevel="container" 1`] = `
-<Div
-  className="ath-viewport"
-  nestingLevel="bigBoxCollection"
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        icon="mdi-close"
-      />
-    </div>
-    <P
-      key="2"
-    />
-  </div>
-</Div>
-`;
-
 exports[`UU5.Bricks.HomeScreen nestingLevel="inline" 1`] = `
 <Div
   className="ath-viewport"
@@ -1125,52 +1125,6 @@ exports[`UU5.Bricks.HomeScreen nestingLevel="smallBoxCollection" 1`] = `
 `;
 
 exports[`UU5.Bricks.HomeScreen nestingLevel="spa" 1`] = `
-<Div
-  className="ath-viewport"
-  nestingLevel="bigBoxCollection"
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        icon="mdi-close"
-      />
-    </div>
-    <P
-      key="2"
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen noIndex=false 1`] = `
-<Div
-  className="ath-viewport"
-  nestingLevel="bigBoxCollection"
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        icon="mdi-close"
-      />
-    </div>
-    <P
-      key="2"
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen noIndex=true 1`] = `
 <Div
   className="ath-viewport"
   nestingLevel="bigBoxCollection"

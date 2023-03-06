@@ -23,7 +23,6 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"uuID"}
-        size="xl"
         props={{
           size: "s",
           bgStyle: "outline",
@@ -58,7 +57,6 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"uuID"}
-        size="xl"
         switchedOn={true}
         props={{
           size: "s",
@@ -93,7 +91,6 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"uuID"}
-        size="xl"
         switchedOn={false}
         props={{
           size: "s",
@@ -128,7 +125,6 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"uuID"}
-        size="xl"
         switchedOn={true}
         props={{
           size: "s",
@@ -163,7 +159,6 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"uuID"}
-        size="xl"
         switchedOn={true}
         props={{
           size: "s",
@@ -187,7 +182,6 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"uuID"}
-        size="xl"
         switchedOn={false}
         props={{
           size: "s",

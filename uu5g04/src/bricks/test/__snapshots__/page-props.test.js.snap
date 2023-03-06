@@ -3210,6 +3210,98 @@ exports[`UU5.Bricks.Page fullTextSearchPriority=0 1`] = `
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Page fullTextSearchPriority=0 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "getPopover": [Function],
+    }
+  }
+>
+  <Div
+    className="uu5-bricks-page uu-fulltextsearch-0 uu5-bricks-page-type-1 uu5-bricks-page-full"
+    id="uuID-inner"
+    leftSwipe={false}
+    mainAttrs={Object {}}
+    rightSwipe={false}
+    screenSize="l"
+  >
+    <Div
+      className="uu5-bricks-page-app-layer"
+      controlled={false}
+      dynamic={true}
+      pureRender={true}
+      ref_={[Function]}
+    />
+    <Div
+      className="uu5-bricks-page-system-layer"
+      controlled={false}
+      dynamic={true}
+      pureRender={true}
+      ref_={[Function]}
+    />
+    <forwardRef(Popover)
+      className="uu5-bricks-page-popover uu5-elevation-5"
+      controlled={false}
+      id="uuID_popover"
+      key="popover"
+      pureRender={true}
+      ref_={[Function]}
+    />
+    <Row
+      className="uu5-bricks-page-flex-grow uu5-bricks-page-bottom-ie-fix uu-bricks-1f9gxzh"
+      display="flex"
+    >
+      <PageColumn
+        block={true}
+        bottomId="uuID-bottom"
+        className=" uu5-bricks-page-left"
+        contentId="uuID-content"
+        controlled={false}
+        onResize={[Function]}
+        overlayBottom={true}
+        overlayTop={true}
+        pureRender={true}
+        ref_={[Function]}
+        topId="uuID-top"
+        width="0%"
+      />
+      <Div
+        className=" uu5-bricks-page-content uu5-bricks-page-flex-basis uu5-bricks-page-flex-grow"
+        id="uuID-content"
+        pureRender={true}
+        ref_={[Function]}
+      >
+        <Div
+          className="uu5-bricks-page-content-body"
+          pureRender={true}
+        >
+          <UpdateWrapper />
+        </Div>
+      </Div>
+      <PageColumn
+        block={true}
+        bottomId="uuID-bottom"
+        className=" uu5-bricks-page-right"
+        contentId="uuID-content"
+        controlled={false}
+        onResize={[Function]}
+        overlayBottom={true}
+        overlayTop={true}
+        pureRender={true}
+        ref_={[Function]}
+        right={true}
+        topId="uuID-top"
+        width="0%"
+      />
+      <ResizeObserver
+        onResize={[Function]}
+      />
+    </Row>
+  </Div>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Page hidden=false 1`] = `
 <ContextProvider
   value={
@@ -7217,8 +7309,6 @@ exports[`UU5.Bricks.Page nestingLevel="box" 3`] = `""`;
 
 exports[`UU5.Bricks.Page nestingLevel="boxCollection" 1`] = `""`;
 
-exports[`UU5.Bricks.Page nestingLevel="container" 1`] = `""`;
-
 exports[`UU5.Bricks.Page nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Page nestingLevel="inline" 3`] = `""`;
@@ -7334,190 +7424,6 @@ exports[`UU5.Bricks.Page nestingLevel="spa" 1`] = `
     leftSwipe={false}
     mainAttrs={Object {}}
     nestingLevel="spa"
-    rightSwipe={false}
-    screenSize="l"
-  >
-    <Div
-      className="uu5-bricks-page-app-layer"
-      controlled={false}
-      dynamic={true}
-      pureRender={true}
-      ref_={[Function]}
-    />
-    <Div
-      className="uu5-bricks-page-system-layer"
-      controlled={false}
-      dynamic={true}
-      pureRender={true}
-      ref_={[Function]}
-    />
-    <forwardRef(Popover)
-      className="uu5-bricks-page-popover uu5-elevation-5"
-      controlled={false}
-      id="uuID_popover"
-      key="popover"
-      pureRender={true}
-      ref_={[Function]}
-    />
-    <Row
-      className="uu5-bricks-page-flex-grow uu5-bricks-page-bottom-ie-fix uu-bricks-1f9gxzh"
-      display="flex"
-    >
-      <PageColumn
-        block={true}
-        bottomId="uuID-bottom"
-        className=" uu5-bricks-page-left"
-        contentId="uuID-content"
-        controlled={false}
-        onResize={[Function]}
-        overlayBottom={true}
-        overlayTop={true}
-        pureRender={true}
-        ref_={[Function]}
-        topId="uuID-top"
-        width="0%"
-      />
-      <Div
-        className=" uu5-bricks-page-content uu5-bricks-page-flex-basis uu5-bricks-page-flex-grow"
-        id="uuID-content"
-        pureRender={true}
-        ref_={[Function]}
-      >
-        <Div
-          className="uu5-bricks-page-content-body"
-          pureRender={true}
-        >
-          <UpdateWrapper />
-        </Div>
-      </Div>
-      <PageColumn
-        block={true}
-        bottomId="uuID-bottom"
-        className=" uu5-bricks-page-right"
-        contentId="uuID-content"
-        controlled={false}
-        onResize={[Function]}
-        overlayBottom={true}
-        overlayTop={true}
-        pureRender={true}
-        ref_={[Function]}
-        right={true}
-        topId="uuID-top"
-        width="0%"
-      />
-      <ResizeObserver
-        onResize={[Function]}
-      />
-    </Row>
-  </Div>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Page noIndex=false 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "getPopover": [Function],
-    }
-  }
->
-  <Div
-    className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
-    id="uuID-inner"
-    leftSwipe={false}
-    mainAttrs={Object {}}
-    rightSwipe={false}
-    screenSize="l"
-  >
-    <Div
-      className="uu5-bricks-page-app-layer"
-      controlled={false}
-      dynamic={true}
-      pureRender={true}
-      ref_={[Function]}
-    />
-    <Div
-      className="uu5-bricks-page-system-layer"
-      controlled={false}
-      dynamic={true}
-      pureRender={true}
-      ref_={[Function]}
-    />
-    <forwardRef(Popover)
-      className="uu5-bricks-page-popover uu5-elevation-5"
-      controlled={false}
-      id="uuID_popover"
-      key="popover"
-      pureRender={true}
-      ref_={[Function]}
-    />
-    <Row
-      className="uu5-bricks-page-flex-grow uu5-bricks-page-bottom-ie-fix uu-bricks-1f9gxzh"
-      display="flex"
-    >
-      <PageColumn
-        block={true}
-        bottomId="uuID-bottom"
-        className=" uu5-bricks-page-left"
-        contentId="uuID-content"
-        controlled={false}
-        onResize={[Function]}
-        overlayBottom={true}
-        overlayTop={true}
-        pureRender={true}
-        ref_={[Function]}
-        topId="uuID-top"
-        width="0%"
-      />
-      <Div
-        className=" uu5-bricks-page-content uu5-bricks-page-flex-basis uu5-bricks-page-flex-grow"
-        id="uuID-content"
-        pureRender={true}
-        ref_={[Function]}
-      >
-        <Div
-          className="uu5-bricks-page-content-body"
-          pureRender={true}
-        >
-          <UpdateWrapper />
-        </Div>
-      </Div>
-      <PageColumn
-        block={true}
-        bottomId="uuID-bottom"
-        className=" uu5-bricks-page-right"
-        contentId="uuID-content"
-        controlled={false}
-        onResize={[Function]}
-        overlayBottom={true}
-        overlayTop={true}
-        pureRender={true}
-        ref_={[Function]}
-        right={true}
-        topId="uuID-top"
-        width="0%"
-      />
-      <ResizeObserver
-        onResize={[Function]}
-      />
-    </Row>
-  </Div>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Page noIndex=true 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "getPopover": [Function],
-    }
-  }
->
-  <Div
-    className="uu5-bricks-page uu5-noindex uu-fulltextsearch-0 uu5-bricks-page-type-1 uu5-bricks-page-full"
-    id="uuID-inner"
-    leftSwipe={false}
-    mainAttrs={Object {}}
     rightSwipe={false}
     screenSize="l"
   >

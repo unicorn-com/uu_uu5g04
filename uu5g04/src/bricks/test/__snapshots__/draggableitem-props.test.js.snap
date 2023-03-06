@@ -453,6 +453,26 @@ exports[`UU5.Bricks.DraggableItem fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.DraggableItem fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-draggable-item uu-fulltextsearch-0"
+  id="uuID"
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
+  title={null}
+>
+  <Div
+    pureRender={true}
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.DraggableItem hidden=false 1`] = `
 <div
   className="uu5-bricks-draggable-item"
@@ -754,26 +774,6 @@ exports[`UU5.Bricks.DraggableItem nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.DraggableItem nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-draggable-item"
-  id="uuID"
-  onMouseDown={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "left": 0,
-      "top": 0,
-    }
-  }
-  title={null}
->
-  <Div
-    pureRender={true}
-  />
-</div>
-`;
-
 exports[`UU5.Bricks.DraggableItem nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.DraggableItem nestingLevel="inline" 3`] = `""`;
@@ -805,46 +805,6 @@ exports[`UU5.Bricks.DraggableItem nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.DraggableItem nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-draggable-item"
-  id="uuID"
-  onMouseDown={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "left": 0,
-      "top": 0,
-    }
-  }
-  title={null}
->
-  <Div
-    pureRender={true}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.DraggableItem noIndex=false 1`] = `
-<div
-  className="uu5-bricks-draggable-item"
-  id="uuID"
-  onMouseDown={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "left": 0,
-      "top": 0,
-    }
-  }
-  title={null}
->
-  <Div
-    pureRender={true}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.DraggableItem noIndex=true 1`] = `
-<div
-  className="uu5-bricks-draggable-item uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   onMouseDown={[Function]}
   onTouchStart={[Function]}

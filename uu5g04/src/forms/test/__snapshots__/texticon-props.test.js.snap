@@ -1292,6 +1292,37 @@ exports[`UU5.Forms.TextIcon props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.TextIcon props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-forms-text-icon uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <autocomplete-text-input
+      clickable={false}
+      feedback="initial"
+      iconOnClick={[Function]}
+      id="uuID-input"
+      mainAttrs={Object {}}
+      name="uuID-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+      size="m"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.TextIcon props function -> InputMixin onChange() 1`] = `
 <TextIcon
   id="checkID"
@@ -2251,68 +2282,6 @@ exports[`UU5.Forms.TextIcon props nestingLevel="inline" 1`] = `
       iconOnClick={[Function]}
       id="uuID-input"
       inputWidth="auto"
-      mainAttrs={Object {}}
-      name="uuID-input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      size="m"
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.TextIcon props noIndex=false 1`] = `
-<div
-  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <autocomplete-text-input
-      clickable={false}
-      feedback="initial"
-      iconOnClick={[Function]}
-      id="uuID-input"
-      mainAttrs={Object {}}
-      name="uuID-input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      size="m"
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.TextIcon props noIndex=true 1`] = `
-<div
-  className="uu5-forms-text-icon uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <autocomplete-text-input
-      clickable={false}
-      feedback="initial"
-      iconOnClick={[Function]}
-      id="uuID-input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}

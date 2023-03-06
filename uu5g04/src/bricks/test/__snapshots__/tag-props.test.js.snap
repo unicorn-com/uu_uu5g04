@@ -49,6 +49,13 @@ exports[`UU5.Bricks.Tag fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Tag fullTextSearchPriority=0 2`] = `
+<span
+  className="uu5-bricks-state-icon uu-bricks-bab078 uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Tag hidden=false 1`] = `
 <span
   className="uu5-bricks-state-icon uu-bricks-bab078"
@@ -169,13 +176,6 @@ exports[`UU5.Bricks.Tag nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tag nestingLevel="container" 1`] = `
-<span
-  className="uu5-bricks-state-icon uu-bricks-bab078"
-  id="uuID"
-/>
-`;
-
 exports[`UU5.Bricks.Tag nestingLevel="inline" 1`] = `
 <span
   className="uu5-bricks-state-icon uu-bricks-bab078"
@@ -214,20 +214,6 @@ exports[`UU5.Bricks.Tag nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Tag nestingLevel="spa" 1`] = `
 <span
   className="uu5-bricks-state-icon uu-bricks-bab078"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Tag noIndex=false 1`] = `
-<span
-  className="uu5-bricks-state-icon uu-bricks-bab078"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Tag noIndex=true 1`] = `
-<span
-  className="uu5-bricks-state-icon uu-bricks-bab078 uu5-noindex uu-fulltextsearch-0"
   id="uuID"
 />
 `;
@@ -288,9 +274,9 @@ exports[`UU5.Bricks.Tag state="alternativeFinal" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tag state="cancel" 1`] = `
+exports[`UU5.Bricks.Tag state="cancelled" 1`] = `
 <span
-  className="uu5-bricks-state-icon uu-bricks-4ymio9"
+  className="uu5-bricks-state-icon uu-bricks-hdgvqz"
   id="uuID"
 />
 `;

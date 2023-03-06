@@ -164,6 +164,13 @@ exports[`UU5.Bricks.Address fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Address fullTextSearchPriority=0 2`] = `
+<address
+  className="uu5-bricks-address uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Address hidden=false 1`] = `
 <address
   className="uu5-bricks-address"
@@ -248,20 +255,6 @@ exports[`UU5.Bricks.Address nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Address nestingLevel="inline" 1`] = `
 <address
   className="uu5-bricks-address"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Address noIndex=false 1`] = `
-<address
-  className="uu5-bricks-address"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Address noIndex=true 1`] = `
-<address
-  className="uu5-bricks-address uu-fulltextsearch-0 uu5-noindex"
   id="uuID"
 />
 `;

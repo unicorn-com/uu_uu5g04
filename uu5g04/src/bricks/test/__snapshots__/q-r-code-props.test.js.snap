@@ -140,6 +140,26 @@ exports[`UU5.Bricks.QRCode fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.QRCode fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <span
+    className="uu5-bricks-q-r-code uu-bricks-1w73uij uu-fulltextsearch-0"
+    id="uuID"
+  >
+    <Suspense
+      fallback=""
+    >
+      <lazy
+        level="L"
+        renderAs="svg"
+        size={128}
+        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      />
+    </Suspense>
+  </span>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.QRCode hidden=false 1`] = `
 <Fragment>
   <span
@@ -339,6 +359,7 @@ exports[`UU5.Bricks.QRCode nestingLevel="inline" 1`] = `
           Object {
             "cs": "Upravit QR kód",
             "en": "Edit QR code",
+            "uk": "Редагувати QR-код",
           }
         }
         mainAttrs={null}
@@ -371,6 +392,7 @@ exports[`UU5.Bricks.QRCode nestingLevel="inline" 1`] = `
           Object {
             "cs": "QR kód",
             "en": "QR code",
+            "uk": "QR-код",
           }
         }
         mainAttrs={null}
@@ -392,46 +414,6 @@ exports[`UU5.Bricks.QRCode nestingLevel="inline" 1`] = `
     }
     renderEditationMode={[Function]}
   />
-</Fragment>
-`;
-
-exports[`UU5.Bricks.QRCode noIndex=false 1`] = `
-<Fragment>
-  <span
-    className="uu5-bricks-q-r-code uu-bricks-1w73uij"
-    id="uuID"
-  >
-    <Suspense
-      fallback=""
-    >
-      <lazy
-        level="L"
-        renderAs="svg"
-        size={128}
-        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
-      />
-    </Suspense>
-  </span>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.QRCode noIndex=true 1`] = `
-<Fragment>
-  <span
-    className="uu5-bricks-q-r-code uu-bricks-1w73uij uu5-noindex uu-fulltextsearch-0"
-    id="uuID"
-  >
-    <Suspense
-      fallback=""
-    >
-      <lazy
-        level="L"
-        renderAs="svg"
-        size={128}
-        value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
-      />
-    </Suspense>
-  </span>
 </Fragment>
 `;
 

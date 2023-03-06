@@ -2347,6 +2347,49 @@ exports[`UU5.Forms.DatePicker props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.DatePicker props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-forms-datepicker uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      icon="mdi-calendar"
+      iconClickable={false}
+      id="uuID-input"
+      mainAttrs={
+        Object {
+          "autoComplete": "off",
+        }
+      }
+      name="uuID-input"
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
+      disableBackdrop={true}
+      forceRender={true}
+      id="uuID-popover"
+      location="local"
+      ref_={[Function]}
+      shown={false}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.DatePicker props function -> Forms.InputMixin onChange() 1`] = `
 <DatePicker
   id="checkID"
@@ -3729,92 +3772,6 @@ exports[`UU5.Forms.DatePicker props nestingLevel="inline" 1`] = `
       iconClickable={false}
       id="uuID-input"
       inputWidth="auto"
-      mainAttrs={
-        Object {
-          "autoComplete": "off",
-        }
-      }
-      name="uuID-input"
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      readonly={false}
-      ref_={[Function]}
-    />
-    <forwardRef(Popover)
-      className="uu5-forms-datepicker-popover"
-      disableBackdrop={true}
-      forceRender={true}
-      id="uuID-popover"
-      location="local"
-      ref_={[Function]}
-      shown={false}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.DatePicker props noIndex=false 1`] = `
-<div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <text-input
-      feedback="initial"
-      icon="mdi-calendar"
-      iconClickable={false}
-      id="uuID-input"
-      mainAttrs={
-        Object {
-          "autoComplete": "off",
-        }
-      }
-      name="uuID-input"
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      readonly={false}
-      ref_={[Function]}
-    />
-    <forwardRef(Popover)
-      className="uu5-forms-datepicker-popover"
-      disableBackdrop={true}
-      forceRender={true}
-      id="uuID-popover"
-      location="local"
-      ref_={[Function]}
-      shown={false}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.DatePicker props noIndex=true 1`] = `
-<div
-  className="uu5-forms-datepicker uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <text-input
-      feedback="initial"
-      icon="mdi-calendar"
-      iconClickable={false}
-      id="uuID-input"
       mainAttrs={
         Object {
           "autoComplete": "off",

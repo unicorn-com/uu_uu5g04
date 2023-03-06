@@ -385,6 +385,23 @@ exports[`UU5.Bricks.YoutubeVideo fullTextSearchPriority=0 1`] = `
 </Span>
 `;
 
+exports[`UU5.Bricks.YoutubeVideo fullTextSearchPriority=0 2`] = `
+<Span
+  className="uu5-bricks-youtube-video uu-fulltextsearch-0"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <iframe
+    allowFullScreen={true}
+    className="uu5-bricks-youtube-video uu-fulltextsearch-0 uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
 exports[`UU5.Bricks.YoutubeVideo hidden=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
@@ -633,23 +650,6 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="boxCollection" 1`] = `
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="boxCollection"
->
-  <iframe
-    allowFullScreen={true}
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel="container" 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
 >
   <iframe
     allowFullScreen={true}
@@ -912,40 +912,6 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="spa" 1`] = `
   <iframe
     allowFullScreen={true}
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo noIndex=false 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel={null}
->
-  <iframe
-    allowFullScreen={true}
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo noIndex=true 1`] = `
-<Span
-  className="uu5-bricks-youtube-video uu5-noindex uu-fulltextsearch-0"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel={null}
->
-  <iframe
-    allowFullScreen={true}
-    className="uu5-bricks-youtube-video uu5-noindex uu-fulltextsearch-0 uu5-bricks-youtube-video-m"
     id="uuID"
     style={Object {}}
     title={null}

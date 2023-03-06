@@ -163,6 +163,13 @@ exports[`UU5.Bricks.Kbd fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Kbd fullTextSearchPriority=0 2`] = `
+<kbd
+  className="uu5-bricks-kbd uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Kbd hidden=false 1`] = `
 <kbd
   className="uu5-bricks-kbd"
@@ -247,20 +254,6 @@ exports[`UU5.Bricks.Kbd nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Kbd nestingLevel="inline" 1`] = `
 <kbd
   className="uu5-bricks-kbd"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Kbd noIndex=false 1`] = `
-<kbd
-  className="uu5-bricks-kbd"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Kbd noIndex=true 1`] = `
-<kbd
-  className="uu5-bricks-kbd uu-fulltextsearch-0 uu5-noindex"
   id="uuID"
 />
 `;

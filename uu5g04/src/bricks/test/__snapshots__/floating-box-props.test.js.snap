@@ -1808,6 +1808,36 @@ exports[`UU5.Bricks.FloatingBox props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.FloatingBox props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-floating-box uu-fulltextsearch-0 uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.FloatingBox props header="floating-box" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
@@ -2212,66 +2242,6 @@ exports[`UU5.Bricks.FloatingBox props nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.FloatingBox props nestingLevel="inline" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      className="uu5-bricks-floating-box-drag-icon"
-      icon="mdi-drag"
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props noIndex=false 1`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      className="uu5-bricks-floating-box-drag-icon"
-      icon="mdi-drag"
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props noIndex=true 1`] = `
-<div
-  className="uu5-bricks-floating-box uu5-noindex uu-fulltextsearch-0 uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
   style={
     Object {

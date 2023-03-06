@@ -514,6 +514,28 @@ exports[`UU5.Bricks.ContextMenu.Item fullTextSearchPriority=0 1`] = `
 </li>
 `;
 
+exports[`UU5.Bricks.ContextMenu.Item fullTextSearchPriority=0 2`] = `
+<li
+  className="uu5-bricks-context-menu-item uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-context-menu-item-link"
+    colorSchema="custom"
+    content={
+      Array [
+        null,
+      ]
+    }
+    href="#"
+    offset={null}
+    onClick={[Function]}
+  />
+</li>
+`;
+
 exports[`UU5.Bricks.ContextMenu.Item hidden=false 1`] = `
 <li
   className="uu5-bricks-context-menu-item"
@@ -868,50 +890,6 @@ exports[`UU5.Bricks.ContextMenu.Item nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.ContextMenu.Item nestingLevel="inline" 1`] = `
 <li
   className="uu5-bricks-context-menu-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-context-menu-item-link"
-    colorSchema="custom"
-    content={
-      Array [
-        null,
-      ]
-    }
-    href="#"
-    offset={null}
-    onClick={[Function]}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.ContextMenu.Item noIndex=false 1`] = `
-<li
-  className="uu5-bricks-context-menu-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-context-menu-item-link"
-    colorSchema="custom"
-    content={
-      Array [
-        null,
-      ]
-    }
-    href="#"
-    offset={null}
-    onClick={[Function]}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.ContextMenu.Item noIndex=true 1`] = `
-<li
-  className="uu5-bricks-context-menu-item uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

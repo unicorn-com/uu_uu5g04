@@ -1465,6 +1465,37 @@ exports[`UU5.Bricks.Panel fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Panel fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-panel uu-fulltextsearch-0 uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
+    _onClick={[Function]}
+    content="noHeader"
+    iconAlign={null}
+    id="uuID-header"
+    key="uuID-header"
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    underline={false}
+  />
+  <panel-body
+    borderRadius={null}
+    content="noBody"
+    id="uuID-body"
+    key="uuID-body"
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Panel header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
@@ -2553,37 +2584,6 @@ exports[`UU5.Bricks.Panel nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Panel nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <panel-header
-    _bgStyle="filled"
-    _colorSchema={null}
-    _onClick={[Function]}
-    content="noHeader"
-    iconAlign={null}
-    id="uuID-header"
-    key="uuID-header"
-    style={
-      Object {
-        "borderRadius": null,
-      }
-    }
-    underline={false}
-  />
-  <panel-body
-    borderRadius={null}
-    content="noBody"
-    id="uuID-body"
-    key="uuID-body"
-  />
-</div>
-`;
-
 exports[`UU5.Bricks.Panel nestingLevel="inline" 1`] = `
 <UU5.BricksEditable.InlineMode
   Component={[Function]}
@@ -2692,6 +2692,7 @@ exports[`UU5.Bricks.Panel nestingLevel="inline" 1`] = `
         Object {
           "cs": "Upravit panel",
           "en": "Edit panel",
+          "uk": "Редагувати панель",
         }
       }
       mainAttrs={null}
@@ -2820,6 +2821,7 @@ exports[`UU5.Bricks.Panel nestingLevel="inline" 3`] = `
         Object {
           "cs": "Upravit panel",
           "en": "Edit panel",
+          "uk": "Редагувати панель",
         }
       }
       mainAttrs={null}
@@ -2979,6 +2981,7 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Upravit panel",
           "en": "Edit panel",
+          "uk": "Редагувати панель",
         }
       }
       mainAttrs={null}
@@ -3107,6 +3110,7 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Upravit panel",
           "en": "Edit panel",
+          "uk": "Редагувати панель",
         }
       }
       mainAttrs={null}
@@ -3130,68 +3134,6 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Panel nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <panel-header
-    _bgStyle="filled"
-    _colorSchema={null}
-    _onClick={[Function]}
-    content="noHeader"
-    iconAlign={null}
-    id="uuID-header"
-    key="uuID-header"
-    style={
-      Object {
-        "borderRadius": null,
-      }
-    }
-    underline={false}
-  />
-  <panel-body
-    borderRadius={null}
-    content="noBody"
-    id="uuID-body"
-    key="uuID-body"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Panel noIndex=false 1`] = `
-<div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <panel-header
-    _bgStyle="filled"
-    _colorSchema={null}
-    _onClick={[Function]}
-    content="noHeader"
-    iconAlign={null}
-    id="uuID-header"
-    key="uuID-header"
-    style={
-      Object {
-        "borderRadius": null,
-      }
-    }
-    underline={false}
-  />
-  <panel-body
-    borderRadius={null}
-    content="noBody"
-    id="uuID-body"
-    key="uuID-body"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Panel noIndex=true 1`] = `
-<div
-  className="uu5-bricks-panel uu5-noindex uu-fulltextsearch-0 uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}

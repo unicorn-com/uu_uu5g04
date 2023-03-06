@@ -377,6 +377,22 @@ exports[`UU5.Bricks.Tree fullTextSearchPriority=0 1`] = `
 </tree-list>
 `;
 
+exports[`UU5.Bricks.Tree fullTextSearchPriority=0 2`] = `
+<tree-list
+  className="uu5-bricks-tree uu-fulltextsearch-0 uu5-bricks-tree-m"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
+>
+  <TreeItem
+    expanded={true}
+    id="idChild"
+    key=".$0"
+    label="Anchorman"
+  />
+</tree-list>
+`;
+
 exports[`UU5.Bricks.Tree hidden=false 1`] = `
 <tree-list
   className="uu5-bricks-tree uu5-bricks-tree-m"
@@ -690,22 +706,6 @@ exports[`UU5.Bricks.Tree nestingLevel="boxCollection" 1`] = `
 </tree-list>
 `;
 
-exports[`UU5.Bricks.Tree nestingLevel="container" 1`] = `
-<tree-list
-  className="uu5-bricks-tree uu5-bricks-tree-m"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
->
-  <TreeItem
-    expanded={true}
-    id="idChild"
-    key=".$0"
-    label="Anchorman"
-  />
-</tree-list>
-`;
-
 exports[`UU5.Bricks.Tree nestingLevel="inline" 1`] = `
 <UU5.BricksEditable.InlineMode
   Component={[Function]}
@@ -972,38 +972,6 @@ exports[`UU5.Bricks.Tree nestingLevel="spa" 1`] = `
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="spa"
->
-  <TreeItem
-    expanded={true}
-    id="idChild"
-    key=".$0"
-    label="Anchorman"
-  />
-</tree-list>
-`;
-
-exports[`UU5.Bricks.Tree noIndex=false 1`] = `
-<tree-list
-  className="uu5-bricks-tree uu5-bricks-tree-m"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel={null}
->
-  <TreeItem
-    expanded={true}
-    id="idChild"
-    key=".$0"
-    label="Anchorman"
-  />
-</tree-list>
-`;
-
-exports[`UU5.Bricks.Tree noIndex=true 1`] = `
-<tree-list
-  className="uu5-bricks-tree uu5-noindex uu-fulltextsearch-0 uu5-bricks-tree-m"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel={null}
 >
   <TreeItem
     expanded={true}

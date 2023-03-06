@@ -164,6 +164,13 @@ exports[`UU5.Bricks.Em fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Em fullTextSearchPriority=0 2`] = `
+<em
+  className="uu5-bricks-em uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Em hidden=false 1`] = `
 <em
   className="uu5-bricks-em"
@@ -248,20 +255,6 @@ exports[`UU5.Bricks.Em nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Em nestingLevel="inline" 1`] = `
 <em
   className="uu5-bricks-em"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Em noIndex=false 1`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Em noIndex=true 1`] = `
-<em
-  className="uu5-bricks-em uu-fulltextsearch-0 uu5-noindex"
   id="uuID"
 />
 `;

@@ -16,9 +16,8 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
+import { mount, shallow, omitConsoleLogs } from "uu5g05-test";
 //@@viewOff:imports
-
-const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MySwitchComponent = UU5.Common.VisualComponent.create({
   getInitialState: () => {
@@ -101,6 +100,7 @@ describe(`UU5.Bricks.Switch props testing`, () => {
   });
 
   it(`UU5.Bricks.Switch onClick() should toggle button`, function () {
+    omitConsoleLogs("deprecated");
     const wrapper = mount(
       <UU5.Bricks.Switch
         id={"mySwitch"}

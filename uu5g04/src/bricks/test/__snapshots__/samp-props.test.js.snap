@@ -177,6 +177,13 @@ exports[`UU5.Bricks.Samp fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Samp fullTextSearchPriority=0 2`] = `
+<samp
+  className="uu5-bricks-samp uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Samp hidden=false 1`] = `
 <samp
   className="uu5-bricks-samp"
@@ -261,20 +268,6 @@ exports[`UU5.Bricks.Samp nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Samp nestingLevel="inline" 1`] = `
 <samp
   className="uu5-bricks-samp"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Samp noIndex=false 1`] = `
-<samp
-  className="uu5-bricks-samp"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Samp noIndex=true 1`] = `
-<samp
-  className="uu5-bricks-samp uu-fulltextsearch-0 uu5-noindex"
   id="uuID"
 />
 `;

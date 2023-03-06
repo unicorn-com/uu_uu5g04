@@ -640,6 +640,24 @@ exports[`UU5.Bricks.GoogleMap fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.GoogleMap fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-google-map uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.GoogleMap googleApiKey="AIzaSyBkv-K9tpS-MrvvRKOpIGEj7H5wwdHD9pA" 1`] = `
 <div
   className="uu5-bricks-google-map"
@@ -1044,42 +1062,6 @@ exports[`UU5.Bricks.GoogleMap nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.GoogleMap nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-google-map"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    style={
-      Object {
-        "height": "400px",
-        "width": "100%",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.GoogleMap noIndex=false 1`] = `
-<div
-  className="uu5-bricks-google-map"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    style={
-      Object {
-        "height": "400px",
-        "width": "100%",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.GoogleMap noIndex=true 1`] = `
-<div
-  className="uu5-bricks-google-map uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

@@ -468,6 +468,27 @@ exports[`UU5.Bricks.Code fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Code fullTextSearchPriority=0 2`] = `
+<_code
+  className="uu5-bricks-code uu-fulltextsearch-0"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-code"
+  ignoreInnerHTML={true}
+  language="code"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
 exports[`UU5.Bricks.Code hidden=false 1`] = `
 <_code
   className="uu5-bricks-code"
@@ -783,27 +804,6 @@ exports[`UU5.Bricks.Code nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Code nestingLevel="container" 1`] = `
-<_code
-  className="uu5-bricks-code"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-code"
-  ignoreInnerHTML={true}
-  language="code"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
 exports[`UU5.Bricks.Code nestingLevel="inline" 1`] = `
 <_code
   className="uu5-bricks-code"
@@ -923,48 +923,6 @@ exports[`UU5.Bricks.Code nestingLevel="spa" 1`] = `
   mainAttrs={Object {}}
   name={null}
   nestingLevel="spa"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Code noIndex=false 1`] = `
-<_code
-  className="uu5-bricks-code"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-code"
-  ignoreInnerHTML={true}
-  language="code"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Code noIndex=true 1`] = `
-<_code
-  className="uu5-bricks-code uu5-noindex uu-fulltextsearch-0"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-code"
-  ignoreInnerHTML={true}
-  language="code"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
   pureRender={false}
   selected={false}
   style={null}

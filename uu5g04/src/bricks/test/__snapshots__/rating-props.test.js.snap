@@ -1154,6 +1154,33 @@ exports[`UU5.Bricks.Rating fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Rating fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-rating uu-fulltextsearch-0 uu5-bricks-rating-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <RatingIcon
+      key="5"
+    />
+    <RatingIcon
+      key="4"
+    />
+    <RatingIcon
+      key="3"
+    />
+    <RatingIcon
+      key="2"
+    />
+    <RatingIcon
+      key="1"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Rating hidden=false 1`] = `
 <Fragment>
   <div
@@ -1592,33 +1619,6 @@ exports[`UU5.Bricks.Rating nestingLevel="boxCollection" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Rating nestingLevel="container" 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-rating uu5-bricks-rating-size-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <RatingIcon
-      key="5"
-    />
-    <RatingIcon
-      key="4"
-    />
-    <RatingIcon
-      key="3"
-    />
-    <RatingIcon
-      key="2"
-    />
-    <RatingIcon
-      key="1"
-    />
-  </div>
-</Fragment>
-`;
-
 exports[`UU5.Bricks.Rating nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Rating nestingLevel="inline" 3`] = `""`;
@@ -1708,60 +1708,6 @@ exports[`UU5.Bricks.Rating nestingLevel="spa" 1`] = `
 <Fragment>
   <div
     className="uu5-bricks-rating uu5-bricks-rating-size-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <RatingIcon
-      key="5"
-    />
-    <RatingIcon
-      key="4"
-    />
-    <RatingIcon
-      key="3"
-    />
-    <RatingIcon
-      key="2"
-    />
-    <RatingIcon
-      key="1"
-    />
-  </div>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Rating noIndex=false 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-rating uu5-bricks-rating-size-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <RatingIcon
-      key="5"
-    />
-    <RatingIcon
-      key="4"
-    />
-    <RatingIcon
-      key="3"
-    />
-    <RatingIcon
-      key="2"
-    />
-    <RatingIcon
-      key="1"
-    />
-  </div>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Rating noIndex=true 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-rating uu5-noindex uu-fulltextsearch-0 uu5-bricks-rating-size-m"
     id="uuID"
     style={Object {}}
     title={null}

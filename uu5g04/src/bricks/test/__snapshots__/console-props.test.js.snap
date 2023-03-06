@@ -39,6 +39,13 @@ exports[`UU5.Bricks.Console disabled=true 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Console fullTextSearchPriority=0 1`] = `
+<Console
+  fullTextSearchPriority={0}
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Console hidden=false 1`] = `
 <Console
   id="uuID"
@@ -99,13 +106,6 @@ exports[`UU5.Bricks.Console nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Console nestingLevel="container" 1`] = `
-<Console
-  id="uuID"
-  nestingLevel="container"
-/>
-`;
-
 exports[`UU5.Bricks.Console nestingLevel="inline" 1`] = `
 <UU5.Bricks.LinkModal
   component={
@@ -156,20 +156,6 @@ exports[`UU5.Bricks.Console nestingLevel="spa" 1`] = `
 <Console
   id="uuID"
   nestingLevel="spa"
-/>
-`;
-
-exports[`UU5.Bricks.Console noIndex=false 1`] = `
-<Console
-  id="uuID"
-  noIndex={false}
-/>
-`;
-
-exports[`UU5.Bricks.Console noIndex=true 1`] = `
-<Console
-  id="uuID"
-  noIndex={true}
 />
 `;
 

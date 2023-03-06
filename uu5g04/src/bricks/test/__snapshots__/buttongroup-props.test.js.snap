@@ -505,6 +505,16 @@ exports[`UU5.Bricks.ButtonGroup props testing fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ButtonGroup props testing fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu-fulltextsearch-0 uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ButtonGroup props testing hidden=false 1`] = `
 <Fragment>
   <Div
@@ -663,17 +673,6 @@ exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="boxCollection" 1`] =
 </Fragment>
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="container" 1`] = `
-<Fragment>
-  <Div
-    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-    id="uuID-inner"
-    mainAttrs={Object {}}
-    nestingLevel="container"
-  />
-</Fragment>
-`;
-
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="inline" 3`] = `""`;
@@ -718,26 +717,6 @@ exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="spa" 1`] = `
     id="uuID-inner"
     mainAttrs={Object {}}
     nestingLevel="spa"
-  />
-</Fragment>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing noIndex=false 1`] = `
-<Fragment>
-  <Div
-    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-    id="uuID-inner"
-    mainAttrs={Object {}}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing noIndex=true 1`] = `
-<Fragment>
-  <Div
-    className="uu5-bricks-button-group uu5-noindex uu-fulltextsearch-0 uu5-bricks-button-group-horizontal"
-    id="uuID-inner"
-    mainAttrs={Object {}}
   />
 </Fragment>
 `;

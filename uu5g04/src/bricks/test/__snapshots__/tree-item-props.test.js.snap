@@ -495,6 +495,25 @@ exports[`UU5.Bricks.Tree.Item fullTextSearchPriority=0 1`] = `
 </li>
 `;
 
+exports[`UU5.Bricks.Tree.Item fullTextSearchPriority=0 2`] = `
+<li
+  className="uu5-bricks-tree-item uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Div
+    className="uu5-bricks-tree-item-nav"
+  >
+    <Icon
+      className="uu5-bricks-tree-item-icon-hidden"
+    />
+     
+    <Span />
+  </Div>
+</li>
+`;
+
 exports[`UU5.Bricks.Tree.Item hidden=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
@@ -888,25 +907,6 @@ exports[`UU5.Bricks.Tree.Item nestingLevel="boxCollection" 1`] = `
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel="container" 1`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-  >
-    <Icon
-      className="uu5-bricks-tree-item-icon-hidden"
-    />
-     
-    <Span />
-  </Div>
-</li>
-`;
-
 exports[`UU5.Bricks.Tree.Item nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Tree.Item nestingLevel="inline" 3`] = `""`;
@@ -971,44 +971,6 @@ exports[`UU5.Bricks.Tree.Item nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Tree.Item nestingLevel="spa" 1`] = `
 <li
   className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-  >
-    <Icon
-      className="uu5-bricks-tree-item-icon-hidden"
-    />
-     
-    <Span />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item noIndex=false 1`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-  >
-    <Icon
-      className="uu5-bricks-tree-item-icon-hidden"
-    />
-     
-    <Span />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item noIndex=true 1`] = `
-<li
-  className="uu5-bricks-tree-item uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

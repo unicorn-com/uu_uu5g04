@@ -83,6 +83,9 @@ export default UU5.Common.VisualComponent.create({
       iconLink: ns.css("text-icon-link"),
       iconLinkReadOnly: ns.css("text-icon-link-read-only"),
       inputError: ns.css("input-error"),
+      revealableInput: ns.css("text-input-revealable"),
+      revealButton: ns.css("text-input-reveal-button"),
+      revealIcon: ns.css("text-input-reveal-icon"),
       inputWithPrefix: (props, state) => {
         let styles = [];
 
@@ -196,6 +199,7 @@ export default UU5.Common.VisualComponent.create({
     prefix: UU5.PropTypes.any,
     suffix: UU5.PropTypes.any,
     wrapperAttrs: UU5.PropTypes.object,
+    revealable: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -225,6 +229,7 @@ export default UU5.Common.VisualComponent.create({
       prefix: undefined,
       suffix: undefined,
       wrapperAttrs: undefined,
+      revealable: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -236,6 +241,7 @@ export default UU5.Common.VisualComponent.create({
       autoResizeOverflow: undefined,
       prefixWidth: 0,
       assumedValueWidth: 0,
+      revealed: false,
     };
   },
 
@@ -353,6 +359,10 @@ export default UU5.Common.VisualComponent.create({
     return result;
   },
 
+  _isEffectivelyRevealed() {
+    return this.state.revealed && !this.props.disabled;
+  },
+
   _getTextInput() {
     let input;
     let className = this.getClassName().item;
@@ -426,7 +436,7 @@ export default UU5.Common.VisualComponent.create({
       name: this.props.name,
       placeholder: this._getPlaceholder(),
       value: this.props.type === "password" ? undefined : this.props.value,
-      type: this.props.type,
+      type: this.props.type === "password" && this._isEffectivelyRevealed() ? "text" : this.props.type,
       onChange: this.props.onChange,
       onBlur: this.props.readonly ? null : this.props.onBlur,
       onFocus: this.props.onFocus,
@@ -624,6 +634,31 @@ export default UU5.Common.VisualComponent.create({
         {this._getTextInput()}
         {this._getSuffix()}
         {this._getFeedbackIcon()}
+        {this.props.type === "password" && this.props.revealable ? (
+          <UU5.Bricks.Button
+            className={this.getClassName("revealButton")}
+            bgStyle="transparent"
+            size={this.props.size}
+            colorSchema="grey"
+            disabled={this.props.disabled}
+            mainAttrs={{
+              // we want:
+              // 1. If input is focused, keep focus there, even if user clicks the button.
+              // 2. Should not be focusable via Tab key (so that user Tab-s among inputs only).
+              //   => make not focusable via keyboard (tabIndex) and also prevent focusing using mouse (preventDefault in onMouseDown)
+              tabIndex: -1,
+              onMouseDown: (e) => {
+                e.preventDefault();
+                this.setState((state) => ({ revealed: !state.revealed }));
+              },
+            }}
+          >
+            <UU5.Bricks.Icon
+              icon={this._isEffectivelyRevealed() ? "mdi-eye-off-outline" : "mdi-eye-outline"}
+              className={this.getClassName("revealIcon")}
+            />
+          </UU5.Bricks.Button>
+        ) : null}
       </div>
     );
   },

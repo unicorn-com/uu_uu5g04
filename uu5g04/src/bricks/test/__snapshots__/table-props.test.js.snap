@@ -1359,6 +1359,29 @@ exports[`UU5.Bricks.Table fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Table fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-table uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table
+    className="uu5-bricks-table-table"
+  >
+    <table-tr
+      id="child01"
+      key="child01"
+    >
+      <table-td
+        content="Rimmer"
+        id="child02"
+      />
+    </table-tr>
+  </table>
+</div>
+`;
+
 exports[`UU5.Bricks.Table header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-table"
@@ -2148,6 +2171,7 @@ exports[`UU5.Bricks.Table nestingLevel="inline" 1`] = `
         Object {
           "cs": "Tabulka",
           "en": "Table",
+          "uk": "Таблиця",
         }
       }
       mainAttrs={null}
@@ -2178,6 +2202,7 @@ exports[`UU5.Bricks.Table nestingLevel="inline" 1`] = `
         Object {
           "cs": "Tabulka",
           "en": "Table",
+          "uk": "Таблиця",
         }
       }
       mainAttrs={null}
@@ -2208,6 +2233,7 @@ exports[`UU5.Bricks.Table nestingLevel="inline" 1`] = `
         Object {
           "cs": "Tabulka",
           "en": "Table",
+          "uk": "Таблиця",
         }
       }
       mainAttrs={null}
@@ -2223,52 +2249,6 @@ exports[`UU5.Bricks.Table nestingLevel="inline" 1`] = `
     />
   }
 />
-`;
-
-exports[`UU5.Bricks.Table noIndex=false 1`] = `
-<div
-  className="uu5-bricks-table"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <table
-    className="uu5-bricks-table-table"
-  >
-    <table-tr
-      id="child01"
-      key="child01"
-    >
-      <table-td
-        content="Rimmer"
-        id="child02"
-      />
-    </table-tr>
-  </table>
-</div>
-`;
-
-exports[`UU5.Bricks.Table noIndex=true 1`] = `
-<div
-  className="uu5-bricks-table uu5-noindex uu-fulltextsearch-0"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <table
-    className="uu5-bricks-table-table"
-  >
-    <table-tr
-      id="child01"
-      key="child01"
-    >
-      <table-td
-        content="Rimmer"
-        id="child02"
-      />
-    </table-tr>
-  </table>
-</div>
 `;
 
 exports[`UU5.Bricks.Table noPrint=false 1`] = `

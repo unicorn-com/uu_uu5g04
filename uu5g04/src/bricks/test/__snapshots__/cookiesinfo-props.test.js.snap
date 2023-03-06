@@ -250,6 +250,16 @@ exports[`UU5.Bricks.CookiesInfo fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.CookiesInfo fullTextSearchPriority=0 2`] = `
+<Section
+  className="uu5-bricks-cookies-info uu-fulltextsearch-0"
+  id="uuID-inner"
+  level={1}
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.CookiesInfo headerLevel=0 1`] = `
 <Section
   className="uu5-bricks-cookies-info"
@@ -453,16 +463,6 @@ exports[`UU5.Bricks.CookiesInfo nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.CookiesInfo nestingLevel="container" 1`] = `
-<Section
-  className="uu5-bricks-cookies-info"
-  id="uuID-inner"
-  level={1}
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
-/>
-`;
-
 exports[`UU5.Bricks.CookiesInfo nestingLevel="inline" 1`] = `
 <Section
   className="uu5-bricks-cookies-info"
@@ -514,26 +514,6 @@ exports[`UU5.Bricks.CookiesInfo nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.CookiesInfo nestingLevel="spa" 1`] = `
 <Section
   className="uu5-bricks-cookies-info"
-  id="uuID-inner"
-  level={1}
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
-/>
-`;
-
-exports[`UU5.Bricks.CookiesInfo noIndex=false 1`] = `
-<Section
-  className="uu5-bricks-cookies-info"
-  id="uuID-inner"
-  level={1}
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
-/>
-`;
-
-exports[`UU5.Bricks.CookiesInfo noIndex=true 1`] = `
-<Section
-  className="uu5-bricks-cookies-info uu5-noindex uu-fulltextsearch-0"
   id="uuID-inner"
   level={1}
   mainAttrs={Object {}}

@@ -239,7 +239,6 @@ const CommonClassNames = {
         padding: 0;
         max-width: 100%;
         background-color: transparent;
-        user-select: none;
         ${UU5.Common.Tools.isIE() ? "&::-ms-clear { display: none; }" : ""}
       }
 

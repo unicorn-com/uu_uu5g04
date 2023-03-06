@@ -240,6 +240,17 @@ exports[`UU5.Forms.Select.Option props fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Forms.Select.Option props fullTextSearchPriority=0 2`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item uu-fulltextsearch-0"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
 exports[`UU5.Forms.Select.Option props hidden=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
@@ -367,28 +378,6 @@ exports[`UU5.Forms.Select.Option props nestingLevel="box" 1`] = `
 exports[`UU5.Forms.Select.Option props nestingLevel="inline" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  content="option value"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  onClick={[Function]}
-  ref_={[Function]}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props noIndex=false 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  content="option value"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  onClick={[Function]}
-  ref_={[Function]}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props noIndex=true 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item uu5-noindex uu-fulltextsearch-0"
   content="option value"
   id="uuID-inner"
   mainAttrs={Object {}}

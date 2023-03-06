@@ -7,20 +7,39 @@ exports[`UU5.Bricks.CookieBar agreedText="I agree" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      I agree
+    </Button>
+    <Button
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="default"
+      onClick={[Function]}
+    >
+      <Lsi
+        lsi={
+          Object {
+            "cs": "Zavřít",
+            "en": "Close",
+            "sk": "Zavrieť",
+            "uk": "Закрити",
+          }
+        }
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -31,20 +50,25 @@ exports[`UU5.Bricks.CookieBar checkGrammar=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -55,20 +79,25 @@ exports[`UU5.Bricks.CookieBar checkGrammar=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -79,20 +108,25 @@ exports[`UU5.Bricks.CookieBar checkHighlight=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -103,20 +137,25 @@ exports[`UU5.Bricks.CookieBar checkHighlight=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -127,20 +166,25 @@ exports[`UU5.Bricks.CookieBar checkSpaces=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -151,20 +195,25 @@ exports[`UU5.Bricks.CookieBar checkSpaces=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -175,20 +224,54 @@ exports[`UU5.Bricks.CookieBar className="my-classname" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar className="test-classname" 1`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg test-classname uu5-bricks-cookie-bar-bottom"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -199,20 +282,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="brown" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -223,20 +311,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="brown-rich" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -247,20 +340,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="cyan" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -271,20 +369,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="cyan-rich" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -295,20 +398,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="default" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -319,20 +427,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="green" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -343,20 +456,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="green-rich" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -367,20 +485,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="grey" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -391,20 +514,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="grey-rich" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -415,20 +543,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="orange" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -439,20 +572,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="orange-rich" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -463,20 +601,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="pink" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -487,20 +630,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="pink-rich" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -511,20 +659,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="purple" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -535,20 +688,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="purple-rich" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -559,20 +717,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="red" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -583,20 +746,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="red-rich" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -607,20 +775,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="yellow" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -631,20 +804,25 @@ exports[`UU5.Bricks.CookieBar colorSchema="yellow-rich" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -655,20 +833,25 @@ exports[`UU5.Bricks.CookieBar content="This is Content from ContentMixin" 1`] = 
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="This is Content from ContentMixin"
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="This is Content from ContentMixin"
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -679,20 +862,25 @@ exports[`UU5.Bricks.CookieBar content=12345 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content={12345}
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content={12345}
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -703,20 +891,25 @@ exports[`UU5.Bricks.CookieBar controlled=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -727,20 +920,25 @@ exports[`UU5.Bricks.CookieBar controlled=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -751,20 +949,25 @@ exports[`UU5.Bricks.CookieBar cookieKey="UCL.Parrot.Home_123v12" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -775,20 +978,25 @@ exports[`UU5.Bricks.CookieBar cookieValue="no" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -799,20 +1007,25 @@ exports[`UU5.Bricks.CookieBar cookieValue="yes" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -823,20 +1036,25 @@ exports[`UU5.Bricks.CookieBar default props 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -847,20 +1065,54 @@ exports[`UU5.Bricks.CookieBar disabled=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar disabled=false 3`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -872,20 +1124,55 @@ exports[`UU5.Bricks.CookieBar disabled=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar disabled=true 3`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
+  disabled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -896,20 +1183,25 @@ exports[`UU5.Bricks.CookieBar dynamic=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -920,20 +1212,54 @@ exports[`UU5.Bricks.CookieBar dynamic=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar elementAttrs={"data":{"test":"data-test-value"}} 1`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -968,20 +1294,25 @@ exports[`UU5.Bricks.CookieBar expireDays=365 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -992,20 +1323,25 @@ exports[`UU5.Bricks.CookieBar fixed="bottom" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1016,20 +1352,83 @@ exports[`UU5.Bricks.CookieBar fixed="top" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar fullTextSearchPriority=0 1`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu-fulltextsearch-0 uu5-bricks-cookie-bar-bottom"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar fullTextSearchPriority=0 2`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu-fulltextsearch-0 uu5-bricks-cookie-bar-bottom"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1040,20 +1439,54 @@ exports[`UU5.Bricks.CookieBar hidden=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar hidden=false 3`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1065,20 +1498,55 @@ exports[`UU5.Bricks.CookieBar hidden=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar hidden=true 3`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1089,20 +1557,54 @@ exports[`UU5.Bricks.CookieBar id="myId" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar id="test-id" 1`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
+  id="test-id-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1113,20 +1615,25 @@ exports[`UU5.Bricks.CookieBar ignoreHTML=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1137,20 +1644,25 @@ exports[`UU5.Bricks.CookieBar ignoreHTML=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1161,20 +1673,25 @@ exports[`UU5.Bricks.CookieBar infoHref="https://unicorn.com/cz/cookies" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1185,20 +1702,25 @@ exports[`UU5.Bricks.CookieBar infoTarget="_blank" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1209,20 +1731,25 @@ exports[`UU5.Bricks.CookieBar infoTarget="_parent" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1233,20 +1760,25 @@ exports[`UU5.Bricks.CookieBar infoTarget="_self" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1257,20 +1789,25 @@ exports[`UU5.Bricks.CookieBar infoTarget="_top" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1281,25 +1818,31 @@ exports[`UU5.Bricks.CookieBar infoText="More information" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Link
-    className="uu5-bricks-cookie-bar-link"
-    content="More information"
-    target="_blank"
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+    <Link
+      className="uu5-bricks-cookie-bar-link"
+      colorSchema="default"
+      content="More information"
+      target="_blank"
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1310,20 +1853,25 @@ exports[`UU5.Bricks.CookieBar mainAttrs=undefined 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1335,20 +1883,25 @@ exports[`UU5.Bricks.CookieBar name="myName" 1`] = `
   name="myName-inner"
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1359,20 +1912,25 @@ exports[`UU5.Bricks.CookieBar nestingLevel="bigBox" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBox"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1383,20 +1941,25 @@ exports[`UU5.Bricks.CookieBar nestingLevel="bigBoxCollection" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1407,20 +1970,54 @@ exports[`UU5.Bricks.CookieBar nestingLevel="box" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="box"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar nestingLevel="box" 3`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1431,44 +2028,25 @@ exports[`UU5.Bricks.CookieBar nestingLevel="boxCollection" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="boxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
-</Div>
-`;
-
-exports[`UU5.Bricks.CookieBar nestingLevel="container" 1`] = `
-<Div
-  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
->
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
   >
-    <Icon
-      icon="mdi-close"
-    />
-  </Button>
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1478,20 +2056,53 @@ exports[`UU5.Bricks.CookieBar nestingLevel="inline" 1`] = `
   id="uuID-inner"
   mainAttrs={Object {}}
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar nestingLevel="inline" 3`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1502,20 +2113,25 @@ exports[`UU5.Bricks.CookieBar nestingLevel="page" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1525,20 +2141,25 @@ exports[`UU5.Bricks.CookieBar nestingLevel="smallBox" 1`] = `
   id="uuID-inner"
   mainAttrs={Object {}}
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1548,20 +2169,25 @@ exports[`UU5.Bricks.CookieBar nestingLevel="smallBoxCollection" 1`] = `
   id="uuID-inner"
   mainAttrs={Object {}}
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1572,68 +2198,83 @@ exports[`UU5.Bricks.CookieBar nestingLevel="spa" 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.CookieBar noIndex=false 1`] = `
+exports[`UU5.Bricks.CookieBar noPrint=false 1`] = `
 <Div
   className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.CookieBar noIndex=true 1`] = `
+exports[`UU5.Bricks.CookieBar noPrint=true 1`] = `
 <Div
-  className="uu5-bricks-cookie-bar uu5-common-bg uu5-noindex uu5-bricks-cookie-bar-bottom"
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
   id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1644,20 +2285,25 @@ exports[`UU5.Bricks.CookieBar pureRender=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1668,20 +2314,25 @@ exports[`UU5.Bricks.CookieBar pureRender=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1692,20 +2343,25 @@ exports[`UU5.Bricks.CookieBar selected=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1717,20 +2373,25 @@ exports[`UU5.Bricks.CookieBar selected=true 1`] = `
   nestingLevel="bigBoxCollection"
   selected={true}
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1747,20 +2408,25 @@ exports[`UU5.Bricks.CookieBar style="padding:8px; borderRadius: 2px" 1`] = `
     }
   }
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1777,20 +2443,59 @@ exports[`UU5.Bricks.CookieBar style={"backgroundColor":"red","color":"blue"} 1`]
     }
   }
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
+</Div>
+`;
+
+exports[`UU5.Bricks.CookieBar style={"margin":8} 1`] = `
+<Div
+  className="uu5-bricks-cookie-bar uu5-common-bg uu5-bricks-cookie-bar-bottom"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  style={
+    Object {
+      "margin": 8,
+    }
+  }
+>
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
+    />
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1801,20 +2506,25 @@ exports[`UU5.Bricks.CookieBar textCorrector=false 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1825,20 +2535,25 @@ exports[`UU5.Bricks.CookieBar textCorrector=true 1`] = `
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;
 
@@ -1854,19 +2569,24 @@ exports[`UU5.Bricks.CookieBar tooltip="My Tooltip" 1`] = `
   nestingLevel="bigBoxCollection"
   tooltip="My Tooltip"
 >
-  <Span
-    content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
-  />
-  <Button
-    bgStyle="transparent"
-    className="uu5-bricks-cookie-bar-button"
-    colorSchema="custom"
-    onClick={[Function]}
-    size="s"
-  >
-    <Icon
-      icon="mdi-close"
+  <div>
+    <Span
+      content="Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use."
     />
-  </Button>
+  </div>
+  <div
+    className="uu5-bricks-cookie-bar-controls"
+  >
+    <Button
+      bgStyle="transparent"
+      className="uu5-bricks-cookie-bar-button"
+      colorSchema="custom"
+      onClick={[Function]}
+    >
+      <Icon
+        icon="mdi-close"
+      />
+    </Button>
+  </div>
 </Div>
 `;

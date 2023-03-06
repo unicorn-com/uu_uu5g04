@@ -729,6 +729,22 @@ exports[`UU5.Bricks.Accordion props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Accordion props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-accordion uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Accordion props hidden=false 1`] = `
 <div
   className="uu5-bricks-accordion"
@@ -1004,22 +1020,6 @@ exports[`UU5.Bricks.Accordion props nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    content="Text in Panel"
-    id="childrenID"
-    key="childrenID"
-    onClick={[Function]}
-  />
-</div>
-`;
-
 exports[`UU5.Bricks.Accordion props nestingLevel="inline" 1`] = `
 <UU5.BricksEditable.InlineMode
   Component={[Function]}
@@ -1150,6 +1150,7 @@ exports[`UU5.Bricks.Accordion props nestingLevel="inline" 1`] = `
         Object {
           "cs": "Upravit accordion",
           "en": "Edit accordion",
+          "uk": "Редагувати акордеон",
         }
       }
       mainAttrs={null}
@@ -1225,6 +1226,7 @@ exports[`UU5.Bricks.Accordion props nestingLevel="inline" 1`] = `
         Object {
           "cs": "Akordeon",
           "en": "Accordion",
+          "uk": "Акордеон",
         }
       }
       mainAttrs={null}
@@ -1373,6 +1375,7 @@ exports[`UU5.Bricks.Accordion props nestingLevel="inline" 3`] = `
         Object {
           "cs": "Upravit accordion",
           "en": "Edit accordion",
+          "uk": "Редагувати акордеон",
         }
       }
       mainAttrs={null}
@@ -1448,6 +1451,7 @@ exports[`UU5.Bricks.Accordion props nestingLevel="inline" 3`] = `
         Object {
           "cs": "Akordeon",
           "en": "Accordion",
+          "uk": "Акордеон",
         }
       }
       mainAttrs={null}
@@ -1612,6 +1616,7 @@ exports[`UU5.Bricks.Accordion props nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Upravit accordion",
           "en": "Edit accordion",
+          "uk": "Редагувати акордеон",
         }
       }
       mainAttrs={null}
@@ -1687,6 +1692,7 @@ exports[`UU5.Bricks.Accordion props nestingLevel="smallBox" 1`] = `
         Object {
           "cs": "Akordeon",
           "en": "Accordion",
+          "uk": "Акордеон",
         }
       }
       mainAttrs={null}
@@ -1835,6 +1841,7 @@ exports[`UU5.Bricks.Accordion props nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Upravit accordion",
           "en": "Edit accordion",
+          "uk": "Редагувати акордеон",
         }
       }
       mainAttrs={null}
@@ -1910,6 +1917,7 @@ exports[`UU5.Bricks.Accordion props nestingLevel="smallBoxCollection" 1`] = `
         Object {
           "cs": "Akordeon",
           "en": "Accordion",
+          "uk": "Акордеон",
         }
       }
       mainAttrs={null}
@@ -1931,38 +1939,6 @@ exports[`UU5.Bricks.Accordion props nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Accordion props nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    content="Text in Panel"
-    id="childrenID"
-    key="childrenID"
-    onClick={[Function]}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props noIndex=false 1`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    content="Text in Panel"
-    id="childrenID"
-    key="childrenID"
-    onClick={[Function]}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props noIndex=true 1`] = `
-<div
-  className="uu5-bricks-accordion uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

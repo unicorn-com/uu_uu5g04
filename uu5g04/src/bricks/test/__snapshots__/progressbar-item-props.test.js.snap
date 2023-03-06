@@ -581,6 +581,19 @@ exports[`UU5.Bricks.ProgressBar.Item fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.ProgressBar.Item fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-progress-bar-item uu-fulltextsearch-0"
+  id="uuID"
+  style={
+    Object {
+      "width": "0%",
+    }
+  }
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.ProgressBar.Item hidden=false 1`] = `
 <div
   className="uu5-bricks-progress-bar-item"
@@ -777,19 +790,6 @@ exports[`UU5.Bricks.ProgressBar.Item nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBar.Item nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-progress-bar-item"
-  id="uuID"
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.ProgressBar.Item nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.ProgressBar.Item nestingLevel="inline" 3`] = `""`;
@@ -836,32 +836,6 @@ exports[`UU5.Bricks.ProgressBar.Item nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.ProgressBar.Item nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-progress-bar-item"
-  id="uuID"
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBar.Item noIndex=false 1`] = `
-<div
-  className="uu5-bricks-progress-bar-item"
-  id="uuID"
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBar.Item noIndex=true 1`] = `
-<div
-  className="uu5-bricks-progress-bar-item uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={
     Object {

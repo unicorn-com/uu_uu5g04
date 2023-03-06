@@ -155,6 +155,13 @@ exports[`UU5.Bricks.Dt fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Dt fullTextSearchPriority=0 2`] = `
+<dt
+  className="uu5-bricks-dt uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Dt hidden=false 1`] = `
 <dt
   className="uu5-bricks-dt"
@@ -267,20 +274,6 @@ exports[`UU5.Bricks.Dt nestingLevel="box" 1`] = `
 `;
 
 exports[`UU5.Bricks.Dt nestingLevel="inline" 1`] = `""`;
-
-exports[`UU5.Bricks.Dt noIndex=false 1`] = `
-<dt
-  className="uu5-bricks-dt"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Dt noIndex=true 1`] = `
-<dt
-  className="uu5-bricks-dt uu-fulltextsearch-0 uu5-noindex"
-  id="uuID"
-/>
-`;
 
 exports[`UU5.Bricks.Dt noPrint=false 1`] = `
 <dt

@@ -806,6 +806,16 @@ export const Popover = withContext(
 
       props.style.width = this.state.width;
 
+      let origOnClick = props.onClick;
+      props.onClick = (e) => {
+        // if Popover contains e.g. UU5.Forms.Select (which uses another Popover for its item list) and
+        // user clicks an item from the list, we don't want the top Popover to close
+        //   => React event bubbles upwards via React component hierarchy, not DOM hierarchy, i.e. simply
+        //      stop propagation thanks to which DOM listeners for event "click" on window won't run
+        e.stopPropagation();
+        if (typeof origOnClick === "function") origOnClick(e);
+      }
+
       return props;
     },
 

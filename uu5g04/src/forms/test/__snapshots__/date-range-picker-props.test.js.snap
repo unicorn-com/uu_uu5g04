@@ -11747,6 +11747,198 @@ exports[`UU5.Forms.DateRangePicker props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.DateRangePicker props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-forms-daterangepicker uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input"
+    onClick={[Function]}
+  >
+    <InputWrapper
+      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+      daterangepicker={true}
+      disabled={false}
+      readonly={false}
+    >
+      <items-input
+        className="uu5-forms-daterangepicker-main-input uu5-forms-input-m"
+        feedback="initial"
+        id="uuID-input"
+        inputWidth={null}
+        key="input"
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        name="uuID-input"
+        onKeyDown={[Function]}
+        readonly={false}
+        ref_={[Function]}
+        size="m"
+        value={
+          <div
+            className="uu5-forms-daterangepicker-input-content-wrapper"
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-calendar"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            <React.Fragment>
+              <span
+                className="uu5-forms-daterangepicker-input-text"
+              />
+              <span
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
+              />
+            </React.Fragment>
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-menu-down"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+          </div>
+        }
+      />
+    </InputWrapper>
+  </div>
+  <div
+    className="uu5-forms-daterangepicker-popover-wrapper"
+  >
+    <forwardRef(Popover)
+      className="uu5-forms-daterangepicker-popover"
+      disableBackdrop={true}
+      forceRender={true}
+      id="uuID-popover"
+      key="popover"
+      location="local"
+      ref_={[Function]}
+      shown={false}
+    >
+      <div
+        className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
+      >
+        <div
+          className="uu5-forms-daterangepicker-popover-first-row"
+        >
+          <div
+            className="uu5-forms-daterangepicker-popover-left-column"
+          >
+            <text-input
+              className="uu5-forms-daterangepicker-calendar-input"
+              feedback="initial"
+              mainAttrs={
+                Object {
+                  "title": null,
+                }
+              }
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              ref_={[Function]}
+            />
+          </div>
+          <span
+            className="uu5-forms-daterangepicker-calendar-separator"
+          />
+          <div
+            className="uu5-forms-daterangepicker-popover-right-column"
+          >
+            <text-input
+              className="uu5-forms-daterangepicker-calendar-input"
+              feedback="initial"
+              mainAttrs={
+                Object {
+                  "title": null,
+                }
+              }
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              ref_={[Function]}
+            />
+          </div>
+        </div>
+        <div
+          className="uu5-forms-daterangepicker-popover-second-row"
+        >
+          <Button
+            className="uu-forms-1qj2ab7"
+            content={
+              <Lsi
+                allowTags={Array []}
+                className={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                hidden={false}
+                id={null}
+                ignoreInnerHTML={false}
+                language={null}
+                lsi={
+                  Object {
+                    "cs": "Vymazat",
+                    "en": "Reset",
+                  }
+                }
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                params={null}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+              />
+            }
+            key="reset"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </forwardRef(Popover)>
+  </div>
+</div>
+`;
+
 exports[`UU5.Forms.DateRangePicker props function -> Text.InputMixin validateOnChange() - input is invalid 1`] = `
 <div
   className="uu5-forms-daterangepicker"
@@ -16974,390 +17166,6 @@ exports[`UU5.Forms.DateRangePicker props nestingLevel="inline" 1`] = `
 >
   <div
     className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width uu5-forms-input-prevent-wrap uu5-forms-input"
-    onClick={[Function]}
-  >
-    <InputWrapper
-      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-      daterangepicker={true}
-      disabled={false}
-      readonly={false}
-    >
-      <items-input
-        className="uu5-forms-daterangepicker-main-input uu5-forms-input-m"
-        feedback="initial"
-        id="uuID-input"
-        inputWidth={null}
-        key="input"
-        mainAttrs={
-          Object {
-            "autoComplete": "off",
-            "onFocus": [Function],
-            "tabIndex": "0",
-          }
-        }
-        name="uuID-input"
-        onKeyDown={[Function]}
-        readonly={false}
-        ref_={[Function]}
-        size="m"
-        value={
-          <div
-            className="uu5-forms-daterangepicker-input-content-wrapper"
-          >
-            <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
-              icon="mdi-calendar"
-              id={null}
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              parent={null}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
-            />
-            <React.Fragment>
-              <span
-                className="uu5-forms-daterangepicker-input-text"
-              />
-              <span
-                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
-              />
-            </React.Fragment>
-            <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
-              icon="mdi-menu-down"
-              id={null}
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              parent={null}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
-            />
-          </div>
-        }
-      />
-    </InputWrapper>
-  </div>
-  <div
-    className="uu5-forms-daterangepicker-popover-wrapper"
-  >
-    <forwardRef(Popover)
-      className="uu5-forms-daterangepicker-popover"
-      disableBackdrop={true}
-      forceRender={true}
-      id="uuID-popover"
-      key="popover"
-      location="local"
-      ref_={[Function]}
-      shown={false}
-    >
-      <div
-        className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
-      >
-        <div
-          className="uu5-forms-daterangepicker-popover-first-row"
-        >
-          <div
-            className="uu5-forms-daterangepicker-popover-left-column"
-          >
-            <text-input
-              className="uu5-forms-daterangepicker-calendar-input"
-              feedback="initial"
-              mainAttrs={
-                Object {
-                  "title": null,
-                }
-              }
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              ref_={[Function]}
-            />
-          </div>
-          <span
-            className="uu5-forms-daterangepicker-calendar-separator"
-          />
-          <div
-            className="uu5-forms-daterangepicker-popover-right-column"
-          >
-            <text-input
-              className="uu5-forms-daterangepicker-calendar-input"
-              feedback="initial"
-              mainAttrs={
-                Object {
-                  "title": null,
-                }
-              }
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              ref_={[Function]}
-            />
-          </div>
-        </div>
-        <div
-          className="uu5-forms-daterangepicker-popover-second-row"
-        >
-          <Button
-            className="uu-forms-1qj2ab7"
-            content={
-              <Lsi
-                allowTags={Array []}
-                className={null}
-                content={null}
-                controlled={true}
-                disabled={false}
-                dynamic={false}
-                hidden={false}
-                id={null}
-                ignoreInnerHTML={false}
-                language={null}
-                lsi={
-                  Object {
-                    "cs": "Vymazat",
-                    "en": "Reset",
-                  }
-                }
-                mainAttrs={null}
-                name={null}
-                nestingLevel={null}
-                params={null}
-                parent={null}
-                pureRender={false}
-                ref_={null}
-                selected={false}
-                style={null}
-                tooltip={null}
-              />
-            }
-            key="reset"
-            onClick={[Function]}
-          />
-        </div>
-      </div>
-    </forwardRef(Popover)>
-  </div>
-</div>
-`;
-
-exports[`UU5.Forms.DateRangePicker props noIndex=false 1`] = `
-<div
-  className="uu5-forms-daterangepicker"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input"
-    onClick={[Function]}
-  >
-    <InputWrapper
-      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-      daterangepicker={true}
-      disabled={false}
-      readonly={false}
-    >
-      <items-input
-        className="uu5-forms-daterangepicker-main-input uu5-forms-input-m"
-        feedback="initial"
-        id="uuID-input"
-        inputWidth={null}
-        key="input"
-        mainAttrs={
-          Object {
-            "autoComplete": "off",
-            "onFocus": [Function],
-            "tabIndex": "0",
-          }
-        }
-        name="uuID-input"
-        onKeyDown={[Function]}
-        readonly={false}
-        ref_={[Function]}
-        size="m"
-        value={
-          <div
-            className="uu5-forms-daterangepicker-input-content-wrapper"
-          >
-            <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
-              icon="mdi-calendar"
-              id={null}
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              parent={null}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
-            />
-            <React.Fragment>
-              <span
-                className="uu5-forms-daterangepicker-input-text"
-              />
-              <span
-                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
-              />
-            </React.Fragment>
-            <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
-              icon="mdi-menu-down"
-              id={null}
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              parent={null}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
-            />
-          </div>
-        }
-      />
-    </InputWrapper>
-  </div>
-  <div
-    className="uu5-forms-daterangepicker-popover-wrapper"
-  >
-    <forwardRef(Popover)
-      className="uu5-forms-daterangepicker-popover"
-      disableBackdrop={true}
-      forceRender={true}
-      id="uuID-popover"
-      key="popover"
-      location="local"
-      ref_={[Function]}
-      shown={false}
-    >
-      <div
-        className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
-      >
-        <div
-          className="uu5-forms-daterangepicker-popover-first-row"
-        >
-          <div
-            className="uu5-forms-daterangepicker-popover-left-column"
-          >
-            <text-input
-              className="uu5-forms-daterangepicker-calendar-input"
-              feedback="initial"
-              mainAttrs={
-                Object {
-                  "title": null,
-                }
-              }
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              ref_={[Function]}
-            />
-          </div>
-          <span
-            className="uu5-forms-daterangepicker-calendar-separator"
-          />
-          <div
-            className="uu5-forms-daterangepicker-popover-right-column"
-          >
-            <text-input
-              className="uu5-forms-daterangepicker-calendar-input"
-              feedback="initial"
-              mainAttrs={
-                Object {
-                  "title": null,
-                }
-              }
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              ref_={[Function]}
-            />
-          </div>
-        </div>
-        <div
-          className="uu5-forms-daterangepicker-popover-second-row"
-        >
-          <Button
-            className="uu-forms-1qj2ab7"
-            content={
-              <Lsi
-                allowTags={Array []}
-                className={null}
-                content={null}
-                controlled={true}
-                disabled={false}
-                dynamic={false}
-                hidden={false}
-                id={null}
-                ignoreInnerHTML={false}
-                language={null}
-                lsi={
-                  Object {
-                    "cs": "Vymazat",
-                    "en": "Reset",
-                  }
-                }
-                mainAttrs={null}
-                name={null}
-                nestingLevel={null}
-                params={null}
-                parent={null}
-                pureRender={false}
-                ref_={null}
-                selected={false}
-                style={null}
-                tooltip={null}
-              />
-            }
-            key="reset"
-            onClick={[Function]}
-          />
-        </div>
-      </div>
-    </forwardRef(Popover)>
-  </div>
-</div>
-`;
-
-exports[`UU5.Forms.DateRangePicker props noIndex=true 1`] = `
-<div
-  className="uu5-forms-daterangepicker uu5-noindex uu-fulltextsearch-0"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input"
     onClick={[Function]}
   >
     <InputWrapper

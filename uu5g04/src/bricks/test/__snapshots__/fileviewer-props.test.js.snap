@@ -260,6 +260,24 @@ exports[`UU5.Bricks.FileViewer fullTextSearchPriority=0 1`] = `
 </Table>
 `;
 
+exports[`UU5.Bricks.FileViewer fullTextSearchPriority=0 2`] = `
+<Table
+  className="uu5-bricks-file-viewer uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <table-tbody>
+    <table-tr>
+      <table-td
+        className="uu5-bricks-file-viewer-block-of-lines"
+        colorSchema="default"
+      />
+    </table-tr>
+  </table-tbody>
+</Table>
+`;
+
 exports[`UU5.Bricks.FileViewer hidden=false 1`] = `
 <Table
   className="uu5-bricks-file-viewer"
@@ -495,24 +513,6 @@ exports[`UU5.Bricks.FileViewer nestingLevel="boxCollection" 1`] = `
 </Table>
 `;
 
-exports[`UU5.Bricks.FileViewer nestingLevel="container" 1`] = `
-<Table
-  className="uu5-bricks-file-viewer"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <table-tbody>
-    <table-tr>
-      <table-td
-        className="uu5-bricks-file-viewer-block-of-lines"
-        colorSchema="default"
-      />
-    </table-tr>
-  </table-tbody>
-</Table>
-`;
-
 exports[`UU5.Bricks.FileViewer nestingLevel="inline" 1`] = `
 <span>
   <ForwardRef
@@ -594,42 +594,6 @@ exports[`UU5.Bricks.FileViewer nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.FileViewer nestingLevel="spa" 1`] = `
 <Table
   className="uu5-bricks-file-viewer"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <table-tbody>
-    <table-tr>
-      <table-td
-        className="uu5-bricks-file-viewer-block-of-lines"
-        colorSchema="default"
-      />
-    </table-tr>
-  </table-tbody>
-</Table>
-`;
-
-exports[`UU5.Bricks.FileViewer noIndex=false 1`] = `
-<Table
-  className="uu5-bricks-file-viewer"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <table-tbody>
-    <table-tr>
-      <table-td
-        className="uu5-bricks-file-viewer-block-of-lines"
-        colorSchema="default"
-      />
-    </table-tr>
-  </table-tbody>
-</Table>
-`;
-
-exports[`UU5.Bricks.FileViewer noIndex=true 1`] = `
-<Table
-  className="uu5-bricks-file-viewer uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

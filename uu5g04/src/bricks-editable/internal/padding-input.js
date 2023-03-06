@@ -17,7 +17,7 @@ const CLASS_NAMES = {
       left: 2px;
       width: calc(100% - 4px);
       height: ${hidePadding ? "36px" : "88px"};
-      border 12px solid #E1F0E1;
+      border: 12px solid #E1F0E1;
     `;
   },
   paddingVertical: (hidePaddingVertical, position, hidePadding) => {

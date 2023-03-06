@@ -340,6 +340,15 @@ exports[`UU5.Bricks.Table.Col fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Table.Col fullTextSearchPriority=0 2`] = `
+<col
+  className="uu5-bricks-table-col uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Table.Col hidden=false 1`] = `
 <col
   className="uu5-bricks-table-col"
@@ -458,15 +467,6 @@ exports[`UU5.Bricks.Table.Col nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Col nestingLevel="container" 1`] = `
-<col
-  className="uu5-bricks-table-col"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Table.Col nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Table.Col nestingLevel="inline" 3`] = `""`;
@@ -501,24 +501,6 @@ exports[`UU5.Bricks.Table.Col nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Table.Col nestingLevel="spa" 1`] = `
 <col
   className="uu5-bricks-table-col"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Col noIndex=false 1`] = `
-<col
-  className="uu5-bricks-table-col"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Col noIndex=true 1`] = `
-<col
-  className="uu5-bricks-table-col uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

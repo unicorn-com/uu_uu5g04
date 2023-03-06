@@ -1,13 +1,13 @@
 {
-  "name": "uu5g04",
-  "version": "1.55.0",
+  "name": "uu5g04~root",
+  "version": "1.56.0",
   "private": true,
   "workspaces": [
     "uu5g04"
   ],
   "description": "",
   "license": "UAF",
-  "spec": "nodejs-multi; uu_appg01_devkit@5.2.2",
+  "spec": "nodejs-multi; uu_appg01_devkit@5.4.0",
   "uuBuildSettings": {},
   "devDependencies": {
     "uu_appg01_devkit": "^5.2.2"
@@ -26,6 +26,8 @@
     "uuCloudDeploy": "uu_appg01_devkit uuCloudDeploy",
     "uuCloudUndeploy": "uu_appg01_devkit uuCloudUndeploy",
     "uuCloudDeployList": "uu_appg01_devkit uuCloudDeployList",
-    "uuAppDevKitUpgrade": "uu_appg01_devkit uuAppDevKitUpgrade"
+    "uuAppDevKitUpgrade": "uu_appg01_devkit uuAppDevKitUpgrade",
+    "lsiExport": "uu_appg01_devkit lsiExport",
+    "lsiImport": "uu_appg01_devkit lsiImport"
   }
 }

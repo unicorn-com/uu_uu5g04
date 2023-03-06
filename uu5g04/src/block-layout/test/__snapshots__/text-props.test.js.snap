@@ -571,6 +571,20 @@ exports[`UU5.BlockLayout.Text props testing fullTextSearchPriority=0 1`] = `
 </span>
 `;
 
+exports[`UU5.BlockLayout.Text props testing fullTextSearchPriority=0 2`] = `
+<span
+  className="uublocklayout-1mchdn4 uu-fulltextsearch-0 uu5-common-text uublocklayout-1ardydz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
 exports[`UU5.BlockLayout.Text props testing hidden=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-1ardydz"
@@ -832,20 +846,6 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel="boxCollection" 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel="container" 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-1ardydz"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
 exports[`UU5.BlockLayout.Text props testing nestingLevel="inline" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-1ardydz"
@@ -919,34 +919,6 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel="smallBoxCollection" 1`
 exports[`UU5.BlockLayout.Text props testing nestingLevel="spa" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-1ardydz"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing noIndex=false 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-1ardydz"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing noIndex=true 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-noindex uu-fulltextsearch-0 uu5-common-text uublocklayout-1ardydz"
   id="uuID"
   style={Object {}}
   title={null}

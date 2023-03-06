@@ -108,6 +108,12 @@ exports[`UU5.Bricks.Popover footer={"type":"div","key":null,"ref":null,"props":{
 </ContextConsumer>
 `;
 
+exports[`UU5.Bricks.Popover fullTextSearchPriority=0 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
+
 exports[`UU5.Bricks.Popover header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <ContextConsumer>
   <Component />
@@ -235,18 +241,6 @@ exports[`UU5.Bricks.Popover mainAttrs=undefined 1`] = `
 `;
 
 exports[`UU5.Bricks.Popover name="myName" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;
-
-exports[`UU5.Bricks.Popover noIndex=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;
-
-exports[`UU5.Bricks.Popover noIndex=true 1`] = `
 <ContextConsumer>
   <Component />
 </ContextConsumer>

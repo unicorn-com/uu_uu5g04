@@ -468,6 +468,15 @@ exports[`UU5.Bricks.Tabs.Item fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Tabs.Item fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Tabs.Item header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
@@ -739,15 +748,6 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Tabs.Item nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Tabs.Item nestingLevel="inline" 3`] = `""`;
@@ -782,24 +782,6 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Tabs.Item nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item noIndex=false 1`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item noIndex=true 1`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

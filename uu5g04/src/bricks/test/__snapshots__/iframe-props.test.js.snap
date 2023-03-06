@@ -235,6 +235,24 @@ exports[`UU5.Bricks.Iframe fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Iframe fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-iframe uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <iframe
+    id="uuID-iframe"
+    style={
+      Object {
+        "height": "250px",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`UU5.Bricks.Iframe height="40em" 1`] = `
 <div
   className="uu5-bricks-iframe"
@@ -561,24 +579,6 @@ exports[`UU5.Bricks.Iframe nestingLevel="boxCollection" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Iframe nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-iframe"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <iframe
-    id="uuID-iframe"
-    style={
-      Object {
-        "height": "250px",
-      }
-    }
-  />
-</div>
-`;
-
 exports[`UU5.Bricks.Iframe nestingLevel="inline" 1`] = `
 <Link
   target="_blank"
@@ -624,42 +624,6 @@ exports[`UU5.Bricks.Iframe nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Iframe nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-iframe"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <iframe
-    id="uuID-iframe"
-    style={
-      Object {
-        "height": "250px",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Iframe noIndex=false 1`] = `
-<div
-  className="uu5-bricks-iframe"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <iframe
-    id="uuID-iframe"
-    style={
-      Object {
-        "height": "250px",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Iframe noIndex=true 1`] = `
-<div
-  className="uu5-bricks-iframe uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

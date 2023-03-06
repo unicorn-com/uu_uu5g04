@@ -132,6 +132,13 @@ exports[`UU5.Bricks.Todo footer={"type":"div","key":null,"ref":null,"props":{"ch
 />
 `;
 
+exports[`UU5.Bricks.Todo fullTextSearchPriority=0 1`] = `
+<Todo
+  fullTextSearchPriority={0}
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Todo header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <Todo
   header={
@@ -315,13 +322,6 @@ exports[`UU5.Bricks.Todo nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Todo nestingLevel="container" 1`] = `
-<Todo
-  id="uuID"
-  nestingLevel="container"
-/>
-`;
-
 exports[`UU5.Bricks.Todo nestingLevel="inline" 1`] = `
 <UU5.Bricks.LinkModal
   component={
@@ -432,20 +432,6 @@ exports[`UU5.Bricks.Todo nestingLevel="spa" 1`] = `
 <Todo
   id="uuID"
   nestingLevel="spa"
-/>
-`;
-
-exports[`UU5.Bricks.Todo noIndex=false 1`] = `
-<Todo
-  id="uuID"
-  noIndex={false}
-/>
-`;
-
-exports[`UU5.Bricks.Todo noIndex=true 1`] = `
-<Todo
-  id="uuID"
-  noIndex={true}
 />
 `;
 

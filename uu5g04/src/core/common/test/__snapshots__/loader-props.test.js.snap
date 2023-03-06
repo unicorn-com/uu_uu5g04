@@ -49,6 +49,13 @@ exports[`UU5.Common.Loader props testing fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Common.Loader props testing fullTextSearchPriority=0 2`] = `
+<TestReady
+  data="data"
+  key=".0"
+/>
+`;
+
 exports[`UU5.Common.Loader props testing hidden=false 1`] = `
 <TestReady
   data="data"
@@ -103,20 +110,6 @@ exports[`UU5.Common.Loader props testing nestingLevel="box" 1`] = `
 `;
 
 exports[`UU5.Common.Loader props testing nestingLevel="inline" 1`] = `
-<TestReady
-  data="data"
-  key=".0"
-/>
-`;
-
-exports[`UU5.Common.Loader props testing noIndex=false 1`] = `
-<TestReady
-  data="data"
-  key=".0"
-/>
-`;
-
-exports[`UU5.Common.Loader props testing noIndex=true 1`] = `
 <TestReady
   data="data"
   key=".0"

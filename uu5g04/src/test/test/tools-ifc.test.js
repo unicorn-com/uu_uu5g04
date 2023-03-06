@@ -189,6 +189,7 @@ describe("UU5.Test.Tools", () => {
     let isLoaded = false;
     while (!isLoaded && Date.now() - start < 500) {
       await UU5.Test.Tools.wait(9);
+      if (Math.abs(Date.now() - start - 50) <= 10) continue; // if we're ~10ms around timeout boundary (50) then don't expect anything
       isLoaded = Date.now() - start >= 50;
       expect(wrapper.text()).toBe(isLoaded ? "loaded" : "loading");
     }

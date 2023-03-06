@@ -66,10 +66,6 @@ export const TagPlaceholder = VisualComponent.create({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      tagName: null,
-      props: null,
-      content: null,
-      error: null,
       _tagName: null,
       _props: null,
       _content: null,

@@ -16,8 +16,7 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
-
-const { mount, shallow, wait } = UU5.Test.Tools;
+import { mount, shallow, omitConsoleLogs } from "uu5g05-test";
 
 describe("UU5.Form.ColorPicker intreface testing", () => {
   it("toggle(setStateCallBack, e)", () => {
@@ -595,6 +594,7 @@ describe("UU5.Forms.ColorPicker interface", () => {
 
     for (let i = 0; i < invalidColors.length; i++) {
       let value = invalidColors[i];
+      omitConsoleLogs("invalid value " + value);
 
       // test change props
       wrapper.setProps({ value });
@@ -621,6 +621,7 @@ describe("UU5.Forms.ColorPicker interface", () => {
     expect(validFn).not.toBeCalled();
 
     // test using only custom validation - disable component validation
+    omitConsoleLogs("invalid value #XXXXXX");
     wrapper.setProps({ value: "#XXXXXX" });
     wrapper.update();
     expect(validFn).toBeCalled();
@@ -633,6 +634,7 @@ describe("UU5.Forms.ColorPicker interface", () => {
     expect(validFn).toBeCalledTimes(2);
     expect(wrapper.instance().getValue()).toEqual("#FFFFFF");
 
+    omitConsoleLogs("invalid value #YYYYYY");
     wrapper.instance().setValue("#YYYYYY");
     expect(validFn).toBeCalledTimes(3);
     expect(wrapper.instance().getValue()).toEqual("");

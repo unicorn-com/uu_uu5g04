@@ -4,6 +4,26 @@
 /* UU5.Forms.Label */
 .@{name}-text-input {
   position: relative;
+
+  &-revealable::-ms-reveal {
+    display: none;
+  }
+
+  &-reveal-button {
+    position: absolute !important; /* needs !important when it's disabled (e.g. feedback="loading") because of: .uu5-common-disabled { position: relative !important; } */
+    top: 0;
+    right: 0;
+    clip-path: inset(2px); /* to not be over input's border / inset box-shadow */
+    .@{name}-input-loading & { transform: translateX(-100%); } 
+    
+  }
+  &-reveal-icon {
+    &&& {
+      height: auto;
+      position: static;
+      padding: 0;
+    }
+  }
 }
 
 /* reset textarea space bottom */

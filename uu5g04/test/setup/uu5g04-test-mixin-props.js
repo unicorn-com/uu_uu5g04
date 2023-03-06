@@ -20,8 +20,8 @@ const MixinProps = {
     mainAttrs: {
       style: [{ backgroundColor: "red", color: "blue" }],
     },
-    noIndex: {
-      values: [true, false],
+    fullTextSearchPriority: {
+      values: [0],
     },
   },
 
@@ -94,7 +94,6 @@ const MixinProps = {
     nestingLevel: {
       values: [
         "spa",
-        "container",
         "page",
         "bigBoxCollection",
         "bigBox",

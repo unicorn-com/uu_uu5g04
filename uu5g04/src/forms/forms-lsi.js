@@ -201,6 +201,12 @@ export const FormsLsi = {
       sk: "Zadajte prosím menšie číslo. Maximálna povolená hodnota je %d.",
       uk: "Будь ласка вкажіть невелике число. Максимальне значення є %d.",
     },
+    ambiguousValuePastedMessage: {
+      cs: "Zkontrolujte prosím správnost vloženého čísla.",
+      en: "Please check the validity of the pasted number.",
+      sk: "Skontrolujte prosím správnosť vloženého čísla.",
+      uk: "Будь ласка, перевірте дійсність вставленого номера.",
+    },
   },
   file: {
     dropHere: {

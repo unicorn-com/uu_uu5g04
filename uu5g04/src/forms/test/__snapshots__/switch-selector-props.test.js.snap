@@ -1226,6 +1226,49 @@ exports[`UU5.Forms.SwitchSelector props testing fullTextSearchPriority=0 1`] = `
 </Resize>
 `;
 
+exports[`UU5.Forms.SwitchSelector props testing fullTextSearchPriority=0 2`] = `
+<Resize
+  onResize={[Function]}
+>
+  <div
+    className="uu5-forms-switch-selector uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <InputWrapper
+      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+      disabled={false}
+      readonly={false}
+    >
+      <SwitchSelector
+        className="uu-forms-ps7vq7"
+        items={
+          Array [
+            Object {
+              "label": "Low",
+              "value": "low",
+            },
+            Object {
+              "label": "Normal",
+              "value": "normal",
+            },
+            Object {
+              "label": "High",
+              "value": "high",
+            },
+          ]
+        }
+        onChange={[Function]}
+        ref_={[Function]}
+        value="low"
+        width={null}
+      />
+    </InputWrapper>
+  </div>
+</Resize>
+`;
+
 exports[`UU5.Forms.SwitchSelector props testing hidden=false 1`] = `
 <Resize
   onResize={[Function]}
@@ -2018,92 +2061,6 @@ exports[`UU5.Forms.SwitchSelector props testing nestingLevel="inline" 1`] = `
 >
   <div
     className="uu5-forms-switch-selector uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <InputWrapper
-      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-      disabled={false}
-      readonly={false}
-    >
-      <SwitchSelector
-        className="uu-forms-ps7vq7"
-        items={
-          Array [
-            Object {
-              "label": "Low",
-              "value": "low",
-            },
-            Object {
-              "label": "Normal",
-              "value": "normal",
-            },
-            Object {
-              "label": "High",
-              "value": "high",
-            },
-          ]
-        }
-        onChange={[Function]}
-        ref_={[Function]}
-        value="low"
-        width={null}
-      />
-    </InputWrapper>
-  </div>
-</Resize>
-`;
-
-exports[`UU5.Forms.SwitchSelector props testing noIndex=false 1`] = `
-<Resize
-  onResize={[Function]}
->
-  <div
-    className="uu5-forms-switch-selector uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <InputWrapper
-      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-      disabled={false}
-      readonly={false}
-    >
-      <SwitchSelector
-        className="uu-forms-ps7vq7"
-        items={
-          Array [
-            Object {
-              "label": "Low",
-              "value": "low",
-            },
-            Object {
-              "label": "Normal",
-              "value": "normal",
-            },
-            Object {
-              "label": "High",
-              "value": "high",
-            },
-          ]
-        }
-        onChange={[Function]}
-        ref_={[Function]}
-        value="low"
-        width={null}
-      />
-    </InputWrapper>
-  </div>
-</Resize>
-`;
-
-exports[`UU5.Forms.SwitchSelector props testing noIndex=true 1`] = `
-<Resize
-  onResize={[Function]}
->
-  <div
-    className="uu5-forms-switch-selector uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
     id="uuID"
     style={Object {}}
     title={null}

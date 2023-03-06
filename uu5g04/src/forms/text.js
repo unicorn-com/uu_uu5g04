@@ -51,6 +51,7 @@ export const Text = Context.withContext(
       password: UU5.PropTypes.bool,
       pattern: UU5.PropTypes.string,
       popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
+      revealable: UU5.PropTypes.bool,
     },
     //@@viewOff:propTypes
 
@@ -61,6 +62,7 @@ export const Text = Context.withContext(
         password: false,
         pattern: null,
         popoverLocation: "local", // "local" <=> backward-compatible behaviour
+        revealable: false,
       };
     },
     //@@viewOff:getDefaultProps
@@ -236,6 +238,7 @@ export const Text = Context.withContext(
         value: this.state.value,
         placeholder: this.props.placeholder,
         type: this.props.password ? "password" : this.props.type || "text",
+        revealable: this.props.revealable,
         onChange: !this.isReadOnly() && !this.isComputedDisabled() ? this.onChange : null,
         onFocus: !this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null,
         onBlur: this._onBlur,

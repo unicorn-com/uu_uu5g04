@@ -187,6 +187,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
             ${/* uu5g05 Modal - set body padding to 0 */ ""}
             &>:last-child:not(.uu5-bricks-modal-dialog)>:first-child {
               padding: 0;
+              display: flex;
             }
           `)
         );

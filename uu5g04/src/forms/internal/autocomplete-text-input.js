@@ -79,6 +79,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
     onClose: UU5.PropTypes.func,
     onOpen: UU5.PropTypes.func,
     popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
+    revealable: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -112,6 +113,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
       onClose: undefined,
       onOpen: undefined,
       popoverLocation: "local", // "local" <=> backward-compatible behaviour
+      revealable: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -408,6 +410,8 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
       icon: this.props.icon,
       iconOnClick: this.props.iconOnClick,
       clickable: this.props.clickable,
+      revealable: this.props.revealable,
+      size: this.props.size,
     };
   },
   //@@viewOff:private

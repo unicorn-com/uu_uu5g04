@@ -252,6 +252,15 @@ exports[`UU5.Bricks.Column fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Column fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-column uu-fulltextsearch-0 uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Column header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
@@ -650,15 +659,6 @@ exports[`UU5.Bricks.Column nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Column nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Column nestingLevel="inline" 3`] = `""`;
@@ -686,24 +686,6 @@ exports[`UU5.Bricks.Column nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Column nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column noIndex=false 1`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column noIndex=true 1`] = `
-<div
-  className="uu5-bricks-column uu5-noindex uu-fulltextsearch-0 uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
   style={Object {}}
   title={null}

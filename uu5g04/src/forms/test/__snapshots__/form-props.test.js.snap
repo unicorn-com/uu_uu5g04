@@ -572,6 +572,50 @@ exports[`UU5.Forms.Form props fullTextSearchPriority=0 1`] = `
 </form>
 `;
 
+exports[`UU5.Forms.Form props fullTextSearchPriority=0 2`] = `
+<form
+  className="uu5-forms-form uu-fulltextsearch-0 uu5-common-form uu-forms-ifp1tt"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    closeTimer={null}
+    location="local"
+    ref_={[Function]}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "inputColWidth": undefined,
+        "labelAlignment": undefined,
+        "labelColWidth": undefined,
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      id="uuID-child"
+      key="1-0"
+      label="Name"
+      name="name"
+      placeholder="John"
+      required={true}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
 exports[`UU5.Forms.Form props header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <form
   className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
@@ -1026,94 +1070,6 @@ exports[`UU5.Forms.Form props nestingLevel="box" 1`] = `
 exports[`UU5.Forms.Form props nestingLevel="inline" 1`] = `
 <form
   className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
-  id="uuID"
-  onSubmit={[Function]}
-  style={Object {}}
-  title={null}
->
-  <AlertBus
-    closeTimer={null}
-    location="local"
-    ref_={[Function]}
-  />
-  <ContextProvider
-    value={
-      Object {
-        "inputColWidth": undefined,
-        "labelAlignment": undefined,
-        "labelColWidth": undefined,
-        "readOnly": false,
-        "values": null,
-      }
-    }
-  >
-    <Text
-      id="uuID-child"
-      key="1-0"
-      label="Name"
-      name="name"
-      placeholder="John"
-      required={true}
-    />
-  </ContextProvider>
-  <button
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-    type="submit"
-  />
-</form>
-`;
-
-exports[`UU5.Forms.Form props noIndex=false 1`] = `
-<form
-  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
-  id="uuID"
-  onSubmit={[Function]}
-  style={Object {}}
-  title={null}
->
-  <AlertBus
-    closeTimer={null}
-    location="local"
-    ref_={[Function]}
-  />
-  <ContextProvider
-    value={
-      Object {
-        "inputColWidth": undefined,
-        "labelAlignment": undefined,
-        "labelColWidth": undefined,
-        "readOnly": false,
-        "values": null,
-      }
-    }
-  >
-    <Text
-      id="uuID-child"
-      key="1-0"
-      label="Name"
-      name="name"
-      placeholder="John"
-      required={true}
-    />
-  </ContextProvider>
-  <button
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-    type="submit"
-  />
-</form>
-`;
-
-exports[`UU5.Forms.Form props noIndex=true 1`] = `
-<form
-  className="uu5-forms-form uu5-noindex uu-fulltextsearch-0 uu5-common-form uu-forms-ifp1tt"
   id="uuID"
   onSubmit={[Function]}
   style={Object {}}

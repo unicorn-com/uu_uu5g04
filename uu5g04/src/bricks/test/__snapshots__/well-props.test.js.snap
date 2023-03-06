@@ -391,6 +391,15 @@ exports[`UU5.Bricks.Well fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Well fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-well uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-well-default"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Well hidden=false 1`] = `
 <div
   className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
@@ -527,15 +536,6 @@ exports[`UU5.Bricks.Well nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Well nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Well nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Well nestingLevel="inline" 3`] = `""`;
@@ -556,24 +556,6 @@ exports[`UU5.Bricks.Well nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.Well nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Well noIndex=false 1`] = `
-<div
-  className="uu5-bricks-well uu5-common-bg-style-filled uu5-bricks-well-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Well noIndex=true 1`] = `
-<div
-  className="uu5-bricks-well uu5-noindex uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-well-default"
   id="uuID"
   style={Object {}}
   title={null}

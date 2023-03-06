@@ -49,7 +49,6 @@ exports[`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props Make sna
               }
             }
             name="Item name"
-            noIndex={true}
             style={
               Object {
                 "color": "red",
@@ -306,6 +305,16 @@ exports[`UU5.Bricks.NavBar.Nav.Item props fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.NavBar.Nav.Item props fullTextSearchPriority=0 2`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item uu-fulltextsearch-0"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav.Item props hidden=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
@@ -470,26 +479,6 @@ exports[`UU5.Bricks.NavBar.Nav.Item props nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.NavBar.Nav.Item props nestingLevel="inline" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props noIndex=false 1`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props noIndex=true 1`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   onClick={[Function]}
   style={Object {}}

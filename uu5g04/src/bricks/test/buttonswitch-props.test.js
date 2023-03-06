@@ -15,8 +15,12 @@
 
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
+import { mount, shallow, omitConsoleLogs } from "uu5g05-test";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+beforeEach(() => {
+  omitConsoleLogs('"size" is deprecated');
+  omitConsoleLogs('"bgStyle" is deprecated');
+});
 
 const CONFIG = {
   mixins: [

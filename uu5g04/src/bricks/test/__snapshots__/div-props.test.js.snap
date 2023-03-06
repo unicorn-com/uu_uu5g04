@@ -220,6 +220,15 @@ exports[`UU5.Bricks.Div fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Div fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-common-div uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Div hidden=false 1`] = `
 <div
   className="uu5-common-div"
@@ -323,24 +332,6 @@ exports[`UU5.Bricks.Div nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Div nestingLevel="inline" 1`] = `
 <span
   className="uu5-common-div"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Div noIndex=false 1`] = `
-<div
-  className="uu5-common-div"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Div noIndex=true 1`] = `
-<div
-  className="uu5-common-div uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

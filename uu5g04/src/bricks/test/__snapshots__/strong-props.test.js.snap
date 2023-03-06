@@ -182,6 +182,13 @@ exports[`UU5.Bricks.Strong fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Strong fullTextSearchPriority=0 2`] = `
+<strong
+  className="uu5-bricks-strong uu-fulltextsearch-0"
+  id="uuID"
+/>
+`;
+
 exports[`UU5.Bricks.Strong hidden=false 1`] = `
 <strong
   className="uu5-bricks-strong"
@@ -266,20 +273,6 @@ exports[`UU5.Bricks.Strong nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.Strong nestingLevel="inline" 1`] = `
 <strong
   className="uu5-bricks-strong"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Strong noIndex=false 1`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-/>
-`;
-
-exports[`UU5.Bricks.Strong noIndex=true 1`] = `
-<strong
-  className="uu5-bricks-strong uu-fulltextsearch-0 uu5-noindex"
   id="uuID"
 />
 `;

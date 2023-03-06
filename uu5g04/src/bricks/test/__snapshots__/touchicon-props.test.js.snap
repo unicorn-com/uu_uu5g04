@@ -1019,6 +1019,28 @@ exports[`UU5.Bricks.TouchIcon fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.TouchIcon fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu-fulltextsearch-0 uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  >
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
+    />
+  </Link>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.TouchIcon hidden=false 1`] = `
 <Fragment>
   <Link
@@ -2151,29 +2173,6 @@ exports[`UU5.Bricks.TouchIcon nestingLevel="boxCollection" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.TouchIcon nestingLevel="container" 1`] = `
-<Fragment>
-  <Link
-    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
-    id="uuID-inner"
-    mainAttrs={Object {}}
-    nestingLevel="container"
-  >
-    <div
-      className="uu5-bricks-touch-icon-body"
-    >
-      <Icon
-        className="uu5-bricks-touch-icon-icon"
-        icon="mdi-file"
-      />
-    </div>
-    <div
-      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
-    />
-  </Link>
-</Fragment>
-`;
-
 exports[`UU5.Bricks.TouchIcon nestingLevel="inline" 1`] = `
 <Link
   className="uu-bricks-4lh3wl"
@@ -2276,50 +2275,6 @@ exports[`UU5.Bricks.TouchIcon nestingLevel="spa" 1`] = `
     id="uuID-inner"
     mainAttrs={Object {}}
     nestingLevel="spa"
-  >
-    <div
-      className="uu5-bricks-touch-icon-body"
-    >
-      <Icon
-        className="uu5-bricks-touch-icon-icon"
-        icon="mdi-file"
-      />
-    </div>
-    <div
-      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
-    />
-  </Link>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.TouchIcon noIndex=false 1`] = `
-<Fragment>
-  <Link
-    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
-    id="uuID-inner"
-    mainAttrs={Object {}}
-  >
-    <div
-      className="uu5-bricks-touch-icon-body"
-    >
-      <Icon
-        className="uu5-bricks-touch-icon-icon"
-        icon="mdi-file"
-      />
-    </div>
-    <div
-      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
-    />
-  </Link>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.TouchIcon noIndex=true 1`] = `
-<Fragment>
-  <Link
-    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-noindex uu-fulltextsearch-0 uu5-bricks-touch-icon-filled"
-    id="uuID-inner"
-    mainAttrs={Object {}}
   >
     <div
       className="uu5-bricks-touch-icon-body"

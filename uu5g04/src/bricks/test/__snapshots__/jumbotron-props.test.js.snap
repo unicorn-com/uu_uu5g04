@@ -474,6 +474,17 @@ exports[`UU5.Bricks.Jumbotron fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Jumbotron fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Jumbotron hidden=false 1`] = `
 <Fragment>
   <div
@@ -640,17 +651,6 @@ exports[`UU5.Bricks.Jumbotron nestingLevel="boxCollection" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Jumbotron nestingLevel="container" 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Fragment>
-`;
-
 exports[`UU5.Bricks.Jumbotron nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="inline" 3`] = `""`;
@@ -674,28 +674,6 @@ exports[`UU5.Bricks.Jumbotron nestingLevel="spa" 1`] = `
 <Fragment>
   <div
     className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Jumbotron noIndex=false 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Jumbotron noIndex=true 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-jumbotron uu5-noindex uu-fulltextsearch-0 uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
     id="uuID"
     style={Object {}}
     title={null}

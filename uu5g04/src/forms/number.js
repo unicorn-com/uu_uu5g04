@@ -21,6 +21,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
+import { Utils } from "uu5g05";
 import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
@@ -37,6 +38,65 @@ function isSameNumber(a, b) {
     (Number.isNaN(a) && Number.isNaN(b)) || // check if both values are NaN
     (a === 0 && b === 0 && 1 / a === 1 / b) // check if both values are same zero (positive or negative)
   );
+}
+
+// NOTE Copied from uu5g05-forms (number-input.js), keep in sync.
+function transformPastedTextToNumberString(text, groupingSeparator, decimalSeparator) {
+  let numberString;
+  let ambiguous = false;
+  let numbersAndSepsOnly = text.match(/-?\d+[.,\s0-9]*|-?[.,]\d+[.,\s0-9]*/)?.[0]?.trim() || ""; // use only first number
+  let negativePrefix = numbersAndSepsOnly[0] === "-" ? "-" : "";
+  if (negativePrefix) numbersAndSepsOnly = numbersAndSepsOnly.slice(1).trim();
+  numbersAndSepsOnly = numbersAndSepsOnly.replace(/[.,\s]+$/, ""); // ignore separators at the end
+
+  // numbersAndSepsOnly now contains e.g. "1,2" or "1.456.3" or ".,23452...23" or "1 234.567"
+  let dotCount = numbersAndSepsOnly.split(".").length - 1;
+  let commaCount = numbersAndSepsOnly.split(",").length - 1;
+  let isWellFormedWithSpaceAsThousandSeparator =
+    dotCount + commaCount <= 1 && // at most 1 occurrence of , or .
+    numbersAndSepsOnly.includes(" ") && // has space
+    !numbersAndSepsOnly.split(/[.,]/)[1]?.includes(" "); // there is no space after , or .
+  if ((dotCount > 0 && commaCount > 0) || isWellFormedWithSpaceAsThousandSeparator) {
+    // both types of separators => use last of separators as decimal point
+    let parts = numbersAndSepsOnly.replace(/\s+/g, "").split(/[.,]/);
+    let decimalPart = parts.length > 1 ? parts.pop() : "";
+    numberString = parts.join("") + (decimalPart && !decimalPart.match(/^0+$/) ? "." + decimalPart : ""); // strip .00 from the end to make it clearer for user
+  } else if (dotCount > 0 || commaCount > 0) {
+    // single type of separator
+    let separatorCount = dotCount || commaCount;
+    let separatorChar = dotCount > 0 ? "." : ",";
+    let isGrouppedByTriples = numbersAndSepsOnly
+      .split(separatorChar)
+      .slice(1)
+      .every((it) => it.length === 3);
+    if (isGrouppedByTriples) {
+      // e.g. "2,134,567,890" or "1,234"
+      if (separatorCount > 1 || groupingSeparator === separatorChar) {
+        // 1,234,567 or (1,234 && we use ',' for thousands) => 1234567 or 1234; dtto for "."
+        numberString = numbersAndSepsOnly.replace(/\s+/g, "").replaceAll(separatorChar, "");
+        ambiguous = separatorCount === 1;
+      } else {
+        // 1,234 && we don't use "," for thousands => use 1.234 and warn
+        numberString = numbersAndSepsOnly.replace(/\s+/g, "").replace(separatorChar, ".").replace(/\.0*$/, "");
+        ambiguous = true;
+      }
+    } else {
+      // e.g. "2134,56,789" or "1,23" => use last of separators as decimal point
+      let parts = numbersAndSepsOnly.replace(/\s+/g, "").split(separatorChar);
+      let decimalPart = parts.pop();
+      numberString = parts.join("") + (decimalPart && !decimalPart.match(/^0+$/) ? "." + decimalPart : ""); // strip .00 from the end to make it clearer for user
+    }
+  } else {
+    // no separators present => use as-is
+    numberString = numbersAndSepsOnly.replace(/\s+/g, "");
+  }
+
+  let fullNumberString =
+    numberString && !Number.isNaN(Number(numberString)) ? negativePrefix + numberString : undefined;
+  return {
+    numberString: fullNumberString,
+    ambiguous,
+  };
 }
 
 let NumberComponent = Context.withContext(
@@ -1029,6 +1089,55 @@ let NumberComponent = Context.withContext(
       }
       return true;
     },
+
+    _handlePaste(e) {
+      let json = Utils.Clipboard.read(e, "json");
+      let numberString;
+      let ambiguous = false;
+      if (json != null && typeof json === "number") {
+        numberString = JSON.stringify(json);
+      } else {
+        let text = Utils.Clipboard.read(e);
+        ({ numberString, ambiguous } = transformPastedTextToNumberString(
+          text,
+          this.props.thousandSeparator,
+          this.props.decimalSeparator
+        ));
+      }
+      delete this._ambiguous;
+      if (numberString) {
+        e.preventDefault();
+        let number = Number(numberString);
+        let newLocalizedValue = this._formatNumberToLocalizedStringEditable(number);
+        let valueTypedValue = this._getValueTypedValue(newLocalizedValue);
+        let opt = {
+          value: valueTypedValue,
+          event: e,
+          component: this,
+          _data: { type: "input", value: newLocalizedValue },
+        };
+        if (ambiguous) {
+          opt.feedback = "warning";
+          opt.message = this.getLsiComponent("ambiguousValuePastedMessage");
+        }
+        if (typeof this.props.onChange === "function") {
+          this.props.onChange(opt);
+        } else {
+          this.onChangeDefault(opt);
+        }
+      }
+    },
+
+    _handleCopy(e) {
+      // if copy&pasting among number inputs then copy the value also as a number type so that
+      // during paste we know exactly the number and don't have to guess which separator is decimal, etc.
+      let value = this._parseNumberFromLocalizedString(this.state.value);
+      if (value != null && !isNaN(value)) {
+        e.preventDefault();
+        e.clipboardData.setData("text/plain", value + "");
+        e.clipboardData.setData("application/json", JSON.stringify(value));
+      }
+    },
     //@@viewOff:private
 
     //@@viewOn:render
@@ -1064,10 +1173,18 @@ let NumberComponent = Context.withContext(
             ]
           : null;
 
-      let inputAttrs = this.props.inputAttrs || {};
+      let inputAttrs = { ...this.props.inputAttrs };
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       inputAttrs.onMouseUp = this._onMouseUp;
       inputAttrs.onKeyDown = this._onKeyDown;
+      inputAttrs.onPaste = (e) => {
+        if (typeof this.props.inputAttrs?.onPaste === "function") this.props.inputAttrs?.onPaste(e);
+        if (!e.defaultPrevented) this._handlePaste(e);
+      };
+      inputAttrs.onCopy = (e) => {
+        if (typeof this.props.inputAttrs?.onCopy === "function") this.props.inputAttrs?.onCopy(e);
+        if (!e.defaultPrevented) this._handleCopy(e);
+      };
       let value;
 
       if (this.state.value) {

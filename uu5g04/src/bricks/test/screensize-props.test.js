@@ -15,8 +15,7 @@
 
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-
-const { mount, shallow, wait } = UU5.Test.Tools;
+import { mount, shallow, omitConsoleLogs } from "uu5g05-test";
 
 const CONFIG = {
   mixins: [
@@ -84,7 +83,6 @@ let baseMixinprops = {
   },
   // parent: {},
   // ref_: {},
-  noIndex: true,
 };
 
 let elementaryMixinprops = {
@@ -149,6 +147,7 @@ describe("Mixin Props testing", () => {
   });
 
   it("props of ContentMixin", () => {
+    omitConsoleLogs("deprecated");
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot" {...contentMixinprops}>
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"xl"}>

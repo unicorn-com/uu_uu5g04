@@ -222,6 +222,16 @@ exports[`UU5.Bricks.Lsi props fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Lsi props fullTextSearchPriority=0 2`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
 exports[`UU5.Bricks.Lsi props hidden=false 1`] = `
 <lsi-item
   content="Text in Children"
@@ -484,16 +494,6 @@ exports[`UU5.Bricks.Lsi props nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Lsi props nestingLevel="container" 1`] = `
-<lsi-item
-  content="Text in Children"
-  id="childID"
-  key="childID"
-  language="cs"
-  nestingLevel="bigBoxCollection"
-/>
-`;
-
 exports[`UU5.Bricks.Lsi props nestingLevel="inline" 1`] = `
 <lsi-item
   content="Text in Children"
@@ -545,26 +545,6 @@ exports[`UU5.Bricks.Lsi props nestingLevel="smallBoxCollection" 1`] = `
 `;
 
 exports[`UU5.Bricks.Lsi props nestingLevel="spa" 1`] = `
-<lsi-item
-  content="Text in Children"
-  id="childID"
-  key="childID"
-  language="cs"
-  nestingLevel="bigBoxCollection"
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props noIndex=false 1`] = `
-<lsi-item
-  content="Text in Children"
-  id="childID"
-  key="childID"
-  language="cs"
-  nestingLevel="bigBoxCollection"
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props noIndex=true 1`] = `
 <lsi-item
   content="Text in Children"
   id="childID"

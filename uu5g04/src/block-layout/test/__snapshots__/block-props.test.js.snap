@@ -799,6 +799,21 @@ exports[`UU5.BlockLayout.Block props testing fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.BlockLayout.Block props testing fullTextSearchPriority=0 2`] = `
+<div
+  className="uublocklayout-1519s3b uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    key="uu5-content-0"
+  >
+    Test
+  </Row>
+</div>
+`;
+
 exports[`UU5.BlockLayout.Block props testing hidden=false 1`] = `
 <div
   className="uublocklayout-1519s3b"
@@ -1025,21 +1040,6 @@ exports[`UU5.BlockLayout.Block props testing nestingLevel="boxCollection" 1`] = 
 </div>
 `;
 
-exports[`UU5.BlockLayout.Block props testing nestingLevel="container" 1`] = `
-<div
-  className="uublocklayout-1519s3b"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Row
-    key="uu5-content-0"
-  >
-    Test
-  </Row>
-</div>
-`;
-
 exports[`UU5.BlockLayout.Block props testing nestingLevel="inline" 1`] = `
 <div
   className="uublocklayout-1519s3b"
@@ -1118,36 +1118,6 @@ exports[`UU5.BlockLayout.Block props testing nestingLevel="smallBoxCollection" 1
 exports[`UU5.BlockLayout.Block props testing nestingLevel="spa" 1`] = `
 <div
   className="uublocklayout-1519s3b"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Row
-    key="uu5-content-0"
-  >
-    Test
-  </Row>
-</div>
-`;
-
-exports[`UU5.BlockLayout.Block props testing noIndex=false 1`] = `
-<div
-  className="uublocklayout-1519s3b"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Row
-    key="uu5-content-0"
-  >
-    Test
-  </Row>
-</div>
-`;
-
-exports[`UU5.BlockLayout.Block props testing noIndex=true 1`] = `
-<div
-  className="uublocklayout-1519s3b uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

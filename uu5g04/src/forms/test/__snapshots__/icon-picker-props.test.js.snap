@@ -6047,6 +6047,141 @@ exports[`UU5.Forms.IconPicker props fullTextSearchPriority=0 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.IconPicker props fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-forms-iconpicker uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+      key="button"
+    >
+      <Button
+        className="uu5-forms-iconpicker-open-button"
+        id="uuID-button"
+        onClick={[Function]}
+        ref_={[Function]}
+      >
+         
+        <Icon
+          className="uu5-forms-iconpicker-arrow-down-icon"
+          icon="mdi-menu-down"
+        />
+      </Button>
+    </Div>
+    <forwardRef(Popover)
+      className=""
+      controlled={false}
+      disableBackdrop={false}
+      fitHeightToViewport={true}
+      forceRender={true}
+      header={
+        <Row
+          className="uu-forms-1oiads2"
+          content={null}
+          controlled={true}
+          disabled={false}
+          display="standard"
+          dynamic={false}
+          footer={null}
+          header={null}
+          hidden={false}
+          id={null}
+          ignoreInnerHTML={false}
+          increaseLevel={false}
+          level={null}
+          mainAttrs={null}
+          name={null}
+          nestingLevel={null}
+          noSpacing={false}
+          parent={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          spaceAround={true}
+          style={null}
+          tooltip={null}
+          underline={false}
+        >
+          <TextIcon
+            actionOnEnter={false}
+            autocompleteItems={null}
+            bgStyle={null}
+            borderRadius={null}
+            className="uu5-forms-iconpicker-search-input"
+            colorSchema={null}
+            controlled={true}
+            disabled={false}
+            elevation={null}
+            feedback="initial"
+            focusMessage={null}
+            hidden={false}
+            icon="mdi-magnify"
+            iconPosition="right"
+            id={null}
+            inputAttrs={null}
+            inputColWidth={
+              Object {
+                "s": 7,
+                "xs": 12,
+              }
+            }
+            inputWidth={null}
+            label={null}
+            labelColWidth={
+              Object {
+                "s": 5,
+                "xs": 12,
+              }
+            }
+            labelWidth={null}
+            mainAttrs={null}
+            message={null}
+            name={null}
+            onBlur={null}
+            onChange={[Function]}
+            onClick={null}
+            onEnter={null}
+            onFocus={null}
+            onValidate={null}
+            parent={null}
+            password={false}
+            pattern={null}
+            patternMessage={null}
+            placeholder="Search icon"
+            popoverLocation="local"
+            pureRender={false}
+            readOnly={false}
+            ref_={null}
+            required={false}
+            requiredMessage={null}
+            selected={false}
+            size="s"
+            spacing={null}
+            style={null}
+            tooltip={null}
+            tooltipIcon="mdi-information-outline"
+            validateOnChange={false}
+            value=""
+          />
+        </Row>
+      }
+      id="uuID-popover"
+      key="popover"
+      location="local"
+      ref_={[Function]}
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.IconPicker props function -> InputMixin onChange() 1`] = `
 <IconPicker
   id="checkID"
@@ -8615,276 +8750,6 @@ exports[`UU5.Forms.IconPicker props nestingLevel="box" 1`] = `
 exports[`UU5.Forms.IconPicker props nestingLevel="inline" 1`] = `
 <div
   className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-inline uu5-forms-input-auto-width uu5-forms-input-prevent-wrap"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <Div
-      className="uu5-forms-right-wrapper"
-      key="button"
-    >
-      <Button
-        className="uu5-forms-iconpicker-open-button"
-        id="uuID-button"
-        onClick={[Function]}
-        ref_={[Function]}
-      >
-         
-        <Icon
-          className="uu5-forms-iconpicker-arrow-down-icon"
-          icon="mdi-menu-down"
-        />
-      </Button>
-    </Div>
-    <forwardRef(Popover)
-      className=""
-      controlled={false}
-      disableBackdrop={false}
-      fitHeightToViewport={true}
-      forceRender={true}
-      header={
-        <Row
-          className="uu-forms-1oiads2"
-          content={null}
-          controlled={true}
-          disabled={false}
-          display="standard"
-          dynamic={false}
-          footer={null}
-          header={null}
-          hidden={false}
-          id={null}
-          ignoreInnerHTML={false}
-          increaseLevel={false}
-          level={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noSpacing={false}
-          parent={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          spaceAround={true}
-          style={null}
-          tooltip={null}
-          underline={false}
-        >
-          <TextIcon
-            actionOnEnter={false}
-            autocompleteItems={null}
-            bgStyle={null}
-            borderRadius={null}
-            className="uu5-forms-iconpicker-search-input"
-            colorSchema={null}
-            controlled={true}
-            disabled={false}
-            elevation={null}
-            feedback="initial"
-            focusMessage={null}
-            hidden={false}
-            icon="mdi-magnify"
-            iconPosition="right"
-            id={null}
-            inputAttrs={null}
-            inputColWidth={
-              Object {
-                "s": 7,
-                "xs": 12,
-              }
-            }
-            inputWidth={null}
-            label={null}
-            labelColWidth={
-              Object {
-                "s": 5,
-                "xs": 12,
-              }
-            }
-            labelWidth={null}
-            mainAttrs={null}
-            message={null}
-            name={null}
-            onBlur={null}
-            onChange={[Function]}
-            onClick={null}
-            onEnter={null}
-            onFocus={null}
-            onValidate={null}
-            parent={null}
-            password={false}
-            pattern={null}
-            patternMessage={null}
-            placeholder="Search icon"
-            popoverLocation="local"
-            pureRender={false}
-            readOnly={false}
-            ref_={null}
-            required={false}
-            requiredMessage={null}
-            selected={false}
-            size="s"
-            spacing={null}
-            style={null}
-            tooltip={null}
-            tooltipIcon="mdi-information-outline"
-            validateOnChange={false}
-            value=""
-          />
-        </Row>
-      }
-      id="uuID-popover"
-      key="popover"
-      location="local"
-      ref_={[Function]}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.IconPicker props noIndex=false 1`] = `
-<div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    disabled={false}
-    readonly={false}
-  >
-    <Div
-      className="uu5-forms-right-wrapper"
-      key="button"
-    >
-      <Button
-        className="uu5-forms-iconpicker-open-button"
-        id="uuID-button"
-        onClick={[Function]}
-        ref_={[Function]}
-      >
-         
-        <Icon
-          className="uu5-forms-iconpicker-arrow-down-icon"
-          icon="mdi-menu-down"
-        />
-      </Button>
-    </Div>
-    <forwardRef(Popover)
-      className=""
-      controlled={false}
-      disableBackdrop={false}
-      fitHeightToViewport={true}
-      forceRender={true}
-      header={
-        <Row
-          className="uu-forms-1oiads2"
-          content={null}
-          controlled={true}
-          disabled={false}
-          display="standard"
-          dynamic={false}
-          footer={null}
-          header={null}
-          hidden={false}
-          id={null}
-          ignoreInnerHTML={false}
-          increaseLevel={false}
-          level={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noSpacing={false}
-          parent={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          spaceAround={true}
-          style={null}
-          tooltip={null}
-          underline={false}
-        >
-          <TextIcon
-            actionOnEnter={false}
-            autocompleteItems={null}
-            bgStyle={null}
-            borderRadius={null}
-            className="uu5-forms-iconpicker-search-input"
-            colorSchema={null}
-            controlled={true}
-            disabled={false}
-            elevation={null}
-            feedback="initial"
-            focusMessage={null}
-            hidden={false}
-            icon="mdi-magnify"
-            iconPosition="right"
-            id={null}
-            inputAttrs={null}
-            inputColWidth={
-              Object {
-                "s": 7,
-                "xs": 12,
-              }
-            }
-            inputWidth={null}
-            label={null}
-            labelColWidth={
-              Object {
-                "s": 5,
-                "xs": 12,
-              }
-            }
-            labelWidth={null}
-            mainAttrs={null}
-            message={null}
-            name={null}
-            onBlur={null}
-            onChange={[Function]}
-            onClick={null}
-            onEnter={null}
-            onFocus={null}
-            onValidate={null}
-            parent={null}
-            password={false}
-            pattern={null}
-            patternMessage={null}
-            placeholder="Search icon"
-            popoverLocation="local"
-            pureRender={false}
-            readOnly={false}
-            ref_={null}
-            required={false}
-            requiredMessage={null}
-            selected={false}
-            size="s"
-            spacing={null}
-            style={null}
-            tooltip={null}
-            tooltipIcon="mdi-information-outline"
-            validateOnChange={false}
-            value=""
-          />
-        </Row>
-      }
-      id="uuID-popover"
-      key="popover"
-      location="local"
-      ref_={[Function]}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.IconPicker props noIndex=true 1`] = `
-<div
-  className="uu5-forms-iconpicker uu5-noindex uu-fulltextsearch-0 uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}

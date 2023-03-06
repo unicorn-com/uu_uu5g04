@@ -939,6 +939,26 @@ exports[`UU5.Bricks.Header fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.Header fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu-fulltextsearch-0 uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
+    }
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.Header hidden=false 1`] = `
 <Fragment>
   <Jumbotron
@@ -1414,26 +1434,6 @@ exports[`UU5.Bricks.Header nestingLevel="boxCollection" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel="container" 1`] = `
-<Fragment>
-  <Jumbotron
-    id="uuID"
-    mainAttrs={
-      Object {
-        "className": "uu5-bricks-header uu5-common-text",
-        "id": "uuID",
-        "style": Object {},
-        "title": null,
-      }
-    }
-  >
-    <h1
-      className="uu5-bricks-header-jumbotron-content uu5-common-text"
-    />
-  </Jumbotron>
-</Fragment>
-`;
-
 exports[`UU5.Bricks.Header nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Header nestingLevel="inline" 3`] = `""`;
@@ -1469,46 +1469,6 @@ exports[`UU5.Bricks.Header nestingLevel="spa" 1`] = `
     mainAttrs={
       Object {
         "className": "uu5-bricks-header uu5-common-text",
-        "id": "uuID",
-        "style": Object {},
-        "title": null,
-      }
-    }
-  >
-    <h1
-      className="uu5-bricks-header-jumbotron-content uu5-common-text"
-    />
-  </Jumbotron>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Header noIndex=false 1`] = `
-<Fragment>
-  <Jumbotron
-    id="uuID"
-    mainAttrs={
-      Object {
-        "className": "uu5-bricks-header uu5-common-text",
-        "id": "uuID",
-        "style": Object {},
-        "title": null,
-      }
-    }
-  >
-    <h1
-      className="uu5-bricks-header-jumbotron-content uu5-common-text"
-    />
-  </Jumbotron>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Header noIndex=true 1`] = `
-<Fragment>
-  <Jumbotron
-    id="uuID"
-    mainAttrs={
-      Object {
-        "className": "uu5-bricks-header uu5-noindex uu-fulltextsearch-0 uu5-common-text",
         "id": "uuID",
         "style": Object {},
         "title": null,

@@ -40,7 +40,7 @@ const CONFIG = {
         "problemActive",
         "passive",
         "alternativeFinal",
-        "cancel",
+        "cancelled",
       ],
     },
   },

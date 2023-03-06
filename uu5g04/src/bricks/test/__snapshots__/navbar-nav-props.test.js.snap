@@ -663,6 +663,24 @@ exports[`UU5.Bricks.NavBar.Nav props fullTextSearchPriority=0 1`] = `
 </ul>
 `;
 
+exports[`UU5.Bricks.NavBar.Nav props fullTextSearchPriority=0 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu-fulltextsearch-0 uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
 exports[`UU5.Bricks.NavBar.Nav props hidden=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
@@ -865,42 +883,6 @@ exports[`UU5.Bricks.NavBar.Nav props nestingLevel="box" 1`] = `
 exports[`UU5.Bricks.NavBar.Nav props nestingLevel="inline" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    id="child02"
-    key="child02"
-    offset={null}
-    smoothScroll={1000}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props noIndex=false 1`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    id="child02"
-    key="child02"
-    offset={null}
-    smoothScroll={1000}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props noIndex=true 1`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-noindex uu-fulltextsearch-0 uu5-bricks-nav-bar-nav-left"
   id="uuID"
   style={Object {}}
   title={null}

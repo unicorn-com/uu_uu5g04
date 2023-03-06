@@ -32,6 +32,7 @@ export const createHoc = Component.createHoc;
 // then uu5g04-forms (UU5 module) wants to add "Forms" key into "root" of uu5g04 exports which
 // isn't possible (exports are frozen by SystemJS), so instead uu5g04-forms will inject its components into
 // pre-existing "Forms" key within uu5g04 exports
+export const AmCharts = {};
 export const Animation = {};
 export const Bricks = {};
 export const BricksEditable = {};

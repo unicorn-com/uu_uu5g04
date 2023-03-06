@@ -729,6 +729,28 @@ exports[`UU5.Bricks.ScreenSize fullTextSearchPriority=0 1`] = `
 </Fragment>
 `;
 
+exports[`UU5.Bricks.ScreenSize fullTextSearchPriority=0 2`] = `
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
+`;
+
 exports[`UU5.Bricks.ScreenSize hidden=false 1`] = `
 <Fragment>
   <screen-size-item
@@ -1061,28 +1083,6 @@ exports[`UU5.Bricks.ScreenSize nestingLevel="boxCollection" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.ScreenSize nestingLevel="container" 1`] = `
-<Fragment>
-  <screen-size-item
-    id="childID"
-    key="childID"
-    nestingLevel="container"
-    screenSize={
-      Array [
-        "m",
-        "l",
-        "xl",
-      ]
-    }
-  >
-    <Span
-      content="Content for M-XL"
-      id="childID02"
-    />
-  </screen-size-item>
-</Fragment>
-`;
-
 exports[`UU5.Bricks.ScreenSize nestingLevel="inline" 1`] = `
 <Fragment>
   <screen-size-item
@@ -1194,50 +1194,6 @@ exports[`UU5.Bricks.ScreenSize nestingLevel="smallBoxCollection" 1`] = `
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="spa" 1`] = `
-<Fragment>
-  <screen-size-item
-    id="childID"
-    key="childID"
-    nestingLevel="spa"
-    screenSize={
-      Array [
-        "m",
-        "l",
-        "xl",
-      ]
-    }
-  >
-    <Span
-      content="Content for M-XL"
-      id="childID02"
-    />
-  </screen-size-item>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.ScreenSize noIndex=false 1`] = `
-<Fragment>
-  <screen-size-item
-    id="childID"
-    key="childID"
-    nestingLevel="spa"
-    screenSize={
-      Array [
-        "m",
-        "l",
-        "xl",
-      ]
-    }
-  >
-    <Span
-      content="Content for M-XL"
-      id="childID02"
-    />
-  </screen-size-item>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.ScreenSize noIndex=true 1`] = `
 <Fragment>
   <screen-size-item
     id="childID"

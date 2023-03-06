@@ -37,7 +37,7 @@ function formatDateByIntl(date, { country, format, timeZone, hourFormat, timeOnl
     hour: "numeric",
     minute: "numeric",
     second: "numeric",
-    hourCycle: hourFormat === 12 ? "h12" : "h24",
+    hourCycle: hourFormat === 12 ? "h12" : hourFormat === 24 ? "h23" : undefined,
   };
 
   if (timeOnly) {

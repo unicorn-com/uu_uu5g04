@@ -42,6 +42,12 @@ exports[`UU5.Bricks.Unauthenticated fullTextSearchPriority=0 1`] = `
 </Identity>
 `;
 
+exports[`UU5.Bricks.Unauthenticated fullTextSearchPriority=0 2`] = `
+<Identity>
+  <Component />
+</Identity>
+`;
+
 exports[`UU5.Bricks.Unauthenticated hidden=false 1`] = `
 <Identity>
   <Component />
@@ -85,18 +91,6 @@ exports[`UU5.Bricks.Unauthenticated nestingLevel="box" 1`] = `
 `;
 
 exports[`UU5.Bricks.Unauthenticated nestingLevel="inline" 1`] = `
-<Identity>
-  <Component />
-</Identity>
-`;
-
-exports[`UU5.Bricks.Unauthenticated noIndex=false 1`] = `
-<Identity>
-  <Component />
-</Identity>
-`;
-
-exports[`UU5.Bricks.Unauthenticated noIndex=true 1`] = `
 <Identity>
   <Component />
 </Identity>

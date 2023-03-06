@@ -16,7 +16,7 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+const { mount, shallow } = UU5.Test.Tools;
 
 describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
   it("Should render with shallow and make a snapshot", () => {
@@ -30,7 +30,8 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
   });
 
   it("getProgress()", () => {
-    const wrapper = mount(
+    let progress1, progress2;
+    mount(
       <UU5.Bricks.ProgressBar id={"uuID01"}>
         <UU5.Bricks.ProgressBar.Item
           id={"uuID02"}
@@ -38,23 +39,24 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           colorSchema="blue"
           animated
           striped
-          ref_={(progress2) => (this.progress2 = progress2)}
+          ref_={(_progress2) => (progress2 = _progress2)}
           content="number"
         />
         <UU5.Bricks.ProgressBar.Item
           id={"uuID03"}
           progress={35}
           colorSchema="purple"
-          ref_={(progress1) => (this.progress1 = progress1)}
+          ref_={(_progress1) => (progress1 = _progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
-    expect(this.progress2.getProgress()).toBe(40);
-    expect(this.progress1.getProgress()).toBe(35);
+    expect(progress2.getProgress()).toBe(40);
+    expect(progress1.getProgress()).toBe(35);
   });
 
   it("getProgressContent()", () => {
-    const wrapper = mount(
+    let progress1, progress2;
+    mount(
       <UU5.Bricks.ProgressBar id={"uuID01"}>
         <UU5.Bricks.ProgressBar.Item
           id={"uuID02"}
@@ -62,7 +64,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           colorSchema="blue"
           animated
           striped
-          ref_={(progress2) => (this.progress2 = progress2)}
+          ref_={(_progress2) => (progress2 = _progress2)}
           content="number"
         />
         <UU5.Bricks.ProgressBar.Item
@@ -70,16 +72,17 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           progress={35}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={(progress1) => (this.progress1 = progress1)}
+          ref_={(_progress1) => (progress1 = _progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
-    expect(this.progress1.getProgressContent()).toEqual("Progress1");
-    expect(this.progress2.getProgressContent()).toEqual("number");
+    expect(progress1.getProgressContent()).toEqual("Progress1");
+    expect(progress2.getProgressContent()).toEqual("number");
   });
 
   it("isStriped()", () => {
-    const wrapper = mount(
+    let progress1, progress2;
+    mount(
       <UU5.Bricks.ProgressBar id={"uuID01"}>
         <UU5.Bricks.ProgressBar.Item
           id={"uuID02"}
@@ -87,7 +90,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           colorSchema="blue"
           animated
           striped
-          ref_={(progress2) => (this.progress2 = progress2)}
+          ref_={(_progress2) => (progress2 = _progress2)}
           content="number"
         />
         <UU5.Bricks.ProgressBar.Item
@@ -95,16 +98,17 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           progress={35}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={(progress1) => (this.progress1 = progress1)}
+          ref_={(_progress1) => (progress1 = _progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
-    expect(this.progress1.isStriped()).toBeFalsy();
-    expect(this.progress2.isStriped()).toBeTruthy();
+    expect(progress1.isStriped()).toBeFalsy();
+    expect(progress2.isStriped()).toBeTruthy();
   });
 
   it("isAnimated()", () => {
-    const wrapper = mount(
+    let progress1, progress2;
+    mount(
       <UU5.Bricks.ProgressBar id={"uuID01"}>
         <UU5.Bricks.ProgressBar.Item
           id={"uuID02"}
@@ -112,7 +116,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           colorSchema="blue"
           animated
           striped
-          ref_={(progress2) => (this.progress2 = progress2)}
+          ref_={(_progress2) => (progress2 = _progress2)}
           content="number"
         />
         <UU5.Bricks.ProgressBar.Item
@@ -120,15 +124,16 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           progress={35}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={(progress1) => (this.progress1 = progress1)}
+          ref_={(_progress1) => (progress1 = _progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
-    expect(this.progress1.isAnimated()).toBeFalsy();
-    expect(this.progress2.isAnimated()).toBeTruthy();
+    expect(progress1.isAnimated()).toBeFalsy();
+    expect(progress2.isAnimated()).toBeTruthy();
   });
 
   it("setProgress(param, setStateCallBack)", () => {
+    let progress1;
     const wrapper = mount(
       <UU5.Bricks.ProgressBar id={"uuID01"}>
         <UU5.Bricks.ProgressBar.Item
@@ -136,7 +141,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           progress={35}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={(progress1) => (this.progress1 = progress1)}
+          ref_={(_progress1) => (progress1 = _progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
@@ -144,9 +149,9 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
     expect(wrapper.find("ProgressBarItem").instance().state.progress).toBe(35);
     expect(wrapper.find("ProgressBarItem").instance().state.content).toEqual("Progress1");
     expect(wrapper.find("ProgressBarItem").instance().state.striped).toBeFalsy();
-    expect(this.progress1.getProgressContent()).toEqual("Progress1");
-    expect(this.progress1.getProgress()).toBe(35);
-    this.progress1.setProgress({ value: 68, content: "Jarda Jágr", striped: true }, mockFunc);
+    expect(progress1.getProgressContent()).toEqual("Progress1");
+    expect(progress1.getProgress()).toBe(35);
+    progress1.setProgress({ value: 68, content: "Jarda Jágr", striped: true }, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -155,11 +160,12 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
     expect(wrapper.find("ProgressBarItem").instance().state.progress).toBe(68);
     expect(wrapper.find("ProgressBarItem").instance().state.content).toEqual("Jarda Jágr");
     expect(wrapper.find("ProgressBarItem").instance().state.striped).toBeTruthy();
-    expect(this.progress1.getProgressContent()).toEqual("Jarda Jágr");
-    expect(this.progress1.getProgress()).toBe(68);
+    expect(progress1.getProgressContent()).toEqual("Jarda Jágr");
+    expect(progress1.getProgress()).toBe(68);
   });
 
   it("increase(value, setStateCallBack)", () => {
+    let progress1;
     const wrapper = mount(
       <UU5.Bricks.ProgressBar id={"uuID01"}>
         <UU5.Bricks.ProgressBar.Item
@@ -167,16 +173,16 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           progress={2}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={(progress1) => (this.progress1 = progress1)}
+          ref_={(_progress1) => (progress1 = _progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
     const mockFunc = jest.fn();
     expect(wrapper.find("ProgressBarItem").instance().state.progress).toBe(2);
     expect(wrapper.find("ProgressBarItem").instance().state.content).toEqual("Progress1");
-    expect(this.progress1.getProgressContent()).toEqual("Progress1");
-    expect(this.progress1.getProgress()).toBe(2);
-    this.progress1.increase({ value: 68, content: "Jarda Jágr postupuje" }, mockFunc);
+    expect(progress1.getProgressContent()).toEqual("Progress1");
+    expect(progress1.getProgress()).toBe(2);
+    progress1.increase({ value: 68, content: "Jarda Jágr postupuje" }, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -184,14 +190,15 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
     //expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find("ProgressBarItem").instance().state.progress).toBe(70);
     expect(wrapper.find("ProgressBarItem").instance().state.content).toEqual("Jarda Jágr postupuje");
-    expect(this.progress1.getProgressContent()).toEqual("Jarda Jágr postupuje");
-    expect(this.progress1.getProgress()).toBe(70);
-    this.progress1.increase(35);
+    expect(progress1.getProgressContent()).toEqual("Jarda Jágr postupuje");
+    expect(progress1.getProgress()).toBe(70);
+    progress1.increase(35);
     wrapper.update();
-    expect(this.progress1.getProgress()).toBe(100);
+    expect(progress1.getProgress()).toBe(100);
   });
 
   it("decrease(value, setStateCallBack)", () => {
+    let progress1;
     const wrapper = mount(
       <UU5.Bricks.ProgressBar id={"uuID01"}>
         <UU5.Bricks.ProgressBar.Item
@@ -199,16 +206,16 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
           progress={20}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={(progress1) => (this.progress1 = progress1)}
+          ref_={(_progress1) => (progress1 = _progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
     const mockFunc = jest.fn();
     expect(wrapper.find("ProgressBarItem").instance().state.progress).toBe(20);
     expect(wrapper.find("ProgressBarItem").instance().state.content).toEqual("Progress1");
-    expect(this.progress1.getProgressContent()).toEqual("Progress1");
-    expect(this.progress1.getProgress()).toBe(20);
-    this.progress1.decrease({ value: 18, content: "Jarda Jágr ustupuje" }, mockFunc);
+    expect(progress1.getProgressContent()).toEqual("Progress1");
+    expect(progress1.getProgress()).toBe(20);
+    progress1.decrease({ value: 18, content: "Jarda Jágr ustupuje" }, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -216,10 +223,10 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
     //expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find("ProgressBarItem").instance().state.progress).toBe(2);
     expect(wrapper.find("ProgressBarItem").instance().state.content).toEqual("Jarda Jágr ustupuje");
-    expect(this.progress1.getProgressContent()).toEqual("Jarda Jágr ustupuje");
-    expect(this.progress1.getProgress()).toBe(2);
-    this.progress1.decrease(5);
+    expect(progress1.getProgressContent()).toEqual("Jarda Jágr ustupuje");
+    expect(progress1.getProgress()).toBe(2);
+    progress1.decrease(5);
     wrapper.update();
-    expect(this.progress1.getProgress()).toBe(0);
+    expect(progress1.getProgress()).toBe(0);
   });
 });

@@ -247,6 +247,15 @@ exports[`UU5.Bricks.Dl fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Dl fullTextSearchPriority=0 2`] = `
+<dl
+  className="uu5-bricks-dl uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Dl header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <dl
   className="uu5-bricks-dl"
@@ -529,15 +538,6 @@ exports[`UU5.Bricks.Dl nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dl nestingLevel="container" 1`] = `
-<dl
-  className="uu5-bricks-dl"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Dl nestingLevel="inline" 1`] = `
 <dl
   className="uu5-bricks-dl uu-bricks-g4nixu"
@@ -586,24 +586,6 @@ exports[`UU5.Bricks.Dl nestingLevel="smallBoxCollection" 1`] = `
 exports[`UU5.Bricks.Dl nestingLevel="spa" 1`] = `
 <dl
   className="uu5-bricks-dl"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dl noIndex=false 1`] = `
-<dl
-  className="uu5-bricks-dl"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dl noIndex=true 1`] = `
-<dl
-  className="uu5-bricks-dl uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

@@ -239,6 +239,23 @@ exports[`UU5.Bricks.ButtonToTop props testing fullTextSearchPriority=0 1`] = `
 </Button>
 `;
 
+exports[`UU5.Bricks.ButtonToTop props testing fullTextSearchPriority=0 2`] = `
+<Button
+  bgStyle="outline"
+  className="uu5-bricks-button-to-top uu-fulltextsearch-0"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <Icon
+    icon="mdi-chevron-up"
+  />
+</Button>
+`;
+
 exports[`UU5.Bricks.ButtonToTop props testing hidden=false 1`] = `
 <Button
   bgStyle="outline"
@@ -495,23 +512,6 @@ exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="boxCollection" 1`] =
 </Button>
 `;
 
-exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="container" 1`] = `
-<Button
-  bgStyle="outline"
-  className="uu5-bricks-button-to-top"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="smallBox"
-  onClick={[Function]}
-  style={Object {}}
->
-  <Icon
-    icon="mdi-chevron-up"
-  />
-</Button>
-`;
-
 exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="inline" 1`] = `
 <Button
   bgStyle="outline"
@@ -599,40 +599,6 @@ exports[`UU5.Bricks.ButtonToTop props testing nestingLevel="spa" 1`] = `
 <Button
   bgStyle="outline"
   className="uu5-bricks-button-to-top"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="smallBox"
-  onClick={[Function]}
-  style={Object {}}
->
-  <Icon
-    icon="mdi-chevron-up"
-  />
-</Button>
-`;
-
-exports[`UU5.Bricks.ButtonToTop props testing noIndex=false 1`] = `
-<Button
-  bgStyle="outline"
-  className="uu5-bricks-button-to-top"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="smallBox"
-  onClick={[Function]}
-  style={Object {}}
->
-  <Icon
-    icon="mdi-chevron-up"
-  />
-</Button>
-`;
-
-exports[`UU5.Bricks.ButtonToTop props testing noIndex=true 1`] = `
-<Button
-  bgStyle="outline"
-  className="uu5-bricks-button-to-top uu5-noindex uu-fulltextsearch-0"
   hidden={true}
   id="uuID-inner"
   mainAttrs={Object {}}

@@ -15,8 +15,7 @@
 
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-
-const { mount, shallow, wait } = UU5.Test.Tools;
+import { mount, shallow, omitConsoleLogs } from "uu5g05-test";
 
 let origDateNow = Date.now;
 beforeEach(() => {
@@ -24,6 +23,10 @@ beforeEach(() => {
 });
 afterEach(() => {
   Date.now = origDateNow;
+});
+
+beforeEach(() => {
+  omitConsoleLogs('"minSelection" is deprecated');
 });
 
 let mockElement = document.createElement("div");

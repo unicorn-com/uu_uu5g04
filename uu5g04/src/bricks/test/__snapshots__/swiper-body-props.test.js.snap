@@ -206,6 +206,15 @@ exports[`UU5.Bricks.Swiper.Body fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Bricks.Swiper.Body fullTextSearchPriority=0 2`] = `
+<div
+  className="uu5-bricks-swiper-body uu-fulltextsearch-0"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Swiper.Body hidden=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
@@ -342,15 +351,6 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel="boxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
 exports[`UU5.Bricks.Swiper.Body nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Swiper.Body nestingLevel="inline" 3`] = `""`;
@@ -371,24 +371,6 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel="smallBoxCollection" 1`] = `""`;
 exports[`UU5.Bricks.Swiper.Body nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body noIndex=false 1`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body noIndex=true 1`] = `
-<div
-  className="uu5-bricks-swiper-body uu5-noindex uu-fulltextsearch-0"
   id="uuID"
   style={Object {}}
   title={null}

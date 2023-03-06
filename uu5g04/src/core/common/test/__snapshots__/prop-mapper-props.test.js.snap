@@ -86,6 +86,18 @@ exports[`UU5.Common.PropMapper props testing fullTextSearchPriority=0 1`] = `
 />
 `;
 
+exports[`UU5.Common.PropMapper props testing fullTextSearchPriority=0 2`] = `
+<Container
+  age={25}
+  city="Los Angeles"
+  country="USA"
+  key=".0"
+  name="John"
+  state="California"
+  surname="Doe"
+/>
+`;
+
 exports[`UU5.Common.PropMapper props testing hidden=false 1`] = `
 <Container
   age={25}
@@ -189,30 +201,6 @@ exports[`UU5.Common.PropMapper props testing nestingLevel="box" 1`] = `
 `;
 
 exports[`UU5.Common.PropMapper props testing nestingLevel="inline" 1`] = `
-<Container
-  age={25}
-  city="Los Angeles"
-  country="USA"
-  key=".0"
-  name="John"
-  state="California"
-  surname="Doe"
-/>
-`;
-
-exports[`UU5.Common.PropMapper props testing noIndex=false 1`] = `
-<Container
-  age={25}
-  city="Los Angeles"
-  country="USA"
-  key=".0"
-  name="John"
-  state="California"
-  surname="Doe"
-/>
-`;
-
-exports[`UU5.Common.PropMapper props testing noIndex=true 1`] = `
 <Container
   age={25}
   city="Los Angeles"

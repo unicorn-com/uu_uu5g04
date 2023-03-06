@@ -58,6 +58,7 @@ const CONFIG = {
   },
   requiredProps: {
     children: ["UU5.Bricks.Carousel.Item"],
+    interval: 0, // turn off "autoSlide" so that revertedValueSnapshotCheck-s match
   },
   opt: {
     shallowOpt: {
