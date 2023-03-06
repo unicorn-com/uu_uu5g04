@@ -89,14 +89,12 @@ const EditationModalMarginInput = UU5.Common.Component.lazy(async () => {
   return import("./editation-modal-margin-input.js");
 });
 
-
 const FORM_PROPS = {
   spacing: 16,
   inputColWidth: "xs-12",
   labelColWidth: "xs-12",
   labelAlignment: "left",
 };
-
 
 const EDITATION_COMPONENT_PROPS = UU5.PropTypes.oneOfType([
   UU5.PropTypes.func,
@@ -1410,6 +1408,15 @@ const ModalBody = UU5.Common.VisualComponent.create({
           itemLabel = `Item${index + 1}`;
         }
 
+        if (Array.isArray(itemLabel) && itemLabel.some((it) => typeof it?.toChildren === "function")) {
+          itemLabel = UU5.Common.UU5String.contentToChildren(itemLabel);
+        }
+
+        // If itemLabel is string and also starts with uu5string tag then we need to parse it and display it as component
+        if (typeof itemLabel === "string" && itemLabel.startsWith("<uu5string")) {
+          itemLabel = UU5.Common.UU5String.toChildren(itemLabel);
+        }
+
         return {
           content: <span>{itemLabel}</span>,
           infoIcons: this._getMenuItemIcons(this.state.itemsValidation ? this.state.itemsValidation[index] : null),
@@ -1640,12 +1647,11 @@ const ModalBody = UU5.Common.VisualComponent.create({
         />
       );
     } else {
-      let { Component, children, props = {} } = this._getEditationComponent(
-        component,
-        valueSource,
-        validationSource,
-        index
-      );
+      let {
+        Component,
+        children,
+        props = {},
+      } = this._getEditationComponent(component, valueSource, validationSource, index);
       props.key = key;
 
       if (typeof Component === "string") {

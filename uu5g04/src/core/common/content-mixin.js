@@ -25,6 +25,8 @@ const PseudoUU5Component = () => null;
 PseudoUU5Component.isUu5PureComponent = true;
 PseudoUU5Component.isStateless = true;
 
+const REF_CONTENT_MIXIN_MARKER = Symbol();
+
 function deepFlattenList(list) {
   let result = [];
   for (let value of list) {
@@ -204,6 +206,17 @@ export const ContentMixin = {
     if (!prevChild.key) newChildProps.key = newChildProps.key || key;
 
     if (isUU5Child && !isStateless) {
+      // remember original ref so that we don't blindly overwrite it, however handle also scenario
+      // whn the ref comes from ContentMixin itself, e.g. because it was passed down via several children
+      // (e.g. <Button><Child/></Button> and then Button renders <Div>{this.getChildren()}</Div>, and Div
+      // renders <div>{this.getChildren()}</div>, both Button and Div are ContentMixin,
+      // then Div's getChildren() should overwrite ref, so that Button's ref is not called;
+      // but if scenario starts with <Button><Child ref={customRef} /></Button> then
+      // Div should overwrite ref but it should also call customRef in the end)
+      let origNonMixinRef = prevChild.ref || prevChild.props?.ref;
+      if (origNonMixinRef && origNonMixinRef[REF_CONTENT_MIXIN_MARKER]) {
+        origNonMixinRef = origNonMixinRef[REF_CONTENT_MIXIN_MARKER][0];
+      }
       newChildProps.ref = function (renderedChild) {
         if (renderedChild) {
           let index = childIndex; // childIndex might be "old" if component is dynamic and multiple new children were added via API
@@ -216,7 +229,10 @@ export const ContentMixin = {
           }
           this.registerRenderedChild(renderedChild, index);
         }
+        if (typeof origNonMixinRef === "function") origNonMixinRef(renderedChild);
+        else if (origNonMixinRef) origNonMixinRef.current = renderedChild;
       }.bind(this);
+      newChildProps.ref[REF_CONTENT_MIXIN_MARKER] = [origNonMixinRef]; // remember non-ContentMixin ref, if any
     }
 
     return newChildProps;

@@ -146,7 +146,7 @@ export const FormsLsi = {
       uk: "Видалити",
     },
     onSaveInvalidForm: {
-      cs: "Přinejmenším jedna honota formuláře není platná!",
+      cs: "Přinejmenším jedna hodnota formuláře není platná!",
       en: "Atleast one of the editation forms is invalid!",
     },
     itemTypeSwitch: {

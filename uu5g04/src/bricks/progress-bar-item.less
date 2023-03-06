@@ -10,6 +10,9 @@
   height: 100%;
   border-radius: 2px;
   float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .@{name}-progress-bar > .@{name}-progress-bar-item:not(:last-child) {
   border-top-right-radius: 0;
@@ -48,20 +51,4 @@
   to {
     background-position: 40px 0;
   }
-}
-
-.@{name}-progress-bar-size-s .@{name}-progress-bar-item {
-  padding-top: 3px;
-}
-
-.@{name}-progress-bar-size-m .@{name}-progress-bar-item {
-  padding-top: 6px;
-}
-
-.@{name}-progress-bar-size-l .@{name}-progress-bar-item {
-  padding-top: 9px;
-}
-
-.@{name}-progress-bar-size-xl .@{name}-progress-bar-item {
-  padding-top: 12px;
 }

@@ -97,5 +97,9 @@ describe(`UU5.Bricks.YoutubeVideo docKit examples`, () => {
     wrapper = mount(<UU5.Bricks.YoutubeVideo src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" muted />);
     iframe = wrapper.find("iframe");
     expect(iframe.instance().getAttribute("src")).toBe("https://youtube.com/embed/1rDVz_Fb6HQ?mute=1");
+
+    wrapper = mount(<UU5.Bricks.YoutubeVideo src="https://youtube.com/shorts/1rDVz_Fb6HQ" muted />);
+    iframe = wrapper.find("iframe");
+    expect(iframe.instance().getAttribute("src")).toBe("https://youtube.com/embed/1rDVz_Fb6HQ?mute=1");
   });
 });

@@ -15,6 +15,7 @@
 
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
+import { useRoute } from "uu5g05";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
 
@@ -82,7 +83,7 @@ let downloadAnimationKeyframes = Css.keyframes({
   },
 });
 
-export const Link = UU5.Common.VisualComponent.create({
+const _Link = UU5.Common.VisualComponent.create({
   displayName: "Link", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
@@ -235,7 +236,7 @@ export const Link = UU5.Common.VisualComponent.create({
   },
 
   _onClick(e) {
-    if (this._isRoute() && UU5.Environment.getRouter()) {
+    if (this._isRoute() && (UU5.Environment.getRouter() || this.props._g05SetRoute)) {
       let [base, ...fragmentParts] = this.props.href.split("#");
       let [path, ...queryParts] = base.split("?");
       let fragment = fragmentParts.join("#");
@@ -247,7 +248,9 @@ export const Link = UU5.Common.VisualComponent.create({
         this._openRouteNewTab();
       } else {
         let useCase = path || UU5.Common.Url.parse(location.href).useCase || "";
-        UU5.Environment.setRoute(useCase, params, fragment);
+        let g04Router = UU5.Environment.getRouter();
+        if (g04Router) g04Router.setRoute(useCase, params, fragment);
+        else this.props._g05SetRoute(useCase, params, fragment);
       }
     }
     typeof this.props.onClick === "function" && this.props.onClick(this, e);
@@ -388,6 +391,15 @@ export const Link = UU5.Common.VisualComponent.create({
   },
   //@@viewOff:render
 });
+
+export const Link = (props) => {
+  const [, g05SetRoute] = useRoute();
+  return <_Link {...props} _g05SetRoute={g05SetRoute} />;
+};
+
+Link.isUu5PureComponent = true;
+Link.displayName = _Link.displayName;
+Link.tagName = _Link.tagName;
 
 export const A = Link;
 

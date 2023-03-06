@@ -1,6 +1,6 @@
 {
   "name": "uu5g04~root",
-  "version": "1.56.0",
+  "version": "1.57.0",
   "private": true,
   "workspaces": [
     "uu5g04"
@@ -10,7 +10,7 @@
   "spec": "nodejs-multi; uu_appg01_devkit@5.4.0",
   "uuBuildSettings": {},
   "devDependencies": {
-    "uu_appg01_devkit": "^5.2.2"
+    "uu_appg01_devkit": "^5.8.0"
   },
   "scripts": {
     "clean": "uu_appg01_devkit clean",

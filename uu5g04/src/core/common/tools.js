@@ -14,7 +14,7 @@
  */
 
 import React from "react";
-import { Utils } from "uu5g05";
+import { Utils, Environment as Uu5Environment } from "uu5g05";
 import Environment from "../environment/environment.js";
 import EnvTools from "../environment/tools.js";
 import Context from "./context.js";
@@ -1465,18 +1465,8 @@ Tools.decodeQuery = (query) => {
 
 Tools.copyToClipboard = (content) => {
   let actualScroll = window.scrollY || document.body.scrollTop || window.pageYOffset;
-  let tempElement = document.createElement("textarea");
-  tempElement.className = "uu5-common-temp-textarea";
-  tempElement.value = content;
-  document.body.appendChild(tempElement);
-  tempElement.select();
-  document.execCommand("copy");
 
-  if (tempElement.remove) {
-    tempElement.remove();
-  } else {
-    tempElement.parentNode.removeChild(tempElement);
-  }
+  Utils.Clipboard.write({ text: content });
 
   document.documentElement.scrollTop = actualScroll;
   document.body.scrollTop = actualScroll;
@@ -1851,8 +1841,12 @@ Tools.setLanguages = (languages) => {
     Environment.languages = languages;
   }
 
+  // set language to <html> element, but only if in whole-page mode (otherwise it can break pages,
+  // e.g. it broke VUCs in uuOS8 because they expect the lang attribute containing only language without country)
   let priorityLang = Environment.languages[0];
-  if (priorityLang) {
+  // NOTE Using Uu5Environment too because this method is sometimes called before the environment
+  // from uu5g05 gets merged into ours (this method is called via setLanguage() in root scope of this tools.js file).
+  if (priorityLang && !Environment._inStyleRootElement && !Uu5Environment._constants?.inStyleRootElement) {
     document.documentElement.setAttribute("lang", priorityLang.location || priorityLang.language);
   }
 

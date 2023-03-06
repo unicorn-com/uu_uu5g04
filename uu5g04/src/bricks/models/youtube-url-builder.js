@@ -13,7 +13,7 @@
  * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
-const REGEXP = /^((?:https?:)?\/\/)?((?:(?:www|m)\.)?(?:(?:youtube\.com|youtu.be)))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(?:[?&](.*))?$/;
+const REGEXP = /^((?:https?:)?\/\/)?((?:(?:www|m)\.)?(?:(?:youtube\.com|youtu.be)))(\/(?:[\w\-]+\?v=|embed\/|v\/|shorts\/)?)([\w\-]+)(?:[?&](.*))?$/;
 
 function getUrlParts(url) {
   return url.match(REGEXP);

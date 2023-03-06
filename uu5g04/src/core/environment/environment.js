@@ -525,7 +525,7 @@ Environment.iconLibraries = {
   plus4u5: cdnBaseUri + "uu-plus4u5g01-icons/1.0.0/uu_plus4u5g01_icons.min.css",
   uubml: cdnBaseUri + "uu-uubmldraw-iconsg03/2.0.0/uu_uubmldraw_iconsg03.min.css",
   uubmlicon:
-    "https://uuappg01-eu-w-1.plus4u.net/uu-uubmldraw-stencilcatalogueg01/c168bd044ce044d48ba284c89eeb573b/stencil/getCss?code=",
+    "https://uuappg01-eu-w-1.plus4u.net/uu-uubmldraw-stencilcatalogueg01/c168bd044ce044d48ba284c89eeb573b/stencil/getCss?code=%s",
 };
 
 Environment.addIconLibrary = (iconsKey, src) => {
@@ -605,12 +605,6 @@ Environment.addRuntimeLibrary = (library) => {
   Utils.LibraryRegistry.registerLibrary(library);
   return this;
 };
-const origG05RegisterLibrary = Utils.LibraryRegistry.registerLibrary;
-Utils.LibraryRegistry.registerLibrary = function (...args) {
-  origG05RegisterLibrary.apply(this, args);
-  statistics.addLibrary(args[0]);
-};
-for (let item of Utils.LibraryRegistry.listLibraries()) statistics.addLibrary(item);
 Environment.addRuntimeLibrary({ name: Environment.name, version: Environment.version });
 
 Environment.getRuntimeLibraries = () => {

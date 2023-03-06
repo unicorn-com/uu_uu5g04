@@ -1,6 +1,6 @@
 {
   "name": "uu5g04",
-  "version": "1.56.0",
+  "version": "1.57.0",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
@@ -14,6 +14,7 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "resize-observer-polyfill": "1.5.1",
+    "uu5g05": "^1.0.0",
     "whatwg-fetch": "3.0.0"
   },
   "uuBuildSettings": {
@@ -355,10 +356,10 @@
       }
     ],
     "externals": {
-      "react": "React",
-      "react-dom": "ReactDOM",
-      "create-react-class": "createReactClass",
-      "prop-types": "PropTypes",
+      "react": true,
+      "react-dom": true,
+      "create-react-class": true,
+      "prop-types": true,
       "uu5g04": {
         "globalVariable": "UU5",
         "uri": ""
@@ -382,8 +383,7 @@
       "uu5g04-hooks": {
         "globalVariable": "",
         "uri": ""
-      },
-      "uu5g05": "Uu5g05"
+      }
     },
     "nodeBuildIncludes": "/test-tmp/**/*.js"
   },
@@ -397,12 +397,11 @@
     "react-dnd-html5-backend": "7.0.2",
     "systemjs": "0.19.47",
     "url-polyfill": "1.1.12",
-    "uu5g05": "^1.0.0",
     "uu5g05-browser-compatibility": "^1.0.0",
     "uu5g05-test": "^1.0.0",
     "uu_appg01": "^5.0.0",
     "uu_appg01_oidc": "^3.0.0",
-    "uu_appg01_devkit": "^5.2.2",
+    "uu_appg01_devkit": "^5.8.0",
     "write-file-atomic": "2.3.0"
   },
   "engines": {
@@ -439,6 +438,7 @@
     "printWidth": 120
   },
   "author": "Unicorn a.s.",
+  "browserslist": "> 0.2%, not ie > 0, not op_mini all, not dead, not android < 5",
   "jest": {
     "moduleNameMapper": {
       "^uu5g04$": "<rootDir>/src/core/core.js",

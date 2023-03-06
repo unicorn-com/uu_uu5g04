@@ -19,7 +19,7 @@ function getG05Banner(isMinified, filename) {
 
   if (uu5g05CdnVersion === undefined) {
     let pkg = require("../package.json");
-    let uu5g05VersionSpec = (pkg.devDependencies || {})["uu5g05"] || "";
+    let uu5g05VersionSpec = (pkg.dependencies || {})["uu5g05"] || (pkg.devDependencies || {})["uu5g05"] || "";
     let uu5g05VersionMatch = uu5g05VersionSpec.match(/^([^]?)(\d+)\.\d+\.\d+(-.*)?$/);
     uu5g05CdnVersion = uu5g05VersionMatch[2] + ".0.0";
   }

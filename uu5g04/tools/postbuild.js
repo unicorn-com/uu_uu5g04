@@ -73,14 +73,6 @@ async function run() {
   console.log("Copying jest-setup.js.");
   fs.copyFileSync("src/core/test/jest-setup.js", "target/dist-node/jest-setup.js");
   fs.copyFileSync("src/core/test/jest-setup.js", "target/dist/jest-setup.js"); // for backward compatibility
-
-  // remove uu5g05 from externals (it must not be in .tgz's package.json)
-  // NOTE We can't do this in prepackage step because that step gets executed sooner than prebuild step
-  // (and prebuild needs to add uu5g05 to externals).
-  console.log("Fixing externals for 'package' step.");
-  let pkgJson = JSON.parse(fs.readFileSync("package.json", "utf-8"));
-  delete pkgJson.uuBuildSettings.externals.uu5g05;
-  fs.writeFileSync("package.json", JSON.stringify(pkgJson, null, 2) + "\n", "utf-8");
 }
 
 let processed = new Set();
@@ -113,53 +105,11 @@ async function processColorSchemaFile(srcDir, destDir, fileRelative, fromFile = 
   await Promise.all(promises);
 }
 
-function removeVersionConsoleLog(file) {
-  let content = fs.readFileSync(file, "utf-8");
-  let modContent = content.replace(
-    /console\.log\((?:(?!console\.log)(?:\s|\S)){0,100}?Terms of Use: https:\/\/unicorn\.com\/[^;\n,}]+/,
-    (m) => "void/*" + m + "*/0"
-  );
-  if (content === modContent) {
-    console.warn("WARN Console log in uu5g05 was not replaced - console.log(...) not found in " + file);
-  } else {
-    fs.writeFileSync(file, modContent, "utf-8");
-  }
-}
 function copyUu5g05() {
-  // NOTE Copying of uu5g05 & uu5stringg01 must remain here so that Jest tests of libraries depending on uu5g04 work.
-  let uu5g05Dir = require.resolve("uu5g05/package.json").replace(/[/\\][^/\\]*$/, "");
-  fs.copySync(path.join(uu5g05Dir, "dist") + "/", "target/dist/uu5g05/", { overwrite: true, recursive: true });
-  fs.copySync(path.join(uu5g05Dir, "dist-node") + "/", "target/dist-node/uu5g05/", {
-    overwrite: true,
-    recursive: true,
-  });
-
-  removeVersionConsoleLog("target/dist/uu5g05/uu5g05.js");
-  removeVersionConsoleLog("target/dist/uu5g05/uu5g05.min.js");
-
   let bcFile1 = require.resolve("uu5g05-browser-compatibility/dist/uu5g05-browser-compatibility.min.js");
   fs.copyFileSync(bcFile1, "target/dist/uu5g04-browser-update.min.js");
   let bcFile2 = require.resolve("uu5g05-browser-compatibility/dist/uu5g05-browser-compatibility.js");
   fs.copyFileSync(bcFile2, "target/dist/uu5g04-browser-update.js");
-
-  // copy uu5stringg01 too (uu5g05 depends on it)
-  try {
-    let uu5stringg01Dir = require
-      .resolve("uu5stringg01/package.json", { paths: [uu5g05Dir] })
-      .replace(/[/\\][^/\\]*$/, "");
-    fs.copySync(path.join(uu5stringg01Dir, "dist") + "/", "target/dist/uu5stringg01/", {
-      overwrite: true,
-      recursive: true,
-    });
-    // uu5stringg01 is iso-lib and does not have dist-node/ :-(, we'll copy dist instead
-    fs.copySync(path.join(uu5stringg01Dir, "dist") + "/", "target/dist-node/uu5stringg01/", {
-      overwrite: true,
-      recursive: true,
-    });
-  } catch (e) {
-    if (e.code !== "MODULE_NOT_FOUND") throw e;
-    // uu5stringg01 might not be present if uu5g05 is in older version (< 0.8.0) and that's ok
-  }
 }
 
 copyUu5g05();

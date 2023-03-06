@@ -528,7 +528,7 @@ export const FormMixin = {
     if (this.hasFormControls()) {
       this.eachFormControls((formControls) => formControls.disable(setStateCallback));
     } else {
-      setStateCallback();
+      typeof setStateCallback === "function" && setStateCallback();
     }
 
     return this;
@@ -543,7 +543,7 @@ export const FormMixin = {
     if (this.hasFormControls()) {
       this.eachFormControls((formControls) => formControls.enable(setStateCallback));
     } else {
-      setStateCallback();
+      typeof setStateCallback === "function" && setStateCallback();
     }
 
     return this;

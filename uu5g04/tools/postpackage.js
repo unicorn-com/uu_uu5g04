@@ -15,15 +15,9 @@ const fs = require("fs-extra");
 const path = require("path");
 
 async function run() {
-  // change 'externals' setting for uu5g05 back so that it is present
-  let pkg = JSON.parse(fs.readFileSync("package.json", "utf-8"));
-  if (!pkg.uuBuildSettings.externals.uu5g05) {
-    pkg.uuBuildSettings.externals.uu5g05 = "Uu5g05";
-    fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n", "utf-8");
-  }
-
   // add extra items to library descriptor
   console.log("Replacing library descriptor file.");
+  let pkg = JSON.parse(fs.readFileSync("package.json", "utf-8"));
   let { name, version } = pkg;
   let descriptorFileName = path.join("target", `${name}-${version}-library-descriptor.json`);
   let descriptor = JSON.parse(fs.readFileSync(descriptorFileName, "utf-8"));
@@ -103,9 +97,24 @@ async function run() {
         "uu5g04-bricks": urls["uu5g04-bricks"],
       },
     },
+    {
+      ...libraryItem,
+      code: "UU5.Hooks",
+      name: "uu5g04-hooks",
+      desc: {
+        cs:
+          "<uu5string/>UU5.Hooks je modul knihovny <UU5.Bricks.LinkUU5 />, který obsahuje základní React hooks pro využití v jiných knihovnách.",
+        en:
+          "<uu5string/>UU5.Hooks is a module of <UU5.Bricks.LinkUU5 /> library that contains basic React hooks for usage from other libraries.",
+      },
+      sourceUri: libraryItem.sourceUri.replace(`${name}.min.js`, "uu5g04-hooks.min.js"),
+      dependencyMap: {
+        ...libraryItem.dependencyMap,
+        "uu5g04": urls["uu5g04"],
+      },
+    },
   ];
 
-  descriptor.libraryList.shift(); // remove "uu5g04" itself from the descriptor.libraryList
   fs.writeFileSync(descriptorFileName, JSON.stringify(descriptor, null, 2), "utf-8");
 }
 

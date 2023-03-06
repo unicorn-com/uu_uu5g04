@@ -18,6 +18,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
 import withUserPreferences from "../common/user-preferences";
+import {UNSPECIFIED_FROM, UNSPECIFIED_TO} from "../forms/internal/date-tools";
 
 import "./calendar.less";
 //@@viewOff:imports
@@ -168,6 +169,7 @@ export const Calendar = withUserPreferences(
       monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
       weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
       clickableWeekNumber: UU5.PropTypes.bool,
+      _allowUnspecifiedRange: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.oneOf(["from", "to"])]),
     },
     //@@viewOff:propTypes
 
@@ -193,6 +195,7 @@ export const Calendar = withUserPreferences(
         monthNameFormat: "roman",
         weekStartDay: 1,
         clickableWeekNumber: false,
+        _allowUnspecifiedRange: false,
       };
     },
     //@@viewOff:getDefaultProps
@@ -477,8 +480,8 @@ export const Calendar = withUserPreferences(
     _validateSingleDate(date, dateFrom = this.state.dateFrom, dateTo = this.state.dateTo) {
       let result = { valid: true, error: null };
       let parsedDate = this._parseDate(date);
-      dateFrom = this._parseDate(dateFrom);
-      dateTo = this._parseDate(dateTo);
+      dateFrom = (this.props._allowUnspecifiedRange === true || this.props._allowUnspecifiedRange === "from") ? UNSPECIFIED_FROM : this._parseDate(dateFrom);
+      dateTo = (this.props._allowUnspecifiedRange === true || this.props._allowUnspecifiedRange === "to") ? UNSPECIFIED_TO : this._parseDate(dateTo);
 
       if ((date && !parsedDate) || (date instanceof Date && isNaN(date.getDate()))) {
         result.valid = false;

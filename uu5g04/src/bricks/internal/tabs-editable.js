@@ -196,9 +196,16 @@ const editableItemPropsSetup = {
       type: "text",
       label: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.tabHeaderLabel} />,
       required: true,
-      getProps: () => ({
-        inputAttrs: { autoFocus: true },
-      }),
+      getProps: (e) => {
+        let value = e.value;
+        if (value && typeof value === "object") {
+          value = `<uu5string/>${UU5.Common.UU5String.contentToString(value)}`;
+        }
+        return {
+          value,
+          inputAttrs: { autoFocus: true },
+        }
+      },
     },
   ],
 };

@@ -98,6 +98,8 @@ expect.addSnapshotSerializer({
   },
 });
 
+// TODO Following can be removed after release of uu_plus4u5g01 4.27.4.
+
 // for legacy purposes, if the current project doesn't know about uu_plus4u5g02 then mock it
 // so that it loads from inside of uu_plus4u5g01 to be backward compatible;
 //    uu_plus4u5g02 => uu_plus4u5g01/dist-node/uu_plus4u5g02/uu_plus4u5g02.js with fall back to

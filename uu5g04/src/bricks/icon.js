@@ -20,6 +20,32 @@ import ns from "./bricks-ns.js";
 import "./icon.less";
 //@@viewOff:imports
 
+const cache = [];
+let warnedIcon;
+
+function addLibrary(icon) {
+  let [libraryName, stencil] = icon.split("-");
+  let libraryUri = UU5.Environment.iconLibraries[libraryName];
+
+  if (libraryUri) {
+    if (libraryUri.includes("%s")) {
+      libraryName = [libraryName, stencil].join("-");
+      libraryUri = UU5.Common.Tools.formatString(libraryUri, stencil);
+    }
+
+    if (!cache.includes(libraryName)) {
+      const done = UU5.Environment.DocumentManager.addUniqueCss(libraryUri);
+      if (done) cache.push(libraryName);
+    }
+  } else if (process.env.NODE_ENV !== "production" && (!warnedIcon || !warnedIcon.has(icon))) {
+    warnedIcon ??= new Set();
+    warnedIcon.add(icon);
+    UU5.Common.Tools.warning(
+      `Unknown icon '${icon}' - the icon library URL is not configured in uu5Environment.iconLibraryMap["${libraryName}"]`
+    );
+  }
+}
+
 export const Icon = UU5.Common.VisualComponent.create({
   displayName: "Icon", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
@@ -76,6 +102,14 @@ export const Icon = UU5.Common.VisualComponent.create({
       preloading,
       response,
     });
+  },
+
+  componentDidMount() {
+    this.props.icon && addLibrary(this.props.icon);
+  },
+
+  componentDidUpdate() {
+    this.props.icon && addLibrary(this.props.icon);
   },
   //@@viewOff:reactLifeCycle
 
@@ -199,12 +233,7 @@ export const Icon = UU5.Common.VisualComponent.create({
       let splitter = this.props.icon.split("-");
       if (splitter) {
         let iconsName = splitter[0];
-        if (iconsName === "uubmlicon") {
-          const stencil = splitter[1];
-          UU5.Environment.DocumentManager.addUniqueCss(UU5.Environment.iconLibraries.uubmlicon + stencil);
-        } else {
-          UU5.Environment.IconManager.addIcons(iconsName);
-        }
+        //UU5.Environment.IconManager.addIcons(iconsName);
         mainProps.className += " " + iconsName;
       }
       mainProps.className += " " + this.props.icon;

@@ -778,6 +778,7 @@ export const Popover = withContext(
         window.removeEventListener("contextmenu", this._closeListener);
         window.removeEventListener("resize", this._onResize);
         window.removeEventListener("mousedown", this._onMouseDown);
+        this._lastMouseDownTarget = undefined;
         this._closeListener = null;
       }
     },
@@ -814,7 +815,7 @@ export const Popover = withContext(
         //      stop propagation thanks to which DOM listeners for event "click" on window won't run
         e.stopPropagation();
         if (typeof origOnClick === "function") origOnClick(e);
-      }
+      };
 
       return props;
     },

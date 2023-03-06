@@ -32,14 +32,6 @@ async function includeTestFolder() {
 
 async function run() {
   if (!process.env.WATCH) await includeTestFolder();
-
-  // ensure that uu5g05 is in externals (in case we performed build previously and terminated it
-  // via Ctrl+C midway)
-  let pkg = JSON.parse(fs.readFileSync("package.json", "utf-8"));
-  if (!pkg.uuBuildSettings.externals.uu5g05) {
-    pkg.uuBuildSettings.externals.uu5g05 = "Uu5g05";
-    fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n", "utf-8");
-  }
 }
 
 run();

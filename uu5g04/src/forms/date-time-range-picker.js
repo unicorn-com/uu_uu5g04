@@ -996,11 +996,14 @@ let DateTimeRangePicker = Context.withContext(
         let date = this._parseDate(opt.value, isEndDate);
         date = this._getOutcomingValue(date);
 
+        const dateFrom = this._getDateFromRange(this._formattingValues.dateFrom);
+        const dateTo = this._getDateToRange(this._formattingValues.dateTo);
+
         if (!opt.value || date) {
-          if (this._compareDates(date, this._formattingValues.dateFrom, "lesser")) {
+          if (this._compareDates(date, dateFrom, "lesser")) {
             result.feedback = "error";
             result.message = this.getLsiItem(this._formattingValues.beforeRangeMessage);
-          } else if (this._compareDates(date, this._formattingValues.dateTo, "greater")) {
+          } else if (this._compareDates(date, dateTo, "greater")) {
             result.feedback = "error";
             result.message = this.getLsiItem(this._formattingValues.afterRangeMessage);
           } else {
@@ -1033,8 +1036,8 @@ let DateTimeRangePicker = Context.withContext(
       let date = this._parseDate(opt.value);
       if (opt && Array.isArray(opt.value)) {
         if (date) {
-          let dateFrom = this._getDateFrom(props.dateFrom);
-          let dateTo = this._getDateTo(props.dateTo);
+          let dateFrom = this._getDateFromRange(this._getDateFrom(props.dateFrom));
+          let dateTo = this._getDateToRange(this._getDateTo(props.dateTo));
           let valueFrom = this._getFromValue(date);
           let valueTo = this._getToValue(date);
           if (
@@ -1058,18 +1061,29 @@ let DateTimeRangePicker = Context.withContext(
     _validateDevProps(value, dateFrom = this.props.dateFrom, dateTo = this.props.dateTo) {
       let result = { valid: true, error: null };
 
+      const _dateFrom = this._getDateFromRange(dateFrom);
+      const _dateTo = this._getDateToRange(dateTo)
+
       if (Array.isArray(value) && value.length === 2) {
         // Currently only 2 values are relevant
         if (this._compareDates(value[0], value[1], "greater")) {
           result.valid = false;
           result.error = "firstGreaterThanSecond";
-        } else if (dateFrom && dateTo && this._compareDates(dateFrom, dateTo, "greater")) {
+        } else if (_dateFrom && _dateTo && this._compareDates(_dateFrom, _dateTo, "greater")) {
           result.valid = false;
           result.error = "dateFromGreaterThanDateTo";
         }
       }
 
       return result;
+    },
+
+    _getDateFromRange(dateFrom) {
+      return this._isAllowedFromUnspecifiedRange ? UNSPECIFIED_FROM : dateFrom;
+    },
+
+    _getDateToRange(dateTo) {
+      return this._isAllowedToUnspecifiedRange ? UNSPECIFIED_TO : dateTo;
     },
 
     _onOpen(type, setStateCallback) {
@@ -2588,6 +2602,7 @@ let DateTimeRangePicker = Context.withContext(
         hideOtherSections: true,
         colorSchema: this.getColorSchema(),
         weekStartDay: this.props.weekStartDay,
+        _allowUnspecifiedRange: this.props.allowUnspecifiedRange,
       };
 
       if (isSorXs) {

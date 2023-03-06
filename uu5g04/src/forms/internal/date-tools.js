@@ -366,20 +366,18 @@ export const DateTools = {
     return dateRange;
   },
   isAllowedFromUnspecifiedRange(props) {
-    let { allowUnspecifiedRange, dateFrom, strictSelection, step } = props;
+    let { allowUnspecifiedRange, strictSelection, step } = props;
     return (
       (allowUnspecifiedRange === true || allowUnspecifiedRange === "from") &&
-      !dateFrom &&
       !strictSelection &&
       step !== "years" &&
       step !== "months"
     );
   },
   isAllowedToUnspecifiedRange(props) {
-    let { allowUnspecifiedRange, dateTo, strictSelection, step } = props;
+    let { allowUnspecifiedRange, strictSelection, step } = props;
     return (
       (allowUnspecifiedRange === true || allowUnspecifiedRange === "to") &&
-      !dateTo &&
       !strictSelection &&
       step !== "years" &&
       step !== "months"

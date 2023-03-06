@@ -134,15 +134,15 @@ export default UU5.Common.VisualComponent.create({
   },
 
   getRenderedChildren_() {
-    return this._popover.getRenderedChildren();
+    return this._popover?.getRenderedChildren() || [];
   },
 
   getRenderedChildrenIdList_() {
-    return this._popover.getRenderedChildrenIdList();
+    return this._popover?.getRenderedChildrenIdList() || {};
   },
 
   getRenderedChildrenNameList_() {
-    return this._popover.getRenderedChildrenNameList();
+    return this._popover?.getRenderedChildrenNameList() || {};
   },
   //@@viewOff:overriding
 
