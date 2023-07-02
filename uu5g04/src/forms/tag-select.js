@@ -219,6 +219,14 @@ export const TagSelect = Context.withContext(
         setStateCallback
       );
     },
+
+    getValue_() {
+      if (this.props.multiple) {
+        return this.state.value;
+      }
+
+      return this.state.value[0];
+    },
     //@@viewOff:overriding
 
     //@@viewOn:private
